@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOCpilot — Plans, Not Prompts</title>
+<meta name="description" content="SOCpilot: verifying policy compliance for LLM-assisted incident response by deciding over canonical action traces, not free-form text.">
+<style>
+  :root {
+    --bg: #fbfcfe;
+    --fg: #1e2530;
+    --muted: #5a6474;
+    --accent: #2b5d8a;
+    --accent-soft: #e3ecf6;
+    --green: #2f7d4f;
+    --green-soft: #e6f2ea;
+    --rule: #d7dee8;
+    --card: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14181f;
+      --fg: #e5e9f0;
+      --muted: #9aa5b5;
+      --accent: #7fb0dd;
+      --accent-soft: #1d2a3a;
+      --green: #6fbe8f;
+      --green-soft: #1b2d22;
+      --rule: #2a3342;
+      --card: #1a202a;
+    }
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg); color: var(--fg);
+    font: 17px/1.65 Georgia, 'Times New Roman', serif;
+  }
+  .wrap { max-width: 46rem; margin: 0 auto; padding: 3.5rem 1.4rem 4rem; }
+  header { border-bottom: 1px solid var(--rule); padding-bottom: 2rem; margin-bottom: 2.2rem; }
+  .kicker {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: .8rem; letter-spacing: .18em; text-transform: uppercase;
+    color: var(--accent); margin-bottom: .8rem;
+  }
+  h1 { font-size: 1.9rem; line-height: 1.25; font-weight: normal; margin-bottom: 1.1rem; }
+  .authors { color: var(--fg); font-size: 1rem; margin-bottom: .3rem; }
+  .affil { color: var(--muted); font-size: .95rem; font-style: italic; }
+  h2 {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: 1.05rem; letter-spacing: .04em;
+    color: var(--accent); margin: 2.4rem 0 .9rem;
+  }
+  p + p { margin-top: .9rem; }
+  .thesis {
+    background: var(--accent-soft); border-left: 3px solid var(--accent);
+    padding: 1rem 1.2rem; margin: 1.4rem 0; font-style: italic;
+  }
+  ul.props { list-style: none; margin: .6rem 0 0; }
+  ul.props li { padding: .35rem 0 .35rem 1.4rem; position: relative; }
+  ul.props li::before { content: "—"; position: absolute; left: 0; color: var(--green); }
+  .links { display: grid; gap: .7rem; margin-top: .9rem; }
+  .link-card {
+    display: block; background: var(--card); border: 1px solid var(--rule);
+    border-radius: 6px; padding: .85rem 1.1rem; text-decoration: none; color: inherit;
+  }
+  .link-card .name {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    font-size: .95rem; font-weight: 600; color: var(--accent);
+  }
+  .link-card .state { color: var(--muted); font-size: .9rem; }
+  .pending .state::before {
+    content: "pending"; color: var(--green); background: var(--green-soft);
+    font-family: ui-sans-serif, system-ui, sans-serif; font-size: .72rem;
+    letter-spacing: .08em; text-transform: uppercase;
+    padding: .12rem .5rem; border-radius: 99px; margin-right: .55rem;
+  }
+  footer {
+    margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--rule);
+    color: var(--muted); font-size: .88rem;
+  }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="kicker">SOCpilot &middot; research project</div>
+  <h1>Plans, Not Prompts: Verifying Policy Compliance for LLM&#8209;Assisted Incident Response</h1>
+  <p class="authors">Sidnei Barbieri &middot; Leonardo Vaz de Meneses &middot; &Aacute;gney Lopes Roth Ferraz &middot; Wagner Comin Sonaglio &middot; Louren&ccedil;o Alves Pereira J&uacute;nior</p>
+  <p class="affil">Computer Science Division, Aeronautics Institute of Technology (ITA), Brazil</p>
+</header>
+
+<h2>Overview</h2>
+<p>Security operations centers increasingly use large language models as copilots that propose incident-response plans for analyst review. Existing evaluations assess instruction adherence, generated text, or downstream tool execution; none of them establishes whether the plan presented to an analyst satisfies the organization's declared policy.</p>
+<div class="thesis">Whether operational governance is decidable is a property of the representation the decision is made over, not of the model that produced the plan.</div>
+<p>SOCpilot projects a model's free-form proposal onto a canonical action trace over a finite action catalog — an operation we call operational policy projection — and decides compliance there, with a deterministic, typed verifier, after generation and before any execution. A subjective judgment over prose becomes a reproducible decision over a plan: the same trace yields the same verdict regardless of which model emitted it.</p>
+
+<h2>What the evaluation object provides</h2>
+<ul class="props">
+  <li>A frozen corpus of real incidents from a production financial-sector SOC, canonicalized and anonymized under a dual-review release protocol, with a reserved export batch for prespecified transfer checks.</li>
+  <li>A reviewed, typed operational policy (mandatory, ordering, restraint, and approval rules) derived through a documented selection protocol, with every retained rule traceable to data, decision, and test.</li>
+  <li>A deterministic verifier with typed, auditable repairs, whose determinism, provider-independence, and idempotence are enforced by released checks rather than assumed.</li>
+  <li>Provider-free public replay: every reported number regenerates from frozen evidence without calling any model.</li>
+</ul>
+
+<h2>Paper and artifact</h2>
+<div class="links">
+  <span class="link-card pending"><span class="name">Extended paper (with appendices)</span><br><span class="state">arXiv identifier will appear here.</span></span>
+  <span class="link-card pending"><span class="name">Code &amp; reproducibility artifact</span><br><span class="state">The versioned evaluation object — corpus packages, policy bundle, verifier, and replay tooling — is released here together with the paper.</span></span>
+</div>
+<p style="margin-top: .9rem; color: var(--muted); font-size: .95rem;">The public release is staged: the artifact is published once, in the same versioned evaluation state that produced the reported results, so that the code, corpus, policy, and evidence share one lineage.</p>
+
+<h2>Contact</h2>
+<p>Questions about the project or the artifact: <a href="mailto:sidneisb@ita.br">sidneisb@ita.br</a>.</p>
+
+<footer>
+  SOCpilot is a research measurement instrument, not a defense product. Incident data crosses the release boundary only after canonicalization and anonymization.
+</footer>
+
+</div>
+</body>
+</html>
