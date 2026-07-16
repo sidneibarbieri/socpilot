@@ -93,7 +93,7 @@
 
 <h2>Overview</h2>
 <p>Security operations centers increasingly use large language models as copilots that propose incident-response plans for analyst review. Existing evaluations assess instruction adherence, generated text, or downstream tool execution; none of them establishes whether the plan presented to an analyst satisfies the organization's declared policy.</p>
-<div class="thesis">Whether operational governance is decidable is a property of the representation the decision is made over, not of the model that produced the plan.</div>
+<div class="thesis">Compliance becomes decidable when the representation changes, not when the model does: a plan projected onto a finite action alphabet admits an exact decision procedure, where free text admits only judgment.</div>
 <p>SOCpilot projects a model's free-form proposal onto a canonical action trace over a finite action catalog — an operation we call operational policy projection — and decides compliance there, with a deterministic, typed verifier, after generation and before any execution. A subjective judgment over prose becomes a reproducible decision over a plan: the same trace yields the same verdict regardless of which model emitted it.</p>
 
 <h2>What the evaluation object provides</h2>
