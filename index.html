@@ -1,123 +1,123 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SOCpilot — Plans, Not Prompts</title>
-<meta name="description" content="SOCpilot: verifying policy compliance for LLM-assisted incident response by deciding over canonical action traces, not free-form text.">
-<style>
-  :root {
-    --bg: #fbfcfe;
-    --fg: #1e2530;
-    --muted: #5a6474;
-    --accent: #2b5d8a;
-    --accent-soft: #e3ecf6;
-    --green: #2f7d4f;
-    --green-soft: #e6f2ea;
-    --rule: #d7dee8;
-    --card: #ffffff;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #14181f;
-      --fg: #e5e9f0;
-      --muted: #9aa5b5;
-      --accent: #7fb0dd;
-      --accent-soft: #1d2a3a;
-      --green: #6fbe8f;
-      --green-soft: #1b2d22;
-      --rule: #2a3342;
-      --card: #1a202a;
-    }
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: var(--bg); color: var(--fg);
-    font: 17px/1.65 Georgia, 'Times New Roman', serif;
-  }
-  .wrap { max-width: 46rem; margin: 0 auto; padding: 3.5rem 1.4rem 4rem; }
-  header { border-bottom: 1px solid var(--rule); padding-bottom: 2rem; margin-bottom: 2.2rem; }
-  .kicker {
-    font-family: ui-sans-serif, system-ui, sans-serif;
-    font-size: .8rem; letter-spacing: .18em; text-transform: uppercase;
-    color: var(--accent); margin-bottom: .8rem;
-  }
-  h1 { font-size: 1.9rem; line-height: 1.25; font-weight: normal; margin-bottom: 1.1rem; }
-  .authors { color: var(--fg); font-size: 1rem; margin-bottom: .3rem; }
-  .affil { color: var(--muted); font-size: .95rem; font-style: italic; }
-  h2 {
-    font-family: ui-sans-serif, system-ui, sans-serif;
-    font-size: 1.05rem; letter-spacing: .04em;
-    color: var(--accent); margin: 2.4rem 0 .9rem;
-  }
-  p + p { margin-top: .9rem; }
-  .thesis {
-    background: var(--accent-soft); border-left: 3px solid var(--accent);
-    padding: 1rem 1.2rem; margin: 1.4rem 0; font-style: italic;
-  }
-  ul.props { list-style: none; margin: .6rem 0 0; }
-  ul.props li { padding: .35rem 0 .35rem 1.4rem; position: relative; }
-  ul.props li::before { content: "—"; position: absolute; left: 0; color: var(--green); }
-  .links { display: grid; gap: .7rem; margin-top: .9rem; }
-  .link-card {
-    display: block; background: var(--card); border: 1px solid var(--rule);
-    border-radius: 6px; padding: .85rem 1.1rem; text-decoration: none; color: inherit;
-  }
-  .link-card .name {
-    font-family: ui-sans-serif, system-ui, sans-serif;
-    font-size: .95rem; font-weight: 600; color: var(--accent);
-  }
-  .link-card .state { color: var(--muted); font-size: .9rem; }
-  .pending .state::before {
-    content: "pending"; color: var(--green); background: var(--green-soft);
-    font-family: ui-sans-serif, system-ui, sans-serif; font-size: .72rem;
-    letter-spacing: .08em; text-transform: uppercase;
-    padding: .12rem .5rem; border-radius: 99px; margin-right: .55rem;
-  }
-  footer {
-    margin-top: 3rem; padding-top: 1.4rem; border-top: 1px solid var(--rule);
-    color: var(--muted); font-size: .88rem;
-  }
-  a { color: var(--accent); }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SOCpilot checks declared policy over ordered incident-response action lists before execution.">
+  <title>SOCpilot | Plans, Not Prompts</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="wrap">
+  <header class="site-header">
+    <a class="wordmark" href="#top">SOCpilot</a>
+    <nav aria-label="Primary navigation">
+      <a href="#principle">Principle</a>
+      <a href="#method">Method</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#release">Release</a>
+    </nav>
+  </header>
 
-<header>
-  <div class="kicker">SOCpilot &middot; research project</div>
-  <h1>Plans, Not Prompts: Verifying Policy Compliance for LLM&#8209;Assisted Incident Response</h1>
-  <p class="authors">Sidnei Barbieri &middot; Leonardo Vaz de Meneses &middot; &Aacute;gney Lopes Roth Ferraz &middot; Wagner Comin Sonaglio &middot; Louren&ccedil;o Alves Pereira J&uacute;nior</p>
-  <p class="affil">Computer Science Division, Aeronautics Institute of Technology (ITA), Brazil</p>
-</header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Research preview</p>
+        <h1>Plans,<br>not prompts.</h1>
+        <p class="lede">SOCpilot extracts an ordered action list from a model
+          response and checks declared policy before execution.</p>
+        <a class="text-link" href="#release">View release status <span>↓</span></a>
+      </div>
 
-<h2>Overview</h2>
-<p>Security operations centers increasingly use large language models as copilots that propose incident-response plans for analyst review. Existing evaluations assess instruction adherence, generated text, or downstream tool execution; none of them establishes whether the plan presented to an analyst satisfies the organization's declared policy.</p>
-<div class="thesis">Compliance becomes decidable when the representation changes, not when the model does: a plan projected onto a finite action alphabet admits an exact decision procedure, where free text admits only judgment.</div>
-<p>SOCpilot projects a model's free-form proposal onto a canonical action trace over a finite action catalog — an operation we call operational policy projection — and decides compliance there, with a deterministic, typed verifier, after generation and before any execution. A subjective judgment over prose becomes a reproducible decision over a plan: the same trace yields the same verdict regardless of which model emitted it.</p>
+      <div class="boundary-figure" role="img" aria-label="A probabilistic model proposes actions that a deterministic policy verifier checks and repairs before execution.">
+        <div class="stage muted">
+          <span class="stage-index">01</span>
+          <strong>Incident package</strong>
+          <small>telemetry + case context</small>
+        </div>
+        <span class="connector" aria-hidden="true">→</span>
+        <div class="stage muted">
+          <span class="stage-index">02</span>
+          <strong>LLM proposal</strong>
+          <small>probabilistic generation</small>
+        </div>
+        <span class="connector" aria-hidden="true">→</span>
+        <div class="stage trace">
+          <span class="stage-index">03</span>
+          <strong>Action list</strong>
+          <small>ordered catalog actions</small>
+        </div>
+        <span class="connector" aria-hidden="true">→</span>
+        <div class="stage decision">
+          <span class="stage-index">04</span>
+          <strong>Policy verifier</strong>
+          <small>15 operational rules</small>
+        </div>
+      </div>
+    </section>
 
-<h2>What the evaluation object provides</h2>
-<ul class="props">
-  <li>A frozen corpus of real incidents from a production financial-sector SOC, canonicalized and anonymized under a dual-review release protocol, with a reserved export batch for prespecified transfer checks.</li>
-  <li>A reviewed, typed operational policy (mandatory, ordering, restraint, and approval rules) derived through a documented selection protocol, with every retained rule traceable to data, decision, and test.</li>
-  <li>A deterministic verifier with typed, auditable repairs, whose determinism, provider-independence, and idempotence are enforced by released checks rather than assumed.</li>
-  <li>Provider-free public replay: every reported number regenerates from frozen evidence without calling any model.</li>
-</ul>
+    <section class="statement" id="principle">
+      <p class="section-number">01 / Principle</p>
+      <h2>Generation is probabilistic.<br>Policy checks are reproducible.</h2>
+      <p>SOCpilot maps a proposed response to a finite action catalog and checks
+        three operational rule families. The verifier records each violation and repair
+        without asking another model to infer compliance from prose.</p>
+    </section>
 
-<h2>Paper and artifact</h2>
-<div class="links">
-  <span class="link-card pending"><span class="name">Extended paper (with appendices)</span><br><span class="state">arXiv identifier will appear here.</span></span>
-  <span class="link-card pending"><span class="name">Code &amp; reproducibility artifact</span><br><span class="state">The versioned evaluation object — corpus packages, policy bundle, verifier, and replay tooling — is released here together with the paper.</span></span>
-</div>
-<p style="margin-top: .9rem; color: var(--muted); font-size: .95rem;">The public release is staged: the artifact is published once, in the same versioned evaluation state that produced the reported results, so that the code, corpus, policy, and evidence share one lineage.</p>
+    <section class="method" id="method">
+      <p class="section-number">02 / Method</p>
+      <div class="method-grid">
+        <h2>One fixed protocol.<br>Every decision auditable.</h2>
+        <ol>
+          <li><span>Incident</span>Normalized, anonymized package.</li>
+          <li><span>Actions</span>Finite catalog of response actions.</li>
+          <li><span>Policy</span>Reviewed predicates with explicit scope.</li>
+          <li><span>Protocol</span>Fixed matrix, hashes, ledger, and denominators.</li>
+          <li><span>Replay</span>Analysis reproducible without rerunning the model.</li>
+        </ol>
+      </div>
+    </section>
 
-<h2>Contact</h2>
-<p>Questions about the project or the artifact: <a href="mailto:sidneisb@ita.br">sidneisb@ita.br</a>.</p>
+    <section class="evidence" id="evidence">
+      <p class="section-number">03 / Evidence state</p>
+      <div class="evidence-line">
+        <div>
+          <strong>Validated</strong>
+          <p>Corpus integrity, policy tiers, conversion boundary, verifier
+            properties, fixture plumbing, and zero-cost validation.</p>
+        </div>
+        <div>
+          <strong>Fixed before execution</strong>
+          <p>Corpus, models, prompts, repeats, contrasts, failure policy, and
+            stopping rules are bound by one protocol manifest.</p>
+        </div>
+        <div>
+          <strong>Pending model run</strong>
+          <p>No result from the new 400-incident evaluation is reported before
+            every planned task and diagnostic passes terminal validation.</p>
+        </div>
+      </div>
+    </section>
 
-<footer>
-  SOCpilot is a research measurement instrument, not a defense product. Incident data crosses the release boundary only after canonicalization and anonymization.
-</footer>
+    <section class="release" id="release">
+      <p class="section-number">04 / Scientific release</p>
+      <h2>Pre-execution package published and validated.</h2>
+      <p>The public source package contains no model results. We downloaded its
+        anonymous ZIP and validated it in a clean environment before starting
+        the model run. The same public location will receive the completed
+        reviewer package only after accounting, privacy, and reproduction gates pass.</p>
+      <dl>
+        <div><dt>Paper</dt><dd>Extended draft in progress</dd></div>
+        <div><dt>Code</dt><dd><a href="https://anonymous.4open.science/r/socpilot-artifact-02EB/">Validated anonymous source</a></dd></div>
+        <div><dt>Artifact</dt><dd>Model evidence pending</dd></div>
+        <div><dt>arXiv</dt><dd>Identifier pending</dd></div>
+      </dl>
+    </section>
+  </main>
 
-</div>
+  <footer>
+    <span>SOCpilot research preview</span>
+    <span>No model result is reported before terminal validation.</span>
+  </footer>
 </body>
 </html>
