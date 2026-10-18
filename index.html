@@ -6,52 +6,56 @@
   <meta name="description" content="SOCpilot checks declared policy over ordered incident-response action lists before execution.">
   <title>SOCpilot | Plans, Not Prompts</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20261012demo">
 </head>
 <body>
+  <a class="skip-link" href="#top">Skip to main content</a>
   <header class="site-header">
-    <a class="wordmark" href="#top">SOCpilot</a>
+    <a class="wordmark" href="#top">SOC<span>pilot</span></a>
     <nav aria-label="Primary navigation">
       <a href="#principle">Principle</a>
       <a href="#method">Method</a>
       <a href="#evidence">Evidence</a>
+      <a href="#demo">Demo</a>
       <a href="#release">Release</a>
     </nav>
   </header>
 
-  <main id="top">
+  <main id="top" tabindex="-1">
     <section class="hero">
       <div class="hero-copy">
         <p class="eyebrow">Research preview</p>
         <h1>Plans,<br>not prompts.</h1>
-        <p class="lede">SOCpilot extracts an ordered action list from a model
-          response and checks declared policy before execution.</p>
-        <a class="text-link" href="#release">View release status <span>↓</span></a>
+        <p class="lede">SOCpilot extracts an ordered action list from a model response and checks it against declared policy.</p>
+        <p class="hero-links">
+          <a class="text-link" href="#release">View release status <span>↓</span></a>
+          <a class="text-link" href="https://arxiv.org/abs/2605.05501">Read the preprint <span aria-hidden="true">↗</span></a>
+        </p>
       </div>
 
-      <div class="boundary-figure" role="img" aria-label="A probabilistic model proposes actions that a deterministic policy verifier checks and repairs before execution.">
+      <div class="boundary-figure" role="img" aria-label="A probabilistic model proposes a response that is mapped to an ordered action list and checked and repaired by a deterministic policy verifier.">
         <div class="stage muted">
           <span class="stage-index">01</span>
           <strong>Incident package</strong>
           <small>telemetry + case context</small>
         </div>
         <span class="connector" aria-hidden="true">→</span>
-        <div class="stage muted">
+        <div class="stage role-assumption">
           <span class="stage-index">02</span>
           <strong>LLM proposal</strong>
           <small>probabilistic generation</small>
         </div>
         <span class="connector" aria-hidden="true">→</span>
-        <div class="stage trace">
+        <div class="stage role-structure">
           <span class="stage-index">03</span>
           <strong>Action list</strong>
           <small>ordered catalog actions</small>
         </div>
         <span class="connector" aria-hidden="true">→</span>
-        <div class="stage decision">
+        <div class="stage role-check">
           <span class="stage-index">04</span>
           <strong>Policy verifier</strong>
-          <small>19 typed operational rules</small>
+          <small>15 operational rules</small>
         </div>
       </div>
     </section>
@@ -59,9 +63,7 @@
     <section class="statement" id="principle">
       <p class="section-number">01 / Principle</p>
       <h2>Generation is probabilistic.<br>Policy checks are reproducible.</h2>
-      <p>SOCpilot maps a proposed response to a finite action catalog and checks
-        three operational rule families. The verifier records each violation and repair
-        without asking another model to infer compliance from prose.</p>
+      <p>SOCpilot maps a proposed response to a finite action catalog and checks three operational rule families. The verifier records each violation and repair without asking another model to infer compliance from prose.</p>
     </section>
 
     <section class="method" id="method">
@@ -82,42 +84,67 @@
       <p class="section-number">03 / Evidence state</p>
       <div class="evidence-line">
         <div>
-          <strong>Validated</strong>
-          <p>Corpus integrity, policy tiers, conversion boundary, verifier
-            properties, fixture plumbing, and zero-cost validation.</p>
+          <strong>Deterministic replay</strong>
+          <p>Preserved inputs and outputs allow policy decisions and aggregate reports to be recomputed offline.</p>
         </div>
         <div>
           <strong>Fixed before execution</strong>
-          <p>Corpus, models, prompts, repeats, contrasts, failure policy, and
-            stopping rules are bound by one protocol manifest.</p>
+          <p>Corpus, models, prompts, repeats, contrasts, failure policy, and stopping rules are bound by one protocol manifest.</p>
         </div>
         <div>
-          <strong>Preserved evaluation</strong>
-          <p>The completed 400-incident evaluation is retained with its fixed
-            protocol, cell-level verdicts, run accounting, and replayable analyses.</p>
+          <strong>Preserved model evidence</strong>
+          <p>Of 4,800 primary evaluation cells over <span data-metric="MeasurementIncidentCount">400</span> incidents, <span data-metric="MeasurementPlanCells">4,798</span> produced a plan. <span data-metric="ProjectionParseErrors">2</span> responses failed parsing and are excluded from the plan denominator. Analysis replay uses preserved outputs, not new model calls. Public release remains blocked by privacy review.</p>
         </div>
       </div>
     </section>
 
+    <section class="demo" id="demo" aria-labelledby="demo-title">
+      <p class="section-number">04 / Synthetic demonstration</p>
+      <h2 id="demo-title">Inspect a proposal, its violations and its repair.</h2>
+      <p>The library example checks an ordered action list against two declared
+      rules. The recording shows actual CLI output with empty telemetry and no
+      model calls or executed response actions.</p>
+      <video controls preload="none" poster="assets/demos/posters/socpilot-synthetic-cli.jpg"
+             aria-label="SOCpilot synthetic CLI output inspection">
+        <source src="assets/demos/socpilot-synthetic-cli.webm" type="video/webm">
+        <track kind="captions" src="assets/demos/captions/socpilot-synthetic-cli.vtt"
+               srclang="en" label="English" default>
+        Your browser does not support embedded video. Read the transcript below.
+      </video>
+      <p class="demo-help">Use fullscreen to inspect JSON fields, or read the transcript.</p>
+      <details class="demo-transcript">
+        <summary>Read the transcript</summary>
+        <p>The example declares a proposal to reimage a host and then isolate it.
+        Its policy requires forensic collection before reimaging and prohibits
+        isolation. The original proposal violates both rules.</p>
+        <p>The verifier removes isolation and inserts forensic collection before
+        reimaging. The repaired list is <code>collect_forensics</code>, followed by
+        <code>reimage_host</code>. Both example rules pass, and a second enforcement
+        pass leaves the list unchanged.</p>
+        <p>This is a synthetic demonstration of plan verification. It does not
+        measure model behavior, analyst benefit or incident containment. The
+        browser displays the original CLI report with text selection for
+        readability; the recording is not an interactive response console.</p>
+      </details>
+    </section>
+
     <section class="release" id="release">
-      <p class="section-number">04 / Scientific release</p>
-      <h2>Public artifact release paused for privacy review.</h2>
-      <p>The evaluation and zero-cost replay package are complete, but the
-        artifact is intentionally unavailable while its publication boundary is
-        independently reviewed. A public release will return only after privacy,
-        provenance, and clean-room reproduction gates pass.</p>
+      <p class="section-number">05 / Scientific release</p>
+      <h2>Artifact release paused for privacy revalidation.</h2>
+      <p>The earlier public package is not an approved release surface. A new reviewer package will be published only after source-derived supporting telemetry is excluded, aggregate evidence is rebound, and the exact archive passes privacy and clean-environment reproduction gates.</p>
       <dl>
-        <div><dt>Paper</dt><dd><a href="https://arxiv.org/abs/2605.05501">Read the preprint</a></dd></div>
-        <div><dt>Code</dt><dd>Private during publication-safety review</dd></div>
-        <div><dt>Artifact</dt><dd>Release withheld pending independent privacy validation</dd></div>
-        <div><dt>Reproduction</dt><dd>Zero-cost replay prepared; public package withheld</dd></div>
+        <div><dt>Paper</dt><dd>Extended draft in progress</dd></div>
+        <div><dt>Code</dt><dd>Temporarily unavailable during release-boundary review</dd></div>
+        <div><dt>Artifact</dt><dd>Blocked until privacy and reproduction gates pass</dd></div>
+        <div><dt>arXiv</dt><dd>Identifier pending</dd></div>
       </dl>
     </section>
   </main>
 
   <footer>
     <span>SOCpilot research preview</span>
-    <span>Artifact release withheld until privacy validation is complete.</span>
+    <span>Preserved model evidence does not authorize public data release.</span>
+    <a href="https://sidneibarbieri.github.io/">Sidnei Barbieri</a>
   </footer>
 </body>
 </html>

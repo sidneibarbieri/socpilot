@@ -1,12 +1,12 @@
 :root {
-  --paper: #f4f0e7;
-  --ink: #17201f;
-  --muted: #65706c;
-  --line: #b9c1ba;
-  --accent: #315f66;
-  --accent-soft: #dbe7e4;
-  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  --sans: "Avenir Next", Avenir, "Helvetica Neue", sans-serif;
+  --paper: #f5f6f8;
+  --ink: #1b2430;
+  --muted: #5b6675;
+  --line: #dde2e8;
+  --accent: #2463d6;
+  --accent-soft: #e8eff5;
+  --serif: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --sans: "Inter", "Helvetica Neue", Arial, sans-serif;
 }
 
 * {
@@ -15,6 +15,32 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--ink);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 12px;
+  left: 24px;
+  z-index: 10;
+  padding: 12px 16px;
+  background: var(--ink);
+  color: var(--paper);
+  transform: translateY(-200%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
 }
 
 body {
@@ -39,10 +65,16 @@ a {
 }
 
 .wordmark {
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  font-weight: 700;
+  color: #0b1b33;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
   text-decoration: none;
+}
+
+.wordmark span {
+  color: var(--accent);
 }
 
 nav {
@@ -62,8 +94,8 @@ nav a {
   align-items: end;
   border-bottom: 1px solid var(--line);
   display: grid;
-  gap: 7vw;
-  grid-template-columns: minmax(300px, 0.8fr) minmax(520px, 1.2fr);
+  gap: clamp(32px, 4vw, 64px);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   min-height: calc(100svh - 76px);
   padding: 7vh clamp(24px, 5vw, 78px) 9vh;
 }
@@ -80,14 +112,14 @@ nav a {
 h1,
 h2 {
   font-family: var(--serif);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.04em;
   margin: 0;
 }
 
 h1 {
-  font-size: clamp(4.4rem, 9vw, 9.4rem);
-  line-height: 0.78;
+  font-size: clamp(3.2rem, 6.5vw, 7rem);
+  line-height: 1.02;
   margin: 4vh 0;
 }
 
@@ -116,6 +148,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
   margin-bottom: 7vh;
+  min-width: 0;
 }
 
 .stage {
@@ -123,6 +156,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0;
   min-height: 190px;
   padding: 20px 14px;
 }
@@ -152,13 +186,14 @@ h1 {
 
 .connector {
   align-self: center;
-  color: var(--accent);
+  color: var(--muted);
   padding: 0 8px;
 }
 
 .statement,
 .method,
 .evidence,
+.demo,
 .release {
   border-bottom: 1px solid var(--line);
   padding: clamp(72px, 11vw, 160px) clamp(24px, 8vw, 132px);
@@ -166,10 +201,42 @@ h1 {
 
 .statement h2,
 .method h2,
+.demo h2,
 .release h2 {
   font-size: clamp(2.5rem, 5vw, 5.8rem);
   line-height: 1.02;
   margin: 32px 0;
+}
+
+.demo > p,
+.demo-transcript {
+  max-width: 760px;
+  line-height: 1.55;
+}
+
+.demo video {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 32px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: white;
+}
+
+.demo-help {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.demo-transcript {
+  margin-top: 24px;
+}
+
+.demo-transcript summary {
+  width: fit-content;
+  padding: 12px 0;
+  cursor: pointer;
 }
 
 .statement > p:last-child,
@@ -196,6 +263,9 @@ ol {
 
 ol li {
   border-top: 1px solid var(--line);
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 104px minmax(0, 1fr);
   padding: 18px 0;
 }
 
@@ -206,7 +276,7 @@ ol li span {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  width: 120px;
+  width: auto;
 }
 
 .evidence-line {
@@ -253,7 +323,25 @@ dt {
 }
 
 dd {
+  line-height: 1.5;
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  ol li {
+    gap: 8px;
+    grid-template-columns: 1fr;
+  }
+
+  dl div {
+    gap: 8px;
+    grid-template-columns: 1fr;
+  }
+
+  ol li span {
+    display: block;
+    width: auto;
+  }
 }
 
 footer {
@@ -294,9 +382,41 @@ footer {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1500px) {
+  .hero {
+    align-items: start;
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .boundary-figure {
+    margin: 32px 0 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 12px;
+  }
+
   nav {
-    display: none;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+  }
+
+  nav a {
+    align-items: center;
+    display: flex;
+    min-height: 44px;
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 13vw, 4.4rem);
   }
 
   .hero {
@@ -330,4 +450,24 @@ footer {
   dl {
     margin-left: 0;
   }
+}
+
+/* Diagram roles carry the papers' meanings: blue structure and evidence,
+   green checked decision, orange proposal or assumption, red rejection.
+   The project accent marks the brand only. */
+:root {
+  --role-structure: #2b4c6f;
+  --role-check: #3e6b55;
+  --role-assumption: #9c6b24;
+  --role-reject: #8f3434;
+}
+.stage.role-structure { border-color: var(--role-structure); background: rgb(43 76 111 / 7%); }
+.stage.role-check { border-color: var(--role-check); background: rgb(62 107 85 / 8%); }
+.stage.role-assumption { border-color: var(--role-assumption); background: rgb(156 107 36 / 9%); }
+.stage.role-reject { border-color: var(--role-reject); background: rgb(143 52 52 / 7%); }
+
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
 }

@@ -1,0 +1,29 @@
+WEBVTT
+
+00:00.000 --> 00:06.000 line:0%
+SOCpilot: inspect a synthetic CLI example.
+No model calls or response actions are executed.
+
+00:06.000 --> 00:12.000 line:0%
+Inspect the declared proposal:
+reimage_host, then isolate_host.
+
+00:12.000 --> 00:22.000 line:0%
+Two example rules constrain this plan:
+preserve evidence and prohibit isolation.
+
+00:22.000 --> 00:32.000 line:0%
+The original proposal violates both rules.
+Each outcome identifies the rule and violation.
+
+00:32.000 --> 00:42.000 line:0%
+The verifier removes isolation
+and inserts forensics before reimaging.
+
+00:42.000 --> 00:50.000 line:0%
+The repaired plan passes both example rules.
+This result applies to the declared synthetic policy.
+
+00:50.000 --> 01:00.600 line:0%
+Inspect the repaired list and unchanged second pass.
+These are plan checks, not executed response actions.
