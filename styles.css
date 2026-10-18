@@ -471,3 +471,10 @@ footer {
   flex-wrap: wrap;
   gap: 10px 28px;
 }
+
+.release dd a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-underline-offset: 3px;
+}

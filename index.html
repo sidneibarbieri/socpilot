@@ -29,7 +29,7 @@
         <p class="lede">SOCpilot extracts an ordered action list from a model response and checks it against declared policy.</p>
         <p class="hero-links">
           <a class="text-link" href="#release">View release status <span>↓</span></a>
-          <a class="text-link" href="https://arxiv.org/abs/2605.05501">Read the preprint <span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://arxiv.org/abs/2605.05501">Read the earlier preprint <span aria-hidden="true">↗</span></a>
         </p>
       </div>
 
@@ -84,16 +84,16 @@
       <p class="section-number">03 / Evidence state</p>
       <div class="evidence-line">
         <div>
-          <strong>Deterministic replay</strong>
-          <p>Preserved inputs and outputs allow policy decisions and aggregate reports to be recomputed offline.</p>
+          <strong>Plans often violate policy</strong>
+          <p>Across two models and two prompt conditions, <span data-metric="MeasurementViolationRateMinPct">66.1</span>% to <span data-metric="MeasurementViolationRateMaxPct">80.4</span>% of plans for real incidents violate at least one fixed rule.</p>
         </div>
         <div>
-          <strong>Fixed before execution</strong>
-          <p>Corpus, models, prompts, repeats, contrasts, failure policy, and stopping rules are bound by one protocol manifest.</p>
+          <strong>Plausible is not compliant</strong>
+          <p>A model judge given the same incident and plan accepts <span data-metric="SeparationJudgeFalseAcceptPct">70.5</span>% of the plans the deterministic check rejects.</p>
         </div>
         <div>
-          <strong>Preserved model evidence</strong>
-          <p>Of 4,800 primary evaluation cells over <span data-metric="MeasurementIncidentCount">400</span> incidents, <span data-metric="MeasurementPlanCells">4,798</span> produced a plan. <span data-metric="ProjectionParseErrors">2</span> responses failed parsing and are excluded from the plan denominator. Analysis replay uses preserved outputs, not new model calls. Public release remains blocked by privacy review.</p>
+          <strong>Normalized triggers transfer</strong>
+          <p>Anchored to raw detector strings instead of behavior classes, <span data-metric="NormAblationStringAnchoredCollapsed">4</span> of <span data-metric="NormAblationTransferRules">8</span> transfer rules stop applying on the held-out batch. Every reported decision replays offline from <span data-metric="MeasurementPlanCells">4,798</span> preserved plans for <span data-metric="MeasurementIncidentCount">400</span> incidents; <span data-metric="ProjectionParseErrors">2</span> unparseable responses stay outside the denominator.</p>
         </div>
       </div>
     </section>
@@ -130,20 +130,20 @@
 
     <section class="release" id="release">
       <p class="section-number">05 / Scientific release</p>
-      <h2>Artifact release paused for privacy revalidation.</h2>
-      <p>The earlier public package is not an approved release surface. A new reviewer package will be published only after source-derived supporting telemetry is excluded, aggregate evidence is rebound, and the exact archive passes privacy and clean-environment reproduction gates.</p>
+      <h2>The evaluation package is under release review.</h2>
+      <p>The incidents come from a production security operations center, so the reviewer package is published only after its exact bytes pass privacy review with the data owner and a clean-environment reproduction.</p>
       <dl>
-        <div><dt>Paper</dt><dd>Extended draft in progress</dd></div>
-        <div><dt>Code</dt><dd>Temporarily unavailable during release-boundary review</dd></div>
-        <div><dt>Artifact</dt><dd>Blocked until privacy and reproduction gates pass</dd></div>
-        <div><dt>arXiv</dt><dd>Identifier pending</dd></div>
+        <div><dt>Paper</dt><dd>Revised manuscript in preparation</dd></div>
+        <div><dt>Code</dt><dd>Released with the reviewer package</dd></div>
+        <div><dt>Artifact</dt><dd>Under privacy and reproduction review</dd></div>
+        <div><dt>arXiv</dt><dd><a href="https://arxiv.org/abs/2605.05501">2605.05501</a>, an earlier version of this work</dd></div>
       </dl>
     </section>
   </main>
 
   <footer>
     <span>SOCpilot research preview</span>
-    <span>Preserved model evidence does not authorize public data release.</span>
+    <span>Generation is probabilistic; policy checking need not be.</span>
     <a href="https://sidneibarbieri.github.io/">Sidnei Barbieri</a>
   </footer>
 </body>
