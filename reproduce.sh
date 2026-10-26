@@ -37,6 +37,57 @@ else:
 PY
 }
 
+restore_archive_campaign_links() {
+  "${PYTHON}" - <<'PY'
+import json
+import os
+from pathlib import Path
+
+root = Path.cwd()
+manifest_path = root / "artifact_outputs/analysis/corpus_campaign.json"
+if manifest_path.is_file():
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    def confined_path(relative):
+        path = Path(relative)
+        if path.is_absolute() or ".." in path.parts or not path.parts:
+            raise ValueError(f"Invalid campaign path: {relative}")
+        resolved = (root / path).resolve()
+        if root not in resolved.parents:
+            raise ValueError(f"Campaign path escapes the artifact: {relative}")
+        return root / path
+
+    view = confined_path(manifest["view_path"])
+    expected = {}
+    for incident_id, label in manifest["incident_partitions"].items():
+        if Path(incident_id).name != incident_id:
+            raise ValueError("Invalid incident identifier in campaign manifest")
+        source = confined_path(manifest["partitions"][label]["source_path"]) / incident_id
+        if not source.is_dir():
+            raise FileNotFoundError(f"Campaign source is missing: {incident_id}")
+        expected[view / incident_id] = os.path.relpath(source, view)
+    flattened = []
+    for link, target in expected.items():
+        if link.is_symlink():
+            if os.readlink(link) != target:
+                raise ValueError(f"Campaign link target changed: {link.name}")
+        elif link.is_file() and link.read_text(encoding="utf-8") == target:
+            flattened.append((link, target))
+        else:
+            raise ValueError(f"Campaign link is neither intact nor archive-flattened: {link.name}")
+    if flattened and len(flattened) != len(expected):
+        raise ValueError("Campaign archive contains mixed link representations")
+    for link, target in flattened:
+        link.unlink()
+        link.symlink_to(target, target_is_directory=True)
+    if flattened:
+        print(f"Restored {len(flattened)} archive-flattened campaign links.")
+PY
+}
+
+if [[ "${1:-help}" != "help" && "${1:-help}" != "--help" ]]; then
+  restore_archive_campaign_links
+fi
+
 show_help() {
   printf 'Usage:\n  bash %s <command> [options]\n\n' "$(basename "${BASH_SOURCE[0]}")"
   if [[ "$(artifact_stage)" == "pre_execution_source" ]]; then
