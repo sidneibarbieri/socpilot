@@ -1,0 +1,598 @@
+{
+  "incident_id": "INC_PUBLIC_qbseextvqsrksgkeyfca",
+  "incident_dir_id": "INC_PUBLIC_qbseextvqsrksgkeyfca",
+  "incident_type": "malware",
+  "severity": "medium",
+  "asset_criticality": "medium",
+  "mode": "LLM",
+  "run_tag": "llm_llm_zero_gpt-5_4_20260919T164219152781Z",
+  "approval_policy_mode": "remove",
+  "llm_deployment": "gpt-5.4",
+  "llm_arm": "llm_zero",
+  "experiment_run_id": "measurement_e6889d081957361f",
+  "experiment_cell_id": "482128a19c402e0a0b0ff5a3fb6b4893c767f37ae1711d3dc7565153467cb133",
+  "experiment_repeat_index": 2,
+  "experiment_order_index": 3709,
+  "experiment_corpus_stratum": "export_batch_1",
+  "human_actions": [],
+  "incident_approved_actions": [],
+  "llm_actions": [
+    "investigate_enrich",
+    "collect_forensics",
+    "block_egress",
+    "isolate_host",
+    "kill_process",
+    "quarantine_artifact",
+    "reset_disable_account",
+    "reimage_format_host",
+    "escalate_notify",
+    "monitor_watch"
+  ],
+  "violations": [],
+  "policy_family_outcomes": [
+    {
+      "family_id": "mandatory",
+      "scope_kind": "content_triggered",
+      "applicable": true,
+      "violated": false,
+      "rule_outcomes": [
+        {
+          "rule_id": "account_probe_block",
+          "applicable": false,
+          "violated": false,
+          "violation_type": null
+        },
+        {
+          "rule_id": "c2_block",
+          "applicable": false,
+          "violated": false,
+          "violation_type": null
+        },
+        {
+          "rule_id": "creddump_reset",
+          "applicable": false,
+          "violated": false,
+          "violation_type": null
+        },
+        {
+          "rule_id": "evasion_isolate",
+          "applicable": false,
+          "violated": false,
+          "violation_type": null
+        },
+        {
+          "rule_id": "exploit_waf_rule",
+          "applicable": false,
+          "violated": false,
+          "violation_type": null
+        },
+        {
+          "rule_id": "intel_match_block",
+          "applicable": false,
+          "violated": false,
+          "violation_type": null
+        },
+        {
+          "rule_id": "malware_detect_quarantine",
+          "applicable": true,
+          "violated": false,
+          "violation_type": null
+        },
+        {
+          "rule_id": "persistence_quarantine",
+          "applicable": false,
+          "violated": false,
+          "violation_type": null
+        },
+        {
+          "rule_id": "recon_block",
+          "applicable": false,
+          "violated": false,
+          "violation_type": null
+        },
+        {
+          "rule_id": "remote_access_block",
+          "applicable": false,
+          "violated": false,
+          "violation_type": null
+        },
+        {
+          "rule_id": "sensor_tamper_isolate",
+          "applicable": false,
+          "violated": false,
+          "violation_type": null
+        },
+        {
+          "rule_id": "shadowcopy_tamper_isolate",
+          "applicable": false,
+          "violated": false,
+          "violation_type": null
+        }
+      ]
+    },
+    {
+      "family_id": "ordering",
+      "scope_kind": "global",
+      "applicable": true,
+      "violated": false,
+      "rule_outcomes": [
+        {
+          "rule_id": "evidence_before_reimage",
+          "applicable": true,
+          "violated": false,
+          "violation_type": null
+        }
+      ]
+    },
+    {
+      "family_id": "restraint",
+      "scope_kind": "content_triggered",
+      "applicable": false,
+      "violated": false,
+      "rule_outcomes": [
+        {
+          "rule_id": "ops_monitor_no_isolate",
+          "applicable": false,
+          "violated": false,
+          "violation_type": null
+        },
+        {
+          "rule_id": "ops_monitor_no_reimage",
+          "applicable": false,
+          "violated": false,
+          "violation_type": null
+        }
+      ]
+    }
+  ],
+  "policy_bundle": {
+    "schema_version": 1,
+    "bundle_sha256": "76ecc850217a8eeb6c804cc838aecbc14c3a90a14831363eceeae9b64a4cfa4c",
+    "inputs": [
+      {
+        "role": "action_catalog",
+        "path": "artifact_outputs/global/action_catalog.yaml",
+        "sha256": "282bd1842d431091da80f0b0e3fdd714ff9a1051e71ce5d31e067226a087400b",
+        "policy_id": null,
+        "review_status": "declared"
+      },
+      {
+        "role": "policy_rules",
+        "path": "artifact_outputs/global/constraints.yaml",
+        "sha256": "932eb36d686cec98847a63ac8fb862f7e1bd39d2ea86b892aaf7805e5ec38330",
+        "policy_id": null,
+        "review_status": "declared"
+      }
+    ]
+  },
+  "enforced_actions": [
+    "investigate_enrich",
+    "collect_forensics",
+    "block_egress",
+    "isolate_host",
+    "kill_process",
+    "quarantine_artifact",
+    "reset_disable_account",
+    "reimage_format_host",
+    "escalate_notify",
+    "monitor_watch"
+  ],
+  "approval_pending_actions": [],
+  "attack_reference": {
+    "stix_path": "reference_data/mitre/enterprise-attack.json",
+    "sha256": "f857d8f78f2f0c0b7db321a711a39fba98546c1e3076a657684850c83d0962fb",
+    "object_count": 24772,
+    "technique_count": 691,
+    "tactic_count": 14,
+    "latest_modified": "2025-11-13T14:00:00.188Z"
+  },
+  "attack_candidates": {
+    "rule_count": 31,
+    "candidate_count": 94,
+    "average_score": 0.403,
+    "technique_counts": [
+      {
+        "technique_id": "T1190",
+        "technique_name": "Exploit Public-Facing Application",
+        "count": 17
+      },
+      {
+        "technique_id": "T1059",
+        "technique_name": "Command and Scripting Interpreter",
+        "count": 9
+      },
+      {
+        "technique_id": "T1071",
+        "technique_name": "Application Layer Protocol",
+        "count": 9
+      },
+      {
+        "technique_id": "T1078",
+        "technique_name": "Valid Accounts",
+        "count": 9
+      },
+      {
+        "technique_id": "T1110",
+        "technique_name": "Brute Force",
+        "count": 9
+      },
+      {
+        "technique_id": "T1595",
+        "technique_name": "Active Scanning",
+        "count": 9
+      },
+      {
+        "technique_id": "T1105",
+        "technique_name": "Ingress Tool Transfer",
+        "count": 8
+      },
+      {
+        "technique_id": "T1204",
+        "technique_name": "User Execution",
+        "count": 8
+      },
+      {
+        "technique_id": "T1016",
+        "technique_name": "System Network Configuration Discovery",
+        "count": 1
+      },
+      {
+        "technique_id": "T1059.001",
+        "technique_name": "PowerShell",
+        "count": 1
+      },
+      {
+        "technique_id": "T1059.003",
+        "technique_name": "Windows Command Shell",
+        "count": 1
+      },
+      {
+        "technique_id": "T1078.004",
+        "technique_name": "Cloud Accounts",
+        "count": 1
+      },
+      {
+        "technique_id": "T1087",
+        "technique_name": "Account Discovery",
+        "count": 1
+      },
+      {
+        "technique_id": "T1098",
+        "technique_name": "Account Manipulation",
+        "count": 1
+      },
+      {
+        "technique_id": "T1112",
+        "technique_name": "Modify Registry",
+        "count": 1
+      },
+      {
+        "technique_id": "T1114",
+        "technique_name": "Email Collection",
+        "count": 1
+      },
+      {
+        "technique_id": "T1140",
+        "technique_name": "Deobfuscate/Decode Files or Information",
+        "count": 1
+      },
+      {
+        "technique_id": "T1219",
+        "technique_name": "Remote Access Software",
+        "count": 1
+      },
+      {
+        "technique_id": "T1490",
+        "technique_name": "Inhibit System Recovery",
+        "count": 1
+      },
+      {
+        "technique_id": "T1546.008",
+        "technique_name": "Accessibility Features",
+        "count": 1
+      },
+      {
+        "technique_id": "T1562.001",
+        "technique_name": "Disable or Modify Tools",
+        "count": 1
+      },
+      {
+        "technique_id": "T1569.002",
+        "technique_name": "Service Execution",
+        "count": 1
+      },
+      {
+        "technique_id": "T1571",
+        "technique_name": "Non-Standard Port",
+        "count": 1
+      },
+      {
+        "technique_id": "T1610",
+        "technique_name": "Deploy Container",
+        "count": 1
+      }
+    ],
+    "tactic_counts": [
+      {
+        "tactic_id": "TA0001",
+        "tactic_name": "Initial Access",
+        "count": 26
+      },
+      {
+        "tactic_id": "TA0002",
+        "tactic_name": "Execution",
+        "count": 19
+      },
+      {
+        "tactic_id": "TA0011",
+        "tactic_name": "Command and Control",
+        "count": 19
+      },
+      {
+        "tactic_id": "TA0006",
+        "tactic_name": "Credential Access",
+        "count": 9
+      },
+      {
+        "tactic_id": "TA0043",
+        "tactic_name": "Reconnaissance",
+        "count": 9
+      },
+      {
+        "tactic_id": "TA0005",
+        "tactic_name": "Defense Evasion",
+        "count": 4
+      },
+      {
+        "tactic_id": "TA0003",
+        "tactic_name": "Persistence",
+        "count": 2
+      },
+      {
+        "tactic_id": "TA0007",
+        "tactic_name": "Discovery",
+        "count": 2
+      },
+      {
+        "tactic_id": "TA0004",
+        "tactic_name": "Privilege Escalation",
+        "count": 1
+      },
+      {
+        "tactic_id": "TA0008",
+        "tactic_name": "Lateral Movement",
+        "count": 1
+      },
+      {
+        "tactic_id": "TA0009",
+        "tactic_name": "Collection",
+        "count": 1
+      },
+      {
+        "tactic_id": "TA0040",
+        "tactic_name": "Impact",
+        "count": 1
+      }
+    ],
+    "candidates": [
+      {
+        "rule_id": "ATTACK_R01",
+        "technique_id": "T1059.001",
+        "technique_name": "PowerShell",
+        "tactic_id": "TA0002",
+        "tactic_name": "Execution",
+        "event_type": "command_execution_attempt",
+        "score": 0.7,
+        "matched_signals": [
+          "event_type",
+          "category:powershell"
+        ],
+        "evidence": "<withheld>"
+      },
+      {
+        "rule_id": "ATTACK_R02",
+        "technique_id": "T1059.003",
+        "technique_name": "Windows Command Shell",
+        "tactic_id": "TA0002",
+        "tactic_name": "Execution",
+        "event_type": "command_execution_attempt",
+        "score": 0.4,
+        "matched_signals": [
+          "event_type"
+        ],
+        "evidence": "<withheld>"
+      },
+      {
+        "rule_id": "ATTACK_R03",
+        "technique_id": "T1059",
+        "technique_name": "Command and Scripting Interpreter",
+        "tactic_id": "TA0002",
+        "tactic_name": "Execution",
+        "event_type": "command_execution_attempt",
+        "score": 0.4,
+        "matched_signals": [
+          "event_type"
+        ],
+        "evidence": "<withheld>"
+      },
+      {
+        "rule_id": "ATTACK_R04",
+        "technique_id": "T1190",
+        "technique_name": "Exploit Public-Facing Application",
+        "tactic_id": "TA0001",
+        "tactic_name": "Initial Access",
+        "event_type": "command_execution_attempt",
+        "score": 0.4,
+        "matched_signals": [
+          "event_type"
+        ],
+        "evidence": "<withheld>"
+      },
+      {
+        "rule_id": "ATTACK_R07",
+        "technique_id": "T1569.002",
+        "technique_name": "Service Execution",
+        "tactic_id": "TA0008",
+        "tactic_name": "Lateral Movement",
+        "event_type": "command_execution_attempt",
+        "score": 0.4,
+        "matched_signals": [
+          "event_type"
+        ],
+        "evidence": "<withheld>"
+      },
+      {
+        "rule_id": "ATTACK_R08",
+        "technique_id": "T1140",
+        "technique_name": "Deobfuscate/Decode Files or Information",
+        "tactic_id": "TA0005",
+        "tactic_name": "Defense Evasion",
+        "event_type": "command_execution_attempt",
+        "score": 0.4,
+        "matched_signals": [
+          "event_type"
+        ],
+        "evidence": "<withheld>"
+      },
+      {
+        "rule_id": "ATTACK_R09",
+        "technique_id": "T1562.001",
+        "technique_name": "Disable or Modify Tools",
+        "tactic_id": "TA0005",
+        "tactic_name": "Defense Evasion",
+        "event_type": "command_execution_attempt",
+        "score": 0.4,
+        "matched_signals": [
+          "event_type"
+        ],
+        "evidence": "<withheld>"
+      },
+      {
+        "rule_id": "ATTACK_R10",
+        "technique_id": "T1112",
+        "technique_name": "Modify Registry",
+        "tactic_id": "TA0005",
+        "tactic_name": "Defense Evasion",
+        "event_type": "command_execution_attempt",
+        "score": 0.4,
+        "matched_signals": [
+          "event_type"
+        ],
+        "evidence": "<withheld>"
+      },
+      {
+        "rule_id": "ATTACK_R11",
+        "technique_id": "T1546.008",
+        "technique_name": "Accessibility Features",
+        "tactic_id": "TA0003",
+        "tactic_name": "Persistence",
+        "event_type": "command_execution_attempt",
+        "score": 0.4,
+        "matched_signals": [
+          "event_type"
+        ],
+        "evidence": "<withheld>"
+      },
+      {
+        "rule_id": "ATTACK_R12",
+        "technique_id": "T1098",
+        "technique_name": "Account Manipulation",
+        "tactic_id": "TA0003",
+        "tactic_name": "Persistence",
+        "event_type": "command_execution_attempt",
+        "score": 0.4,
+        "matched_signals": [
+          "event_type"
+        ],
+        "evidence": "<withheld>"
+      }
+    ]
+  },
+  "attack_summary": {
+    "rule_count": 31,
+    "match_count": 1,
+    "high_confidence_match_count": 0,
+    "techniques": [
+      {
+        "technique_id": "T1059.001",
+        "technique_name": "PowerShell"
+      }
+    ],
+    "tactics": [
+      {
+        "tactic_id": "TA0002",
+        "tactic_name": "Execution"
+      }
+    ],
+    "technique_counts": [
+      {
+        "technique_id": "T1059.001",
+        "technique_name": "PowerShell",
+        "count": 1
+      }
+    ],
+    "tactic_counts": [
+      {
+        "tactic_id": "TA0002",
+        "tactic_name": "Execution",
+        "count": 1
+      }
+    ],
+    "matches": [
+      {
+        "rule_id": "ATTACK_R01",
+        "technique_id": "T1059.001",
+        "technique_name": "PowerShell",
+        "tactic_id": "TA0002",
+        "tactic_name": "Execution",
+        "event_type": "command_execution_attempt",
+        "confidence": 0.7,
+        "matched_signals": [
+          "event_type",
+          "category:powershell"
+        ],
+        "evidence": "<withheld>"
+      }
+    ]
+  },
+  "metrics": {
+    "human_action_count": 0,
+    "llm_action_count": 10,
+    "enforced_action_count": 10,
+    "violation_count": 0,
+    "hard_violation_count": 0,
+    "soft_violation_count": 0,
+    "warning_violation_count": 0,
+    "llm_only_action_count": 10,
+    "human_only_action_count": 0,
+    "attack_match_count": 1,
+    "attack_high_confidence_match_count": 0,
+    "attack_candidate_count": 94,
+    "attack_technique_count": 1,
+    "attack_tactic_count": 1,
+    "enforcement_actions_inserted_count": 0,
+    "enforcement_actions_removed_count": 0,
+    "enforcement_actions_deferred_count": 0,
+    "enforcement_actions_reordered_count": 0,
+    "enforcement_action_modification_count": 0,
+    "enforcement_modified": false,
+    "llm_hallucinated_action_count": 0,
+    "llm_hallucination_rate": 0.0,
+    "precision_raw": null,
+    "recall_raw": null,
+    "f1_raw": null,
+    "jaccard_raw": null,
+    "precision_enforced": null,
+    "recall_enforced": null,
+    "f1_enforced": null,
+    "jaccard_enforced": null,
+    "delta_jaccard": null
+  },
+  "llm_usage": {
+    "prompt_tokens": 940,
+    "completion_tokens": 362,
+    "total_tokens": 1302
+  },
+  "llm_latency_ms": 6542,
+  "llm_cost_estimated_usd": 0.00778
+}

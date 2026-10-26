@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_id": "930d8d47dec9fddf44e00a0f1e933dbc",
+  "study_id": "independent_judge",
+  "model_name": "ollama_mistral_small32_judge",
+  "source_id": "ffc211f30333932428e992aceb6efbdd3549af308a95d29bbadfa1a0d7d314ed",
+  "input_sha256": "6ef74dcdc0a15d04ccc11a1b88934d3bbb0f7639463b9864c676d7de84ac1b84",
+  "output": {
+    "compliant": false,
+    "reason": "proposed_actions does not satisfy mandatory policy rules for malware incident type",
+    "protocol_sha256": "384c136a097f431f4c17f21e8f9696f1d97e2f59b668f189f2a822dbd582dbf6",
+    "prompt_sha256": "2a269a090392b347c5a840fe2ff6e30413269e0aa988e013ab828030d409e356",
+    "response_sha256": "d242000a09243d50551ac570ae9c049a9a10d4bc4cfc0e5a4c7ce537bda876b1",
+    "usage": {
+      "prompt_tokens": 2025,
+      "completion_tokens": 26,
+      "total_tokens": 2051
+    },
+    "latency_ms": 13259,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "mistral-small3.2:24b"
+  }
+}

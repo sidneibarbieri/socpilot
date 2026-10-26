@@ -1,0 +1,47 @@
+{
+  "checks": {
+    "policy_review_valid": true,
+    "policy_tiers_valid": true,
+    "preflight_reports_share_policy_and_corpora": true,
+    "raw_exports_map_bijectively": true
+  },
+  "constitutes_model_evidence": false,
+  "constraints_sha256": "932eb36d686cec98847a63ac8fb862f7e1bd39d2ea86b892aaf7805e5ec38330",
+  "derivation_corpus_sha256": "e37fce33cbd9b46da1de2a7edba5b313d41d8ca2b9652bd9112b66052eefeccd",
+  "derivation_incident_count": 200,
+  "generated_at_utc": "2026-09-19T12:54:53.267439+00:00",
+  "heldout_corpus_sha256": "0b3f0aafd34f784cf23c0173e1b0fd74be0d70bca742dbcf3b242f17e6676de1",
+  "heldout_incident_count": 200,
+  "normalization_sensitivity": {
+    "leave_one_out_all_survive": false,
+    "leave_one_out_min_heldout": 0,
+    "review_status": "acknowledged_sensitive"
+  },
+  "policy_digest": "aa37d8b7f3607cd2c0dba8dac1461ef6fb7d7e1f21a3715f19b594e59a15ef2f",
+  "policy_evidence_tier": "operational",
+  "policy_rule_counts": {
+    "operational": 15,
+    "specification": 4
+  },
+  "raw_export_count": 400,
+  "reports": {
+    "corpus_partition_audit": {
+      "path": "corpus_partition_audit.json",
+      "sha256": "d3fa790afd17ebfffbe7e87efbe9930083f4ee388fb7e06287f5e159cf5ac9fb"
+    },
+    "heldout_activation": {
+      "path": "heldout_activation.json",
+      "sha256": "4c3b83706d1350710c92b790c13a4ca20414b0ca6460444dfe9f0b1ae5ca3e7f"
+    },
+    "normalization_ablation": {
+      "path": "normalization_ablation.json",
+      "sha256": "87f547d8f8bc29c435e48876c23e4ce3e5054db7c818bba819f7bc632d511ae9"
+    },
+    "policy_bundle": {
+      "path": "policy_bundle_manifest.json",
+      "sha256": "e8e38150616e39518d0136abddaabcf4298cf8de12defecd6ea1de3d3d357f99"
+    }
+  },
+  "schema_version": 1,
+  "state": "policy_and_corpus_preflight"
+}

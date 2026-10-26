@@ -1,0 +1,60 @@
+# Azure replacement study; the interrupted OpenAI study remains separate.
+- name: azure_gpt54
+  deployment: gpt-5.4
+  provider: azure_openai
+  model: gpt-5.4-2026-03-05
+  api_version: "2024-10-21"
+  azure_token_parameter: max_completion_tokens
+  enabled: true
+  prompt_price_per_1k_usd: 0.0025
+  completion_price_per_1k_usd: 0.015
+  pricing_source_url: https://devblogs.microsoft.com/foundry/whats-new-in-microsoft-foundry-mar-2026/
+  pricing_verified_on: "2026-09-19"
+  planning_prompt_tokens: 3500
+  planning_completion_tokens: 1200
+
+- name: openai_gpt55
+  deployment: gpt-5.5-2026-04-23
+  provider: openai
+  model: gpt-5.5-2026-04-23
+  api_version: ""
+  enabled: false
+  prompt_price_per_1k_usd: 0.005
+  completion_price_per_1k_usd: 0.03
+  pricing_source_url: https://developers.openai.com/api/docs/models/gpt-5.5
+  pricing_verified_on: "2026-08-27"
+  planning_prompt_tokens: 3500
+  planning_completion_tokens: 1200
+
+- name: ollama_qwen36
+  deployment: qwen3.6:latest
+  provider: ollama
+  billing_mode: local
+  model: qwen3.6:latest
+  model_digest: 096fdbd02fe620fc10cbeb6537e080f8041aece851e5d696aed024d4f70f2e47
+  thinking: false
+  response_format: text
+  enabled: true
+  prompt_price_per_1k_usd: 0
+  completion_price_per_1k_usd: 0
+  pricing_source_url: https://ollama.com/library/qwen3.6
+  pricing_verified_on: "2026-08-27"
+  planning_prompt_tokens: 3500
+  planning_completion_tokens: 800
+
+# Selected explicitly by diagnostic studies; excluded from primary-model defaults.
+- name: ollama_mistral_small32_judge
+  deployment: mistral-small3.2:24b
+  provider: ollama
+  billing_mode: local
+  model: mistral-small3.2:24b
+  model_digest: 5a408ab55df5c1b5cf46533c368813b30bf9e4d8fc39263bf2a3338cfa3b895b
+  thinking: false
+  response_format: json
+  enabled: false
+  prompt_price_per_1k_usd: 0
+  completion_price_per_1k_usd: 0
+  pricing_source_url: https://ollama.com/library/mistral-small3.2:24b
+  pricing_verified_on: "2026-08-27"
+  planning_prompt_tokens: 4000
+  planning_completion_tokens: 400

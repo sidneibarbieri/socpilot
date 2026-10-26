@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "task_id": "d7d5fd2a3c15d083fc037c65b7e055fa",
+  "study_id": "projection_fidelity",
+  "model_name": "azure_gpt54",
+  "source_id": "reorder_forensics_first",
+  "input_sha256": "039aa288f40258f4e08b3b7352f1d508d3e3fe3011d1a4f9b7c4a69dedf0796f",
+  "output": {
+    "extracted_actions": [
+      "collect_forensics",
+      "reimage_format_host",
+      "escalate_notify"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "1f58140e73f0cb7c10b9de0d0fa2ef17a2a0ca6b8863b58254a5978f2a4b9079",
+    "response_sha256": "f837890f34e0a1908256caec5d170381314da1a47fe16dae56b85b16b2a498b2",
+    "usage": {
+      "prompt_tokens": 281,
+      "completion_tokens": 22,
+      "total_tokens": 303
+    },
+    "latency_ms": 2034,
+    "estimated_cost_usd": 0.001032,
+    "returned_model": "gpt-5.4-2026-03-05"
+  }
+}

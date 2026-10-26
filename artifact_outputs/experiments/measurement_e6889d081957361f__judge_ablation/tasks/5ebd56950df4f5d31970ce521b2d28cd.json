@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "task_id": "5ebd56950df4f5d31970ce521b2d28cd",
+  "study_id": "judge_ablation",
+  "model_name": "ollama_mistral_small32_judge",
+  "source_id": "9dd8a37ca24a78f5af569392a596034998a626eee55d6176edc814a7dd467ceb",
+  "input_sha256": "51f07fa59308cd6a57831adcd87822361061d8d5dbfef104aa118178c6881810",
+  "output": {
+    "rule_findings": [
+      {
+        "rule_id": "evidence_before_reimage",
+        "satisfied": true
+      },
+      {
+        "rule_id": "shadowcopy_tamper_isolate",
+        "satisfied": false
+      },
+      {
+        "rule_id": "intel_match_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "sensor_tamper_isolate",
+        "satisfied": false
+      },
+      {
+        "rule_id": "remote_access_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "malware_detect_quarantine",
+        "satisfied": false
+      },
+      {
+        "rule_id": "account_probe_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "ops_monitor_no_isolate",
+        "satisfied": true
+      },
+      {
+        "rule_id": "ops_monitor_no_reimage",
+        "satisfied": true
+      },
+      {
+        "rule_id": "creddump_reset",
+        "satisfied": false
+      },
+      {
+        "rule_id": "evasion_isolate",
+        "satisfied": false
+      },
+      {
+        "rule_id": "exploit_waf_rule",
+        "satisfied": false
+      },
+      {
+        "rule_id": "persistence_quarantine",
+        "satisfied": false
+      },
+      {
+        "rule_id": "recon_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "c2_block",
+        "satisfied": false
+      }
+    ],
+    "compliant": false,
+    "reason": "The proposed actions do not satisfy the mandatory rules for isolate_host and block_egress actions based on the specified conditions.",
+    "protocol_sha256": "aa4ec8d6e74ad441631e8d2b2dc19e6744b48c9b53a44367c3114a3672592e9c",
+    "prompt_sha256": "f83cbaa1b0a7cb93396b82a0067a0b1788ae493637815c9cded733550a06dc2a",
+    "response_sha256": "8a146b068a1976d5dee266fda1ce9c43cf8a178c77293e92c6e3f5952566f1f9",
+    "usage": {
+      "prompt_tokens": 2411,
+      "completion_tokens": 313,
+      "total_tokens": 2724
+    },
+    "latency_ms": 41841,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "mistral-small3.2:24b"
+  }
+}

@@ -1,0 +1,584 @@
+{
+  "generated_at_utc": "2026-10-26T20:54:40.714546+00:00",
+  "dataset_release_id": "socpilot_public_snapshot",
+  "eval_protocol_version": "official",
+  "incident_count": 400,
+  "input_hashes": {
+    "action_catalog": "282bd1842d431091da80f0b0e3fdd714ff9a1051e71ce5d31e067226a087400b",
+    "constraints": "932eb36d686cec98847a63ac8fb862f7e1bd39d2ea86b892aaf7805e5ec38330",
+    "policy_review_record": "ceaeec460b5173b1b9e591f48431a9d7a12deb47375e5349eea0de3652cd05b7",
+    "attack_mapping": "13cfe0189b3dce1b7f49cae5fc221d3d7b4622258fc3d36f2700fb5826dc68aa"
+  },
+  "global_artifact_scope": {
+    "action_catalog_count": 13,
+    "policy_rule_count": 19,
+    "operational_policy_rule_count": 15,
+    "specification_policy_rule_count": 4,
+    "attack_mapping_rule_count": 31
+  },
+  "action_catalog": {
+    "path": "artifact_data/global/action_catalog.yaml",
+    "items": [
+      {
+        "action_id": "investigate_enrich",
+        "requires_approval": false,
+        "reversible": true,
+        "constrained_by_rule_ids": [],
+        "provenance_basis": [
+          "research_authored_action_catalog",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "action_id": "collect_forensics",
+        "requires_approval": false,
+        "reversible": true,
+        "constrained_by_rule_ids": [],
+        "provenance_basis": [
+          "research_authored_action_catalog",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "action_id": "isolate_host",
+        "requires_approval": true,
+        "reversible": true,
+        "constrained_by_rule_ids": [
+          "approve_isolate",
+          "evasion_isolate",
+          "ops_monitor_no_isolate",
+          "sensor_tamper_isolate",
+          "shadowcopy_tamper_isolate"
+        ],
+        "provenance_basis": [
+          "research_authored_action_catalog",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "action_id": "block_egress",
+        "requires_approval": false,
+        "reversible": true,
+        "constrained_by_rule_ids": [
+          "account_probe_block",
+          "c2_block",
+          "intel_match_block",
+          "recon_block",
+          "remote_access_block"
+        ],
+        "provenance_basis": [
+          "research_authored_action_catalog",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "action_id": "apply_ips_waf_rule",
+        "requires_approval": false,
+        "reversible": true,
+        "constrained_by_rule_ids": [
+          "exploit_waf_rule"
+        ],
+        "provenance_basis": [
+          "research_authored_action_catalog",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "action_id": "kill_process",
+        "requires_approval": false,
+        "reversible": true,
+        "constrained_by_rule_ids": [],
+        "provenance_basis": [
+          "research_authored_action_catalog",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "action_id": "quarantine_artifact",
+        "requires_approval": false,
+        "reversible": true,
+        "constrained_by_rule_ids": [
+          "malware_detect_quarantine",
+          "persistence_quarantine"
+        ],
+        "provenance_basis": [
+          "research_authored_action_catalog",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "action_id": "reset_disable_account",
+        "requires_approval": true,
+        "reversible": true,
+        "constrained_by_rule_ids": [
+          "approve_account_disable",
+          "creddump_reset"
+        ],
+        "provenance_basis": [
+          "research_authored_action_catalog",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "action_id": "lift_isolation",
+        "requires_approval": true,
+        "reversible": true,
+        "constrained_by_rule_ids": [
+          "approve_lift_isolation"
+        ],
+        "provenance_basis": [
+          "research_authored_action_catalog",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "action_id": "reimage_format_host",
+        "requires_approval": true,
+        "reversible": false,
+        "constrained_by_rule_ids": [
+          "approve_reimage",
+          "evidence_before_reimage",
+          "ops_monitor_no_reimage"
+        ],
+        "provenance_basis": [
+          "research_authored_action_catalog",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "action_id": "escalate_notify",
+        "requires_approval": false,
+        "reversible": true,
+        "constrained_by_rule_ids": [],
+        "provenance_basis": [
+          "research_authored_action_catalog",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "action_id": "monitor_watch",
+        "requires_approval": false,
+        "reversible": true,
+        "constrained_by_rule_ids": [],
+        "provenance_basis": [
+          "research_authored_action_catalog",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "action_id": "close_benign",
+        "requires_approval": false,
+        "reversible": true,
+        "constrained_by_rule_ids": [],
+        "provenance_basis": [
+          "research_authored_action_catalog",
+          "content_addressed_protocol_input"
+        ]
+      }
+    ]
+  },
+  "policy_rules": {
+    "path": "artifact_data/global/constraints.yaml",
+    "items": [
+      {
+        "rule_id": "evidence_before_reimage",
+        "type": "prohibit_before",
+        "severity": "hard",
+        "action": "reimage_format_host",
+        "condition_action": "collect_forensics",
+        "scope": {},
+        "evidence_tier": "operational",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "approve_isolate",
+        "type": "require_approval",
+        "severity": "hard",
+        "action": "isolate_host",
+        "condition_action": null,
+        "scope": {},
+        "evidence_tier": "specification",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "approve_reimage",
+        "type": "require_approval",
+        "severity": "hard",
+        "action": "reimage_format_host",
+        "condition_action": null,
+        "scope": {},
+        "evidence_tier": "specification",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "approve_lift_isolation",
+        "type": "require_approval",
+        "severity": "hard",
+        "action": "lift_isolation",
+        "condition_action": null,
+        "scope": {},
+        "evidence_tier": "specification",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "approve_account_disable",
+        "type": "require_approval",
+        "severity": "hard",
+        "action": "reset_disable_account",
+        "condition_action": null,
+        "scope": {},
+        "evidence_tier": "specification",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "shadowcopy_tamper_isolate",
+        "type": "mandatory",
+        "severity": "hard",
+        "action": "isolate_host",
+        "condition_action": null,
+        "scope": {
+          "category_contains": [
+            "volume_shadow"
+          ]
+        },
+        "evidence_tier": "operational",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "intel_match_block",
+        "type": "mandatory",
+        "severity": "hard",
+        "action": "block_egress",
+        "condition_action": null,
+        "scope": {
+          "category_contains": [
+            "custom_intelligence_indicator",
+            "ioc_management_action",
+            "edr_intelligence_indicator",
+            "indicator_of_compromise",
+            "quarenten"
+          ]
+        },
+        "evidence_tier": "operational",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "sensor_tamper_isolate",
+        "type": "mandatory",
+        "severity": "hard",
+        "action": "isolate_host",
+        "condition_action": null,
+        "scope": {
+          "category_contains": [
+            "falcon_sensor",
+            "disable_or_modify_tools"
+          ]
+        },
+        "evidence_tier": "operational",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "remote_access_block",
+        "type": "mandatory",
+        "severity": "hard",
+        "action": "block_egress",
+        "condition_action": null,
+        "scope": {
+          "category_contains": [
+            "accept_remote",
+            "acesso_remoto",
+            "ssh_or_telnet",
+            "remoteaccess",
+            "remote_administrat",
+            "lateral_movement",
+            "remote_services"
+          ]
+        },
+        "evidence_tier": "operational",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "malware_detect_quarantine",
+        "type": "mandatory",
+        "severity": "hard",
+        "action": "quarantine_artifact",
+        "condition_action": null,
+        "scope": {
+          "category_contains": [
+            "machine_learning",
+            "sensor_based_ml",
+            "ml_algorithm",
+            "adware_pup",
+            "malware",
+            "malicious",
+            "suspicious",
+            "suspei",
+            "powershell",
+            "command_line",
+            "edr_detection",
+            "ml"
+          ]
+        },
+        "evidence_tier": "operational",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "account_probe_block",
+        "type": "mandatory",
+        "severity": "hard",
+        "action": "block_egress",
+        "condition_action": null,
+        "scope": {
+          "category_contains": [
+            "login_failure",
+            "falhas_de_login",
+            "locked_out",
+            "contas_bloqueadas",
+            "enumerated_users",
+            "context_label_004",
+            "diversos_ip"
+          ]
+        },
+        "evidence_tier": "operational",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "ops_monitor_no_isolate",
+        "type": "prohibit_when",
+        "severity": "hard",
+        "action": "isolate_host",
+        "condition_action": null,
+        "scope": {
+          "category_contains": [
+            "zabbix",
+            "context_label_001",
+            "administration_edit",
+            "stopped_sending_events",
+            "monitoramento",
+            "context_label_003",
+            "context_label_002",
+            "unomi"
+          ]
+        },
+        "evidence_tier": "operational",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "ops_monitor_no_reimage",
+        "type": "prohibit_when",
+        "severity": "hard",
+        "action": "reimage_format_host",
+        "condition_action": null,
+        "scope": {
+          "category_contains": [
+            "zabbix",
+            "context_label_001",
+            "administration_edit",
+            "stopped_sending_events",
+            "monitoramento",
+            "context_label_003",
+            "context_label_002",
+            "unomi"
+          ]
+        },
+        "evidence_tier": "operational",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "creddump_reset",
+        "type": "mandatory",
+        "severity": "hard",
+        "action": "reset_disable_account",
+        "condition_action": null,
+        "scope": {
+          "category_contains": [
+            "credential",
+            "dumping"
+          ]
+        },
+        "evidence_tier": "operational",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "evasion_isolate",
+        "type": "mandatory",
+        "severity": "hard",
+        "action": "isolate_host",
+        "condition_action": null,
+        "scope": {
+          "category_contains": [
+            "masquerading",
+            "evasion",
+            "injection",
+            "injected",
+            "recycle_bin",
+            "bypass"
+          ]
+        },
+        "evidence_tier": "operational",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "exploit_waf_rule",
+        "type": "mandatory",
+        "severity": "hard",
+        "action": "apply_ips_waf_rule",
+        "condition_action": null,
+        "scope": {
+          "category_contains": [
+            "exploit",
+            "log4shell",
+            "ssrf",
+            "smuggling",
+            "heap_spray",
+            "cgi",
+            "worm"
+          ]
+        },
+        "evidence_tier": "operational",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "persistence_quarantine",
+        "type": "mandatory",
+        "severity": "hard",
+        "action": "quarantine_artifact",
+        "condition_action": null,
+        "scope": {
+          "category_contains": [
+            "scheduled_task",
+            "schedule_a_task",
+            "usu_aacute_rio_local",
+            "atributos_de_conta",
+            "password_never"
+          ]
+        },
+        "evidence_tier": "operational",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "recon_block",
+        "type": "mandatory",
+        "severity": "hard",
+        "action": "block_egress",
+        "condition_action": null,
+        "scope": {
+          "category_contains": [
+            "scan",
+            "nmap",
+            "recon"
+          ]
+        },
+        "evidence_tier": "operational",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      },
+      {
+        "rule_id": "c2_block",
+        "type": "mandatory",
+        "severity": "hard",
+        "action": "block_egress",
+        "condition_action": null,
+        "scope": {
+          "category_contains": [
+            "web_service",
+            "application_layer_protocols",
+            "network_activity_with_a_remote_destination",
+            "https_ou_ssh"
+          ]
+        },
+        "evidence_tier": "operational",
+        "decision_record": "docs/POLICY_SURFACE_DERIVATION.md",
+        "provenance_basis": [
+          "research_reviewed_experimental_policy",
+          "content_addressed_protocol_input"
+        ]
+      }
+    ]
+  },
+  "attack_mapping": {
+    "path": "config/attack_mapping.yaml",
+    "status": "heuristic_coverage_enrichment",
+    "rule_count": 31,
+    "technique_count": 24,
+    "tactic_count": 12,
+    "corpus_matched_technique_count": 0,
+    "corpus_matched_tactic_count": 0
+  },
+  "notes": [
+    "The corpus contains no observed incident-response action sequence.",
+    "Workflow tasks are not treated as response actions or approvals.",
+    "Only operational-tier rules enter prompts, verdicts, and rates."
+  ]
+}

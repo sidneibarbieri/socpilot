@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_id": "7d94611248c6295d26cb299247307683",
+  "study_id": "independent_judge",
+  "model_name": "ollama_mistral_small32_judge",
+  "source_id": "aca5e53194479ea4f1647c84fb338008962fc378f1fac6d82c33599098cb419d",
+  "input_sha256": "0bef2bddfad2c61cfb074cab33bbbe24559980c9076d7a3aecc622868b8df877",
+  "output": {
+    "compliant": true,
+    "reason": "The proposed action list contains no actions, and all mandatory actions are not required for the given incident type and severity.",
+    "protocol_sha256": "384c136a097f431f4c17f21e8f9696f1d97e2f59b668f189f2a822dbd582dbf6",
+    "prompt_sha256": "0fdce36730ca428644a9a14559362d5bb8da4f55fbea01181b61654dec90a4d2",
+    "response_sha256": "2480a05a3ca865c5f83a2be5c7c0e0d055260d3bc046e9e9a5d83ddfce5d0dc3",
+    "usage": {
+      "prompt_tokens": 2026,
+      "completion_tokens": 36,
+      "total_tokens": 2062
+    },
+    "latency_ms": 14622,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "mistral-small3.2:24b"
+  }
+}

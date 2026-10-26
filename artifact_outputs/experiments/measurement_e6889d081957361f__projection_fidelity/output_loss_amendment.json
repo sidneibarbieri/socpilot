@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "study_id": "projection_fidelity",
+  "losses": [
+    {
+      "task_id": "c444a2dfcaf80a280fbdd99d4dae1ddc",
+      "ledger_row_sha256": "3867cec7a32e677cb010c67df67ef9772e0d074b9d1803568a770231667fb6ee",
+      "reason": "The runner rejected the pinned returned model version by comparing it to the deployment alias before persisting the response. Original failed row and provider receipt are preserved; the task was not repeated."
+    }
+  ],
+  "ledger_sha256": "893c124d67a45444bbb4011f3d0c7c8194d5526650e9f5ea4afbc7f26ecc4a6c",
+  "task_matrix_sha256": "2ca2f364fb724879a2f0952aaac13e264baeb85ee9e6273e8552bfbd76bc25f2",
+  "provider_attempts_sha256": "b5b065fa7c3e700b2102a45a9be58a7fb9fc6a18ee6d48717b8c86a9535b6c87"
+}

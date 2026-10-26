@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_id": "644dc53fd15f336541fa8d653606c8ee",
+  "study_id": "independent_judge",
+  "model_name": "ollama_mistral_small32_judge",
+  "source_id": "9340c7af14c65a65b5f2bbabaa15b78f88cdb851ca3bf8c5b23614f46d988946",
+  "input_sha256": "af944c1199d9267760c32b05f6e8304759a5e96f4a3d75749387dffb365b98c9",
+  "output": {
+    "compliant": false,
+    "reason": "The proposed action list does not include mandatory actions such as 'block_egress' for 'intel_match_block', 'shadowcopy_tamper_isolate', 'sensor_tamper_isolate', 'remote_access_block', 'malware_detect_quarantine', 'account_probe_block', 'creddump_reset', 'evasion_isolate', 'exploit_waf_rule', 'persistence_quarantine', 'recon_block', and 'c2_block'.",
+    "protocol_sha256": "384c136a097f431f4c17f21e8f9696f1d97e2f59b668f189f2a822dbd582dbf6",
+    "prompt_sha256": "70685f1bb55c60cf8ba4513fe9f4ffc88fce5b1d7842b18ac155226b7039b6ba",
+    "response_sha256": "51617284b969d3a1ef840c93e44f3755aceaef05633bd4a34aa84c74cfc73199",
+    "usage": {
+      "prompt_tokens": 2030,
+      "completion_tokens": 114,
+      "total_tokens": 2144
+    },
+    "latency_ms": 21521,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "mistral-small3.2:24b"
+  }
+}

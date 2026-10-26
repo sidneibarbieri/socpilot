@@ -1,0 +1,31 @@
+{
+  "failure_count": 2,
+  "failures": [
+    {
+      "arm": "llm_policy_prompt",
+      "cell_id": "4b3948a9dd19763f0ac6ed7de768357cef8b8711ad6eb51d66322798650dcd95",
+      "deployment": "qwen3.6:latest",
+      "error": "LLM did not return valid JSON (sha256=69a0dd6a3152aa30d5433dc6cadf5e6eb51933081aadb5ddd235f32efbebe6f1, characters=590; error=Invalid \\escape: line 7 column 384 (char 487)).",
+      "exception_type": "LLMResponseParseError",
+      "incident_id": "INC_PUBLIC_rvgzypxxpntejadvyhth",
+      "model": "ollama_qwen36",
+      "order_index": "2900",
+      "repeat_index": "3",
+      "run_id": "measurement_e6889d081957361f",
+      "traceback": "Traceback (most recent call last):\n  File \"<local-source>/llm_adapter.py\", line 1315, in _parse_response\n    obj = json.loads(text)\n  File \"<local-source>/__init__.py\", line 352, in loads\n    return _default_decoder.decode(s)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"<local-source>/decoder.py\", line 345, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<local-source>/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~~^^^^^^^^\njson.decoder.JSONDecodeError: Invalid \\escape: line 7 column 384 (char 487)\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<local-source>/experiment_runner.py\", line 1160, in _execute_run\n    run_pipeline(\n    ~~~~~~~~~~~~^\n        [\n        ^\n    ...<23 lines>...\n        ]\n        ^\n    )\n    ^\n  File \"<local-source>/pipeline.py\", line 1083, in main\n    _process_incident(\n    ~~~~~~~~~~~~~~~~~^\n        paths,\n        ^^^^^^\n        str(args.incident),\n        ^^^^^^^^^^^^^^^^^^^\n        options=options,\n        ^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"<local-source>/pipeline.py\", line 961, in _process_incident\n    run_llm(\n    ~~~~~~~^\n        paths,\n        ^^^^^^\n    ...<3 lines>...\n        llm_arm=options.llm_arm,\n        ^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"<local-source>/pipeline.py\", line 394, in run_llm\n    recommendation = adapter.recommend(\n        meta,\n    ...<3 lines>...\n        policy_prompt_mode=policy_prompt_mode,\n    )\n  File \"<local-source>/llm_adapter.py\", line 1395, in recommend\n    actions, reasoning, hallucinated_actions = self._parse_response(\n                                               ~~~~~~~~~~~~~~~~~~~~^\n        api_response.content,\n        ^^^^^^^^^^^^^^^^^^^^^\n        valid_actions,\n        ^^^^^^^^^^^^^^\n    )\n    ^\n  File \"<local-source>/llm_adapter.py\", line 1317, in _parse_response\n    raise LLMResponseParseError(\n        f\"LLM did not return valid JSON ({response_identity}; error={exc}).\"\n    ) from exc\nsoc_llm_policy.llm_adapter.LLMResponseParseError: LLM did not return valid JSON (sha256=69a0dd6a3152aa30d5433dc6cadf5e6eb51933081aadb5ddd235f32efbebe6f1, characters=590; error=Invalid \\escape: line 7 column 384 (char 487)).\n"
+    },
+    {
+      "arm": "llm_policy_prompt",
+      "cell_id": "1bd57af56ad0466899d41bada2bd666f44eb873e97edf13a95958cfad0681409",
+      "deployment": "gpt-5.4",
+      "error": "LLM did not return valid JSON (sha256=8344cc5f64f97c3edf0c7575423a094d6f430f3c2a8a8e040c0e7d9b3fcefea8, characters=610; error=Unterminated string starting at: line 1 column 75 (char 74)).",
+      "exception_type": "LLMResponseParseError",
+      "incident_id": "INC_PUBLIC_uxdgweppxqvjvjznaeth",
+      "model": "azure_gpt54",
+      "order_index": "3911",
+      "repeat_index": "3",
+      "run_id": "measurement_e6889d081957361f",
+      "traceback": "Traceback (most recent call last):\n  File \"<local-source>/llm_adapter.py\", line 1315, in _parse_response\n    obj = json.loads(text)\n  File \"<local-source>/__init__.py\", line 352, in loads\n    return _default_decoder.decode(s)\n           ~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"<local-source>/decoder.py\", line 345, in decode\n    obj, end = self.raw_decode(s, idx=_w(s, 0).end())\n               ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^\n  File \"<local-source>/decoder.py\", line 361, in raw_decode\n    obj, end = self.scan_once(s, idx)\n               ~~~~~~~~~~~~~~^^^^^^^^\njson.decoder.JSONDecodeError: Unterminated string starting at: line 1 column 75 (char 74)\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"<local-source>/experiment_runner.py\", line 1160, in _execute_run\n    run_pipeline(\n    ~~~~~~~~~~~~^\n        [\n        ^\n    ...<23 lines>...\n        ]\n        ^\n    )\n    ^\n  File \"<local-source>/pipeline.py\", line 1083, in main\n    _process_incident(\n    ~~~~~~~~~~~~~~~~~^\n        paths,\n        ^^^^^^\n        str(args.incident),\n        ^^^^^^^^^^^^^^^^^^^\n        options=options,\n        ^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"<local-source>/pipeline.py\", line 961, in _process_incident\n    run_llm(\n    ~~~~~~~^\n        paths,\n        ^^^^^^\n    ...<3 lines>...\n        llm_arm=options.llm_arm,\n        ^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File \"<local-source>/pipeline.py\", line 394, in run_llm\n    recommendation = adapter.recommend(\n        meta,\n    ...<3 lines>...\n        policy_prompt_mode=policy_prompt_mode,\n    )\n  File \"<local-source>/llm_adapter.py\", line 1395, in recommend\n    actions, reasoning, hallucinated_actions = self._parse_response(\n                                               ~~~~~~~~~~~~~~~~~~~~^\n        api_response.content,\n        ^^^^^^^^^^^^^^^^^^^^^\n        valid_actions,\n        ^^^^^^^^^^^^^^\n    )\n    ^\n  File \"<local-source>/llm_adapter.py\", line 1317, in _parse_response\n    raise LLMResponseParseError(\n        f\"LLM did not return valid JSON ({response_identity}; error={exc}).\"\n    ) from exc\nsoc_llm_policy.llm_adapter.LLMResponseParseError: LLM did not return valid JSON (sha256=8344cc5f64f97c3edf0c7575423a094d6f430f3c2a8a8e040c0e7d9b3fcefea8, characters=610; error=Unterminated string starting at: line 1 column 75 (char 74)).\n"
+    }
+  ]
+}

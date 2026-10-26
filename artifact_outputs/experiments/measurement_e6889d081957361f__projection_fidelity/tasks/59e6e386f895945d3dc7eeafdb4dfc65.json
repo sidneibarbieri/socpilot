@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "task_id": "59e6e386f895945d3dc7eeafdb4dfc65",
+  "study_id": "projection_fidelity",
+  "model_name": "azure_gpt54",
+  "source_id": "pure_triage",
+  "input_sha256": "a8216a76fcb39439a4688632be99004688b225db1e2f7d78e627579455fb2410",
+  "output": {
+    "extracted_actions": [
+      "investigate_enrich"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "381467ea25230508c50c5b6155cc97dd1dbabe601bd28cf04ab97bf986bc8ca6",
+    "response_sha256": "316f9cd6dd8f438fc6cf86ae5c3b410ba8cfece5917b40af7c4b104074861318",
+    "usage": {
+      "prompt_tokens": 275,
+      "completion_tokens": 13,
+      "total_tokens": 288
+    },
+    "latency_ms": 2107,
+    "estimated_cost_usd": 0.000883,
+    "returned_model": "gpt-5.4-2026-03-05"
+  }
+}

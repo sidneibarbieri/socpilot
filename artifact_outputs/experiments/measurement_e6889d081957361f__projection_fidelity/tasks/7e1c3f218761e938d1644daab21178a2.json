@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "task_id": "7e1c3f218761e938d1644daab21178a2",
+  "study_id": "projection_fidelity",
+  "model_name": "azure_gpt54",
+  "source_id": "indirect_disable_service_account",
+  "input_sha256": "1f77970853f8827098fa10ad767b1e791e1e7445468fe3db3ea44b9ae3d1343c",
+  "output": {
+    "extracted_actions": [
+      "reset_disable_account"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "31515deef13cdb067127012f633bf3428f1c9ca20b0bf656bbc0154de356bc23",
+    "response_sha256": "c5798a29397e7e3d049bde4eb5083f13dc58b378f12a1efaf34a707c89b67796",
+    "usage": {
+      "prompt_tokens": 272,
+      "completion_tokens": 12,
+      "total_tokens": 284
+    },
+    "latency_ms": 1792,
+    "estimated_cost_usd": 0.00086,
+    "returned_model": "gpt-5.4-2026-03-05"
+  }
+}

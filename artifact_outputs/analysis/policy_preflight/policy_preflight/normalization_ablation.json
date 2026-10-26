@@ -1,0 +1,583 @@
+{
+  "behavior_class_count": 16,
+  "constraints_path": "policy/constraints.yaml",
+  "constraints_predicate_sha256": "08897d985cac1ada8f8247b073aa81df9855343db316de3fb4d78c27b4178a73",
+  "constraints_sha256": "932eb36d686cec98847a63ac8fb862f7e1bd39d2ea86b892aaf7805e5ec38330",
+  "derivation_category_string_count": 123,
+  "heldout_floor": 3,
+  "leave_one_out": {
+    "account_probe_block": {
+      "droppable": true,
+      "patterns": 7,
+      "survives_floor": true,
+      "worst_dropped_pattern": "context_label_004",
+      "worst_heldout": 4
+    },
+    "intel_match_block": {
+      "droppable": true,
+      "patterns": 5,
+      "survives_floor": false,
+      "worst_dropped_pattern": "ioc_management_action",
+      "worst_heldout": 0
+    },
+    "malware_detect_quarantine": {
+      "droppable": true,
+      "patterns": 12,
+      "survives_floor": true,
+      "worst_dropped_pattern": "adware_pup",
+      "worst_heldout": 8
+    },
+    "ops_monitor_no_isolate": {
+      "droppable": true,
+      "patterns": 8,
+      "survives_floor": false,
+      "worst_dropped_pattern": "zabbix",
+      "worst_heldout": 2
+    },
+    "ops_monitor_no_reimage": {
+      "droppable": true,
+      "patterns": 8,
+      "survives_floor": false,
+      "worst_dropped_pattern": "zabbix",
+      "worst_heldout": 2
+    },
+    "remote_access_block": {
+      "droppable": true,
+      "patterns": 7,
+      "survives_floor": false,
+      "worst_dropped_pattern": "accept_remote",
+      "worst_heldout": 0
+    },
+    "sensor_tamper_isolate": {
+      "droppable": true,
+      "patterns": 2,
+      "survives_floor": false,
+      "worst_dropped_pattern": "falcon_sensor",
+      "worst_heldout": 0
+    },
+    "shadowcopy_tamper_isolate": {
+      "droppable": false,
+      "patterns": 1
+    }
+  },
+  "leave_one_out_all_survive": false,
+  "leave_one_out_drops": 49,
+  "leave_one_out_min_heldout": 0,
+  "normalization_path": "policy/telemetry_normalization.yaml",
+  "normalization_sha256": "52a55bef14cfb3dad2302966d214f92df128dc9afeccdd46ac3ab39991aecac8",
+  "schema_version": 1,
+  "survivors": {
+    "class_complete": [
+      "account_probe_block",
+      "intel_match_block",
+      "malware_detect_quarantine",
+      "ops_monitor_no_isolate",
+      "ops_monitor_no_reimage",
+      "remote_access_block",
+      "sensor_tamper_isolate",
+      "shadowcopy_tamper_isolate"
+    ],
+    "curated": [
+      "account_probe_block",
+      "intel_match_block",
+      "malware_detect_quarantine",
+      "ops_monitor_no_isolate",
+      "ops_monitor_no_reimage",
+      "remote_access_block",
+      "sensor_tamper_isolate",
+      "shadowcopy_tamper_isolate"
+    ],
+    "noise_folded": [
+      "account_probe_block",
+      "intel_match_block",
+      "malware_detect_quarantine",
+      "ops_monitor_no_isolate",
+      "ops_monitor_no_reimage",
+      "remote_access_block",
+      "sensor_tamper_isolate",
+      "shadowcopy_tamper_isolate"
+    ],
+    "string_anchored": [
+      "account_probe_block",
+      "intel_match_block",
+      "malware_detect_quarantine",
+      "shadowcopy_tamper_isolate"
+    ]
+  },
+  "transfer_supporting_content_rules": [
+    "account_probe_block",
+    "intel_match_block",
+    "malware_detect_quarantine",
+    "ops_monitor_no_isolate",
+    "ops_monitor_no_reimage",
+    "remote_access_block",
+    "sensor_tamper_isolate",
+    "shadowcopy_tamper_isolate"
+  ],
+  "variants": {
+    "class_complete": {
+      "account_probe_block": {
+        "derivation": 9,
+        "heldout": 9,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "approve_account_disable": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "approve_isolate": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "approve_lift_isolation": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "approve_reimage": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "c2_block": {
+        "derivation": 4,
+        "heldout": 1,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "creddump_reset": {
+        "derivation": 9,
+        "heldout": 1,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "evasion_isolate": {
+        "derivation": 17,
+        "heldout": 2,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "evidence_before_reimage": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "exploit_waf_rule": {
+        "derivation": 17,
+        "heldout": 2,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "intel_match_block": {
+        "derivation": 19,
+        "heldout": 92,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "malware_detect_quarantine": {
+        "derivation": 77,
+        "heldout": 10,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "ops_monitor_no_isolate": {
+        "derivation": 7,
+        "heldout": 17,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "ops_monitor_no_reimage": {
+        "derivation": 7,
+        "heldout": 17,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "persistence_quarantine": {
+        "derivation": 8,
+        "heldout": 0,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "recon_block": {
+        "derivation": 13,
+        "heldout": 1,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "remote_access_block": {
+        "derivation": 6,
+        "heldout": 9,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "sensor_tamper_isolate": {
+        "derivation": 6,
+        "heldout": 3,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "shadowcopy_tamper_isolate": {
+        "derivation": 17,
+        "heldout": 54,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      }
+    },
+    "curated": {
+      "account_probe_block": {
+        "derivation": 9,
+        "heldout": 9,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "approve_account_disable": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "approve_isolate": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "approve_lift_isolation": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "approve_reimage": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "c2_block": {
+        "derivation": 4,
+        "heldout": 1,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "creddump_reset": {
+        "derivation": 9,
+        "heldout": 1,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "evasion_isolate": {
+        "derivation": 17,
+        "heldout": 2,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "evidence_before_reimage": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "exploit_waf_rule": {
+        "derivation": 17,
+        "heldout": 2,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "intel_match_block": {
+        "derivation": 19,
+        "heldout": 92,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "malware_detect_quarantine": {
+        "derivation": 59,
+        "heldout": 10,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "ops_monitor_no_isolate": {
+        "derivation": 7,
+        "heldout": 17,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "ops_monitor_no_reimage": {
+        "derivation": 7,
+        "heldout": 17,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "persistence_quarantine": {
+        "derivation": 8,
+        "heldout": 0,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "recon_block": {
+        "derivation": 13,
+        "heldout": 1,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "remote_access_block": {
+        "derivation": 6,
+        "heldout": 9,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "sensor_tamper_isolate": {
+        "derivation": 6,
+        "heldout": 3,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "shadowcopy_tamper_isolate": {
+        "derivation": 17,
+        "heldout": 54,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      }
+    },
+    "noise_folded": {
+      "account_probe_block": {
+        "derivation": 51,
+        "heldout": 11,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "approve_account_disable": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "approve_isolate": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "approve_lift_isolation": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "approve_reimage": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "c2_block": {
+        "derivation": 50,
+        "heldout": 5,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "creddump_reset": {
+        "derivation": 52,
+        "heldout": 4,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "evasion_isolate": {
+        "derivation": 63,
+        "heldout": 6,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "evidence_before_reimage": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "exploit_waf_rule": {
+        "derivation": 63,
+        "heldout": 5,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "intel_match_block": {
+        "derivation": 62,
+        "heldout": 96,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "malware_detect_quarantine": {
+        "derivation": 123,
+        "heldout": 14,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "ops_monitor_no_isolate": {
+        "derivation": 54,
+        "heldout": 21,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "ops_monitor_no_reimage": {
+        "derivation": 54,
+        "heldout": 21,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "persistence_quarantine": {
+        "derivation": 54,
+        "heldout": 4,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "recon_block": {
+        "derivation": 55,
+        "heldout": 4,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "remote_access_block": {
+        "derivation": 50,
+        "heldout": 13,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "sensor_tamper_isolate": {
+        "derivation": 52,
+        "heldout": 7,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "shadowcopy_tamper_isolate": {
+        "derivation": 64,
+        "heldout": 58,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      }
+    },
+    "string_anchored": {
+      "account_probe_block": {
+        "derivation": 9,
+        "heldout": 3,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "approve_account_disable": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "approve_isolate": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "approve_lift_isolation": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "approve_reimage": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "c2_block": {
+        "derivation": 4,
+        "heldout": 0,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "creddump_reset": {
+        "derivation": 9,
+        "heldout": 1,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "evasion_isolate": {
+        "derivation": 17,
+        "heldout": 1,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "evidence_before_reimage": {
+        "derivation": 200,
+        "heldout": 200,
+        "meets_transfer_floor": false,
+        "scope_kind": "global"
+      },
+      "exploit_waf_rule": {
+        "derivation": 17,
+        "heldout": 0,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "intel_match_block": {
+        "derivation": 19,
+        "heldout": 92,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "malware_detect_quarantine": {
+        "derivation": 59,
+        "heldout": 8,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      },
+      "ops_monitor_no_isolate": {
+        "derivation": 7,
+        "heldout": 0,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "ops_monitor_no_reimage": {
+        "derivation": 7,
+        "heldout": 0,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "persistence_quarantine": {
+        "derivation": 8,
+        "heldout": 0,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "recon_block": {
+        "derivation": 13,
+        "heldout": 1,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "remote_access_block": {
+        "derivation": 6,
+        "heldout": 0,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "sensor_tamper_isolate": {
+        "derivation": 6,
+        "heldout": 0,
+        "meets_transfer_floor": false,
+        "scope_kind": "content_triggered"
+      },
+      "shadowcopy_tamper_isolate": {
+        "derivation": 17,
+        "heldout": 54,
+        "meets_transfer_floor": true,
+        "scope_kind": "content_triggered"
+      }
+    }
+  }
+}

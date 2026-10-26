@@ -1,0 +1,17 @@
+{
+  "expected_repeats": 3,
+  "incomplete_repeat_group_count": 2,
+  "observed_repeat_group_count": 1600,
+  "plan_composition_varies_count": 994,
+  "plan_composition_varies_rate": 0.6220275344180225,
+  "plan_sequence_varies_count": 1089,
+  "plan_sequence_varies_rate": 0.681476846057572,
+  "repeat_group_count": 1598,
+  "run_ids": [
+    "measurement_e6889d081957361f"
+  ],
+  "schema_version": 2,
+  "source_cell_count": 4798,
+  "verdict_stable_count": 1380,
+  "verdict_stable_rate": 0.8635794743429287
+}

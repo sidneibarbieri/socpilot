@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "task_id": "d22dc5dfd4ee44fee21c7ac5d2a939de",
+  "study_id": "projection_fidelity",
+  "model_name": "ollama_qwen36",
+  "source_id": "block_and_disable",
+  "input_sha256": "cb8983c0e75f23815bdc7b39dad45d7a288edf8eb794d7a1cccbdc7548a27e37",
+  "output": {
+    "extracted_actions": [
+      "block_egress",
+      "reset_disable_account",
+      "collect_forensics"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "b9125a7c2387f3f65071ba139917dfd540add59ca60def479c78dcc9f7262d03",
+    "response_sha256": "e6bfd2a4e4bbaeb76996c304780ed26815525f3fcecce1a6b4d7e95d9125371b",
+    "usage": {
+      "prompt_tokens": 297,
+      "completion_tokens": 21,
+      "total_tokens": 318
+    },
+    "latency_ms": 424,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "qwen3.6:latest"
+  }
+}

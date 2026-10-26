@@ -1,0 +1,20 @@
+{
+  "incident_id": "INC_PUBLIC_tsaaktnqdnqdceyuysnk",
+  "model": "qwen3.6:latest",
+  "returned_model": "qwen3.6:latest",
+  "arm": "llm_zero",
+  "actions": [
+    "investigate_enrich",
+    "collect_forensics"
+  ],
+  "hallucinated_actions": [],
+  "reasoning": "<withheld>",
+  "prompt_sha256": "817ea150e212b9bd78438cbf127c8d6bc30a89048d95d9cc50f651b59be10d9c",
+  "usage": {
+    "prompt_tokens": 1018,
+    "completion_tokens": 92,
+    "total_tokens": 1110
+  },
+  "latency_ms": 1645,
+  "estimated_cost_usd": 0.0
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "3b2c6bf7f01665969cfcf1ea74e01390",
+  "study_id": "projection_fidelity",
+  "model_name": "azure_gpt54",
+  "source_id": "escalate_and_watch",
+  "input_sha256": "f4a5cb9dda5e0135b109e3032e7646915dc8ce2984d1c1dbff914c44bc5097eb",
+  "output": {
+    "extracted_actions": [
+      "escalate_notify",
+      "monitor_watch"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "3482694d3088461e6df330b0bdafa7e6c94186b36dc1ad79c5ce513484cd5e87",
+    "response_sha256": "f12ee9415d1f8c6ed0f80232944fbc792f5ef8dccbdf33e7a8a446f3ecddb58a",
+    "usage": {
+      "prompt_tokens": 284,
+      "completion_tokens": 16,
+      "total_tokens": 300
+    },
+    "latency_ms": 1990,
+    "estimated_cost_usd": 0.00095,
+    "returned_model": "gpt-5.4-2026-03-05"
+  }
+}

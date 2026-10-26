@@ -1,0 +1,95 @@
+{
+  "$defs": {
+    "SeparationInputViolation": {
+      "additionalProperties": true,
+      "properties": {
+        "action": {
+          "minLength": 1,
+          "title": "Action",
+          "type": "string"
+        },
+        "rule_id": {
+          "minLength": 1,
+          "title": "Rule Id",
+          "type": "string"
+        },
+        "severity": {
+          "enum": [
+            "hard",
+            "soft",
+            "warning"
+          ],
+          "title": "Severity",
+          "type": "string"
+        },
+        "type": {
+          "minLength": 1,
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": [
+        "rule_id",
+        "severity",
+        "type",
+        "action"
+      ],
+      "title": "SeparationInputViolation",
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "description": "Schema-constrained projection of a persisted verifier output.",
+  "properties": {
+    "experiment_cell_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Experiment Cell Id"
+    },
+    "incident_id": {
+      "minLength": 1,
+      "title": "Incident Id",
+      "type": "string"
+    },
+    "llm_actions": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Llm Actions",
+      "type": "array"
+    },
+    "llm_arm": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Llm Arm"
+    },
+    "violations": {
+      "items": {
+        "$ref": "#/$defs/SeparationInputViolation"
+      },
+      "title": "Violations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "incident_id",
+    "llm_actions",
+    "violations"
+  ],
+  "title": "SeparationVerifierOutput",
+  "type": "object"
+}

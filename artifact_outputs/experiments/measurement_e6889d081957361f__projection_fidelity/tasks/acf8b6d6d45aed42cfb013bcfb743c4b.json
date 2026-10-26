@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "acf8b6d6d45aed42cfb013bcfb743c4b",
+  "study_id": "projection_fidelity",
+  "model_name": "ollama_qwen36",
+  "source_id": "lift_isolation_recovery",
+  "input_sha256": "2b272d7976fcd4cfe3ba8eeff1a5b95e8e2ac3e77c2eafcfa1b6f81a89bf8ce3",
+  "output": {
+    "extracted_actions": [
+      "lift_isolation",
+      "monitor_watch"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "1c6132048ad29eb6cafb2cafaecb55aedd831dc00aec0f166cbee4b90dd39510",
+    "response_sha256": "131b040014584eba3f6638f6b106b07333517dff3790683cc5bb0a7726941ba3",
+    "usage": {
+      "prompt_tokens": 296,
+      "completion_tokens": 14,
+      "total_tokens": 310
+    },
+    "latency_ms": 373,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "qwen3.6:latest"
+  }
+}

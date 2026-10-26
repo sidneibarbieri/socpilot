@@ -1,0 +1,11 @@
+{
+  "incident_id": "INC_PUBLIC_wafekvybcgvxumvnster",
+  "incident_type": "malware",
+  "severity": "high",
+  "asset_criticality": "high",
+  "asset_role": "bank_endpoint",
+  "time_window_start": "2016-09-09T14:57:26.220000Z",
+  "time_window_end": "2016-09-13T00:50:35.486000Z",
+  "final_status": "resolved",
+  "asset_host": "host_0001"
+}

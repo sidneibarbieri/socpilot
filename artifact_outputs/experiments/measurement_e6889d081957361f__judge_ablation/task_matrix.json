@@ -1,0 +1,4967 @@
+{
+  "schema_version": 1,
+  "study_id": "judge_ablation",
+  "protocol_freeze_sha256": "e6889d081957361fe7249325e09baf9c14f23e58bdfc4191bcf3b6e67a3fadf6",
+  "population_source_count": 4800,
+  "selected_source_count": 240,
+  "provider_task_count": 240,
+  "task_count_ceiling": 240,
+  "unavailable_sources": [],
+  "tasks": [
+    {
+      "task_id": "5b1a062710522f0a801546642bf4373c",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "015dca6f74e2c025f8d0dea6edd182b9741fe6ed3ff659d17005d699a3128de1",
+      "input_sha256": "50dbd3b5dbb7114562b9ed6588df2ef6748359913b938eec1f992edc78a4062d",
+      "payload": {
+        "cell_id": "015dca6f74e2c025f8d0dea6edd182b9741fe6ed3ff659d17005d699a3128de1",
+        "incident_id": "INC_PUBLIC_czfvtsbjznuvkuqtjnbb",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "31ef246c3742f34397ed0a91949a9511",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "0516e4beec4ceff36c1d593df3ddabe96a9fb7492997e6b2f7828d159dfd6e15",
+      "input_sha256": "bf8a475e7d1022bfd894b65628a30eb60d3fe22134e4a8a14da12b8094d8f9ee",
+      "payload": {
+        "cell_id": "0516e4beec4ceff36c1d593df3ddabe96a9fb7492997e6b2f7828d159dfd6e15",
+        "incident_id": "INC_PUBLIC_bjuphjutadzgharmfswb",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "7f39e27c9898ebd67b0e26a177de9e85",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "05e9f367aa473f1b7194f396762d24b4d4ff8e4c40ce2087e6a21d5b1037e9e0",
+      "input_sha256": "4052d52fc6e577d0ce92c2f19a504992a0f0d616f23d97ac7590a8d0285efecf",
+      "payload": {
+        "cell_id": "05e9f367aa473f1b7194f396762d24b4d4ff8e4c40ce2087e6a21d5b1037e9e0",
+        "incident_id": "INC_PUBLIC_mgjckswwyhydztrtbhfq",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "monitor_watch",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "f84c46fa32dba6d4dc38755298df1e1e",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "0a76dc18ce6469a72dce96ca4340682428c404f7077f7ddafed6ce43b5e5c991",
+      "input_sha256": "d557b1549311f4a356317909d2acc6277ebb956eb707973aaa4f6feb22c60125",
+      "payload": {
+        "cell_id": "0a76dc18ce6469a72dce96ca4340682428c404f7077f7ddafed6ce43b5e5c991",
+        "incident_id": "INC_PUBLIC_samkxwgmtrtkjznnntkj",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "bea3cb35373a7445e338641a8b14b34b",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "0aef84d2779a93f6dacbbc6809afce1f982068a44713b7f0c223aefc390f7391",
+      "input_sha256": "57678ad9661509064c3ba651c61f7cee0b4ce961fd7baa631eea48b61512ef2a",
+      "payload": {
+        "cell_id": "0aef84d2779a93f6dacbbc6809afce1f982068a44713b7f0c223aefc390f7391",
+        "incident_id": "INC_PUBLIC_asmpqaykzbsrpyzautwq",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "d6f7469d8f3e98e1755a5467645b1024",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "0ce815659ca8593f7d8365d80ca194d447628e40c53c8575bb250b28c9621faa",
+      "input_sha256": "06f0afbf89e49d014761b1111bc6365150bc0cc8ed430a609449aa091876d844",
+      "payload": {
+        "cell_id": "0ce815659ca8593f7d8365d80ca194d447628e40c53c8575bb250b28c9621faa",
+        "incident_id": "INC_PUBLIC_hdapxegyyfwkgsbfxjnx",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "c01c4d012e0b4a1885984477e33412be",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "0df449f01ff5f4bf2df9ac5af27b0fd93efaa50ea5d3187fb04d6563a5f813d2",
+      "input_sha256": "2e5f3410eba769c2cf42c98ac5d8a19afdfaacbfe2489542d9c175ce339a2e3d",
+      "payload": {
+        "cell_id": "0df449f01ff5f4bf2df9ac5af27b0fd93efaa50ea5d3187fb04d6563a5f813d2",
+        "incident_id": "INC_PUBLIC_udwjdfdaxmnrfxkwvqur",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "reset_disable_account",
+          "reimage_format_host",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "fe8ec1a7958be9f2d049c7ab94f366fd",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "0dfc11b11c315e404c623d7b1f94ef0159b6d81f3d123b1fff6518764e62bb20",
+      "input_sha256": "fa1941ad816806c1aed36801872433f07408397c2fffb94ef6d1acade2665335",
+      "payload": {
+        "cell_id": "0dfc11b11c315e404c623d7b1f94ef0159b6d81f3d123b1fff6518764e62bb20",
+        "incident_id": "INC_PUBLIC_ukqzeubgvvwszwafaage",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "e899794bd89adc89abf099588ab7b11e",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "0e07df0f29179e5d6b013d38996a428031b84334737d6d7137ff1d6f1fbec6c8",
+      "input_sha256": "22b2dd79472628b92f9e80d5bbe5b2234532b89749fabecad973b00e87634ed0",
+      "payload": {
+        "cell_id": "0e07df0f29179e5d6b013d38996a428031b84334737d6d7137ff1d6f1fbec6c8",
+        "incident_id": "INC_PUBLIC_zhmakdgevnfvxnnatknf",
+        "incident_type": "malware",
+        "severity": "low",
+        "asset_criticality": "low",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "8b5389dc4a2c709e1b6c75231e5f5db2",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "0e795adc308f783d77e3cfbbbb4aef951e89664dccdb610e68e3221c52e6185f",
+      "input_sha256": "5b385d0a41c23f0e7c26d8eb984718d9ed90f4f3b1ce4119d9b995aaa43fe1a0",
+      "payload": {
+        "cell_id": "0e795adc308f783d77e3cfbbbb4aef951e89664dccdb610e68e3221c52e6185f",
+        "incident_id": "INC_PUBLIC_kaavxatammmhgdwcnsfg",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "b91b4e52e30cf8511645908fc04e87f1",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "0f6397725f524725786c83c1a3f64dcba8c11651c3ea1a4d37e8359760bffc67",
+      "input_sha256": "2891ade75bf1b7ceebb23b0a15073db02271f12252846cbbe309ee9a0b4b260c",
+      "payload": {
+        "cell_id": "0f6397725f524725786c83c1a3f64dcba8c11651c3ea1a4d37e8359760bffc67",
+        "incident_id": "INC_PUBLIC_ufzerkzpkptczdawgtgz",
+        "incident_type": "incident_type_001",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "bb4f7776145d511ee7902872ad2aa2ad",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "113caec77eee76488651ccca17b4e26a44447e292d3527b30a7f9685b732f91f",
+      "input_sha256": "f30190eb1471f25c8751a80a6a4b1f6264ceecabd7f3a549ad27e43e218658b3",
+      "payload": {
+        "cell_id": "113caec77eee76488651ccca17b4e26a44447e292d3527b30a7f9685b732f91f",
+        "incident_id": "INC_PUBLIC_futaksfjerpaxtecbwsg",
+        "incident_type": "malware",
+        "severity": "low",
+        "asset_criticality": "low",
+        "approved_actions": [],
+        "proposed_actions": [
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "7eec207b2e36f3ad959f535d9ab4b915",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "12935becfc89826d8a7b0791daa50644a78579577561dc1494700f814258b523",
+      "input_sha256": "6f6dda439e95d4026029c9e4f3ea68282d11f4a62bfedc657ffce8a32c4c7516",
+      "payload": {
+        "cell_id": "12935becfc89826d8a7b0791daa50644a78579577561dc1494700f814258b523",
+        "incident_id": "INC_PUBLIC_wawajdkgzbxhkdwfnmxb",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "7947fda6a30b7075fe9aa66a4fa4c57e",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "12a43108420e469b7c4c85d37544cc7b97738bf6e55e214a656bee25052474e6",
+      "input_sha256": "ab49431a6fecfb2b6ff1d25505e73e73260db4794629d727ca7f1fd849118f98",
+      "payload": {
+        "cell_id": "12a43108420e469b7c4c85d37544cc7b97738bf6e55e214a656bee25052474e6",
+        "incident_id": "INC_PUBLIC_uhbqbpdyeynrzjcanzxv",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "cc63f45315fd7f2c8d099b4f725b67c4",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "170dbd7bee2da79f58493f55936c62791a6f89ca4a9f73e2fe7969aa7e3ddeca",
+      "input_sha256": "0e1f28f6d72f168ce9ea000c268ac2e1f5ca03928d17433805207c5788f92ad6",
+      "payload": {
+        "cell_id": "170dbd7bee2da79f58493f55936c62791a6f89ca4a9f73e2fe7969aa7e3ddeca",
+        "incident_id": "INC_PUBLIC_sdaftrapnrbaqtjdhnjk",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "block_egress",
+          "apply_ips_waf_rule"
+        ]
+      }
+    },
+    {
+      "task_id": "edb18fe3ebf91c27d48f2e0e7f4cefa7",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "18923b98aceee9592f55da5e5857c1395046305b8aafa3deb525a3053bac35aa",
+      "input_sha256": "020dcdb3d35c422a93f6bfc74756e01afdc256a64c1b9267c59382415c6a2a05",
+      "payload": {
+        "cell_id": "18923b98aceee9592f55da5e5857c1395046305b8aafa3deb525a3053bac35aa",
+        "incident_id": "INC_PUBLIC_bgtnxpuxskazgtfgmmah",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "a5865e9585ebde4855791f25a9529379",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "199feffea58446a07453de191c95b20a69b968aa9a31a209ec7756a2ed286ab1",
+      "input_sha256": "1d0ec3f3501046e122d89052bd1e0562c9ff1a2e72c807175c5ec675dc26d019",
+      "payload": {
+        "cell_id": "199feffea58446a07453de191c95b20a69b968aa9a31a209ec7756a2ed286ab1",
+        "incident_id": "INC_PUBLIC_sbzqedujnezvurhwbvjd",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "02a6dfea673709cf283fde58281a0039",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "1a2336acc6fed4a51682ca0ba88d317b1ddc87c1240aa23b8aad83ab7ae7ac60",
+      "input_sha256": "13e56097dc4c264abe4de3603cd4f2a50d9f988f3a84a36a88fec41a6cf22ac5",
+      "payload": {
+        "cell_id": "1a2336acc6fed4a51682ca0ba88d317b1ddc87c1240aa23b8aad83ab7ae7ac60",
+        "incident_id": "INC_PUBLIC_vfgqswcktvtqcrvmqrwv",
+        "incident_type": "system",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "9735637a306285655e028b62d0e208b5",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "1bcf8c538edea4c38141b385f4fb23bac8c7ea002d79f9a15bd9c789a805b4f9",
+      "input_sha256": "a8017ad5f13b8873ae93ef00e58059141b6e2ac3d3e632317212f7b836b537d7",
+      "payload": {
+        "cell_id": "1bcf8c538edea4c38141b385f4fb23bac8c7ea002d79f9a15bd9c789a805b4f9",
+        "incident_id": "INC_PUBLIC_saufthfqaszksgtetnpn",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "f64683eb91c60bf973ccd573f8e66ce5",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "1c298d65b5a3e14c8cc4c123a1952e543d7d9f86c7c5992a038ce989f4df17b7",
+      "input_sha256": "ee6825c48b4cd01382534904661cf536e7950a82d9f0927db90962f825ab8122",
+      "payload": {
+        "cell_id": "1c298d65b5a3e14c8cc4c123a1952e543d7d9f86c7c5992a038ce989f4df17b7",
+        "incident_id": "INC_PUBLIC_yevjkwdpnymjbyzytnbu",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "block_egress",
+          "isolate_host",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "dabdb99327f2a88b812ae01e7d802323",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "1c4bdccfa0eec2003fbd1f184db358847e1f3bb6f717e4fcf2721b4f6711ccea",
+      "input_sha256": "e8061bcd0f1785f147b358eee1f471751780fa90cfe0e313ff3e97cf05a29af7",
+      "payload": {
+        "cell_id": "1c4bdccfa0eec2003fbd1f184db358847e1f3bb6f717e4fcf2721b4f6711ccea",
+        "incident_id": "INC_PUBLIC_grwraznvnwmzrzfjwgvz",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "90de24e709f464bab151d1e747eede5a",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "1d116a95badf5861b53f705776192d8c6b6388fbe77e584ad910a8e24ed4df44",
+      "input_sha256": "572b3d3ac21e02cc19587e8b9befd367ec0db15864f9f06935090fa7206dba18",
+      "payload": {
+        "cell_id": "1d116a95badf5861b53f705776192d8c6b6388fbe77e584ad910a8e24ed4df44",
+        "incident_id": "INC_PUBLIC_qbvrzesxzpwnqerzyrga",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "block_egress",
+          "quarantine_artifact",
+          "isolate_host",
+          "reset_disable_account"
+        ]
+      }
+    },
+    {
+      "task_id": "b0871f08f4a2a6ef0a7f880dd42b18dc",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "1e815ca871c5e59198fb3d2748be1b8ae53b5eea585d14fd83f6b94eb1f9a9ed",
+      "input_sha256": "7110feefc0813d6b97b8f4b7cc8468a8179dd2fe1deccf95ae42c2405401518d",
+      "payload": {
+        "cell_id": "1e815ca871c5e59198fb3d2748be1b8ae53b5eea585d14fd83f6b94eb1f9a9ed",
+        "incident_id": "INC_PUBLIC_vcyxaekvxmmunqpyqard",
+        "incident_type": "access",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "e03ac76c414b2c91ddc6dbb14e65177b",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "1ea26edb6efeb231ed4614da8cf2097f08eb39472d36f54bf4b45e732d42b71a",
+      "input_sha256": "b6cb332c6879416e7f06286a2be7383365ff2bd228f5a5299eaf44d7e1c018c0",
+      "payload": {
+        "cell_id": "1ea26edb6efeb231ed4614da8cf2097f08eb39472d36f54bf4b45e732d42b71a",
+        "incident_id": "INC_PUBLIC_wxrzktvnbmcqsyzemcxv",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "de90d5598bf7603061592208add99ebb",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "20aa50b8e522714ef20be4d0661f118f8d2e0d851088eecaa208ce57462eb908",
+      "input_sha256": "e44c16719afda0804a5edfa675e490d308736bcc9b27a1f5c7d0da4bc40a9d5f",
+      "payload": {
+        "cell_id": "20aa50b8e522714ef20be4d0661f118f8d2e0d851088eecaa208ce57462eb908",
+        "incident_id": "INC_PUBLIC_nxnwucjcwekjhgfunure",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "7f96861a24a4004708eb45e0f5f79c39",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "225628d080072113293390591519227a53c3f31cb2db0a6b9d35bdc1e575789c",
+      "input_sha256": "650b4782839003788c8edba17885a4c5909e54af45e198e987a2f2e5157ed0d4",
+      "payload": {
+        "cell_id": "225628d080072113293390591519227a53c3f31cb2db0a6b9d35bdc1e575789c",
+        "incident_id": "INC_PUBLIC_njnhjuvfpujsgaycsqbq",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "kill_process",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "630f31bc0be7bf53c8a1f1f7170f6cec",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "227e43235d9150562c960f05264f60e07e5e6b04879edcbb7238d8ba16e3422c",
+      "input_sha256": "69c792c1d696b6f3462d2c1008812e70f6aec1571e0e292e3d8fdaf2326e9926",
+      "payload": {
+        "cell_id": "227e43235d9150562c960f05264f60e07e5e6b04879edcbb7238d8ba16e3422c",
+        "incident_id": "INC_PUBLIC_mxgxamywxbbpdjeemzsm",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host"
+        ]
+      }
+    },
+    {
+      "task_id": "c253e9ad588fb944971042a4db23c505",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "2448bfadc3ef6b240fb7847d84074f3142a4ab5876652ace01162b9a6ea1e387",
+      "input_sha256": "c3ed8f345095a95d5a901b7df71b44c8dbcfc5c2f3fd24cee3437fc5d821b553",
+      "payload": {
+        "cell_id": "2448bfadc3ef6b240fb7847d84074f3142a4ab5876652ace01162b9a6ea1e387",
+        "incident_id": "INC_PUBLIC_ajmygtujbzpcwbtecxqr",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "f889d54cf906453e4a40c5a8b843c3a0",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "244a76967ce99b26f85b5be101c8a5e37ccd108489deb62c8da8291a8a2efffd",
+      "input_sha256": "2bb8cd87cc3b767564f2cdd0d28c7efac3c9e323d682175208a80cb590307a91",
+      "payload": {
+        "cell_id": "244a76967ce99b26f85b5be101c8a5e37ccd108489deb62c8da8291a8a2efffd",
+        "incident_id": "INC_PUBLIC_wsdsuaqspccsfusuehrb",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "a120143b0153c18030ca81cda4a18ea1",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "24618222beec63c20fa2f74974172fe60ad73cdc54ed8d94c649afc5905c43d7",
+      "input_sha256": "8df21b20d18e429ba0d5af251a19305b4de453d96c93b1278be0b7b7c08a4372",
+      "payload": {
+        "cell_id": "24618222beec63c20fa2f74974172fe60ad73cdc54ed8d94c649afc5905c43d7",
+        "incident_id": "INC_PUBLIC_pyzzmpkkrqrkszytyqvf",
+        "incident_type": "authentication",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "705c8884952ea8b0e8b91d6bb4b27754",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "246d2770e0bb3698914da59fd3ae711a660224b800a39cc4b7860c6eb987031e",
+      "input_sha256": "bd49d3ad12ebc5b691fa042d7a7a0f8c395fbf1fb9174f5e22e89d7d4827728e",
+      "payload": {
+        "cell_id": "246d2770e0bb3698914da59fd3ae711a660224b800a39cc4b7860c6eb987031e",
+        "incident_id": "INC_PUBLIC_mysrtfkvwevegtjjzvnr",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "b35da1dde3a1d9d859f05e2bec10af0b",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "254a19fa50e8f001399da90b7c81bb4f9490e2e8d286d83c8a79977ac729640c",
+      "input_sha256": "3010bda1f75035826b4085902ba4a0c82cf75a4574d61dc454fd376338ac2da0",
+      "payload": {
+        "cell_id": "254a19fa50e8f001399da90b7c81bb4f9490e2e8d286d83c8a79977ac729640c",
+        "incident_id": "INC_PUBLIC_hjnzndyudttuqbhukbgy",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "fd77e93b5ce9cb2ad96703349df95b82",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "2765521a4113591130cdd70f3177e65f18451190006561280c382b5a8fbc1769",
+      "input_sha256": "01220780ccb3dec3d7dd3e0c707886d699c3e8a1c6666af1cf6c383fe433fb63",
+      "payload": {
+        "cell_id": "2765521a4113591130cdd70f3177e65f18451190006561280c382b5a8fbc1769",
+        "incident_id": "INC_PUBLIC_zdhesfgwdvnghazrdqfy",
+        "incident_type": "suspicious_activity",
+        "severity": "low",
+        "asset_criticality": "low",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "d126dbd3e78cb5d4a00bd758c0782b45",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "2787a46e26c8ca848d460287b3aea9d976e1383242c4039c508bdfb61ef24d00",
+      "input_sha256": "76fbc1fab35cc01b9ad50fb0e5a332db399cc0e0ac38d23b0b4b46c083ee886e",
+      "payload": {
+        "cell_id": "2787a46e26c8ca848d460287b3aea9d976e1383242c4039c508bdfb61ef24d00",
+        "incident_id": "INC_PUBLIC_hkeqeycemubdhkcakqzh",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch",
+          "close_benign"
+        ]
+      }
+    },
+    {
+      "task_id": "5ae28a9ddf45ed67414719ea512f7107",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "283eeb91d43f711f0f8e38d8490fdf7f51d5e215eb30d131a6b5e2d7b6b2dbde",
+      "input_sha256": "7b0470e32a1fc83cecf3a3889ce7dbd382cc7e3a19325e93be3bb0bfc72eee38",
+      "payload": {
+        "cell_id": "283eeb91d43f711f0f8e38d8490fdf7f51d5e215eb30d131a6b5e2d7b6b2dbde",
+        "incident_id": "INC_PUBLIC_ffwvsesnqjxfuattcyfz",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "7cb7b00a9f52e10638c37b9e8e50cbab",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "298fc4c3c53dcaf419d4dca6ecaff72f38de458e31b7c22ba60359ca8304d1b4",
+      "input_sha256": "6d69ad153e4ba70d6b215527ca83228bed12872cade5748915558bef914fa4f0",
+      "payload": {
+        "cell_id": "298fc4c3c53dcaf419d4dca6ecaff72f38de458e31b7c22ba60359ca8304d1b4",
+        "incident_id": "INC_PUBLIC_rhmnanpjchmepcesbdgu",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "2b0c44686d60f0528ec9e2f2a10e1f1c",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "29adaa3df99c9c2c48050b42d9a6a185e2ac0b5e9f5b9097c368cd9eaa5bc0e4",
+      "input_sha256": "313304d23d14900f0c888c55aef36117abd602bbec3f9dca9ac7017766439824",
+      "payload": {
+        "cell_id": "29adaa3df99c9c2c48050b42d9a6a185e2ac0b5e9f5b9097c368cd9eaa5bc0e4",
+        "incident_id": "INC_PUBLIC_dqxgrxbtgwkscxdsfmmx",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "9e2672035de85f05f12df99c65f3cc06",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "2afa33fb9a5468fe787491ed134c7acc40570f0485b719f5b449e54ce65ca2d4",
+      "input_sha256": "38d5361e54aa72b5de552274aa53816298f1646f5c6c07a0551a745530478c48",
+      "payload": {
+        "cell_id": "2afa33fb9a5468fe787491ed134c7acc40570f0485b719f5b449e54ce65ca2d4",
+        "incident_id": "INC_PUBLIC_eytashpbxqaaaebzqdwt",
+        "incident_type": "system",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "76ed16ac90b31d89fac1ede3ca2228ab",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "2c94467c96712b66a7c430e5f19c0f2b3c7a6b01b0e0dda5e2c2bb0033ce90b5",
+      "input_sha256": "3f77fdacf071778584ac79163fba6eb48af6dc762b9668921de3d317bd3426fe",
+      "payload": {
+        "cell_id": "2c94467c96712b66a7c430e5f19c0f2b3c7a6b01b0e0dda5e2c2bb0033ce90b5",
+        "incident_id": "INC_PUBLIC_sffzwgqwegukkgbtqfvv",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "3f0180c8554f9518a3d8254958de77a8",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "2cf4ebcc82f6551afadb96464b10d1803f64fc313e6c2a1677a4e1c62fc33dc5",
+      "input_sha256": "aabc5443f4b063067f014b3dbfcb5d5b1b5182bb46cb62d2a5f8c7f93c9dc086",
+      "payload": {
+        "cell_id": "2cf4ebcc82f6551afadb96464b10d1803f64fc313e6c2a1677a4e1c62fc33dc5",
+        "incident_id": "INC_PUBLIC_ebfyxbcbfxqawquydrqa",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact",
+          "collect_forensics",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "e4a5f8b95051547c99618b96b0e92e98",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "3017b97b8edbd539f7754f93318596183fdf6f7a6d59f894234e51d255f9f404",
+      "input_sha256": "6d1f4d96f9cdcdb66f5fb23c0e1c7aec04f34b6b2e6f4b5cd98095746c881c26",
+      "payload": {
+        "cell_id": "3017b97b8edbd539f7754f93318596183fdf6f7a6d59f894234e51d255f9f404",
+        "incident_id": "INC_PUBLIC_cumctwyntepkwnecgvfs",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "close_benign"
+        ]
+      }
+    },
+    {
+      "task_id": "ef8571dc98d4574041663ae5156e007f",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "303dcf6067aa5bd5f6a8b80653bcaa6edff64220d15e91a22f74aa5677409cf3",
+      "input_sha256": "fa08d64249c608dd6234296ac09c59402b7b2778107631f27fa7f8f29d6d9938",
+      "payload": {
+        "cell_id": "303dcf6067aa5bd5f6a8b80653bcaa6edff64220d15e91a22f74aa5677409cf3",
+        "incident_id": "INC_PUBLIC_askynxrtutfndvazyahg",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "af05807553bd02cb46349b6714184e28",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "3087ca2f7d5b22306b5e2c51f35255cb40b66b331255be23c2982a8a36e2f0b4",
+      "input_sha256": "91d41886e4a6fc12cb7a6b237f65429d6375e8d988568758f8d603f5ec384cbf",
+      "payload": {
+        "cell_id": "3087ca2f7d5b22306b5e2c51f35255cb40b66b331255be23c2982a8a36e2f0b4",
+        "incident_id": "INC_PUBLIC_nsyzxqazatwwtmfrmdab",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "d81258e28159b6f6af0c253a40f6f0ef",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "30b27de2ca685d79ba0b37a1207449c0888bc651c9d8239cd8271d149d3d16d1",
+      "input_sha256": "65a287cd725b5036ec91b597995f7ed0bb4cd3be292915e2e1fc9728ef6a34e9",
+      "payload": {
+        "cell_id": "30b27de2ca685d79ba0b37a1207449c0888bc651c9d8239cd8271d149d3d16d1",
+        "incident_id": "INC_PUBLIC_dtbccfuaunrzfxtjquuu",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "kill_process",
+          "isolate_host",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "63140d78a9938ad099a5223669844aff",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "332e1e51518a582c17d828280b855e246865ebd4b2ab74c59d3239e1596865c2",
+      "input_sha256": "8f15a1a91b41a81ed7f06b8ff78919301d120a78748bf7f7407fc5970f4b4552",
+      "payload": {
+        "cell_id": "332e1e51518a582c17d828280b855e246865ebd4b2ab74c59d3239e1596865c2",
+        "incident_id": "INC_PUBLIC_uasnkpanbhgeqpefqrau",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "50d8d25005bf6969281b05b41d21d77b",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "34554d0e1943ce3fe1084daed77607b8f095edac86d9efeb3487c8c80460b87a",
+      "input_sha256": "63cacdc03c228fc87a28d43754f8220039a1c140163667a9ff6a83238ffd675b",
+      "payload": {
+        "cell_id": "34554d0e1943ce3fe1084daed77607b8f095edac86d9efeb3487c8c80460b87a",
+        "incident_id": "INC_PUBLIC_dtbccfuaunrzfxtjquuu",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "5444fe2d40921d1c5f99923f58e2817a",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "34c6d8a018b7b7efba4c47afceac07de33e05ec3e89a852bb74fcde89a2ad174",
+      "input_sha256": "10d3e9d537da58dff8e4297eaf4eef35fe41f72979f5344493952924c7f2b944",
+      "payload": {
+        "cell_id": "34c6d8a018b7b7efba4c47afceac07de33e05ec3e89a852bb74fcde89a2ad174",
+        "incident_id": "INC_PUBLIC_ruqahudfbrpzasuybxst",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "51d6c1a0eec7219a33d2a6a3646cdb35",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "359c41f924fab0f3d7781cf946a2db0fa53d2e70abf68373855b9fef6b64a7ac",
+      "input_sha256": "c21bdc18fcaa5ed242a373ac07651b0f519fa40b37a3f927d0e3fd6a653dfc38",
+      "payload": {
+        "cell_id": "359c41f924fab0f3d7781cf946a2db0fa53d2e70abf68373855b9fef6b64a7ac",
+        "incident_id": "INC_PUBLIC_qgqkftabbcfpyapyrcwc",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "79619ee32d0c6a8c6debb6f475c4f0b2",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "39a8dad36298c7f4fe5102bfdfcaacdce7bb00b2a8e09b1c3a18f72f611b7d8c",
+      "input_sha256": "34807cd8fda2cdee78e9ce47bf4420192c0f4864579702d4e277246a18e80a66",
+      "payload": {
+        "cell_id": "39a8dad36298c7f4fe5102bfdfcaacdce7bb00b2a8e09b1c3a18f72f611b7d8c",
+        "incident_id": "INC_PUBLIC_sbzqedujnezvurhwbvjd",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "03e7b6800e20e2665991a37042675816",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "3a4c9203d133de333757af40571e413d09a9109e80b8815163924a1faefb238e",
+      "input_sha256": "349e346ecc1f7e04c4c99d59cb3ba2df71449d94bd42efaf7323260fbb8ed957",
+      "payload": {
+        "cell_id": "3a4c9203d133de333757af40571e413d09a9109e80b8815163924a1faefb238e",
+        "incident_id": "INC_PUBLIC_saufthfqaszksgtetnpn",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "0b1ab86b08b812ea99e810df1396d8c4",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "3ba71dffdc6980e27fa06f9e7b7d784f418b5e7b9eae958a90196ef5b66697e9",
+      "input_sha256": "fd1cc69d636e9116da578144abc92c8a0c1f93525757e0189167d086ad3b9997",
+      "payload": {
+        "cell_id": "3ba71dffdc6980e27fa06f9e7b7d784f418b5e7b9eae958a90196ef5b66697e9",
+        "incident_id": "INC_PUBLIC_nkkzfgtxtafbanyfxkmj",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "isolate_host"
+        ]
+      }
+    },
+    {
+      "task_id": "5b3afec04e5e18a25fffe7c7f45a9b83",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "3e22c3121d80f5f0a32bad7468416de427915a082ba1c5784c1f826e7a8eff9d",
+      "input_sha256": "4db1a442a889ec230e09f6ed5c8c1fe9f198bd086c5a0808afc2f396c1cd4bcf",
+      "payload": {
+        "cell_id": "3e22c3121d80f5f0a32bad7468416de427915a082ba1c5784c1f826e7a8eff9d",
+        "incident_id": "INC_PUBLIC_nfdspsnvydexyvsgcwvv",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "9204d6accc45e244eb538e30b9175e67",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "4035823cfb0453a09069c4a7d4a9b00dbd38a153e79b2ccec4fb2537f25ab7bb",
+      "input_sha256": "f2ca97d2dc86203a6586c56dfda532ac26589ff3be6c0eb6f926e3c04a7c4b7e",
+      "payload": {
+        "cell_id": "4035823cfb0453a09069c4a7d4a9b00dbd38a153e79b2ccec4fb2537f25ab7bb",
+        "incident_id": "INC_PUBLIC_ajmygtujbzpcwbtecxqr",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "6e213bedcaa1f743cb5ab673c4b43859",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "419205315a324066084a51fc388ab7afb43897fd74047dfe7f257bd21bf1957a",
+      "input_sha256": "5e15e15aead63a7552c3bc56eafd0aa93db3d47ae2de0d15d0e4f4523df2fb71",
+      "payload": {
+        "cell_id": "419205315a324066084a51fc388ab7afb43897fd74047dfe7f257bd21bf1957a",
+        "incident_id": "INC_PUBLIC_dwtugdjxzgcnxxbpdkks",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact",
+          "block_egress",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "d0b77ffe94fecca6d207390c7e9fbb76",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "426e146ca13971f321537b0cee3edba9cbaacdf232e99a0a0438f64d519800fd",
+      "input_sha256": "77149198fe8a342207b37e387e99f6ce4243d35affe2ff0045f5d2515f911315",
+      "payload": {
+        "cell_id": "426e146ca13971f321537b0cee3edba9cbaacdf232e99a0a0438f64d519800fd",
+        "incident_id": "INC_PUBLIC_dtbccfuaunrzfxtjquuu",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "kill_process",
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "f14cdcaed1b220632edd1827db28640f",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "428003a1615e0190c032a35d0ef4a1c48bcacc9d4dea4e5f9d1b3c940effb235",
+      "input_sha256": "c2242b03850b60023d5d0043df63c79e5a0b84764fd71f156bfe29a4cb57d938",
+      "payload": {
+        "cell_id": "428003a1615e0190c032a35d0ef4a1c48bcacc9d4dea4e5f9d1b3c940effb235",
+        "incident_id": "INC_PUBLIC_ugevdztuygnhdftxdtas",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "25debc20d3b145f44d975a67db2a019f",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "44212efc5cbe5ae5ee1debc6b11edbe0653135f6d27e096102fe6215d0049707",
+      "input_sha256": "00003145baa5449d77a0f40477cc159e4fa70e084ba4249c92045b846e23c8ae",
+      "payload": {
+        "cell_id": "44212efc5cbe5ae5ee1debc6b11edbe0653135f6d27e096102fe6215d0049707",
+        "incident_id": "INC_PUBLIC_khmbeepscxtdasmmbqdr",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "collect_forensics",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "2f5e0c1e8884485ea4a5d78be7cc1f1e",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "4679e78a8755ae6937b7bcc7ffd30779098a870da78534467f1e0918ca9738bf",
+      "input_sha256": "6fde9923115db68b73cf54c75ca0ff25bb69d4cce8bf4f12199b8e15ddc81578",
+      "payload": {
+        "cell_id": "4679e78a8755ae6937b7bcc7ffd30779098a870da78534467f1e0918ca9738bf",
+        "incident_id": "INC_PUBLIC_qcfkkbdscnzhdtzgqqyz",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "d5012ce2f3ebc936ebc725178d45e0b4",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "4c3ccd785c81e7b09b55313538f34ae0a1e24f7bf48fcade7e77330f0dc2a239",
+      "input_sha256": "e4af68906a53f2ede476c7eb80d6efa415f22e35b7336cc0f8e7874df7ae7292",
+      "payload": {
+        "cell_id": "4c3ccd785c81e7b09b55313538f34ae0a1e24f7bf48fcade7e77330f0dc2a239",
+        "incident_id": "INC_PUBLIC_kmtytankugmmpgrpvchy",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "fc0eeb6911cb54d880362d75294bc18a",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "4c6f71a9b809c04235abdf7db63e940d6df68dea3e601b4f199d9685c932fc77",
+      "input_sha256": "f70c3df3d5dc03976975bec5294847dc0c8e0108f4bc0af2bacad4af2bdeed38",
+      "payload": {
+        "cell_id": "4c6f71a9b809c04235abdf7db63e940d6df68dea3e601b4f199d9685c932fc77",
+        "incident_id": "INC_PUBLIC_pmgjzytnzauzaseepnrv",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "f7a061f9cbea0cdf6c4e342b73bd47c8",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "4d6259cb68cdb8dd4c16b0819c1f49f1b80bc91b7c4664b81543dd377cea7ba0",
+      "input_sha256": "f850971d1ea33c52966d40b1e75cbfb0408ed8f8a47a9e710d5f62c04e6e6227",
+      "payload": {
+        "cell_id": "4d6259cb68cdb8dd4c16b0819c1f49f1b80bc91b7c4664b81543dd377cea7ba0",
+        "incident_id": "INC_PUBLIC_tgquxemkxbptvrrhhevj",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "c4033345224bdd1ae20b6623cd1ab09d",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "4e7a5b5ca8522bd7712e53689e0e9e655a1bf0a3b07ea17748a925e2084a5c3f",
+      "input_sha256": "e46fb33ee410f469f694081aa2972bcc404eb8b65e7e4a39389d312d2f157dff",
+      "payload": {
+        "cell_id": "4e7a5b5ca8522bd7712e53689e0e9e655a1bf0a3b07ea17748a925e2084a5c3f",
+        "incident_id": "INC_PUBLIC_ftvmgxsqvbhwjsbyafzm",
+        "incident_type": "malware",
+        "severity": "low",
+        "asset_criticality": "low",
+        "approved_actions": [],
+        "proposed_actions": [
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "e46cce01c5dee371ff6e0fc7ecb71a80",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "50d0e91e887bf85d9d297681eba657b491c92e8dee3d0f6a56bbb936ac760df6",
+      "input_sha256": "dfde70f17273a811928a05577f9f3679c12878ae9c77457f61f7398eefc76559",
+      "payload": {
+        "cell_id": "50d0e91e887bf85d9d297681eba657b491c92e8dee3d0f6a56bbb936ac760df6",
+        "incident_id": "INC_PUBLIC_hczvusyqasxppcqqbqjm",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "90bd00d1b4f4342f3b2cf12299ddca8d",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "514676bded8443a51571709ce0254fdb334292e2e09fc94e0a375eed5a32b634",
+      "input_sha256": "c7549583b9dca4c37cd8771ccc338dd8472100a41839c49eccb9958fd47958c0",
+      "payload": {
+        "cell_id": "514676bded8443a51571709ce0254fdb334292e2e09fc94e0a375eed5a32b634",
+        "incident_id": "INC_PUBLIC_rvgzypxxpntejadvyhth",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "8836460bc2c4e8c43947e0f6d8b118d9",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "5194c1d5cb1076916769fd723fb7e802f49330fa3210fcd048b3346bec0ed5bc",
+      "input_sha256": "1f663a54b2b0fc41d1afa734791bdc98d8af943ae26f920e6374abcd5cd7fa94",
+      "payload": {
+        "cell_id": "5194c1d5cb1076916769fd723fb7e802f49330fa3210fcd048b3346bec0ed5bc",
+        "incident_id": "INC_PUBLIC_wafekvybcgvxumvnster",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "block_egress",
+          "isolate_host",
+          "kill_process",
+          "quarantine_artifact",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "727ef8847fcf89049a98cc0ba3ae7b84",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "51f929c177736fdee8a25c58c82c9141bbf5fcf3c8fe71b389d1ca1364afca83",
+      "input_sha256": "448734a6d7a814dc0b333c40af8969dcbcced66ea97de54e8d2f0edd5ca9a0c6",
+      "payload": {
+        "cell_id": "51f929c177736fdee8a25c58c82c9141bbf5fcf3c8fe71b389d1ca1364afca83",
+        "incident_id": "INC_PUBLIC_ejncfvakumzprrfvpjdm",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host"
+        ]
+      }
+    },
+    {
+      "task_id": "45dfeaff0b814df3c1cebc9a6179c734",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "52378bded6b90ecc6892fb1f0f1ba47a9dce9ffbebe70ef0394a9ab586b46892",
+      "input_sha256": "94daf73ba00b5c8eeedf5bcf251aed5fa3a6395613c331fceb44319e47ff830e",
+      "payload": {
+        "cell_id": "52378bded6b90ecc6892fb1f0f1ba47a9dce9ffbebe70ef0394a9ab586b46892",
+        "incident_id": "INC_PUBLIC_apwmwfaywkxmyeedwaut",
+        "incident_type": "access",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "reset_disable_account",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "a6e5f5a9f71e430ee821d10a129b8826",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "5299685f832e41e7e6bdd3d56cd19cb672daa584166881a50d97a02a9ba0ca78",
+      "input_sha256": "49f3fcff30da91f078d15aa8447b0988b611270d808a24aab30df9dae1f5ab88",
+      "payload": {
+        "cell_id": "5299685f832e41e7e6bdd3d56cd19cb672daa584166881a50d97a02a9ba0ca78",
+        "incident_id": "INC_PUBLIC_hkeqeycemubdhkcakqzh",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "kill_process",
+          "isolate_host",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "95a0533738019918f2d7764af0de643b",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "52cc4e9ecfad90f00537d1290ded6a00fe4a3281c29c5fa5270dde4f3806db07",
+      "input_sha256": "8aaf2d4703676a90ff85f2f1c4d3a40d43b6e724c5f6c9421fda6cbee4e6a90c",
+      "payload": {
+        "cell_id": "52cc4e9ecfad90f00537d1290ded6a00fe4a3281c29c5fa5270dde4f3806db07",
+        "incident_id": "INC_PUBLIC_rfyxutevmgegbxkmcqjs",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "0f5e923e44b23f2136022c24a5aeca36",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "544788a1439e2a00853f6ff88224f6ce68a961350de128b796a9f79ed109cf96",
+      "input_sha256": "89da8a4a89bfd490bf8337bb20e2a8374b67386420f7b6bed7340f94855ed81b",
+      "payload": {
+        "cell_id": "544788a1439e2a00853f6ff88224f6ce68a961350de128b796a9f79ed109cf96",
+        "incident_id": "INC_PUBLIC_sztnnuqyawsbtnwgqnqd",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "00278aad193394668c9eb65b6d86e6aa",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "55227cb18c2230ae9b65808af805a73f9d95e80e392699ddf171f3f292874ef1",
+      "input_sha256": "693e179e3b6cf47387111f4f9066d96a279df6e9bff74f490fb130d05e343774",
+      "payload": {
+        "cell_id": "55227cb18c2230ae9b65808af805a73f9d95e80e392699ddf171f3f292874ef1",
+        "incident_id": "INC_PUBLIC_bzzgfzacumafeyfmgvzj",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "7f3b00f9914dc6f10290e2bf9c777cd4",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "55a98611b1d89390f6cc85d0d821e7d359b25cf9f4cc978c33e49ae921a904b2",
+      "input_sha256": "441419ecd2374e40c0e3e41fc7e3a9a23cd2f1c7a93f3673cb40fb50d339da3b",
+      "payload": {
+        "cell_id": "55a98611b1d89390f6cc85d0d821e7d359b25cf9f4cc978c33e49ae921a904b2",
+        "incident_id": "INC_PUBLIC_mnwnbynsqbgekcwucxvr",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "cf4cc89ccf320b75d0923a2811f50ca8",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "5770b711e2c873498c51d6f19313dd114907d0bd2b83eaea260887df7868d311",
+      "input_sha256": "a7d1d6a070060950ac861fa63fbbd08141695a4f3fb5ccb013dc9bda7093fa2e",
+      "payload": {
+        "cell_id": "5770b711e2c873498c51d6f19313dd114907d0bd2b83eaea260887df7868d311",
+        "incident_id": "INC_PUBLIC_ayqwcsnpstgzdhaumdag",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "0016f20836d200af9849fae14876a7ad",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "587ad1e0dca8ed2816c48484e2062766fb95e797f9c1cbd7ace7a00fabf13bb2",
+      "input_sha256": "b09b2e6e6130fd8906c87abcfb56209b4c7aeaa9ecd62e9fda60c9f770ab41cb",
+      "payload": {
+        "cell_id": "587ad1e0dca8ed2816c48484e2062766fb95e797f9c1cbd7ace7a00fabf13bb2",
+        "incident_id": "INC_PUBLIC_wzgmrpesatjfzbjzjgxs",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "17e4d76d0ae037402f574f3522b1c6d9",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "59a6232f9a3c3b187cf55560a4ce7a9c2e9a06ab9bad8680c0160a2cae8cabfa",
+      "input_sha256": "09473afe8370312c9e4c7167c6135b7e0e1795fd35733de0def028ae2aa2fad6",
+      "payload": {
+        "cell_id": "59a6232f9a3c3b187cf55560a4ce7a9c2e9a06ab9bad8680c0160a2cae8cabfa",
+        "incident_id": "INC_PUBLIC_vxfdzjyhfhdxdhnqxdfr",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "a7861d3ee50843e9053142e714b40b8d",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "5aeb2248c5c67b4bf5cf7ab18350a44557428103dd2be50ae110e4f60232d988",
+      "input_sha256": "eaa36937d3820ab583b8578c14ff466426075166b068792e310695b6fd2092c1",
+      "payload": {
+        "cell_id": "5aeb2248c5c67b4bf5cf7ab18350a44557428103dd2be50ae110e4f60232d988",
+        "incident_id": "INC_PUBLIC_fywvpgxkdehrdjcgughx",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "block_egress"
+        ]
+      }
+    },
+    {
+      "task_id": "75b3155a006c5f84e3d6edb208cceb57",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "5c1477b85fa68f6b7f0454595b0552d9f6bd3484d0e64447898dfac6a836ac31",
+      "input_sha256": "b44559e0c41650524ca2272f688e6c77a25faa689268dd562797db1113fcfeba",
+      "payload": {
+        "cell_id": "5c1477b85fa68f6b7f0454595b0552d9f6bd3484d0e64447898dfac6a836ac31",
+        "incident_id": "INC_PUBLIC_xcfdtbrkwaxzfyuqeckf",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "kill_process",
+          "quarantine_artifact",
+          "block_egress",
+          "reset_disable_account",
+          "reimage_format_host",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "7554336c8546946b1b9ed12ed62a9f6e",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "5db03182ec7d7344452444eef4421cfd87ab32090c43137fa8a33c1642a953a7",
+      "input_sha256": "5c06d9f4c66ea9e2f38d2df6c50cad2ece03ae1f85b8e814309ccda1783ba225",
+      "payload": {
+        "cell_id": "5db03182ec7d7344452444eef4421cfd87ab32090c43137fa8a33c1642a953a7",
+        "incident_id": "INC_PUBLIC_tetcjbtxaqdxrqnawkxw",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host"
+        ]
+      }
+    },
+    {
+      "task_id": "932e4afa1250efb89adac5a126788db8",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "65fdbdfcc997beebd8c070ac8a32dcbc233bb02a1d33edd6a2fd936ff4f84f40",
+      "input_sha256": "4a9363979f57c7652a437953e5b18feaeb6cbebdc815b5bbc6816e3ed3a90ec8",
+      "payload": {
+        "cell_id": "65fdbdfcc997beebd8c070ac8a32dcbc233bb02a1d33edd6a2fd936ff4f84f40",
+        "incident_id": "INC_PUBLIC_yedfrdjpprerkwranazj",
+        "incident_type": "policy",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich"
+        ]
+      }
+    },
+    {
+      "task_id": "8dacd53a559039ecc52e605080888d67",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "6607974ded67a8d63ea4cf374c790b9e89b56388da025504b3c8c233e06c296b",
+      "input_sha256": "b11db7f98bfb266b501fe508fbabe2ad4d3d3dfe8be60e7be2ac43a9ff250790",
+      "payload": {
+        "cell_id": "6607974ded67a8d63ea4cf374c790b9e89b56388da025504b3c8c233e06c296b",
+        "incident_id": "INC_PUBLIC_qnzgnymdnncadzamxdkq",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "apply_ips_waf_rule",
+          "block_egress",
+          "isolate_host",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "15db9737962455d078debe04caca87a7",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "66b22ec43d04d7b2530f3d972f70f6162b89a39b9ef53535d93bf8b1d32bb437",
+      "input_sha256": "a362455020b66a56ce106f66216da7f0df2a8bdca2b36abd58f8602042631d40",
+      "payload": {
+        "cell_id": "66b22ec43d04d7b2530f3d972f70f6162b89a39b9ef53535d93bf8b1d32bb437",
+        "incident_id": "INC_PUBLIC_qefgcdbvxpanwgnxkcxu",
+        "incident_type": "potential_exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "71b49bec1214ed9ea1e8afedd481969f",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "66cb2869aad2337341b6754142808640a0742c3a4fdd45acc68867be9e1444a0",
+      "input_sha256": "852a04d7f8445cf16b708844636cd1525947e744abf4395ea3ff866f26963e52",
+      "payload": {
+        "cell_id": "66cb2869aad2337341b6754142808640a0742c3a4fdd45acc68867be9e1444a0",
+        "incident_id": "INC_PUBLIC_ebfyxbcbfxqawquydrqa",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "58b83b957caee79c310fa618a3f91eeb",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "67a98a0851bf5a11ece42340ede020ebf23716ba6462bdb65dd511a69fb3bfd8",
+      "input_sha256": "00593b6bab24cdda520225b0e0579986cdf3e726fb826c1f1e261988f5758fc3",
+      "payload": {
+        "cell_id": "67a98a0851bf5a11ece42340ede020ebf23716ba6462bdb65dd511a69fb3bfd8",
+        "incident_id": "INC_PUBLIC_saufthfqaszksgtetnpn",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "0473527d5c00c40791b5200bd2535dff",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "686f05be986263902fc3ddbc667cde3ece03a98bfb45f5e03d068719140956ad",
+      "input_sha256": "e2ed6f9c2f5b6b888136fd7f2cef480f0c757dfc8f1e449d39676163bea3388b",
+      "payload": {
+        "cell_id": "686f05be986263902fc3ddbc667cde3ece03a98bfb45f5e03d068719140956ad",
+        "incident_id": "INC_PUBLIC_wzgmrpesatjfzbjzjgxs",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "block_egress",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "ad1252b595a2bd769178084ab31164c6",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "698a58fa1709f88082842281b8edb6c7bb11d8a6890fcc087b33bf9de7f9ad0e",
+      "input_sha256": "b75eb605d08231a9ddbce674eed291f525c081756a1c734bd0e3ae0301092849",
+      "payload": {
+        "cell_id": "698a58fa1709f88082842281b8edb6c7bb11d8a6890fcc087b33bf9de7f9ad0e",
+        "incident_id": "INC_PUBLIC_spsqedrztdjvegzwfwda",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "204d3fff769189bb55a4ca4a47f88246",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "6b3435b5d451994722f64fb9933937b15f8f5ceb0e658273322b298c2071191f",
+      "input_sha256": "eac1caeae27dab75e8232aa1b412580cc5ddc81d5194d0e917ffe7653b91c370",
+      "payload": {
+        "cell_id": "6b3435b5d451994722f64fb9933937b15f8f5ceb0e658273322b298c2071191f",
+        "incident_id": "INC_PUBLIC_hyzgjntzqpessucjwsmm",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "db1dfe7530aea801f8631d11aee24c5c",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "6d395c751b04edd9e659f32e69f14750dd4dc1374983bb17f7410a1b7b807ac7",
+      "input_sha256": "b3bf78643132a15c99c4bff9199097fd2e9570074f0862790f3a5ef82c40829e",
+      "payload": {
+        "cell_id": "6d395c751b04edd9e659f32e69f14750dd4dc1374983bb17f7410a1b7b807ac7",
+        "incident_id": "INC_PUBLIC_ufbcbrabnfxkqsxwnxud",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "6bd7e91da97ba40a8e57c5e6800ae1f1",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "6dcde2219016d9c9e082ba31ce39a39e95923b9e8ad5d7322ac50dbd75b953e9",
+      "input_sha256": "da8022a11b667f10b45ad45b389e774054cd553d6bfe0e66ea4a0534bb67734d",
+      "payload": {
+        "cell_id": "6dcde2219016d9c9e082ba31ce39a39e95923b9e8ad5d7322ac50dbd75b953e9",
+        "incident_id": "INC_PUBLIC_tyxbkvbftxpqafcwwpua",
+        "incident_type": "suspicious_activity",
+        "severity": "critical",
+        "asset_criticality": "critical",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "327924c9c35eebd4d2608bb1322e566f",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "6e05453049c1afb1bada367551aea24571d2bdde3ae141c4d53b458bcc87cd00",
+      "input_sha256": "6020e2f5497dc9a58bf6a81c6b3002a2ddf32fe8b0dbab29598225f1bf831b6e",
+      "payload": {
+        "cell_id": "6e05453049c1afb1bada367551aea24571d2bdde3ae141c4d53b458bcc87cd00",
+        "incident_id": "INC_PUBLIC_dfkhbcxxcwmqhsejzyky",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "20b6f79c1bffb25279c97e49bff105d8",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "6f4a7109b254f6ab3fa7fc84f31e146767ca41fa0e3bf9564690cd84e7490502",
+      "input_sha256": "385a7a7b413217aae35fb0ebba8b80131be61a49be3d851b8e780a93306701ef",
+      "payload": {
+        "cell_id": "6f4a7109b254f6ab3fa7fc84f31e146767ca41fa0e3bf9564690cd84e7490502",
+        "incident_id": "INC_PUBLIC_samkxwgmtrtkjznnntkj",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "546df09d550d366b3c47799929ea9d2c",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "6f9ac94a8e226b72595326acc6c4c96c632bc68ffff27d68bd6e972049fd882f",
+      "input_sha256": "84c8e962d46c68f44374b0842d691e6423d3598bea6bd1847fa3140cc9414044",
+      "payload": {
+        "cell_id": "6f9ac94a8e226b72595326acc6c4c96c632bc68ffff27d68bd6e972049fd882f",
+        "incident_id": "INC_PUBLIC_cbahfynypsfcpqrfacva",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "f29ee42abdcdfa0ed961ada28e815435",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "71b1999e487dceeb8122bc5e4749813450c662ffe26b739a50fb487eefb23ff6",
+      "input_sha256": "311937f6236c9bb630ba0a9f71290af6ad02a44a86bddc606bf7f1a8c61af8a8",
+      "payload": {
+        "cell_id": "71b1999e487dceeb8122bc5e4749813450c662ffe26b739a50fb487eefb23ff6",
+        "incident_id": "INC_PUBLIC_kvqnwbqtbduwxeynbztk",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "isolate_host",
+          "kill_process",
+          "quarantine_artifact",
+          "reset_disable_account"
+        ]
+      }
+    },
+    {
+      "task_id": "05407b2c2ee7b165b7ca8e9cf24f150a",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "7368dd1e9d79bcdac4bde3dd20cc5cdcf323a5deeec9413caac174ccfba076d7",
+      "input_sha256": "c76f6e45c29e749901a8c4db4222306f5eec6d0f5c781803582194100a1022cc",
+      "payload": {
+        "cell_id": "7368dd1e9d79bcdac4bde3dd20cc5cdcf323a5deeec9413caac174ccfba076d7",
+        "incident_id": "INC_PUBLIC_rzhfsdtstfmmkdphdywz",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "1a5986fad74b76eeca18be706449636a",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "7391dc68f274bfc1b2ac8848fd776e75e332f4bc38841867d31c7e173504ecb3",
+      "input_sha256": "908fdacc2c540000e0e75c5c85ab03eb23bac7cc193b0cb2195bdd0154633920",
+      "payload": {
+        "cell_id": "7391dc68f274bfc1b2ac8848fd776e75e332f4bc38841867d31c7e173504ecb3",
+        "incident_id": "INC_PUBLIC_gqvecxcapmvsqsqufmju",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "kill_process",
+          "isolate_host",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "ea7257da8058ebcaa27b1d27af355b08",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "742ccd83a01fac66a732eef16f4ff62f3edd86c2b5bc1af9f5db47a03c4478bb",
+      "input_sha256": "93eb02e04eeac2e78a40bcaaf7f545610654edc680f4d3fab4ed31b7d4aca747",
+      "payload": {
+        "cell_id": "742ccd83a01fac66a732eef16f4ff62f3edd86c2b5bc1af9f5db47a03c4478bb",
+        "incident_id": "INC_PUBLIC_rmdakmvgrhwdtdccxbem",
+        "incident_type": "authentication",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "faeb0b85eccbee92ff344cf869987c1a",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "74b04e78dd7df4eaedc77ba1721bd6f57aa304a76af921f4bb5548a22edadfa3",
+      "input_sha256": "d14d0810d69745e00b39f9263f4e88d5c9b4cf22c410693beea58a0caa6d2a36",
+      "payload": {
+        "cell_id": "74b04e78dd7df4eaedc77ba1721bd6f57aa304a76af921f4bb5548a22edadfa3",
+        "incident_id": "INC_PUBLIC_pmeswnarkugysxyswcfe",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host"
+        ]
+      }
+    },
+    {
+      "task_id": "4ddb2d95e8b175e9d618dc0f6c2c1716",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "76e34c48e97bd39308cd75d980c15f909467c6c845d45c8a1361b0794f8a1df1",
+      "input_sha256": "eead06f7c683b7e94dbf5a739ce515ce76a070585516459bba17cdfb3221f6bc",
+      "payload": {
+        "cell_id": "76e34c48e97bd39308cd75d980c15f909467c6c845d45c8a1361b0794f8a1df1",
+        "incident_id": "INC_PUBLIC_mkfpvuxhtrwcxbpheqtu",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "24d63bee175e585a4e986a908b4e067e",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "77d581bb1ab93f51ce10797af52885fa1fbf5fcf96e423d18c20b7db99aad959",
+      "input_sha256": "44bd316cb90d6457d7eb6d36e48e3e4fa96714a7fe59e383336474d906a24114",
+      "payload": {
+        "cell_id": "77d581bb1ab93f51ce10797af52885fa1fbf5fcf96e423d18c20b7db99aad959",
+        "incident_id": "INC_PUBLIC_fywvpgxkdehrdjcgughx",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "60657711d58d64a328620b1f4099a8b6",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "7ab61ffa5316accc3e8aa60bdc349a97fef9caaf7fc46a07340a745c72f872aa",
+      "input_sha256": "1ae95c0980937366874672f8e91bf68b1cb9171e119a6d756a30342201d49506",
+      "payload": {
+        "cell_id": "7ab61ffa5316accc3e8aa60bdc349a97fef9caaf7fc46a07340a745c72f872aa",
+        "incident_id": "INC_PUBLIC_wutjuqppnuqeqbmnrwgr",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "7d5392a8d55a984d876c66e422e82980",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "7be5684cadd5066f35192c0505dd24426ce6c9cbc3c783c68385ba8cfc26e7a5",
+      "input_sha256": "e5cdd7e42ac2d3cbc85df27e1c221fa012bc079a83a489831d7650bc3049ea7a",
+      "payload": {
+        "cell_id": "7be5684cadd5066f35192c0505dd24426ce6c9cbc3c783c68385ba8cfc26e7a5",
+        "incident_id": "INC_PUBLIC_rdrzurqbteyznsnxswbm",
+        "incident_type": "suspicious_activity",
+        "severity": "low",
+        "asset_criticality": "low",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "f3871959c58b7f9f37afbc83e5f1629d",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "7f99642479601d2e3e689eebadc16e12386b5ffcb633fae4268f292788f9cb44",
+      "input_sha256": "ddee8998af0e3ec86ac24924014fd45e5e41aadb4119111825a0863c2b81bdff",
+      "payload": {
+        "cell_id": "7f99642479601d2e3e689eebadc16e12386b5ffcb633fae4268f292788f9cb44",
+        "incident_id": "INC_PUBLIC_hhxmzrtgqvhtabbvwhgq",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "0d648a89989a554287c85580984429b1",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "806ac6502a2b963e791109e15ebf88a5cbbe03bc117d1254e68d797edeaa4f47",
+      "input_sha256": "afd8a57d7d876e9840f8d1fd3388907e68bcf643954d0bf7e538d56f7f213776",
+      "payload": {
+        "cell_id": "806ac6502a2b963e791109e15ebf88a5cbbe03bc117d1254e68d797edeaa4f47",
+        "incident_id": "INC_PUBLIC_gyykmgcrukggnujtubcr",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "681e3f9643f6c6798a28392e401eea48",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "808b3467011d84db13fad4a07b151c7b5b5e888ba9860677c5c7f1e8d821199a",
+      "input_sha256": "dcf5b1360ee681c9f705844c74a3e7ba71e8c7c2139d07cf032c883d092056b7",
+      "payload": {
+        "cell_id": "808b3467011d84db13fad4a07b151c7b5b5e888ba9860677c5c7f1e8d821199a",
+        "incident_id": "INC_PUBLIC_mcdjyfenzkkgrjzzwaqs",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "f84f395b20b08d3cfc4d6a795413740d",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "80da54786c4140438ed6af2aef226fc8aefc72dd6bf94d104cd6263a2fa5b3b7",
+      "input_sha256": "bcea3f4fb2e3214c1f52d2f92063353add3bf1623b1bb983749e88fa822ff921",
+      "payload": {
+        "cell_id": "80da54786c4140438ed6af2aef226fc8aefc72dd6bf94d104cd6263a2fa5b3b7",
+        "incident_id": "INC_PUBLIC_rhtwprspasdtfxsmsper",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "apply_ips_waf_rule"
+        ]
+      }
+    },
+    {
+      "task_id": "852cf2d94b48afbcddc407027f4ba778",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "8248fc58d66d58c5b2677f40a48877187587f646e9a275d5e3488b827727604e",
+      "input_sha256": "0eeb4620ff0a150e721356d2952fb4b6acc4c6177d1a5ff6c84680809baf328b",
+      "payload": {
+        "cell_id": "8248fc58d66d58c5b2677f40a48877187587f646e9a275d5e3488b827727604e",
+        "incident_id": "INC_PUBLIC_sxeaknphtzvvbggrnufa",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "21491b25225fdea223f6662c7134fd06",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "83197ac9f4ae64a8e74391c5ff65ca78d291f78055e88b4aaf195186d5d25d56",
+      "input_sha256": "0e61e589ed47fa78821b8febcf99a0ab44eb4f4fbd86bf2b8d8e91d86ccb13a2",
+      "payload": {
+        "cell_id": "83197ac9f4ae64a8e74391c5ff65ca78d291f78055e88b4aaf195186d5d25d56",
+        "incident_id": "INC_PUBLIC_vwwwssqcuzmbbpcsuqaj",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "0ab9cace730c1edc0da88a6406c9dd5f",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "8399b21c42cf836d95846a6c28889ff96f49cdbc9f120383767943046ac29aad",
+      "input_sha256": "af1c9359a0301f8c33f09dc8bd03edac6949a3d37781f0e943758bb6695e1b29",
+      "payload": {
+        "cell_id": "8399b21c42cf836d95846a6c28889ff96f49cdbc9f120383767943046ac29aad",
+        "incident_id": "INC_PUBLIC_krrkutnkprcthhfbjcqf",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "9a1ac49323613904fec15dd925964535",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "83dd4f67cae23e3aa906ef157758e495746c761744ea266748901271860a27e1",
+      "input_sha256": "683226fcd784d08f875001912e56b388695bec87cd8513331d57dfae1c7f15d4",
+      "payload": {
+        "cell_id": "83dd4f67cae23e3aa906ef157758e495746c761744ea266748901271860a27e1",
+        "incident_id": "INC_PUBLIC_fxwsfhmxckrmhdwabgfk",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "d175b4fed8d8cc8b04baacc4d6acf61d",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "8682be84ff873c5b69050a7066e835bf8392671a358f7a630a71a60a101c6396",
+      "input_sha256": "2a946533e2a2b1c7f2a8c18d13161c9cd849c0d1c81c44516113214a9e8e9ae5",
+      "payload": {
+        "cell_id": "8682be84ff873c5b69050a7066e835bf8392671a358f7a630a71a60a101c6396",
+        "incident_id": "INC_PUBLIC_jadqmapqqefhzabqfgny",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "52b9ea692f19c25676db6909c777e1a4",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "87b68cddbc4c26540d6a9b90e728f89537de6a666a5ee7acb492bb175ddbe856",
+      "input_sha256": "737675cd28c4964f3b7080af027a06111ac47702da19093544b2c12017b64363",
+      "payload": {
+        "cell_id": "87b68cddbc4c26540d6a9b90e728f89537de6a666a5ee7acb492bb175ddbe856",
+        "incident_id": "INC_PUBLIC_ahagumaxqzcbahbcmyrd",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "a8f9de7847ac043406d9f17bf4a45a96",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "89afa3ff7c1b59a0f53a91a7dfe8caa0c3a295d3d5feae6b5d103f6a65e8061e",
+      "input_sha256": "dd1ae342c50b2561b01da7d78f90ebfa2ba2ff0b098845ec0e92042a323b3da6",
+      "payload": {
+        "cell_id": "89afa3ff7c1b59a0f53a91a7dfe8caa0c3a295d3d5feae6b5d103f6a65e8061e",
+        "incident_id": "INC_PUBLIC_ubugxnfsdrphnkbakrkc",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "2b01771dcb0e4c76d62bd251451a4ce0",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "89b92be94643db9ee866865cf4ec13c88cabf2e55cec4145e8d0dea456c832c6",
+      "input_sha256": "f70fc2caf69a882fed0f97f51673f31ea4531b955f96a6a6e758e2ab98e2610a",
+      "payload": {
+        "cell_id": "89b92be94643db9ee866865cf4ec13c88cabf2e55cec4145e8d0dea456c832c6",
+        "incident_id": "INC_PUBLIC_tetcjbtxaqdxrqnawkxw",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "66ad5923e9e78e4fdf59546b5409532d",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "8b01c5bd9bc432b71903e3025a12dcc23aa14a00ed87dd5e09711faf6df7d528",
+      "input_sha256": "705f5e82770a1eaa62e78817ac5853d533b0da39cc2b6be7e3b5ebe8511df564",
+      "payload": {
+        "cell_id": "8b01c5bd9bc432b71903e3025a12dcc23aa14a00ed87dd5e09711faf6df7d528",
+        "incident_id": "INC_PUBLIC_ugevdztuygnhdftxdtas",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "c4821accc9980bb044a383c060e2f690",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "8bcd04469d7cd994682ee70cc2a38d277dafd0df4201f3b20c4e64fe759f5cb9",
+      "input_sha256": "6b9fe96f6a6195cec38986f8f1d2c0866ca192d79fbbef61a53be24e93c4f848",
+      "payload": {
+        "cell_id": "8bcd04469d7cd994682ee70cc2a38d277dafd0df4201f3b20c4e64fe759f5cb9",
+        "incident_id": "INC_PUBLIC_skjfvvkptnmjadnbtcvn",
+        "incident_type": "access",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "2bf69413b92d6accc48791eac29bd1ce",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "8dacc7b3c1020a272599601d2b3dbed826403ef6c9830c58733199ee7099ce2e",
+      "input_sha256": "a52b41ecad409fc7301216ce385288e6f82e774417b07084ca30ed555e4a859e",
+      "payload": {
+        "cell_id": "8dacc7b3c1020a272599601d2b3dbed826403ef6c9830c58733199ee7099ce2e",
+        "incident_id": "INC_PUBLIC_physjbfrayjxfxexjsch",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "ebb1fbc3bce454b35d625872a792d8eb",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "8ddc1badce27e7e43e72b253c6a4c6746c8bd97be13c499938f2813c9ca6e730",
+      "input_sha256": "af95025e2ddbb9f451d389c10c6a0f442cd26deb380c391a233b250a79f8af39",
+      "payload": {
+        "cell_id": "8ddc1badce27e7e43e72b253c6a4c6746c8bd97be13c499938f2813c9ca6e730",
+        "incident_id": "INC_PUBLIC_wrcwpuxnugxdvqkxrdke",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "c3890807f779bbd9a0e362681c964a24",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "8e240fd0a148a65a6cfbeab097b4dac21a041e6e533e7f6a58741d6d9fccbc2b",
+      "input_sha256": "c5e37f06cd3f17f41ad20159e124376ae90f98ee9c2d452e9dfb10b4b4bae508",
+      "payload": {
+        "cell_id": "8e240fd0a148a65a6cfbeab097b4dac21a041e6e533e7f6a58741d6d9fccbc2b",
+        "incident_id": "INC_PUBLIC_ruqahudfbrpzasuybxst",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "be96f021a7206b397660c6ee2b839f3b",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "8f45793e92238e86b2467f62e1981a1294d03686f2417b1b59ee9cd195441516",
+      "input_sha256": "5b486d864c19468e6a4d010d69feeb6fb0198af4cd8fd22e97037bd4be6155e0",
+      "payload": {
+        "cell_id": "8f45793e92238e86b2467f62e1981a1294d03686f2417b1b59ee9cd195441516",
+        "incident_id": "INC_PUBLIC_dqefqwxsujkrkgmzcmuv",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "c055c62ce86b432b852f54b684f6e781",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "8f97e73afe0c9a61c3b86262c3dda13f5cb92e857647b57292d8445fe1e8d522",
+      "input_sha256": "ab31fd2cebd383bcff332a05b4aec6308d10adf433199387dd39c6402aacd8b4",
+      "payload": {
+        "cell_id": "8f97e73afe0c9a61c3b86262c3dda13f5cb92e857647b57292d8445fe1e8d522",
+        "incident_id": "INC_PUBLIC_wfmmtusezqvtgfwedhhh",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host"
+        ]
+      }
+    },
+    {
+      "task_id": "aa0031f95e88c4de76c1b3503c9c806a",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "90bda284630a882de53126312bc72d30d11309ff090fe1c602b94f0f7fe35552",
+      "input_sha256": "636caa80320d2861c91c458df3b58a0881d7e6d73685dfb2aee81f7c9d003b47",
+      "payload": {
+        "cell_id": "90bda284630a882de53126312bc72d30d11309ff090fe1c602b94f0f7fe35552",
+        "incident_id": "INC_PUBLIC_wsdsuaqspccsfusuehrb",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "collect_forensics",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "a7162f40ce51599c328e44ff35150f4d",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "92b4620ef6f3547c39eded3aaf13d60d9042152dc3320c9e208dc340aeea0ce7",
+      "input_sha256": "9437a8c7821625e099bdf53660955af23cb48466c3519aeffe4fca81452b3d1c",
+      "payload": {
+        "cell_id": "92b4620ef6f3547c39eded3aaf13d60d9042152dc3320c9e208dc340aeea0ce7",
+        "incident_id": "INC_PUBLIC_wkdttxtmxrdwbxqjwjjt",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "b7f264eb3a1ab3c69f6550a58a7680a3",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "937ebba3f9ad0b625dd233d1e76a07e376c33af7110808f6299a548a9253f1fb",
+      "input_sha256": "39543da74d9df60e7e7eecaa5a5e7ed8b1973bae6d5b08befa277e313e8530e9",
+      "payload": {
+        "cell_id": "937ebba3f9ad0b625dd233d1e76a07e376c33af7110808f6299a548a9253f1fb",
+        "incident_id": "INC_PUBLIC_hpkgujbszrqnvvszebcg",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "f1260a06c594c431b426d1f024c3d86f",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "95c881fe48d3b713a01e640cc38f1c8afb12ec1dbfe57bbf5eb05da05db12d90",
+      "input_sha256": "bb138a2ae468494ecf49bdaf49231d01cbcfebde7516d7edf2ab5d473c307c7a",
+      "payload": {
+        "cell_id": "95c881fe48d3b713a01e640cc38f1c8afb12ec1dbfe57bbf5eb05da05db12d90",
+        "incident_id": "INC_PUBLIC_jvfxpvdykykjytzsfjfx",
+        "incident_type": "suspicious_activity",
+        "severity": "low",
+        "asset_criticality": "low",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "kill_process",
+          "quarantine_artifact",
+          "block_egress",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "2612576d6b317ab528874a5e56351d47",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "9610e76c63ac67ccf42dad659d736ff5ed33e73c9d383623499d9c4f253dfd88",
+      "input_sha256": "f7e7f6ef4b6ec05c22a417459c47ffa62ac6b09b5533f13eb7e32e53b5348703",
+      "payload": {
+        "cell_id": "9610e76c63ac67ccf42dad659d736ff5ed33e73c9d383623499d9c4f253dfd88",
+        "incident_id": "INC_PUBLIC_kqckyaxjwdbgzfdrfvyc",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "1427319f787bf05ed67c3bc958d95ca8",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "968d3064044095df541915aa1d9732be377a893d10735b470274a84cda29a5e7",
+      "input_sha256": "47b4547fb0bbe62d4b737d2c0eb845103ebdcfacc8d1868de3460d14ae6ca692",
+      "payload": {
+        "cell_id": "968d3064044095df541915aa1d9732be377a893d10735b470274a84cda29a5e7",
+        "incident_id": "INC_PUBLIC_tendsmvxeetmaaxbgkjc",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "f7567d089d5f921a2c10259c96955205",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "96c5feacd3bb1ad26378b3c4a47912153fc50afb27487109f18c4967ca48851c",
+      "input_sha256": "73acd4356b60d6576f230f67faa90f64d21cb084b1ef071a82fb8afeb8396ea2",
+      "payload": {
+        "cell_id": "96c5feacd3bb1ad26378b3c4a47912153fc50afb27487109f18c4967ca48851c",
+        "incident_id": "INC_PUBLIC_bksnzvhstxdttvsqefkf",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "faee4e134881dfaf96c38f509dec04f0",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "97503b2c93ecb8017597a9b3b3949c29601de1498e5a73775f6917a0ad71d573",
+      "input_sha256": "76753682f1d8d47ee66d4b6e51182cddcc24175ff1782b59e24ca078cffd820b",
+      "payload": {
+        "cell_id": "97503b2c93ecb8017597a9b3b3949c29601de1498e5a73775f6917a0ad71d573",
+        "incident_id": "INC_PUBLIC_dftxkumqfnkjnjcrzvye",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact",
+          "collect_forensics",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "2b018a43d9e8bd39bc6bc20c6201c808",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "9833ad247eb3cad0f02b13d2310299d5a55bbd7901f50ee6205f7984c99a05a3",
+      "input_sha256": "2b3702fac875a9fde68bb4c4ab4603d1159a638aaa0501478a3630858fc60067",
+      "payload": {
+        "cell_id": "9833ad247eb3cad0f02b13d2310299d5a55bbd7901f50ee6205f7984c99a05a3",
+        "incident_id": "INC_PUBLIC_agdgqzxkypwkgpthdwpm",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "kill_process",
+          "quarantine_artifact",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "36feda29f34772958e81be760608eca5",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "988452ee8dee2ca7309da2a4bf2adf98d2f9b55c165306b999948d74c603bb31",
+      "input_sha256": "7e6b2696744c7717bc254ea6d6245f842f9d9b19e6221bba026b4b8e584a24bf",
+      "payload": {
+        "cell_id": "988452ee8dee2ca7309da2a4bf2adf98d2f9b55c165306b999948d74c603bb31",
+        "incident_id": "INC_PUBLIC_ewpztkhxsykuvanmrmfh",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "e473ca2c2789a849d6a7943cf52288f4",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "9964bc9669ff34edf52feb6de4e01831b7c8534d5164a77e8ec4183776f2033c",
+      "input_sha256": "6dda5590b0e0b7bfca950cb9cb5c487b2a84f0cfd4755fa49e033ce855e6cef5",
+      "payload": {
+        "cell_id": "9964bc9669ff34edf52feb6de4e01831b7c8534d5164a77e8ec4183776f2033c",
+        "incident_id": "INC_PUBLIC_kajjykmekftswvmhfbcq",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "collect_forensics",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "35179ca03f1ada0df71dd307d3d949ac",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "99780229a88aea72d4f5aa0e2ff40986a173efbbbaee16cbd1bf7cfe491139e6",
+      "input_sha256": "3f0b377937e352f1bbc45bb31fef5ba287cb4413ad09e0355756ac86ec16263e",
+      "payload": {
+        "cell_id": "99780229a88aea72d4f5aa0e2ff40986a173efbbbaee16cbd1bf7cfe491139e6",
+        "incident_id": "INC_PUBLIC_gfamauxxfqhmgcmwumxc",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact",
+          "collect_forensics",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "56cf778b77de2148cdb45bc7729ff975",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "9d58591996cd99894bf8b97586b90f8ae2ea5ca1e47d792b65c98af8b9200dac",
+      "input_sha256": "0d0ea2b7a97a204957dec00edde4b451cae7322ba2961cce3f0ab22c225d68c1",
+      "payload": {
+        "cell_id": "9d58591996cd99894bf8b97586b90f8ae2ea5ca1e47d792b65c98af8b9200dac",
+        "incident_id": "INC_PUBLIC_jadqmapqqefhzabqfgny",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "kill_process",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "5ebd56950df4f5d31970ce521b2d28cd",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "9dd8a37ca24a78f5af569392a596034998a626eee55d6176edc814a7dd467ceb",
+      "input_sha256": "51f07fa59308cd6a57831adcd87822361061d8d5dbfef104aa118178c6881810",
+      "payload": {
+        "cell_id": "9dd8a37ca24a78f5af569392a596034998a626eee55d6176edc814a7dd467ceb",
+        "incident_id": "INC_PUBLIC_csgxqnrxgkhtebexhxqw",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "18803d980ed4cffaf3787525f3c0df3f",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "9e87c36be35287db42034c5f255995f55c06b545798c2ff8687f990fa5f31ae1",
+      "input_sha256": "8d95bc30e389c79ff6be93139558c07f8a535d137761ae2dd135166e37431047",
+      "payload": {
+        "cell_id": "9e87c36be35287db42034c5f255995f55c06b545798c2ff8687f990fa5f31ae1",
+        "incident_id": "INC_PUBLIC_czengzpnjaqyushnpjup",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "0f40300ba935c01ecda91d76af26bcb8",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "9ef2efc6ee4d92560d134c9b5d05c3134a6efb2c0222325b0dc2b67a83dca134",
+      "input_sha256": "b00e2f08321d5d7308df3f42471c34bf4883e7d80a51b76b3049d0b6774fe4b1",
+      "payload": {
+        "cell_id": "9ef2efc6ee4d92560d134c9b5d05c3134a6efb2c0222325b0dc2b67a83dca134",
+        "incident_id": "INC_PUBLIC_physjbfrayjxfxexjsch",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "0f7e4661c36ca2538f9a48191ff616ce",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "9f831d54c41061da48bd3de16c489bbe1f86d8897ba294c7b67453e571c31e88",
+      "input_sha256": "c81702c97c2ae9ac76f82bad5a033c874217cb753fc4299d3c373e9b5a900cb7",
+      "payload": {
+        "cell_id": "9f831d54c41061da48bd3de16c489bbe1f86d8897ba294c7b67453e571c31e88",
+        "incident_id": "INC_PUBLIC_sesesyhhytwgdyufwuzt",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "dc74f9cdbfa361e8ef66b68b4b84af0d",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "a08a5183929a10375cc7a42a779a4f70368ffcacbcc4bed10b27bf8b9580b5e8",
+      "input_sha256": "688afc8c4ecacee68f3fc783cf0a1c4aa29e04838df7891706308cb2ad3331b9",
+      "payload": {
+        "cell_id": "a08a5183929a10375cc7a42a779a4f70368ffcacbcc4bed10b27bf8b9580b5e8",
+        "incident_id": "INC_PUBLIC_bnenneyhrbbjhrsfhcjg",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "e66ef40e3d48a81da1cecd1bef742ac4",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "a1f74cffb5913c0c27866c5a4e42147078b01aac25a791d560ccc962cf308d9f",
+      "input_sha256": "29c24af5710a6930a06c9800e36342dced00d95a594611d36dea007a22fc3aa5",
+      "payload": {
+        "cell_id": "a1f74cffb5913c0c27866c5a4e42147078b01aac25a791d560ccc962cf308d9f",
+        "incident_id": "INC_PUBLIC_ftvmgxsqvbhwjsbyafzm",
+        "incident_type": "malware",
+        "severity": "low",
+        "asset_criticality": "low",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "7310b0160813097bc065d3702627877f",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "a2f2733d0983056bc442c01e03fc506d7fec3dd3af8e110fbebae7713e289283",
+      "input_sha256": "a7c51434dbacaa049141731bfbf6791828fb734128cd28fa027a7939f97d2259",
+      "payload": {
+        "cell_id": "a2f2733d0983056bc442c01e03fc506d7fec3dd3af8e110fbebae7713e289283",
+        "incident_id": "INC_PUBLIC_katzrthgmaatecwvsevv",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "kill_process",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "809c31303e77436d5bd43fd202eb1d1c",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "a332ae2c1663c1ad167d78797ab609ad7264d6b00e6b47094da23f9e093f88d2",
+      "input_sha256": "af01c4b07cdd4337a66e70c966b86f886847b05829b50379917bddad5e5a19a8",
+      "payload": {
+        "cell_id": "a332ae2c1663c1ad167d78797ab609ad7264d6b00e6b47094da23f9e093f88d2",
+        "incident_id": "INC_PUBLIC_ganxqmrscgcrsqmzdtgn",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "906c51c5c723a831328a6b477ef66e26",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "a4a9a52ae7ea26acb69533b274259ee4d17c60b15ed5a94640c43a9deac39641",
+      "input_sha256": "df18ae5fa59c0afe1a2748c9d39562c557585fdd21d39ffd147b53641b66f204",
+      "payload": {
+        "cell_id": "a4a9a52ae7ea26acb69533b274259ee4d17c60b15ed5a94640c43a9deac39641",
+        "incident_id": "INC_PUBLIC_ugbqxvvjsaygcapcsfhn",
+        "incident_type": "incident_type_001",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "da46996d97f12fa63d9ff2de84fff26f",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "a509073a4802778da995cdc6cea101d3afbc6f2026d1dc3ce369734c8c5e86fc",
+      "input_sha256": "473a3e9ae17242d71861a38c0c35ec16145a0b150fdfe478404431a484e41060",
+      "payload": {
+        "cell_id": "a509073a4802778da995cdc6cea101d3afbc6f2026d1dc3ce369734c8c5e86fc",
+        "incident_id": "INC_PUBLIC_kbkkjqjvvsbmeffcvtpv",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "0169d2cf45f10c50db2a9cea965de589",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "a66a2650b88dd2556acd2e6c91af3ad13ae49a5ff28476bb1f448384ea5edb76",
+      "input_sha256": "cda1b91dff3238fbcdb29bf90f970b28465b99dd46fd0d214ecd1e73be4379e2",
+      "payload": {
+        "cell_id": "a66a2650b88dd2556acd2e6c91af3ad13ae49a5ff28476bb1f448384ea5edb76",
+        "incident_id": "INC_PUBLIC_uzuzjccqngxfmysjzejy",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "47782112c35915d53fbd10f47915f1c9",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "a717654548f2f43a30a648dddd682b4805864eca0c21ad91614677bb4751dbca",
+      "input_sha256": "b3e469c763731c04d0727b87d1fb893e324d304c42dd5cb82ec3db15e3f9aca9",
+      "payload": {
+        "cell_id": "a717654548f2f43a30a648dddd682b4805864eca0c21ad91614677bb4751dbca",
+        "incident_id": "INC_PUBLIC_vgbvwpeceajgyxycppza",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "isolate_host",
+          "quarantine_artifact",
+          "reimage_format_host"
+        ]
+      }
+    },
+    {
+      "task_id": "c7a3071c1421f5686e829e7e72700672",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "a94db5496814041ffb2d51eed5f9684932bad85b15d548ebdcf92f548fc5245e",
+      "input_sha256": "70ddd0628bb3e741e24aba9109caec7daad92d8d0865cb0123b3dad552d6ed30",
+      "payload": {
+        "cell_id": "a94db5496814041ffb2d51eed5f9684932bad85b15d548ebdcf92f548fc5245e",
+        "incident_id": "INC_PUBLIC_nunsfakznzbqxnawwgfv",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "177561814c520f99f63e48ea41a5414e",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "a961870098e87a9e0686065c986523c16b1c84953c59d063993c113b3c2325e8",
+      "input_sha256": "809f86f317992ff0b2c41879a57fad52e9e2fa4d9a0fb108852a453abdb6819a",
+      "payload": {
+        "cell_id": "a961870098e87a9e0686065c986523c16b1c84953c59d063993c113b3c2325e8",
+        "incident_id": "INC_PUBLIC_akucmcgxwnsjgdwatchr",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "90eb166ca35f83064c3f038b0d475ada",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "aaad48a31899c10943279e0287f2d7c9d32d0ac0a54b1bd095cdaed63f700967",
+      "input_sha256": "489b1c504b88414d4fd2c279c84509077a18059d9c941434d62bb6b7eba17003",
+      "payload": {
+        "cell_id": "aaad48a31899c10943279e0287f2d7c9d32d0ac0a54b1bd095cdaed63f700967",
+        "incident_id": "INC_PUBLIC_srrtrvcqcnzzqyctbknb",
+        "incident_type": "suspicious_activity",
+        "severity": "low",
+        "asset_criticality": "low",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "d9f98cf6245fa46ef5aee3cb04593f3e",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "aadaf12a052253acb5252004f019567f109b9173f29fe418261034ce06d64213",
+      "input_sha256": "0d4598a22800a96fe6f1f4c13d3613174ffc14ac3879f5630457edc31c935907",
+      "payload": {
+        "cell_id": "aadaf12a052253acb5252004f019567f109b9173f29fe418261034ce06d64213",
+        "incident_id": "INC_PUBLIC_ffwvsesnqjxfuattcyfz",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "8ab2fdbe5db6123915209fbbb958e121",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "ad6e930f3fcb7af293e8adf891f93988cd4d46bfc4c80082d432bf3503d80615",
+      "input_sha256": "b0f79015a00ea900aedc49c9298b222b39aa6e91c0006c4257e48049b5f4ba93",
+      "payload": {
+        "cell_id": "ad6e930f3fcb7af293e8adf891f93988cd4d46bfc4c80082d432bf3503d80615",
+        "incident_id": "INC_PUBLIC_btstweuvqkqspvjbhckc",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "e831d4a361522aab9032a4284849d8eb",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "ad9bb75dee3900bf069f573d5ff1ac7dc252872099cc5250b5ec1b98b4d9ffbf",
+      "input_sha256": "7ab169827966428f4e5b4c676246c102b89edfed524e47ab4d6a130f20907b9b",
+      "payload": {
+        "cell_id": "ad9bb75dee3900bf069f573d5ff1ac7dc252872099cc5250b5ec1b98b4d9ffbf",
+        "incident_id": "INC_PUBLIC_vbabhgcvycxeatynemtb",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "f608b7307ae3efd04fa1f1483a82749b",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "aebccd513469c3d4777ad46c62e6e40575c488e883643289e299e7c6dbb6a8c3",
+      "input_sha256": "d483cacec2ba96c973585a0b12ad104af24493707fb823782c9b3802886613b1",
+      "payload": {
+        "cell_id": "aebccd513469c3d4777ad46c62e6e40575c488e883643289e299e7c6dbb6a8c3",
+        "incident_id": "INC_PUBLIC_sdaftrapnrbaqtjdhnjk",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "4d874d4adce79acc7ca0d81f5a44ed5e",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "af85010607b016afeeb8ab86bb309ff7841c91cf4509f985cd554f647758814d",
+      "input_sha256": "6b30c8671fa2c87f4c4baaa0b4aecba7939fe7f3f4356caf229bd9cec04fa984",
+      "payload": {
+        "cell_id": "af85010607b016afeeb8ab86bb309ff7841c91cf4509f985cd554f647758814d",
+        "incident_id": "INC_PUBLIC_futaksfjerpaxtecbwsg",
+        "incident_type": "malware",
+        "severity": "low",
+        "asset_criticality": "low",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "a3600defe5506c1c1f0bd1eb9853e687",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "af8aa1657992bc7f510f0cf7efcac637a528a65c6a0c5a56d1e7f66a058aa68f",
+      "input_sha256": "1b52a44c20e7071696391513b7419cc33f7e8109c49cc8dfb321909d4151b217",
+      "payload": {
+        "cell_id": "af8aa1657992bc7f510f0cf7efcac637a528a65c6a0c5a56d1e7f66a058aa68f",
+        "incident_id": "INC_PUBLIC_grwraznvnwmzrzfjwgvz",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "084d0801823d940bb19e81381b922800",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "b1ef5d101e99024135e8ad0f9a0e64e409e0e084f223abb811e22e4c37a3ceba",
+      "input_sha256": "8f5616e9562b7af4306a6db655b2dd6fc844283191e7f41882da1bbcd08122b6",
+      "payload": {
+        "cell_id": "b1ef5d101e99024135e8ad0f9a0e64e409e0e084f223abb811e22e4c37a3ceba",
+        "incident_id": "INC_PUBLIC_kbuukquyjevwjttazzag",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "d452183cedaef16e9384f6cc9f660ec0",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "b2f57aa72c85175a65e1a5fe1d9649803f10434fc72b285e072c678776060524",
+      "input_sha256": "ebedcf53f085de8c57c93ef36cfe9d0e9ba2e302c79b914329908a71241f3774",
+      "payload": {
+        "cell_id": "b2f57aa72c85175a65e1a5fe1d9649803f10434fc72b285e072c678776060524",
+        "incident_id": "INC_PUBLIC_yvvxzxaebsbgunykpjcd",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "kill_process",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "8a499dccf38b17ff01ad9d30c6525c94",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "b3f003d329c4b47413c275a448039421135b8c01e9e9b324213025b7d3bba27c",
+      "input_sha256": "740fbf91311b342112fb74eb51ca1698c409b13a6ba0bd444688eaf8f1e1d25c",
+      "payload": {
+        "cell_id": "b3f003d329c4b47413c275a448039421135b8c01e9e9b324213025b7d3bba27c",
+        "incident_id": "INC_PUBLIC_rmdakmvgrhwdtdccxbem",
+        "incident_type": "authentication",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "7fea227a9809cdc142fb2c39b5ca26de",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "b42bacfaf0718fb13215247ddf181a7097de4b7a1a5faeec74a4c43911cdf52b",
+      "input_sha256": "dd01b7affc9a2512188f71d293b7ab881c21062c60d19eb3162526d1383bd700",
+      "payload": {
+        "cell_id": "b42bacfaf0718fb13215247ddf181a7097de4b7a1a5faeec74a4c43911cdf52b",
+        "incident_id": "INC_PUBLIC_xsxbbxvvbrdyahagmamh",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "dabd75fb070113d3f4f6d2365d623d6f",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "b45aaeb2dedb631aaad413302cb0d353348791ef00423f3393243c40f79707d2",
+      "input_sha256": "4f76ea3ab1ae73e7bce7f5346476f14865269310be1a543cab965731f1696808",
+      "payload": {
+        "cell_id": "b45aaeb2dedb631aaad413302cb0d353348791ef00423f3393243c40f79707d2",
+        "incident_id": "INC_PUBLIC_dqxgrxbtgwkscxdsfmmx",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "b53eeedfc367b7c14e375650930d4478",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "b4a931bcc2a06468ec866ed5b6ca6d8fdd7f8c5c11dc41529610701eb33dd34a",
+      "input_sha256": "5636a723466906892b91bbded1455c5304a54bcbe7a5240b4e0ecb8187830484",
+      "payload": {
+        "cell_id": "b4a931bcc2a06468ec866ed5b6ca6d8fdd7f8c5c11dc41529610701eb33dd34a",
+        "incident_id": "INC_PUBLIC_vdhurkuuuzszwakzescc",
+        "incident_type": "authentication",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "c2bedbb34053df24081ced88502d7d09",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "b4c34e12044aca22c9819f74ce74b4a86b4727734174bb5d1a0dbccdb726bfe2",
+      "input_sha256": "15bc1c4d2423bd1da9990dc56edd298748b909b6cc1e04eb0782684e14ef4398",
+      "payload": {
+        "cell_id": "b4c34e12044aca22c9819f74ce74b4a86b4727734174bb5d1a0dbccdb726bfe2",
+        "incident_id": "INC_PUBLIC_nprdzwwknjnaygntcnjb",
+        "incident_type": "access",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich"
+        ]
+      }
+    },
+    {
+      "task_id": "2add065ceb332e32d61491bc06573f6c",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "b4d4c93e956bc93aaff189b5c66594f6ee1bc3a525b0494a2fa49a41b5bf9c17",
+      "input_sha256": "870431c2456538292dcdc3c354054f37fec6c5420864440327ea7ecfa9720c7b",
+      "payload": {
+        "cell_id": "b4d4c93e956bc93aaff189b5c66594f6ee1bc3a525b0494a2fa49a41b5bf9c17",
+        "incident_id": "INC_PUBLIC_mwyvjjsrkkdxuaxjddae",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "7aa2dae5d3801678443ccb537328e288",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "b52e6d8f9cd5ec5f1cc8ce765f720ecbdf362e8eaa79adefa855b667702cdc82",
+      "input_sha256": "0dffd4316040ab524a88a53e4e8d41833f4c6c981dc8cd76b080783e9911c2bc",
+      "payload": {
+        "cell_id": "b52e6d8f9cd5ec5f1cc8ce765f720ecbdf362e8eaa79adefa855b667702cdc82",
+        "incident_id": "INC_PUBLIC_kqjcsdrfnabksbdekfvp",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "3f54472c6151777638e58f1835924a61",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "b62147235fad86148170e8c61708b0c0701597067680c920456e4e3bcdaf53fc",
+      "input_sha256": "f2a37a1d7e36850b0f8e4ca8126d7e0b0d96da79b5a21361b75282fa1fdc1c11",
+      "payload": {
+        "cell_id": "b62147235fad86148170e8c61708b0c0701597067680c920456e4e3bcdaf53fc",
+        "incident_id": "INC_PUBLIC_czdzecjkwsbmsgkcxbau",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "kill_process",
+          "quarantine_artifact",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "5f9fabae6fac8b4108bda1d611f87b42",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "b6ee9cfc3c54beff99ad78e3ac212f3955878a0e6f68ed03a938e4069bb42552",
+      "input_sha256": "a6eba88f74546ce284358556d0c1e6462dfa0a5656f40b4de2f0ad6007ec41ac",
+      "payload": {
+        "cell_id": "b6ee9cfc3c54beff99ad78e3ac212f3955878a0e6f68ed03a938e4069bb42552",
+        "incident_id": "INC_PUBLIC_gjkhndrdbxjgbzzrskza",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "83b962f1c317e6a6bff578d0a1db6bd0",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "b8b1e13d352fffce128b464e87343b64ef9d066d2170ba58ff284daad1b394dc",
+      "input_sha256": "b514cb8c17ca66369640e5cc6d58224b669f7eb4cb34a9ffd92fb2c46bebd26c",
+      "payload": {
+        "cell_id": "b8b1e13d352fffce128b464e87343b64ef9d066d2170ba58ff284daad1b394dc",
+        "incident_id": "INC_PUBLIC_qetbrtepsjeswcbudnuq",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "7b708440257110c6ce30444bd754c259",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "b93c6a5149c800044222c89b990964ac6c0c7ea8dd75ae7e248aa22d9017bb07",
+      "input_sha256": "51f457038900c768a6228f0f512d0802c2edc77ff4f00ead150a709641752bd1",
+      "payload": {
+        "cell_id": "b93c6a5149c800044222c89b990964ac6c0c7ea8dd75ae7e248aa22d9017bb07",
+        "incident_id": "INC_PUBLIC_ghvzhpuazgaurremqqfs",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "25dfbc482d6c81318016a9ef91ab8180",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "bd86c56472d0768470728039805cc80100d6d2a021250a921fa2610902e099ca",
+      "input_sha256": "375a1f471fc1fd45ef465c00d585fd1c02ca14abee5ee874efb61aee29a73c4f",
+      "payload": {
+        "cell_id": "bd86c56472d0768470728039805cc80100d6d2a021250a921fa2610902e099ca",
+        "incident_id": "INC_PUBLIC_czfvtsbjznuvkuqtjnbb",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "cb1e962e60e9c3baedf3760ff38e4e06",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "be9d126034d100e7a654177d9565787694e1eb69da33d79417cf4cd3cf9db26d",
+      "input_sha256": "9eb5178d658d085c8479de1babce26b87579545594e2a27efb417c893f4cc014",
+      "payload": {
+        "cell_id": "be9d126034d100e7a654177d9565787694e1eb69da33d79417cf4cd3cf9db26d",
+        "incident_id": "INC_PUBLIC_peyyzsdmqajnytmtxyyu",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "c9609abe73ca87da937502cfd18fdb80",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c01355e300c0d071744ec78a55e0ba2c814fc803d1d819f90e7ed538c0a33178",
+      "input_sha256": "dbf1a847862307e73c7c04a395cb303b7f64ed9bec73197934b35438b659a1e2",
+      "payload": {
+        "cell_id": "c01355e300c0d071744ec78a55e0ba2c814fc803d1d819f90e7ed538c0a33178",
+        "incident_id": "INC_PUBLIC_wcutfpyvchgappphsjpc",
+        "incident_type": "system",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "bff669813a788633ddfa448de95b3eca",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c06f685a7c1e1045c7cf875ed31c528afc2f202fb57aaa16acba22753ea51490",
+      "input_sha256": "6e60fd40dbbeb56d03078f3a793ee5e965e44c2fcad198ac9c4421392f43a144",
+      "payload": {
+        "cell_id": "c06f685a7c1e1045c7cf875ed31c528afc2f202fb57aaa16acba22753ea51490",
+        "incident_id": "INC_PUBLIC_sjpgnrvgttmqbsjgneth",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "79dcfde359ff8e2b102c571af7040ef9",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c1140318324570afce9ef484c157214bff9fc11ed8e0791c04229f338c6dca05",
+      "input_sha256": "c37a19ad489f714735dd4760b3f2047ab77b220d6e9bfc014ce9f084db492e8f",
+      "payload": {
+        "cell_id": "c1140318324570afce9ef484c157214bff9fc11ed8e0791c04229f338c6dca05",
+        "incident_id": "INC_PUBLIC_vgutskgytyvqnmmztnra",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "77a28d473adb6a4605cd4dcd9e4031d1",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c1f31482e8155bf08c9429300abe14fda57f46134212f4259ded4c430660fc49",
+      "input_sha256": "1cd67c713e89fac8306f29b71ca00ba24f36ab256f8e6b57fad2150776e44a2b",
+      "payload": {
+        "cell_id": "c1f31482e8155bf08c9429300abe14fda57f46134212f4259ded4c430660fc49",
+        "incident_id": "INC_PUBLIC_cezfatxjxcunpcqmkuuv",
+        "incident_type": "system",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "db7ac7ce0847923a38ecde5621030a8e",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c22b53488d5875a0f48cf96937ffb7a31eff9213231c4112dd1ca07eb0906a42",
+      "input_sha256": "d44edfdce06cf2496bd8659c19c62e87beb54c34585e1eeef4d79afcde0696a0",
+      "payload": {
+        "cell_id": "c22b53488d5875a0f48cf96937ffb7a31eff9213231c4112dd1ca07eb0906a42",
+        "incident_id": "INC_PUBLIC_trprzraejatxdfpnfffz",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "82a1610340ce16b05a943173ded38918",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c3d75a1bc25d73beccb8cc37ea5fde0f3e956e8685c670ecce36b66166433ffe",
+      "input_sha256": "7e7a9e283d6fa206f9c63e67b1f947bfea89ada0fd224b0a560679536dead361",
+      "payload": {
+        "cell_id": "c3d75a1bc25d73beccb8cc37ea5fde0f3e956e8685c670ecce36b66166433ffe",
+        "incident_id": "INC_PUBLIC_syddfsgtumwznmjaqkys",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "9ae78546cfe96ad08c1803b127f52314",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c45f4827437318bc0b63807188e9868a082b31adbf3ae3d2c4b2f4abf42ff55a",
+      "input_sha256": "aba1c9584cd3ea02c036f17c944141e7209167b602947c64dadf4618ffeb4a6a",
+      "payload": {
+        "cell_id": "c45f4827437318bc0b63807188e9868a082b31adbf3ae3d2c4b2f4abf42ff55a",
+        "incident_id": "INC_PUBLIC_zxcptjdbqcknffhqhnax",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "cae298bf75f9c76e7cbc0fb55b6b0e90",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c4f4588eb6d362363efeea1ad6ae07bf9f4d75e9027ab524c09c943b232e4ba5",
+      "input_sha256": "0800d13a6731c2e4653b04ab73cd242bfb1d2559ec084605351f97f762b893e7",
+      "payload": {
+        "cell_id": "c4f4588eb6d362363efeea1ad6ae07bf9f4d75e9027ab524c09c943b232e4ba5",
+        "incident_id": "INC_PUBLIC_wawajdkgzbxhkdwfnmxb",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "60e00446b1ddaa8a8721211439d82d87",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c5fe814c5cb50e32ece416c344991bc6085999f245a8f6081e9b6b03b0e24298",
+      "input_sha256": "57ba2867848f8381b5a3a60d6a154a9ea2d533af0190bf0cd55af0cdbfc1c0d4",
+      "payload": {
+        "cell_id": "c5fe814c5cb50e32ece416c344991bc6085999f245a8f6081e9b6b03b0e24298",
+        "incident_id": "INC_PUBLIC_ufzerkzpkptczdawgtgz",
+        "incident_type": "incident_type_001",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "9fcdf38c9ea8484eb0e448c48681672f",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c707ab6c7ee6bf238f4dfb828253d5f3a645e888cf65eb5a26ec0f9c9b175b1c",
+      "input_sha256": "f380ab3a8b394468319b0297a19aaec6c34773eea610564ef25c39129af34b55",
+      "payload": {
+        "cell_id": "c707ab6c7ee6bf238f4dfb828253d5f3a645e888cf65eb5a26ec0f9c9b175b1c",
+        "incident_id": "INC_PUBLIC_yknxepquuyeyvfwucfxn",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "7d80289c059bc433cfb3ddd086b98e7a",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c77462180e8c5fd0e1dc63a224c03eaaf72e64feff67fa88a260c7a29e99fbbb",
+      "input_sha256": "c61dafde0e9cf08d8d17a4bfa82dcb18118d6c46ec7471d3ba0487a2d7920717",
+      "payload": {
+        "cell_id": "c77462180e8c5fd0e1dc63a224c03eaaf72e64feff67fa88a260c7a29e99fbbb",
+        "incident_id": "INC_PUBLIC_gqvecxcapmvsqsqufmju",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "a633b4feedabb62359b33b7fd8a647a2",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c7e3557d3cc02a55edda14a707092fb8f6dd071a72b745b569866e9ca04b866c",
+      "input_sha256": "94be82ab630ea17ab48829f3b585e7306811433e73393423507e3d2cfc2cc4ae",
+      "payload": {
+        "cell_id": "c7e3557d3cc02a55edda14a707092fb8f6dd071a72b745b569866e9ca04b866c",
+        "incident_id": "INC_PUBLIC_qvrtxjpwprynexbyupys",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "cdaa7e2e6363cee6e21af4541289c1b1",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c80844c690a2d036114c6324c71be32b49545a6b70e3c433c6ed3a6b18ac6e37",
+      "input_sha256": "9df34cf7e7173fb67ecc3ac243a873dac895aae6720a002a090217760f1109e8",
+      "payload": {
+        "cell_id": "c80844c690a2d036114c6324c71be32b49545a6b70e3c433c6ed3a6b18ac6e37",
+        "incident_id": "INC_PUBLIC_dqefqwxsujkrkgmzcmuv",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "26f846a2fc0e517693cd0dfda748b1b7",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c81b4e3f38dc6770293f1250cff995d89b290074cf1950952d6b3c148d58de9a",
+      "input_sha256": "3ad0f32cc5eacc482f3cd3d623ecb33e841452caeb83d8fc5a61e4b5a2119177",
+      "payload": {
+        "cell_id": "c81b4e3f38dc6770293f1250cff995d89b290074cf1950952d6b3c148d58de9a",
+        "incident_id": "INC_PUBLIC_hdzphbbvbfsdqyjgvbqw",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "d4470d7fb777bf8f5775b60c156035f6",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c84e0720f8e1860abcadf29378ced2de5fe74634144f42ebfec156c2223d8c0a",
+      "input_sha256": "6dae5806c9690795f6f0d55469c27ee13286a0bd8cc4182c6471e8948995f32b",
+      "payload": {
+        "cell_id": "c84e0720f8e1860abcadf29378ced2de5fe74634144f42ebfec156c2223d8c0a",
+        "incident_id": "INC_PUBLIC_uzuzjccqngxfmysjzejy",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "block_egress",
+          "kill_process",
+          "quarantine_artifact",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "f84f789cb4c8d089b76f63e33e346c3c",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c88a8841db955e110d82bd66e12818f8dccfb7fe1d84b3e57a0791526a586051",
+      "input_sha256": "128c0b2e33a28f7ce99191a5c5a12a7ba9c6b2255c1fca09026893a8426f5459",
+      "payload": {
+        "cell_id": "c88a8841db955e110d82bd66e12818f8dccfb7fe1d84b3e57a0791526a586051",
+        "incident_id": "INC_PUBLIC_eubwyczkhkfkjqkfvgng",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "e1c5d29e7517078f1d465227504c8a6e",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "c8bad8818c1927c558a2f3a20be9bda58e0bc892cae9f286f15fbb67bdf6fe2a",
+      "input_sha256": "781db0b6ca87bf809ebcbe7dacc3a2db0435b248182ede58874b53d7b27a2cca",
+      "payload": {
+        "cell_id": "c8bad8818c1927c558a2f3a20be9bda58e0bc892cae9f286f15fbb67bdf6fe2a",
+        "incident_id": "INC_PUBLIC_smhqtendcypfaqgzxvgh",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "1dbbf9b71056a48241ef6a9052c35eb0",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "ca3416ad5c203e40743d958ac230b6d4b5fb0af425a1c504853dc3d64634f4eb",
+      "input_sha256": "56b7434b0f4bb6410a3a78c857e34b032e012c4ae252e603ab299fadf28c017c",
+      "payload": {
+        "cell_id": "ca3416ad5c203e40743d958ac230b6d4b5fb0af425a1c504853dc3d64634f4eb",
+        "incident_id": "INC_PUBLIC_srrtrvcqcnzzqyctbknb",
+        "incident_type": "suspicious_activity",
+        "severity": "low",
+        "asset_criticality": "low",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "096aa990fdc25495eeb5f71cac6d6bca",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "cb6b35a350179ffc6ac306d2ec6afb5e9cae3dffd457ac76421e5d28e4c28009",
+      "input_sha256": "bd637e8693b723e3819ad39e8a2dd3dea5838fb4a1e2e0d6d3573a341627a97f",
+      "payload": {
+        "cell_id": "cb6b35a350179ffc6ac306d2ec6afb5e9cae3dffd457ac76421e5d28e4c28009",
+        "incident_id": "INC_PUBLIC_fauxjxwfsnejyywtcyxa",
+        "incident_type": "access",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "block_egress",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "4ce95037f6b261d045e1645ec5ac6a3b",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "cc5f104581685bd9cbbd727be613d81efc209d51f2e437464ec2168c29123f09",
+      "input_sha256": "e9bbfca1467aab35d0b53b4bff06904ab18c1bd5cf0e05ab30e2379c0d5acadb",
+      "payload": {
+        "cell_id": "cc5f104581685bd9cbbd727be613d81efc209d51f2e437464ec2168c29123f09",
+        "incident_id": "INC_PUBLIC_wawajdkgzbxhkdwfnmxb",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "8b613e43191ff09d37b47f83df5b9ea3",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "cd812b9826eca9f688e4b3d2dca991d7e7b2cf24a58bfe77e200f72cfacfc60c",
+      "input_sha256": "bb996fb40547351da12a3844981fb2adcd0841f079c0cc2823568e3118382a8c",
+      "payload": {
+        "cell_id": "cd812b9826eca9f688e4b3d2dca991d7e7b2cf24a58bfe77e200f72cfacfc60c",
+        "incident_id": "INC_PUBLIC_kqwtsuwpvsettnvajjed",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "965be33da65729ab8cd210a752eccddf",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "ce9484cecb397c3d25e8869e4a30f2df2037b4393188733cf6da1b0fb8f75413",
+      "input_sha256": "146067e67967a18f71806627c776f55df634979ba8e11bfd34de202286ed4f12",
+      "payload": {
+        "cell_id": "ce9484cecb397c3d25e8869e4a30f2df2037b4393188733cf6da1b0fb8f75413",
+        "incident_id": "INC_PUBLIC_krsvgchwgevgyrgqkbrm",
+        "incident_type": "access",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "2c2557c7654b278038bd9f715393ed1a",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d1729851e7718893a0386046ff2820aaca781dc9c5aabf4f77ec6f1502fa5c63",
+      "input_sha256": "9ea2ef33e606b4a3ee415678808ed42d6e8c697bc6033ad7a23fdcf95f52142e",
+      "payload": {
+        "cell_id": "d1729851e7718893a0386046ff2820aaca781dc9c5aabf4f77ec6f1502fa5c63",
+        "incident_id": "INC_PUBLIC_dqyxjczccuzbfsvgnhtw",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "block_egress",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "283597947f9d46c8d7bc9f11902b8cc7",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d1ad2e8f419d6476d2be88fca387c77ac1deb641d87417f76f24faf23301298f",
+      "input_sha256": "2296a7e62cece497f2c3c570e1165f14e61bed35f3132f8927a92dc64ff1f226",
+      "payload": {
+        "cell_id": "d1ad2e8f419d6476d2be88fca387c77ac1deb641d87417f76f24faf23301298f",
+        "incident_id": "INC_PUBLIC_fsdbcmxcwbpqvwqqrrbk",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "4b09453e4ae3dce1798581a8ec3d9ff2",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d1d00c12f8ed14e89b091ad511ed2473ee0fdf9ab7e3663a8f83927410575351",
+      "input_sha256": "99d10c8487106cf854cb83ea8c676ec990f2232d9b3bf883172b6862fd11c8b6",
+      "payload": {
+        "cell_id": "d1d00c12f8ed14e89b091ad511ed2473ee0fdf9ab7e3663a8f83927410575351",
+        "incident_id": "INC_PUBLIC_cumctwyntepkwnecgvfs",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host"
+        ]
+      }
+    },
+    {
+      "task_id": "407328a13df156bca5aa67e7e72f1b14",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d2b132ca8f520d1570e2b18077a364a04f025c45d6658d21d8bd4c62993de2d7",
+      "input_sha256": "1eef9fe909c0f5bcd2c40bdc173fcd6551d5aacaf6535460f28dfe43d82a19b7",
+      "payload": {
+        "cell_id": "d2b132ca8f520d1570e2b18077a364a04f025c45d6658d21d8bd4c62993de2d7",
+        "incident_id": "INC_PUBLIC_btstweuvqkqspvjbhckc",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "919f4f1ee5dc08f322b72104d48a6ec0",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d3277941a5b693806ea77b4d47ce9905ed51b881e603abe99663b8f3e5b9cadc",
+      "input_sha256": "0e3368617ab8dc5326e411e982a1c38917a89b49cc057e378a610babe5cf0495",
+      "payload": {
+        "cell_id": "d3277941a5b693806ea77b4d47ce9905ed51b881e603abe99663b8f3e5b9cadc",
+        "incident_id": "INC_PUBLIC_rhtwprspasdtfxsmsper",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "6b93658a5061b70eb4fbe2b998f7224f",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d46a7398d6b1aa64803a7c25f4c46a8935a714651b524e7ce1669b55a5bed9ad",
+      "input_sha256": "dad768bd737071b0f1cd511f38947539b24c4eefd315fd570824192fe880d3ee",
+      "payload": {
+        "cell_id": "d46a7398d6b1aa64803a7c25f4c46a8935a714651b524e7ce1669b55a5bed9ad",
+        "incident_id": "INC_PUBLIC_ufbcbrabnfxkqsxwnxud",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "d2f66f89fcb3b5592d083e94d2742b48",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d4ab8a2673b675635163349110d685f3624764a6899b408676eb64e581dfa66e",
+      "input_sha256": "6d6b06da629236d5393962a3cf941de015580257743f54e38e1b84942e21bbc1",
+      "payload": {
+        "cell_id": "d4ab8a2673b675635163349110d685f3624764a6899b408676eb64e581dfa66e",
+        "incident_id": "INC_PUBLIC_ufbcbrabnfxkqsxwnxud",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "bab60fb9175d031cdcf3316423bd81e5",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d6083203244ab2d55d6d75d6e05cf545e2333e70fc34c465e411bf695c639f67",
+      "input_sha256": "9fc1db4b78ebccd3155f37c908a7ac7a3565ad40c75aa5b338fec150c3e4ce6c",
+      "payload": {
+        "cell_id": "d6083203244ab2d55d6d75d6e05cf545e2333e70fc34c465e411bf695c639f67",
+        "incident_id": "INC_PUBLIC_vbkpwukcedrfscakmdvu",
+        "incident_type": "incident_type_001",
+        "severity": "critical",
+        "asset_criticality": "critical",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "block_egress"
+        ]
+      }
+    },
+    {
+      "task_id": "e88298ad6dc27f95fbce3d1f8a21cefe",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d64ce6012d358878d817ea6c79a43820546cd3d9c6818a0dfcd353bbcfb29f1c",
+      "input_sha256": "530de948c9d203e833b2f25cb4bb9d7cc0e4e9838cecf5212af3d8a6067a1360",
+      "payload": {
+        "cell_id": "d64ce6012d358878d817ea6c79a43820546cd3d9c6818a0dfcd353bbcfb29f1c",
+        "incident_id": "INC_PUBLIC_kbuukquyjevwjttazzag",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "4082e011c1dc4714029e55b465796f38",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d6cbcb6ec4be6d122b76145c7d2f7bd82448f4aea5b209b4493d160ed53193b2",
+      "input_sha256": "969b071905a73ac902d06b4e5177b86b027b3ba55adef85c979155d177da6abc",
+      "payload": {
+        "cell_id": "d6cbcb6ec4be6d122b76145c7d2f7bd82448f4aea5b209b4493d160ed53193b2",
+        "incident_id": "INC_PUBLIC_gmhqfpsfbweyzrzhcumr",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "df2340272c47d48d7b5eb672c889ce1f",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d75cc87108322adaea40ca19d5ff1a5c9017167a73b05906efb07129211d9aae",
+      "input_sha256": "e0006091fb33dac2946f0cdb23bcdd1a44bf0d6f8c715338e6741af104f92849",
+      "payload": {
+        "cell_id": "d75cc87108322adaea40ca19d5ff1a5c9017167a73b05906efb07129211d9aae",
+        "incident_id": "INC_PUBLIC_spsqedrztdjvegzwfwda",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host"
+        ]
+      }
+    },
+    {
+      "task_id": "c065dfb60f9b77c32c635fb103a20adc",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d7799b498588274e9e270a9150d8d7d12b0288ace5e08d6fd45684e604b4f807",
+      "input_sha256": "d79f7d6a7276690c3dc062aa68185218d038473c452e00d58e73473cd3179b4f",
+      "payload": {
+        "cell_id": "d7799b498588274e9e270a9150d8d7d12b0288ace5e08d6fd45684e604b4f807",
+        "incident_id": "INC_PUBLIC_czqddzxukzyqutnzvxdz",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "25f5d785d5fb1bc156103a93e67f5640",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d7b4d6a845474a0e5af91808d24848bf5f5552ece5f480a9f897a6a46e36ffa8",
+      "input_sha256": "7a8ba5016f51e2d1884f3933a0d22a1cb021e203e34faa69a173b815b6d07aa3",
+      "payload": {
+        "cell_id": "d7b4d6a845474a0e5af91808d24848bf5f5552ece5f480a9f897a6a46e36ffa8",
+        "incident_id": "INC_PUBLIC_jvccxwasswfbqjhwtubq",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "dadf5b16dd5c94c63cd35a0297ba16f6",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d8411f8399982aa343989e607e58d5338abe3fb81b404edeab3cddad2ffb8f72",
+      "input_sha256": "37fbfbb40b108fe74a45f7389e00bb4c967df4bc69f2a82ca8f82943c0e82af0",
+      "payload": {
+        "cell_id": "d8411f8399982aa343989e607e58d5338abe3fb81b404edeab3cddad2ffb8f72",
+        "incident_id": "INC_PUBLIC_cphcccdgyugavmcupbej",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "kill_process",
+          "quarantine_artifact",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "5ba96e57d6156feda05f5297a7949d1d",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d8cd82ef9cddbbed42cf203278d1711740cb8237c11056c44bc943951ad13971",
+      "input_sha256": "e91c9d3f7fbdd48dc43d3fdbc4fc42a906ee437e18a8b7dd5e83c9b50b629ab3",
+      "payload": {
+        "cell_id": "d8cd82ef9cddbbed42cf203278d1711740cb8237c11056c44bc943951ad13971",
+        "incident_id": "INC_PUBLIC_aykxrgdsevurxmmpzqey",
+        "incident_type": "malware",
+        "severity": "low",
+        "asset_criticality": "low",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "close_benign"
+        ]
+      }
+    },
+    {
+      "task_id": "47a254395c1ac480fa37050b105f3450",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "d9da5600c88103ca5636e8fd90c96f6b928033c25765c2f36c44f1f7f5099145",
+      "input_sha256": "51629eb4eaa460d1a32bb040f6d40f4b78da749a3085587457af1a95e65bed0a",
+      "payload": {
+        "cell_id": "d9da5600c88103ca5636e8fd90c96f6b928033c25765c2f36c44f1f7f5099145",
+        "incident_id": "INC_PUBLIC_hpkgujbszrqnvvszebcg",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "95fb07def11d33e75a501df43465ca03",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "da8d51e71bbdba26668077c8dfb522c42a6a3cd9c71f1f24ba4721fcb04a4f5e",
+      "input_sha256": "c4cbaa7ea9bfe20072d11b17ce7f43674dbb80cfd71911f372383398eac269cc",
+      "payload": {
+        "cell_id": "da8d51e71bbdba26668077c8dfb522c42a6a3cd9c71f1f24ba4721fcb04a4f5e",
+        "incident_id": "INC_PUBLIC_mgjckswwyhydztrtbhfq",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "82f29700cc7abb06b9f570351b0b1dec",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "dad929df9c28354d3d0c03ed4e867b0ce57a0efaedd1389418db82ffc5bc2e15",
+      "input_sha256": "2773b0aec0edad15a05f857260e52249511434179a9cb1e850f6f04e25063d1f",
+      "payload": {
+        "cell_id": "dad929df9c28354d3d0c03ed4e867b0ce57a0efaedd1389418db82ffc5bc2e15",
+        "incident_id": "INC_PUBLIC_gkqqydpcmkwndqbstfmk",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "kill_process",
+          "isolate_host",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "1f900af50ef32c7bb5215bca27d67d41",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "dcb14e01a8a6617ada5b45a20e6e177e4d50f20b4113aa930bcbde9ebadd3cdd",
+      "input_sha256": "1d685a9599fe4fa72afb0825b2cc66fdead36c009788c9a42642a68d3c722c12",
+      "payload": {
+        "cell_id": "dcb14e01a8a6617ada5b45a20e6e177e4d50f20b4113aa930bcbde9ebadd3cdd",
+        "incident_id": "INC_PUBLIC_njtcjyskffngsbmpqcuy",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "341c457380fa2c50c6d62c605297d43b",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "dcf31b3cb51344dcda0545bcb57662de35c92acbbbe9cd4ce0201065ef4d6434",
+      "input_sha256": "4c8bec7dddb0f535f2ef016081f5438dc6364bfeb32abaf7b62a3f42d9953c42",
+      "payload": {
+        "cell_id": "dcf31b3cb51344dcda0545bcb57662de35c92acbbbe9cd4ce0201065ef4d6434",
+        "incident_id": "INC_PUBLIC_saxkgxvbkebyjbgndaks",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "a7c41e70286d697c216ad17454aa5c96",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "df6a45ec69344c21b5922877b6334ba91e3b0a059d87487ff051fc2c8a9a419b",
+      "input_sha256": "ffb24ba04d7047c9897ae6ab995780e118a1db900e9db89920118fdfacfc3b86",
+      "payload": {
+        "cell_id": "df6a45ec69344c21b5922877b6334ba91e3b0a059d87487ff051fc2c8a9a419b",
+        "incident_id": "INC_PUBLIC_hmdxqvfbdtufxkmktzfv",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "kill_process",
+          "quarantine_artifact",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "7a799cfd3304bb06923cf73430f99441",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "e03804c35e92cc92d84d8e0241191a69a78ceff4e3433b81013d4868fe173214",
+      "input_sha256": "1b3a2665007355e9c91c6d27e68dbd974f29d1a0abdcb5045501687bbe684806",
+      "payload": {
+        "cell_id": "e03804c35e92cc92d84d8e0241191a69a78ceff4e3433b81013d4868fe173214",
+        "incident_id": "INC_PUBLIC_bpvpavccvhryjqfdpnct",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "isolate_host",
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "8d5bb2384c0898e554ef8652db940f58",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "e14cf75505c46f6fcd380a7991a0a66bc380302249609a0125d3e93e363e6723",
+      "input_sha256": "3d6a3019e8f279873320842c24d0b586c811e3dc20e5f6d3cc017096773d1378",
+      "payload": {
+        "cell_id": "e14cf75505c46f6fcd380a7991a0a66bc380302249609a0125d3e93e363e6723",
+        "incident_id": "INC_PUBLIC_wtadjwcvtsdgxyuysvnb",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "e93c053d282334e0e05f263c5f46472d",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "e2fa90f437527438fc4259bcbce0f8774871c18cf608f45b7e8a7045412046ab",
+      "input_sha256": "a87ea1203dcf0d1a77e3f7305d38af4feb5ffdc8842366ec1a39d18d7cc1f747",
+      "payload": {
+        "cell_id": "e2fa90f437527438fc4259bcbce0f8774871c18cf608f45b7e8a7045412046ab",
+        "incident_id": "INC_PUBLIC_mwyvjjsrkkdxuaxjddae",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "e24c53ad3b843ab57791070afcdab2ec",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "e37c40b75644982d025181e09b172e2e0973cbfa436cfc6d3f131697638cd2ae",
+      "input_sha256": "025d16a25e17bf1324a654ae547dfc70ed9ea7a1c2cd56167ad62a31eb20302e",
+      "payload": {
+        "cell_id": "e37c40b75644982d025181e09b172e2e0973cbfa436cfc6d3f131697638cd2ae",
+        "incident_id": "INC_PUBLIC_grwraznvnwmzrzfjwgvz",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact",
+          "collect_forensics",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "a6e52b0f2571024c7d745deca3608300",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "e46ce6158ab468deb3df4c33ce8f4b30a31256808955827da139e8383fedd429",
+      "input_sha256": "314f54b7bee1daa5f4dfb742724c665eb0c7ed1591c3b7b060f6f3b152dcd2e5",
+      "payload": {
+        "cell_id": "e46ce6158ab468deb3df4c33ce8f4b30a31256808955827da139e8383fedd429",
+        "incident_id": "INC_PUBLIC_spsqedrztdjvegzwfwda",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact",
+          "kill_process",
+          "isolate_host"
+        ]
+      }
+    },
+    {
+      "task_id": "20cbb85e003b72781b7e9d4f43af6a8e",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "e4fe3e5c897b925037eb5f6441f487cbb2718c08d5ffea1666a4452e34e1f621",
+      "input_sha256": "b523724a3108723876e8119687d60c89053d212cac57b971bb42f27a1cd4cba5",
+      "payload": {
+        "cell_id": "e4fe3e5c897b925037eb5f6441f487cbb2718c08d5ffea1666a4452e34e1f621",
+        "incident_id": "INC_PUBLIC_wawajdkgzbxhkdwfnmxb",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "3fa9b556a7f7f702a67628d59097254b",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "e50cdcf3bf8df1cfcb595b934b22a2b8eb670f3671d24427c7d5f869394a75a8",
+      "input_sha256": "dd823fd0f7d41fb3dcb04cd71a0bb78b88315085352bf191007943a512069c13",
+      "payload": {
+        "cell_id": "e50cdcf3bf8df1cfcb595b934b22a2b8eb670f3671d24427c7d5f869394a75a8",
+        "incident_id": "INC_PUBLIC_pmeswnarkugysxyswcfe",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "reset_disable_account",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "15e5a1606134b2d1a365a30a8d6513cd",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "e519f383c9e717c3f299a030993667c3fd8a9c9db56aad7ceddf8f2cee2a0994",
+      "input_sha256": "d18b343a5b1c716c3d1cda1c0c34868c9a0bd7ae6b71f0dfaf171a8b90468e7e",
+      "payload": {
+        "cell_id": "e519f383c9e717c3f299a030993667c3fd8a9c9db56aad7ceddf8f2cee2a0994",
+        "incident_id": "INC_PUBLIC_nsyzxqazatwwtmfrmdab",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "adf02699c2b1a9f24cd7ecf88175832a",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "e7b5c0a8526aeff77fb78564ee0023de20f44c0fc6c72a154b334eafb2bb5b9d",
+      "input_sha256": "cc7cd72733178fd57af9c21457060087d39a6b6f39ccb31d9b6b7309f4f3924a",
+      "payload": {
+        "cell_id": "e7b5c0a8526aeff77fb78564ee0023de20f44c0fc6c72a154b334eafb2bb5b9d",
+        "incident_id": "INC_PUBLIC_upspbxshwynfuegjpxyt",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "3e55498da7ba439797ac59e2b04398a5",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "e9dd1a8f4d0ff526c057c9e5b178819c26878a0a3052a723d22465ab64f40ef0",
+      "input_sha256": "e1576039a081e4af2dce7ad4430d77a1849b01d33ac2ee20a6b7433cd185a490",
+      "payload": {
+        "cell_id": "e9dd1a8f4d0ff526c057c9e5b178819c26878a0a3052a723d22465ab64f40ef0",
+        "incident_id": "INC_PUBLIC_gqvecxcapmvsqsqufmju",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "d2e02770f1feff24120426c856f909fc",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "ed5ddf1dc90e4299704a41dd3f3254f65fb6eeef5bd114a7071c6c7f8b03c675",
+      "input_sha256": "7e9e622f38f9276f37928ed6cfe09cdd669cdffbcab537da14ca6af605c9d50a",
+      "payload": {
+        "cell_id": "ed5ddf1dc90e4299704a41dd3f3254f65fb6eeef5bd114a7071c6c7f8b03c675",
+        "incident_id": "INC_PUBLIC_sesesyhhytwgdyufwuzt",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "e5c7ec784b4a721935e174c1595feca7",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "ed74286f95e8cace14c10613ed505bfb28d3c3d9b8be7290ffca97d6056aeac9",
+      "input_sha256": "81aaf42a1d2280825cfe647f0e3eec50c1334b25ae8337c3375d1b93f3f8de98",
+      "payload": {
+        "cell_id": "ed74286f95e8cace14c10613ed505bfb28d3c3d9b8be7290ffca97d6056aeac9",
+        "incident_id": "INC_PUBLIC_wafekvybcgvxumvnster",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "block_egress",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "0adfe76dfd2cabf39734b20464d49954",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "ed86869c4073587190d2ef577887857ef1bf70ea7bee0b49435580f4956130f9",
+      "input_sha256": "5124f8f3dc893695c665b6d8dee1147678c3b6cc0c52a28296b6bd51dc24a98c",
+      "payload": {
+        "cell_id": "ed86869c4073587190d2ef577887857ef1bf70ea7bee0b49435580f4956130f9",
+        "incident_id": "INC_PUBLIC_partrenechehakaxwjrk",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "block_egress",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "5e32516833262b72039652e1e80bcec1",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "edef6fa3eecf57b962a182a1a1b524d1eff1468627336e757dd80558d33d5ef0",
+      "input_sha256": "44831edd6860fdd8368775c319b165ff37da97d8d25942d18bd81dfb92d6fbc2",
+      "payload": {
+        "cell_id": "edef6fa3eecf57b962a182a1a1b524d1eff1468627336e757dd80558d33d5ef0",
+        "incident_id": "INC_PUBLIC_sxeaknphtzvvbggrnufa",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "isolate_host",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "12cd6ff1c13254e506d0aa6b58d7bfa4",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "f04befbd5d8de681d6fc8166381454f31eaf2c5d26739eeabd1cd5da6843037a",
+      "input_sha256": "31036677746dc6d2cfec82c8e1727ca8de4c0a52a5e8cf296cd5ca117fd59c4a",
+      "payload": {
+        "cell_id": "f04befbd5d8de681d6fc8166381454f31eaf2c5d26739eeabd1cd5da6843037a",
+        "incident_id": "INC_PUBLIC_uyydteytzcuftdzggnjq",
+        "incident_type": "suspicious_activity",
+        "severity": "critical",
+        "asset_criticality": "critical",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "502277ff2a3b7d14ba249375d8b7efd5",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "f0e433b979a338c21c598ef507eef990c241830604e3097fec7bc4a5e5bb451b",
+      "input_sha256": "e59b7c635a265601387dede740aba873532177a5ce8bed290a8077cbb98c65bb",
+      "payload": {
+        "cell_id": "f0e433b979a338c21c598ef507eef990c241830604e3097fec7bc4a5e5bb451b",
+        "incident_id": "INC_PUBLIC_gpajqdxsvjtrqedeagsa",
+        "incident_type": "malware",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "c0a9b867beb30437b66dd173752decc4",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "f15437b0c9a5d5267fe16c5e70f3858e098ea6055fe73c014118cbe1f9aadd35",
+      "input_sha256": "2c2cf3756793df9f7dc6d91be8809580bbf8694a2d2de6eb6b70383d9f61f6c9",
+      "payload": {
+        "cell_id": "f15437b0c9a5d5267fe16c5e70f3858e098ea6055fe73c014118cbe1f9aadd35",
+        "incident_id": "INC_PUBLIC_mabnsxwuzsvmgcdxqgnk",
+        "incident_type": "suspicious_activity",
+        "severity": "low",
+        "asset_criticality": "low",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "kill_process"
+        ]
+      }
+    },
+    {
+      "task_id": "dd9c060e4bd9268c79c82b8a298c9ba9",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "f26d34c51bd4a9e06597141f1c4b606618ce3604334faa49ba4311fc6ac18607",
+      "input_sha256": "a390bc4d65b3f66b4737cf666d934021608319ba07d22a2806ad86b6fbbf3616",
+      "payload": {
+        "cell_id": "f26d34c51bd4a9e06597141f1c4b606618ce3604334faa49ba4311fc6ac18607",
+        "incident_id": "INC_PUBLIC_qxgapddgxaybcdskdzfh",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "kill_process",
+          "quarantine_artifact",
+          "isolate_host",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "7bfaebc9017442af71ad912e64ba50c8",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "f364ee7856f15722d6ecfb8f35a9a671941f90d0f3c66025e2c0e7b37cd66471",
+      "input_sha256": "6c139ff5775adf9101ac99c56b0dddf0d4801ce799b3f1be4aa60d859f784373",
+      "payload": {
+        "cell_id": "f364ee7856f15722d6ecfb8f35a9a671941f90d0f3c66025e2c0e7b37cd66471",
+        "incident_id": "INC_PUBLIC_krsvgchwgevgyrgqkbrm",
+        "incident_type": "access",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "39a2d31115f8b7f90b3640d6a0fd02a9",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "f409b6e24de648d8bda9db368de82164ff71ae86b36e1da95beb4104eb7695f3",
+      "input_sha256": "589cecf2706193dce10af9770529c8d72bbd6f6eab51e4f8472882fe146cadcb",
+      "payload": {
+        "cell_id": "f409b6e24de648d8bda9db368de82164ff71ae86b36e1da95beb4104eb7695f3",
+        "incident_id": "INC_PUBLIC_wynezqkqcbbrcrkmqqyt",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "c2ca6e84ffb2c8b2ae87980aa12efb08",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "f5395a31dec2b93c85ffb348f65ba39498ca93d2ea990861478c92cbcfb494a3",
+      "input_sha256": "f03b58863a0fa9921121e9b8b59e95b193796cc656e483025083e714d7d9b3ac",
+      "payload": {
+        "cell_id": "f5395a31dec2b93c85ffb348f65ba39498ca93d2ea990861478c92cbcfb494a3",
+        "incident_id": "INC_PUBLIC_csgxqnrxgkhtebexhxqw",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "quarantine_artifact",
+          "collect_forensics",
+          "escalate_notify",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "381619d1f4a87c2498c71d67593cfd45",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "f5b8d36e0795b741b398de729a2a010b9e80657a7cc925fa18a1a25922f7e832",
+      "input_sha256": "5da0a964a5648b56b5319cfdadfd48d1c02b85d35171675110b465b37565e6db",
+      "payload": {
+        "cell_id": "f5b8d36e0795b741b398de729a2a010b9e80657a7cc925fa18a1a25922f7e832",
+        "incident_id": "INC_PUBLIC_hyzgjntzqpessucjwsmm",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "collect_forensics",
+          "quarantine_artifact",
+          "monitor_watch"
+        ]
+      }
+    },
+    {
+      "task_id": "3ffac6d92365c344e62e49a1f31987fe",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "f6651fe1c78bda4d9cd94912ecc4cf040bc5ec8d39a65a10e2820e37321ea7db",
+      "input_sha256": "f815142621660b81f139893026a02c887dbe30b7e9c5d2a88f8235a2995462b8",
+      "payload": {
+        "cell_id": "f6651fe1c78bda4d9cd94912ecc4cf040bc5ec8d39a65a10e2820e37321ea7db",
+        "incident_id": "INC_PUBLIC_hdzphbbvbfsdqyjgvbqw",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "quarantine_artifact"
+        ]
+      }
+    },
+    {
+      "task_id": "c1041fa5be6f47937e12817db3cfa804",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "f7a828fddf064cc2702b6ba0ca7cc527de0f7c4dc36129e55ca7929a078d194d",
+      "input_sha256": "10b9ef5bcc4787a756932d0578bebe4e3065c69ab96c5897af3ad4a61d0b807a",
+      "payload": {
+        "cell_id": "f7a828fddf064cc2702b6ba0ca7cc527de0f7c4dc36129e55ca7929a078d194d",
+        "incident_id": "INC_PUBLIC_btstweuvqkqspvjbhckc",
+        "incident_type": "suspicious_activity",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "0c0cc30bd8aad57a82ababa3bfba620a",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "f93ef40adca52530f893a5b949bf864d7b401d5de813af300c6f4c6fccd41a56",
+      "input_sha256": "e312706011fda7fd115fd21b8eb67efe781a2006f182f1b5b7c87f70c945bcdc",
+      "payload": {
+        "cell_id": "f93ef40adca52530f893a5b949bf864d7b401d5de813af300c6f4c6fccd41a56",
+        "incident_id": "INC_PUBLIC_wxrzktvnbmcqsyzemcxv",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "b7c68d52c13f193bcc20fd73a563dcbe",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "fa62cc4f6043b43f7db89e0d5d0a99a3bbbc153805f1860f4f33cccfe282093f",
+      "input_sha256": "45c2ed1db943d19bf72e83335f9da659d28d984b52f4304b7854c780ce1d8d49",
+      "payload": {
+        "cell_id": "fa62cc4f6043b43f7db89e0d5d0a99a3bbbc153805f1860f4f33cccfe282093f",
+        "incident_id": "INC_PUBLIC_nevchcntuzzhxkueehfk",
+        "incident_type": "suspicious_activity",
+        "severity": "low",
+        "asset_criticality": "low",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "monitor_watch",
+          "close_benign"
+        ]
+      }
+    },
+    {
+      "task_id": "872191edd5bb648f62e8a426aeed70bd",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "fc4011cd4d9bec5bdd588ded6175f6c30fc312bfd1bd9890d08ff71154ed2052",
+      "input_sha256": "f9dc4ba21afb13ea30cd6e8f42514ab630eabdfa573833d04e308248af1fb038",
+      "payload": {
+        "cell_id": "fc4011cd4d9bec5bdd588ded6175f6c30fc312bfd1bd9890d08ff71154ed2052",
+        "incident_id": "INC_PUBLIC_pmrutvkxtyngeenrtezp",
+        "incident_type": "suspicious_activity",
+        "severity": "high",
+        "asset_criticality": "high",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "isolate_host",
+          "collect_forensics"
+        ]
+      }
+    },
+    {
+      "task_id": "c9d385d98557342e2353e99a1c865598",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "fddb180121f12d502304d03f112a6193eed5e0de4b7b5dede39aefc8d0792cba",
+      "input_sha256": "3bf96ef8fce8fe51cc39fbeb8334c350e9ec75f9d84939db80d1665af3d12b71",
+      "payload": {
+        "cell_id": "fddb180121f12d502304d03f112a6193eed5e0de4b7b5dede39aefc8d0792cba",
+        "incident_id": "INC_PUBLIC_qxgapddgxaybcdskdzfh",
+        "incident_type": "malware",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    },
+    {
+      "task_id": "06aacea8bf2a906df72b0678abaecf27",
+      "study_id": "judge_ablation",
+      "model_name": "ollama_mistral_small32_judge",
+      "source_id": "ffe25fbca2cdd1e78c5e4f44b6e551022dd91ee0a2f9ff552fa6f0d2521a3a7e",
+      "input_sha256": "bcef57d953b855d40bdafffca8bc3c9e0052d0dee3ca033af16d8a9d70675528",
+      "payload": {
+        "cell_id": "ffe25fbca2cdd1e78c5e4f44b6e551022dd91ee0a2f9ff552fa6f0d2521a3a7e",
+        "incident_id": "INC_PUBLIC_saxkgxvbkebyjbgndaks",
+        "incident_type": "exploit",
+        "severity": "medium",
+        "asset_criticality": "medium",
+        "approved_actions": [],
+        "proposed_actions": [
+          "investigate_enrich",
+          "collect_forensics",
+          "monitor_watch",
+          "escalate_notify"
+        ]
+      }
+    }
+  ]
+}

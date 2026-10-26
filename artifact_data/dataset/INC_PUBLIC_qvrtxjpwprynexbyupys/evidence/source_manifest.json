@@ -1,0 +1,24 @@
+{
+  "source_raw_file": "<private-raw-export>",
+  "redacted_export": "<private-redacted-export>",
+  "generated_at_utc": "2023-08-15T21:49:34.836102Z",
+  "incident_dir": "artifact_data/dataset/INC_PUBLIC_qvrtxjpwprynexbyupys",
+  "anonymization_summary": {
+    "email_tokens": 2,
+    "ip_tokens": 2,
+    "phone_tokens": 4,
+    "host_tokens": 1,
+    "user_tokens": 5
+  },
+  "input_parse_repairs": {
+    "invalid_backslash_escape_count": 0
+  },
+  "incident_id_assignment": "source_derived",
+  "workflow_task_summary": {
+    "task_count": 6,
+    "recorded_action_count": 0,
+    "approval_evidence_count": 0,
+    "empty_action_profile": true,
+    "task_semantics": "workflow_stage_not_response_action"
+  }
+}

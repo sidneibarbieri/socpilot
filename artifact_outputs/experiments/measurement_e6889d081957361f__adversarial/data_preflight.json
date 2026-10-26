@@ -1,0 +1,330 @@
+{
+  "incident_count": 40,
+  "missing_file_count": 0,
+  "parse_error_count": 0,
+  "approval_missing_total": 0,
+  "order_missing_total": 0,
+  "global_missing_files": [],
+  "incidents": [
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_qbvrzesxzpwnqerzyrga",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_rhmnanpjchmepcesbdgu",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_samkxwgmtrtkjznnntkj",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_smhqtendcypfaqgzxvgh",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_sxeaknphtzvvbggrnufa",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_tendsmvxeetmaaxbgkjc",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_tyxbkvbftxpqafcwwpua",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_udwjdfdaxmnrfxkwvqur",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_ufphkjbtrajhvuszknxz",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_ukqzeubgvvwszwafaage",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_uzuzjccqngxfmysjzejy",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_vuedjabthkpaaychczkg",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_vxfdzjyhfhdxdhnqxdfr",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_wynezqkqcbbrcrkmqqyt",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_xcfdtbrkwaxzfyuqeckf",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_xhqdneqjbbzzdzpkfcfy",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_xkvdpbdnnwfbheansvks",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_yfkfvuaktucegkkqtjjy",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_yphvecavwtvkfavscnut",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_CLEAN__INC_PUBLIC_ysuvnegcpkxmecnapbsb",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_qbvrzesxzpwnqerzyrga",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_rhmnanpjchmepcesbdgu",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_samkxwgmtrtkjznnntkj",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_smhqtendcypfaqgzxvgh",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_sxeaknphtzvvbggrnufa",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_tendsmvxeetmaaxbgkjc",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_tyxbkvbftxpqafcwwpua",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_udwjdfdaxmnrfxkwvqur",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_ufphkjbtrajhvuszknxz",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_ukqzeubgvvwszwafaage",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_uzuzjccqngxfmysjzejy",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_vuedjabthkpaaychczkg",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_vxfdzjyhfhdxdhnqxdfr",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_wynezqkqcbbrcrkmqqyt",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_xcfdtbrkwaxzfyuqeckf",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_xhqdneqjbbzzdzpkfcfy",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_xkvdpbdnnwfbheansvks",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_yfkfvuaktucegkkqtjjy",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_yphvecavwtvkfavscnut",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    },
+    {
+      "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_ysuvnegcpkxmecnapbsb",
+      "ok": true,
+      "missing_files": [],
+      "parse_errors": [],
+      "approval_missing_count": 0,
+      "order_missing_count": 0
+    }
+  ]
+}

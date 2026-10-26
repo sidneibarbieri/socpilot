@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "task_id": "d711dacbbc9c4bbe87877f4d2ac93c0f",
+  "study_id": "projection_fidelity",
+  "model_name": "azure_gpt54",
+  "source_id": "full_ransomware_chain",
+  "input_sha256": "a7f13dd00897ee1c9ac67337754f580a8d1afd6d8db7196e6a3fd1a4708f9cdc",
+  "output": {
+    "extracted_actions": [
+      "isolate_host",
+      "kill_process",
+      "collect_forensics",
+      "escalate_notify"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "9136fef77d1021704d342265a6f82d077c7ebfd6dd0b9f75e4e962ec6e12c762",
+    "response_sha256": "df68910285094ab6374209db2c01479a3de44a27bf3d72c43c4318d061d4547d",
+    "usage": {
+      "prompt_tokens": 287,
+      "completion_tokens": 24,
+      "total_tokens": 311
+    },
+    "latency_ms": 2234,
+    "estimated_cost_usd": 0.001077,
+    "returned_model": "gpt-5.4-2026-03-05"
+  }
+}

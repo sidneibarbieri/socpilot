@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "7872a3351b344cfe0e2ea0cedd2d6682",
+  "study_id": "projection_fidelity",
+  "model_name": "ollama_qwen36",
+  "source_id": "benign_close",
+  "input_sha256": "2487fa13f30065a8ac1afae612705eb3fa311238a5a4c3574d8a02d6adf5357a",
+  "output": {
+    "extracted_actions": [
+      "investigate_enrich",
+      "close_benign"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "758f30220340f440282338e8c30e5d70259025fdd66891d0a9358222abc1e336",
+    "response_sha256": "2bfd5a8fe510c868109618382fa4379003f7b29b6dc772e145bfd27b6bb2069d",
+    "usage": {
+      "prompt_tokens": 293,
+      "completion_tokens": 17,
+      "total_tokens": 310
+    },
+    "latency_ms": 397,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "qwen3.6:latest"
+  }
+}

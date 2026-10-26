@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "ebd1cfe12daf2cd5ff66050956d9167d",
+  "study_id": "projection_fidelity",
+  "model_name": "ollama_qwen36",
+  "source_id": "coreference_isolate_then_lift",
+  "input_sha256": "6f8edc40dd59ad6763cc3b743cac2bba046f7bcadb137c31e855819036e1c963",
+  "output": {
+    "extracted_actions": [
+      "isolate_host",
+      "lift_isolation"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "f9829418de227b43793bc4a6d31cd448f7541447e4dce634730fbf57f67d9bf1",
+    "response_sha256": "cb3902a928274175d5faeda069d2b49f9ac7e201a3b680d58e2ebc1edba9ce50",
+    "usage": {
+      "prompt_tokens": 283,
+      "completion_tokens": 15,
+      "total_tokens": 298
+    },
+    "latency_ms": 421,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "qwen3.6:latest"
+  }
+}

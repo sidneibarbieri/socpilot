@@ -1,0 +1,11 @@
+{
+  "incident_id": "INC_PUBLIC_rvkdmkjhsrxbfzffphab",
+  "incident_type": "suspicious_activity",
+  "severity": "high",
+  "asset_criticality": "high",
+  "asset_role": "bank_endpoint",
+  "time_window_start": "2021-11-24T16:04:54.615000Z",
+  "time_window_end": "2021-12-08T22:48:58.754000Z",
+  "final_status": "resolved",
+  "asset_host": "host_0001"
+}

@@ -1,0 +1,11 @@
+{
+  "incident_id": "INC_PUBLIC_zqanreemhjfqrzfjujps",
+  "incident_type": "suspicious_activity",
+  "severity": "critical",
+  "asset_criticality": "critical",
+  "asset_role": "bank_endpoint",
+  "time_window_start": "2023-07-30T00:21:19.123000Z",
+  "time_window_end": "2023-07-30T04:00:58.633000Z",
+  "final_status": "resolved",
+  "asset_host": "host_0001"
+}

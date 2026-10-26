@@ -1,0 +1,11 @@
+{
+  "incident_id": "INC_PUBLIC_wcutfpyvchgappphsjpc",
+  "incident_type": "system",
+  "severity": "medium",
+  "asset_criticality": "medium",
+  "asset_role": "bank_endpoint",
+  "time_window_start": "2016-08-12T16:13:41Z",
+  "time_window_end": "2016-08-20T07:39:41.582000Z",
+  "final_status": "resolved",
+  "asset_host": "host_0001"
+}

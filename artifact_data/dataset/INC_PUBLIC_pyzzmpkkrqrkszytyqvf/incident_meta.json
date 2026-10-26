@@ -1,0 +1,11 @@
+{
+  "incident_id": "INC_PUBLIC_pyzzmpkkrqrkszytyqvf",
+  "incident_type": "authentication",
+  "severity": "medium",
+  "asset_criticality": "medium",
+  "asset_role": "bank_endpoint",
+  "time_window_start": "2023-06-20T13:26:53.579000Z",
+  "time_window_end": "2023-06-25T21:09:18.146000Z",
+  "final_status": "resolved",
+  "asset_host": "host_0001"
+}

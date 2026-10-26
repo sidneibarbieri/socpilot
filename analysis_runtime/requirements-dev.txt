@@ -1,0 +1,7 @@
+-r requirements.txt
+
+black==26.5.1
+matplotlib==3.11.0
+mypy==2.1.0
+pytest==9.1.1
+ruff==0.15.20

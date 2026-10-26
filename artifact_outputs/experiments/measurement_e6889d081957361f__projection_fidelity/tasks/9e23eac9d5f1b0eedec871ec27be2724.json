@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "9e23eac9d5f1b0eedec871ec27be2724",
+  "study_id": "projection_fidelity",
+  "model_name": "azure_gpt54",
+  "source_id": "indirect_block_egress",
+  "input_sha256": "30cea3fe897e10b06026cdf65e6f84f6288e57673a790f9c0fd45c9605c36507",
+  "output": {
+    "extracted_actions": [
+      "block_egress",
+      "investigate_enrich"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "1814b2454b50fd1356e0c6e73a0554ac6691fdf60dbffe9241dd5001c7c2e795",
+    "response_sha256": "fbec0cb6163acd3810426e1353e91f1cdb72c6d0f8d08a6aac65d18492a547bc",
+    "usage": {
+      "prompt_tokens": 296,
+      "completion_tokens": 18,
+      "total_tokens": 314
+    },
+    "latency_ms": 2411,
+    "estimated_cost_usd": 0.00101,
+    "returned_model": "gpt-5.4-2026-03-05"
+  }
+}

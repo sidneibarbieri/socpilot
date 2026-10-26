@@ -1,0 +1,148 @@
+schema_version: 1
+behavior_classes:
+- behavior_class: volume_shadow_copy_tampering
+  attack_reference: ATT&CK T1490 Inhibit System Recovery
+  category_patterns:
+  - volume_shadow
+- behavior_class: security_tool_tampering
+  attack_reference: ATT&CK T1562 Impair Defenses
+  category_patterns:
+  - falcon_sensor
+  - disable_or_modify_tools
+- behavior_class: intelligence_indicator_match
+  attack_reference: reviewed threat-intelligence match (hash, IP, domain)
+  category_patterns:
+  - custom_intelligence_indicator
+  - ioc_management_action
+  - edr_intelligence_indicator
+  - indicator_of_compromise
+  - quarenten
+- behavior_class: credential_access
+  attack_reference: ATT&CK T1003 OS Credential Dumping
+  category_patterns:
+  - credential
+  - dumping
+- behavior_class: reverse_shell
+  attack_reference: ATT&CK T1059 Command and Scripting Interpreter
+  category_patterns:
+  - reverse_shell
+- behavior_class: cryptocurrency_mining
+  attack_reference: ATT&CK T1496 Resource Hijacking
+  category_patterns:
+  - cryptocurrency_mining
+- behavior_class: defense_evasion
+  attack_reference: ATT&CK T1036 Masquerading / T1055 Process Injection
+  category_patterns:
+  - masquerading
+  - evasion
+  - injection
+  - injected
+  - recycle_bin
+  - bypass
+- behavior_class: persistence_manipulation
+  attack_reference: ATT&CK T1053 Scheduled Task / T1136 Create Account
+  category_patterns:
+  - scheduled_task
+  - schedule_a_task
+  - usu_aacute_rio_local
+  - atributos_de_conta
+  - password_never
+- behavior_class: suspicious_remote_access
+  attack_reference: ATT&CK T1133 External Remote Services / T1021 Remote Services
+  category_patterns:
+  - accept_remote
+  - acesso_remoto
+  - ssh_or_telnet
+  - remoteaccess
+  - remote_administrat
+  - lateral_movement
+  - remote_services
+- behavior_class: account_probing
+  attack_reference: ATT&CK T1110 Brute Force / T1087 Account Discovery
+  category_patterns:
+  - login_failure
+  - falhas_de_login
+  - locked_out
+  - contas_bloqueadas
+  - enumerated_users
+  - context_label_004
+  - diversos_ip
+- behavior_class: exploit_attempt
+  attack_reference: ATT&CK T1190 Exploit Public-Facing Application
+  category_patterns:
+  - exploit
+  - log4shell
+  - ssrf
+  - smuggling
+  - heap_spray
+  - cgi
+  - worm
+- behavior_class: recon_scanning
+  attack_reference: ATT&CK T1046 Network Service Discovery / T1595 Active Scanning
+  category_patterns:
+  - scan
+  - nmap
+  - recon
+- behavior_class: c2_network_activity
+  attack_reference: ATT&CK T1102 Web Service / T1071 Application Layer Protocol
+  category_patterns:
+  - web_service
+  - application_layer_protocols
+  - network_activity_with_a_remote_destination
+  - https_ou_ssh
+- behavior_class: malware_detection
+  attack_reference: EDR/ML verdict on a malicious file, process, or command line
+  category_patterns:
+  - machine_learning
+  - sensor_based_ml
+  - ml_algorithm
+  - adware_pup
+  - malware
+  - malicious
+  - known_vulnerabilities
+  - kernel_driver
+  - suspicious
+  - suspei
+  - unusual
+  - macro
+  - lnk_file
+  - powershell
+  - python_process
+  - command_line
+  - registry
+  - interpreter
+  - execution
+  - compromise
+  - downloaded
+  - transfer
+  - edr_detection
+  - ml
+- behavior_class: ops_monitoring
+  attack_reference: operational monitoring and administration, non-attack
+  category_patterns:
+  - zabbix
+  - context_label_001
+  - administration_edit
+  - stopped_sending_events
+  - monitoramento
+  - context_label_003
+  - context_label_002
+  - unomi
+- behavior_class: unclassified_noise
+  attack_reference: export artifact, no behavioral content
+  category_patterns:
+  - domain
+  - changed
+  - account
+  - found
+  - data
+  - join
+  - permit
+  - reject
+  - traffic
+  - tools
+  - scanner
+  - instances
+  - features
+  - services
+  - mitigation

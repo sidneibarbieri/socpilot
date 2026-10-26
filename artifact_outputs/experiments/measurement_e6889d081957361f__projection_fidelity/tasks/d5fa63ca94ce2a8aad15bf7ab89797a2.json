@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "d5fa63ca94ce2a8aad15bf7ab89797a2",
+  "study_id": "projection_fidelity",
+  "model_name": "ollama_qwen36",
+  "source_id": "hedged_maybe_enrich",
+  "input_sha256": "f9a4c385e582d5febc9fde9b6dfe740a04ef1b1689c8c9327bb5d68e3d272f85",
+  "output": {
+    "extracted_actions": [
+      "investigate_enrich",
+      "monitor_watch"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "c4653740f730fe49dae26bec7874294c786b3d5eb3c779ccd3e4585299299519",
+    "response_sha256": "f2803451775dc5137d9852b1d5400f996d31069a8a86940b8e2e97f2c6de8b46",
+    "usage": {
+      "prompt_tokens": 286,
+      "completion_tokens": 15,
+      "total_tokens": 301
+    },
+    "latency_ms": 420,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "qwen3.6:latest"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "source_raw_file": "incoming/raw/incident_vuedjabthkpaaychczkg_export.json",
+  "redacted_export": "incoming/redacted/incident_vuedjabthkpaaychczkg_export.redacted.json",
+  "generated_at_utc": "2026-07-16T18:22:16.470390Z",
+  "incident_dir": "dataset/incidents/INC_PUBLIC_vuedjabthkpaaychczkg",
+  "incident_id_assignment": "source_derived",
+  "mapping_rules_path": "local_redaction/action_mapping_bank.yaml",
+  "mapping_rules_sha256": "31f24a45f34e38fe18e5f90f594b007d1190c91c7c5d09ada512a5b659638d7c",
+  "anonymization_summary": {
+    "email_tokens": 15,
+    "ip_tokens": 3,
+    "phone_tokens": 4,
+    "host_tokens": 1,
+    "user_tokens": 4
+  },
+  "action_mapping_quality": {
+    "task_count": 6,
+    "mapped_task_count": 6,
+    "unmatched_task_count": 0,
+    "unmatched_task_examples": [],
+    "ambiguous_tie_count": 0,
+    "ambiguous_tie_examples": [],
+    "candidate_workflow_action_count": 3,
+    "recorded_action_count": 0,
+    "approval_evidence_count": 0,
+    "empty_action_profile": true,
+    "fallback_used": false,
+    "mapping_coverage": 1.0,
+    "mapping_use": "workflow_quality_only"
+  },
+  "input_parse_repairs": {
+    "invalid_backslash_escape_count": 0
+  }
+}

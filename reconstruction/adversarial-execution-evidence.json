@@ -1,0 +1,64 @@
+{
+  "checks": {
+    "all_cells_terminally_accounted": true,
+    "analysis_bundle_is_provider_evidence": true,
+    "manifest_matches_protocol_freeze": true,
+    "provider_attempts_match_terminal_cells": true,
+    "snapshot_hashes_recorded": true
+  },
+  "constitutes_model_evidence": true,
+  "generated_at_utc": "2026-10-05T17:23:38.526321+00:00",
+  "protocol_freeze": {
+    "path": "artifact_outputs/experiments/measurement_e6889d081957361f__adversarial/protocol_freeze.json",
+    "schema_version": 8,
+    "sha256": "e6889d081957361fe7249325e09baf9c14f23e58bdfc4191bcf3b6e67a3fadf6"
+  },
+  "run_id": "measurement_e6889d081957361f__adversarial",
+  "schema_version": 1,
+  "snapshot": {
+    "files": {
+      "analysis_bundle": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__adversarial/analysis_bundle.json",
+        "sha256": "7c30b1005c3a0abde36076fd1e9d1d81875fe50837ce56aaebba92dd04b6a5c0"
+      },
+      "connectivity_recovery": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__adversarial/connectivity_recovery.jsonl",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "data_preflight": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__adversarial/data_preflight.json",
+        "sha256": "5894d45a609ce4e9795933b8724cab5f90a4796a5b54ec7259720555f2a55fa2"
+      },
+      "data_quality": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__adversarial/data_quality_report.json",
+        "sha256": "9cfe00dc154a87456867e2441c1c2f8ce648038e1cc3f718ec2e1097a5519620"
+      },
+      "ledger": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__adversarial/run_ledger.json",
+        "sha256": "e83dcd1dd1b1da8d4f8569d88ff2906228423c87921170bb3db1e8245592ac4b"
+      },
+      "manifest": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__adversarial/manifest.json",
+        "sha256": "fc1442b56afd0bdc4139848e17986fa4472531b91b446fe7625bbd30580a3c12"
+      },
+      "protocol_freeze": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__adversarial/protocol_freeze.json",
+        "sha256": "e6889d081957361fe7249325e09baf9c14f23e58bdfc4191bcf3b6e67a3fadf6"
+      },
+      "provider_attempts": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__adversarial/provider_attempts.jsonl",
+        "sha256": "47c74650e4c641879555f7924b15e4138d7cc471cba6444f447643d6472c63a8"
+      },
+      "run_matrix": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__adversarial/run_matrix.json",
+        "sha256": "17ebb8ad064db03df12b551fe41df437ab1120a9cc20b60aa9ad01336592392b"
+      },
+      "summary": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__adversarial/summary.json",
+        "sha256": "103419301db9b9b5805e64475243faac0d14814d5fb7817623f78e753d02e5d8"
+      }
+    },
+    "path": "artifact_outputs/experiments/measurement_e6889d081957361f__adversarial"
+  },
+  "state": "post_execution_evidence"
+}

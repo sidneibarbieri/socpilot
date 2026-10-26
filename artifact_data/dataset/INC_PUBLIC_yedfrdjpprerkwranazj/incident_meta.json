@@ -1,0 +1,11 @@
+{
+  "incident_id": "INC_PUBLIC_yedfrdjpprerkwranazj",
+  "incident_type": "policy",
+  "severity": "medium",
+  "asset_criticality": "medium",
+  "asset_role": "bank_endpoint",
+  "time_window_start": "2020-10-03T13:05:27.526000Z",
+  "time_window_end": "2020-10-10T10:43:28.210000Z",
+  "final_status": "resolved",
+  "asset_host": "host_0001"
+}

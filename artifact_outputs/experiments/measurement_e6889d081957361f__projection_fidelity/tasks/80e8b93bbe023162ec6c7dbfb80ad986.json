@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "80e8b93bbe023162ec6c7dbfb80ad986",
+  "study_id": "projection_fidelity",
+  "model_name": "ollama_qwen36",
+  "source_id": "waf_ips_exploit_enrich",
+  "input_sha256": "279219f992b6cddbd8755f1f1a656f0a7ff064d1eb85453993f4fe6ec1fec033",
+  "output": {
+    "extracted_actions": [
+      "apply_ips_waf_rule",
+      "investigate_enrich"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "38718e024856eafccad7ac62472d75b59c14a83fae35f23678f6f0e09d90514e",
+    "response_sha256": "d20ef3eedc694a99d34688a1ec68943b4b291c65156164461bbba50af02b342d",
+    "usage": {
+      "prompt_tokens": 286,
+      "completion_tokens": 18,
+      "total_tokens": 304
+    },
+    "latency_ms": 464,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "qwen3.6:latest"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "source_raw_file": "<private-raw-export>",
+  "redacted_export": "<private-redacted-export>",
+  "generated_at_utc": "2019-09-16T02:58:42.196361Z",
+  "incident_dir": "artifact_data/heldout/INC_PUBLIC_hmdxqvfbdtufxkmktzfv",
+  "incident_id_assignment": "explicit",
+  "anonymization_summary": {
+    "email_tokens": 0,
+    "ip_tokens": 0,
+    "phone_tokens": 0,
+    "host_tokens": 1,
+    "user_tokens": 5
+  },
+  "workflow_task_summary": {
+    "task_count": 1,
+    "recorded_action_count": 0,
+    "approval_evidence_count": 0,
+    "empty_action_profile": true,
+    "task_semantics": "workflow_stage_not_response_action"
+  },
+  "input_parse_repairs": {
+    "invalid_backslash_escape_count": 0
+  }
+}

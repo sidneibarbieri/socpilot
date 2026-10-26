@@ -1,0 +1,492 @@
+{
+  "check_count": 97,
+  "checks": [
+    {
+      "detail": "rows=4798, declared=None",
+      "name": "row_count_matches_bundle",
+      "ok": true
+    },
+    {
+      "detail": "rows=4798, summary.run_count=4798",
+      "name": "row_count_matches_summary",
+      "ok": true
+    },
+    {
+      "detail": "rows=4798, manifest.completed=4798",
+      "name": "manifest_completed_count_matches_rows",
+      "ok": true
+    },
+    {
+      "detail": "completed=4798, failed=2, planned=4800, execution_failures=2",
+      "name": "manifest_terminal_accounting",
+      "ok": true
+    },
+    {
+      "detail": "bundle=4798, official=4798",
+      "name": "summary_field_run_count",
+      "ok": true
+    },
+    {
+      "detail": "bundle=400, official=400",
+      "name": "summary_field_incident_count",
+      "ok": true
+    },
+    {
+      "detail": "bundle=0.8925, official=0.8925",
+      "name": "summary_field_incident_violation_rate",
+      "ok": true
+    },
+    {
+      "detail": "bundle=0.702, official=0.702",
+      "name": "summary_field_enforcement_modification_rate",
+      "ok": true
+    },
+    {
+      "detail": "bundle=None, official=None",
+      "name": "summary_field_task_coverage_drop_rate",
+      "ok": true
+    },
+    {
+      "detail": "bundle=7426140, official=7426140",
+      "name": "summary_field_llm_total_tokens_total",
+      "ok": true
+    },
+    {
+      "detail": "bundle=14.834662, official=14.834662",
+      "name": "summary_field_llm_cost_estimated_usd_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=1199, manifest=1199",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_completed_runs",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.6606, manifest=0.6606",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_run_violation_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.6606, manifest=0.6606",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_enforcement_modification_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_task_coverage_enforced_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_delta_jaccard_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=2170866, manifest=2170866",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_llm_total_tokens_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=8.005371, manifest=8.005371",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_llm_cost_estimated_usd_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=1200, manifest=1200",
+      "name": "manifest_model_gpt-5.4_llm_zero_completed_runs",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.665, manifest=0.665",
+      "name": "manifest_model_gpt-5.4_llm_zero_run_violation_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.665, manifest=0.665",
+      "name": "manifest_model_gpt-5.4_llm_zero_enforcement_modification_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_gpt-5.4_llm_zero_task_coverage_enforced_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_gpt-5.4_llm_zero_delta_jaccard_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=1461859, manifest=1461859",
+      "name": "manifest_model_gpt-5.4_llm_zero_llm_total_tokens_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=6.829291, manifest=6.829291",
+      "name": "manifest_model_gpt-5.4_llm_zero_llm_cost_estimated_usd_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=1199, manifest=1199",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_completed_runs",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.6781, manifest=0.6781",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_run_violation_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.6781, manifest=0.6781",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_enforcement_modification_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_task_coverage_enforced_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_delta_jaccard_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=2283338, manifest=2283338",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_llm_total_tokens_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.0, manifest=0.0",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_llm_cost_estimated_usd_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=1200, manifest=1200",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_completed_runs",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.8042, manifest=0.8042",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_run_violation_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.8042, manifest=0.8042",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_enforcement_modification_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_task_coverage_enforced_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_delta_jaccard_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=1510077, manifest=1510077",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_llm_total_tokens_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.0, manifest=0.0",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_llm_cost_estimated_usd_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=599, manifest=599",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_completed_runs",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.7195, manifest=0.7195",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_run_violation_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.7195, manifest=0.7195",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_enforcement_modification_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_task_coverage_enforced_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_delta_jaccard_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=1053984, manifest=1053984",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_llm_total_tokens_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=3.864894, manifest=3.864894",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_llm_cost_estimated_usd_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=600, manifest=600",
+      "name": "manifest_model_gpt-5.4_llm_zero_completed_runs",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.5617, manifest=0.5617",
+      "name": "manifest_model_gpt-5.4_llm_zero_run_violation_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.5617, manifest=0.5617",
+      "name": "manifest_model_gpt-5.4_llm_zero_enforcement_modification_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_gpt-5.4_llm_zero_task_coverage_enforced_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_gpt-5.4_llm_zero_delta_jaccard_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=704846, manifest=704846",
+      "name": "manifest_model_gpt-5.4_llm_zero_llm_total_tokens_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=3.346847, manifest=3.346847",
+      "name": "manifest_model_gpt-5.4_llm_zero_llm_cost_estimated_usd_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=599, manifest=599",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_completed_runs",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.5225, manifest=0.5225",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_run_violation_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.5225, manifest=0.5225",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_enforcement_modification_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_task_coverage_enforced_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_delta_jaccard_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=1113361, manifest=1113361",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_llm_total_tokens_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.0, manifest=0.0",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_llm_cost_estimated_usd_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=600, manifest=600",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_completed_runs",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.7333, manifest=0.7333",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_run_violation_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.7333, manifest=0.7333",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_enforcement_modification_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_task_coverage_enforced_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_delta_jaccard_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=724708, manifest=724708",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_llm_total_tokens_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.0, manifest=0.0",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_llm_cost_estimated_usd_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=600, manifest=600",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_completed_runs",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.6017, manifest=0.6017",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_run_violation_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.6017, manifest=0.6017",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_enforcement_modification_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_task_coverage_enforced_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_delta_jaccard_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=1116882, manifest=1116882",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_llm_total_tokens_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=4.140477, manifest=4.140477",
+      "name": "manifest_model_gpt-5.4_llm_policy_prompt_llm_cost_estimated_usd_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=600, manifest=600",
+      "name": "manifest_model_gpt-5.4_llm_zero_completed_runs",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.7683, manifest=0.7683",
+      "name": "manifest_model_gpt-5.4_llm_zero_run_violation_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.7683, manifest=0.7683",
+      "name": "manifest_model_gpt-5.4_llm_zero_enforcement_modification_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_gpt-5.4_llm_zero_task_coverage_enforced_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_gpt-5.4_llm_zero_delta_jaccard_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=757013, manifest=757013",
+      "name": "manifest_model_gpt-5.4_llm_zero_llm_total_tokens_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=3.482444, manifest=3.482444",
+      "name": "manifest_model_gpt-5.4_llm_zero_llm_cost_estimated_usd_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=600, manifest=600",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_completed_runs",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.8333, manifest=0.8333",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_run_violation_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.8333, manifest=0.8333",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_enforcement_modification_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_task_coverage_enforced_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_delta_jaccard_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=1169977, manifest=1169977",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_llm_total_tokens_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.0, manifest=0.0",
+      "name": "manifest_model_qwen3.6:latest_llm_policy_prompt_llm_cost_estimated_usd_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=600, manifest=600",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_completed_runs",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.875, manifest=0.875",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_run_violation_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.875, manifest=0.875",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_enforcement_modification_rate",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_task_coverage_enforced_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=None, manifest=None",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_delta_jaccard_avg",
+      "ok": true
+    },
+    {
+      "detail": "computed=785369, manifest=785369",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_llm_total_tokens_total",
+      "ok": true
+    },
+    {
+      "detail": "computed=0.0, manifest=0.0",
+      "name": "manifest_model_qwen3.6:latest_llm_zero_llm_cost_estimated_usd_total",
+      "ok": true
+    },
+    {
+      "detail": "bundle=12, public_rows=12, declared=12",
+      "name": "pairwise_row_count_matches",
+      "ok": true
+    },
+    {
+      "detail": "compared paired count, rate difference, McNemar p-value, and Cohen h",
+      "name": "pairwise_signatures_match",
+      "ok": true
+    }
+  ],
+  "failed_check_count": 0,
+  "status": "pass"
+}

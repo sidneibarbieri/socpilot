@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "task_id": "a7861d3ee50843e9053142e714b40b8d",
+  "study_id": "judge_ablation",
+  "model_name": "ollama_mistral_small32_judge",
+  "source_id": "5aeb2248c5c67b4bf5cf7ab18350a44557428103dd2be50ae110e4f60232d988",
+  "input_sha256": "eaa36937d3820ab583b8578c14ff466426075166b068792e310695b6fd2092c1",
+  "output": {
+    "rule_findings": [
+      {
+        "rule_id": "evidence_before_reimage",
+        "satisfied": true
+      },
+      {
+        "rule_id": "shadowcopy_tamper_isolate",
+        "satisfied": true
+      },
+      {
+        "rule_id": "intel_match_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "sensor_tamper_isolate",
+        "satisfied": false
+      },
+      {
+        "rule_id": "remote_access_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "malware_detect_quarantine",
+        "satisfied": false
+      },
+      {
+        "rule_id": "account_probe_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "ops_monitor_no_isolate",
+        "satisfied": true
+      },
+      {
+        "rule_id": "ops_monitor_no_reimage",
+        "satisfied": true
+      },
+      {
+        "rule_id": "creddump_reset",
+        "satisfied": false
+      },
+      {
+        "rule_id": "evasion_isolate",
+        "satisfied": false
+      },
+      {
+        "rule_id": "exploit_waf_rule",
+        "satisfied": false
+      },
+      {
+        "rule_id": "persistence_quarantine",
+        "satisfied": false
+      },
+      {
+        "rule_id": "recon_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "c2_block",
+        "satisfied": false
+      }
+    ],
+    "compliant": false,
+    "reason": "The proposed actions do not satisfy the mandatory rules for intel_match_block, sensor_tamper_isolate, remote_access_block, malware_detect_quarantine, account_probe_block, creddump_reset, evasion_isolate, exploit_waf_rule, persistence_quarantine, recon_block, and c2_block.",
+    "protocol_sha256": "aa4ec8d6e74ad441631e8d2b2dc19e6744b48c9b53a44367c3114a3672592e9c",
+    "prompt_sha256": "604f0da77290027f425242f0e9f0b6f8568351b3f53afe8663cb2466a7ab3c6e",
+    "response_sha256": "ac054ef8a7a905ff19674158741f38f1ed76275faa1d7a1ec84bdc3147ce21e3",
+    "usage": {
+      "prompt_tokens": 2398,
+      "completion_tokens": 357,
+      "total_tokens": 2755
+    },
+    "latency_ms": 38655,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "mistral-small3.2:24b"
+  }
+}

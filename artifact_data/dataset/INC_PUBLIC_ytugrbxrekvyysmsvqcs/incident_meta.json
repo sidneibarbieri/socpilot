@@ -1,0 +1,11 @@
+{
+  "incident_id": "INC_PUBLIC_ytugrbxrekvyysmsvqcs",
+  "incident_type": "access",
+  "severity": "medium",
+  "asset_criticality": "medium",
+  "asset_role": "bank_endpoint",
+  "time_window_start": "2022-02-06T15:14:49.452000Z",
+  "time_window_end": "2022-02-06T23:44:39.829000Z",
+  "final_status": "not_an_issue",
+  "asset_host": "host_0001"
+}

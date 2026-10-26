@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_id": "e901963a07b8b4b0cebe09340b16c4ca",
+  "study_id": "independent_judge",
+  "model_name": "ollama_mistral_small32_judge",
+  "source_id": "97fce63e9cb8017b64a48dcaafa1a8c112c6b5bed8ff6c798abe160344e6b7d5",
+  "input_sha256": "b85292bd9d078c07a329580bcce75440f8433e91a49b56f7d91d29e83db6df6f",
+  "output": {
+    "compliant": true,
+    "reason": "The proposed action list contains only 'investigate_enrich', which does not violate any of the supplied policy rules.",
+    "protocol_sha256": "384c136a097f431f4c17f21e8f9696f1d97e2f59b668f189f2a822dbd582dbf6",
+    "prompt_sha256": "5a41dc5c3025b3a214ea644cc66c51c27a8bf323d448cb525af3b0a336cfb2eb",
+    "response_sha256": "9a3840a1714a7b32f2f8fcae99fea8e8fd66e69e9a64db697fd1a7212e5fc0f2",
+    "usage": {
+      "prompt_tokens": 2026,
+      "completion_tokens": 37,
+      "total_tokens": 2063
+    },
+    "latency_ms": 14823,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "mistral-small3.2:24b"
+  }
+}

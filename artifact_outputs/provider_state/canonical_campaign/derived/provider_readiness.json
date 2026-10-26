@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "state": "provider_readiness_passed",
+  "constitutes_model_evidence": false,
+  "campaign_id": "measurement_e6889d081957361f",
+  "provider_plan_sha256": "9c27dc95952767ab1f633aa64c15369b82e5186c894e822a98ea2dd0ac3f01d9",
+  "prompt_sha256": "fdc7c826625514f77c57505b39094682d520e26577b5621ac773c2a0e4d6240e",
+  "generated_at_utc": "2026-09-19T12:56:41.617577+00:00",
+  "provider_attempt_log": {
+    "path": "artifact_outputs/provider_state/canonical_campaign/derived/provider_readiness_attempts.jsonl",
+    "sha256": "5cb0635aa30d811de89e99ec3a6b2b9305b28e10cdc8fdfe78a9abfc4707ae55"
+  },
+  "results": [
+    {
+      "model_name": "azure_gpt54",
+      "provider": "azure_openai",
+      "deployment": "gpt-5.4",
+      "status": "passed",
+      "returned_model": "gpt-5.4-2026-03-05",
+      "model_digest": null,
+      "response_sha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+      "latency_ms": 1866,
+      "prompt_tokens": 23,
+      "completion_tokens": 4,
+      "estimated_cost_usd": 0.000118,
+      "truncated": false
+    },
+    {
+      "model_name": "ollama_qwen36",
+      "provider": "ollama",
+      "deployment": "qwen3.6:latest",
+      "status": "passed",
+      "returned_model": "qwen3.6:latest",
+      "model_digest": "096fdbd02fe620fc10cbeb6537e080f8041aece851e5d696aed024d4f70f2e47",
+      "response_sha256": "565339bc4d33d72817b583024112eb7f5cdf3e5eef0252d6ec1b9c9a94e12bb3",
+      "latency_ms": 9810,
+      "prompt_tokens": 30,
+      "completion_tokens": 2,
+      "estimated_cost_usd": 0.0,
+      "truncated": false
+    },
+    {
+      "model_name": "ollama_mistral_small32_judge",
+      "provider": "ollama",
+      "deployment": "mistral-small3.2:24b",
+      "status": "passed",
+      "returned_model": "mistral-small3.2:24b",
+      "model_digest": "5a408ab55df5c1b5cf46533c368813b30bf9e4d8fc39263bf2a3338cfa3b895b",
+      "response_sha256": "27ec7b2195b291a67b03e2474d99a88c7ee2f32792bebe82173cec80710b1063",
+      "latency_ms": 6094,
+      "prompt_tokens": 18,
+      "completion_tokens": 9,
+      "estimated_cost_usd": 0.0,
+      "truncated": false
+    }
+  ],
+  "provider_request_count": 3,
+  "provider_response_count": 3,
+  "realized_cost_usd": 0.000118
+}

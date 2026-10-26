@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "417a48f9ff319f82bfae4a26d1ff3f67",
+  "study_id": "projection_fidelity",
+  "model_name": "ollama_qwen36",
+  "source_id": "coreference_kill_then_quarantine",
+  "input_sha256": "479f23de779c5681ac1f22f9085c826d468b69b0ae53d6a504fc357af934e337",
+  "output": {
+    "extracted_actions": [
+      "kill_process",
+      "quarantine_artifact"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "c5dc7ad76ab72bc1bf001779dcf75dfb2474f86944ee3edd275fdb01faabbc5d",
+    "response_sha256": "a4199c7b3542fe8e2c114626197c65ac2a177f2f9e401f089c1b75959f29d762",
+    "usage": {
+      "prompt_tokens": 283,
+      "completion_tokens": 16,
+      "total_tokens": 299
+    },
+    "latency_ms": 416,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "qwen3.6:latest"
+  }
+}

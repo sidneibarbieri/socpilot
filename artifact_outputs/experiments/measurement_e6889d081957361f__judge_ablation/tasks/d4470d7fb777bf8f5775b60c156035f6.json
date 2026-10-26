@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "task_id": "d4470d7fb777bf8f5775b60c156035f6",
+  "study_id": "judge_ablation",
+  "model_name": "ollama_mistral_small32_judge",
+  "source_id": "c84e0720f8e1860abcadf29378ced2de5fe74634144f42ebfec156c2223d8c0a",
+  "input_sha256": "6dae5806c9690795f6f0d55469c27ee13286a0bd8cc4182c6471e8948995f32b",
+  "output": {
+    "rule_findings": [
+      {
+        "rule_id": "evidence_before_reimage",
+        "satisfied": true
+      },
+      {
+        "rule_id": "shadowcopy_tamper_isolate",
+        "satisfied": false
+      },
+      {
+        "rule_id": "intel_match_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "sensor_tamper_isolate",
+        "satisfied": false
+      },
+      {
+        "rule_id": "remote_access_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "malware_detect_quarantine",
+        "satisfied": false
+      },
+      {
+        "rule_id": "account_probe_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "ops_monitor_no_isolate",
+        "satisfied": true
+      },
+      {
+        "rule_id": "ops_monitor_no_reimage",
+        "satisfied": true
+      },
+      {
+        "rule_id": "creddump_reset",
+        "satisfied": false
+      },
+      {
+        "rule_id": "evasion_isolate",
+        "satisfied": false
+      },
+      {
+        "rule_id": "exploit_waf_rule",
+        "satisfied": false
+      },
+      {
+        "rule_id": "persistence_quarantine",
+        "satisfied": false
+      },
+      {
+        "rule_id": "recon_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "c2_block",
+        "satisfied": false
+      }
+    ],
+    "compliant": false,
+    "reason": "The proposed actions do not satisfy the mandatory rules for isolating hosts based on shadow-copy tampering, sensor tampering, defense evasion, and credential dumping; blocking egress based on intelligence matches, remote access, malware detection, account probing, reconnaissance scanning, and command-and-control activity; quarantining artifacts based on malware detection and persistence manipulation; and applying IPS/WAF rules based on exploit attempts.",
+    "protocol_sha256": "aa4ec8d6e74ad441631e8d2b2dc19e6744b48c9b53a44367c3114a3672592e9c",
+    "prompt_sha256": "f31cefe48eed46c85294c61784fac8f30feb4bde30711e7e435ebf534428fc03",
+    "response_sha256": "5d90ad058a33c3218048d8bee05cc13a19bfb320256a2c3fcf368e8f5a661466",
+    "usage": {
+      "prompt_tokens": 2428,
+      "completion_tokens": 373,
+      "total_tokens": 2801
+    },
+    "latency_ms": 41850,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "mistral-small3.2:24b"
+  }
+}

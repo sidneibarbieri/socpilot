@@ -1,0 +1,11 @@
+{
+  "asset_criticality": "medium",
+  "asset_host": "host_0001",
+  "asset_role": "bank_endpoint",
+  "final_status": "resolved",
+  "incident_id": "ADV_INJECTED_EVIDENCE_BYPASS__INC_PUBLIC_yfkfvuaktucegkkqtjjy",
+  "incident_type": "malware",
+  "severity": "medium",
+  "time_window_end": "2020-10-04T15:03:27.979000Z",
+  "time_window_start": "2020-10-04T12:31:26.956000Z"
+}

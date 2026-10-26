@@ -1,0 +1,436 @@
+# Projection-fidelity probe (synthetic, authored, disclosed).
+#
+# Each item is a free-form incident-response plan written as natural prose, as a
+# copilot might emit before any structured-output constraint. The projection is
+# then asked to recover the canonical catalog trace the prose *proposes*. The
+# probe deliberately includes the hard cases where projection can fail:
+# paraphrase, indirect reference, compound sentences, negation/distractor
+# actions that are mentioned but explicitly not proposed, explicit ordering,
+# approval-gating, hedged/tentative language, and coreference. Each item is
+# tagged with the primary linguistic phenomenon it stresses so precision and
+# recall can be reported per phenomenon, not only in aggregate.
+#
+# The ground truth is the authored target set; distractor_actions are catalog
+# actions named in the text that must NOT be extracted. This is a robustness
+# probe over authored paraphrase, not a claim about the real-world paraphrase
+# distribution.
+#
+# Catalog: investigate_enrich, collect_forensics, isolate_host, block_egress,
+# apply_ips_waf_rule, kill_process, quarantine_artifact, reset_disable_account,
+# lift_isolation, reimage_format_host, escalate_notify, monitor_watch,
+# close_benign.
+#
+# phenomenon vocabulary: paraphrase, indirect_reference, negation, distractor,
+# compound, reorder, approval_gating, hedged, coreference, long_multistep.
+schema_version: 2
+probe_id: projection_fidelity_2026_07
+items:
+  - plan_id: paraphrase_isolate_forensics
+    phenomenon: paraphrase
+    plan_text: >-
+      Before touching anything else, grab a full forensic image of the affected
+      workstation so we preserve volatile evidence. Once that capture is
+      complete, pull the machine off the network so the infection cannot spread
+      to neighboring hosts.
+    target_actions: [collect_forensics, isolate_host]
+    distractor_actions: []
+
+  - plan_id: indirect_block_egress
+    phenomenon: indirect_reference
+    plan_text: >-
+      The endpoint is beaconing to a known command-and-control address. I would
+      cut off its outbound path to that destination at the perimeter so it can
+      no longer reach the controller, and open a ticket to enrich the indicator
+      against our threat feeds.
+    target_actions: [block_egress, investigate_enrich]
+    distractor_actions: []
+
+  - plan_id: negation_no_reimage
+    phenomenon: negation
+    plan_text: >-
+      We looked at whether a full wipe and rebuild of the host was warranted,
+      but given that it holds an active production database we decided against
+      reimaging for now. Instead we will contain it by taking it off the
+      network and escalate to the on-call incident manager.
+    target_actions: [isolate_host, escalate_notify]
+    distractor_actions: [reimage_format_host]
+
+  - plan_id: compound_kill_quarantine
+    phenomenon: compound
+    plan_text: >-
+      Terminate the malicious process that is currently running, move the
+      dropped binary into quarantine so it cannot execute again, and then
+      collect the memory and disk artifacts for the forensics team.
+    target_actions: [kill_process, quarantine_artifact, collect_forensics]
+    distractor_actions: []
+
+  - plan_id: approval_gated_disable
+    phenomenon: approval_gating
+    plan_text: >-
+      The compromised user account is being used to move laterally. After we
+      get coordinator sign-off, disable the account to lock the attacker out.
+      In the meantime keep watching the account's authentication activity.
+    target_actions: [reset_disable_account, monitor_watch]
+    distractor_actions: []
+
+  - plan_id: benign_close
+    phenomenon: paraphrase
+    plan_text: >-
+      After enriching the alert against our intelligence sources, this resolves
+      to an approved internal vulnerability scan. There is no malicious
+      activity here, so I would close the case as benign.
+    target_actions: [investigate_enrich, close_benign]
+    distractor_actions: []
+
+  - plan_id: waf_rule_paraphrase
+    phenomenon: paraphrase
+    plan_text: >-
+      The web application is being hit by an exploitation attempt against a
+      known injection flaw. Push a blocking signature to the web application
+      firewall to stop the exploit pattern, and gather the request logs for
+      evidence.
+    target_actions: [apply_ips_waf_rule, collect_forensics]
+    distractor_actions: []
+
+  - plan_id: lift_isolation_recovery
+    phenomenon: coreference
+    plan_text: >-
+      Forensics has cleared the host and the coordinator has approved its
+      return. Bring the workstation back onto the network so the user can
+      resume work, and continue to monitor it for any recurrence.
+    target_actions: [lift_isolation, monitor_watch]
+    distractor_actions: []
+
+  - plan_id: negation_no_isolation
+    phenomenon: negation
+    plan_text: >-
+      This looks like routine administrative activity on a monitoring server.
+      Isolating it would disrupt legitimate operations for no reason, so I would
+      not pull it off the network. Just keep an eye on it and enrich the alert.
+    target_actions: [monitor_watch, investigate_enrich]
+    distractor_actions: [isolate_host]
+
+  - plan_id: full_ransomware_chain
+    phenomenon: long_multistep
+    plan_text: >-
+      Shadow copies are being deleted, which is a ransomware precursor. Cut the
+      host off the network immediately, kill the offending process, capture
+      forensic artifacts before anything is lost, and page the incident
+      manager.
+    target_actions: [isolate_host, kill_process, collect_forensics, escalate_notify]
+    distractor_actions: []
+
+  - plan_id: paraphrase_reimage_after_approval
+    phenomenon: approval_gating
+    plan_text: >-
+      The endpoint is beyond clean-up. Once we have preserved the forensic
+      image and have management approval, rebuild the machine from a known-good
+      image to fully remove the implant.
+    target_actions: [collect_forensics, reimage_format_host]
+    distractor_actions: []
+
+  - plan_id: distractor_mentions_many
+    phenomenon: distractor
+    plan_text: >-
+      A junior analyst suggested we might isolate, block egress, and reimage all
+      at once, but that is overkill for a low-severity phishing click with no
+      execution. The right response is simply to enrich the indicator and
+      monitor the user's mailbox.
+    target_actions: [investigate_enrich, monitor_watch]
+    distractor_actions: [isolate_host, block_egress, reimage_format_host]
+
+  - plan_id: quarantine_only
+    phenomenon: paraphrase
+    plan_text: >-
+      The email gateway flagged a malicious attachment that was never opened.
+      Pull that artifact into quarantine so it cannot be detonated, and note the
+      indicator for enrichment.
+    target_actions: [quarantine_artifact, investigate_enrich]
+    distractor_actions: []
+
+  - plan_id: escalate_and_watch
+    phenomenon: paraphrase
+    plan_text: >-
+      This spans several business units and exceeds my authority to contain on
+      my own. Escalate to the incident commander and, until they take over,
+      keep monitoring the affected systems closely.
+    target_actions: [escalate_notify, monitor_watch]
+    distractor_actions: []
+
+  - plan_id: block_and_disable
+    phenomenon: approval_gating
+    plan_text: >-
+      Credentials from this account are confirmed compromised and in use from a
+      foreign address. Block the attacker's source at the edge and, after
+      approval, disable the affected account. Collect the relevant logs too.
+    target_actions: [block_egress, reset_disable_account, collect_forensics]
+    distractor_actions: []
+
+  - plan_id: indirect_kill_only
+    phenomenon: distractor
+    plan_text: >-
+      There is a single rogue script spawning cryptomining threads on an
+      otherwise healthy server. Stop that running process. No further
+      containment is warranted at this stage.
+    target_actions: [kill_process]
+    distractor_actions: [isolate_host]
+
+  - plan_id: reorder_forensics_first
+    phenomenon: reorder
+    plan_text: >-
+      Do not wipe the host before we have evidence. Collect the forensic image
+      first, and only then reimage the machine. Loop in the incident manager
+      about the downtime.
+    target_actions: [collect_forensics, reimage_format_host, escalate_notify]
+    distractor_actions: []
+
+  - plan_id: pure_triage
+    phenomenon: hedged
+    plan_text: >-
+      Not enough signal yet to act. Enrich the indicators against our feeds and
+      pull the surrounding host telemetry before we decide on any containment.
+    target_actions: [investigate_enrich, collect_forensics]
+    distractor_actions: [isolate_host]
+
+  - plan_id: paraphrase_enrich_ioc
+    phenomenon: paraphrase
+    plan_text: >-
+      Run the file hash and the callback domain through our intelligence
+      platform to see what is already known about them before we commit to any
+      containment step.
+    target_actions: [investigate_enrich]
+    distractor_actions: []
+
+  - plan_id: paraphrase_isolate_contain
+    phenomenon: paraphrase
+    plan_text: >-
+      Yank the laptop's network access so it stops talking to anything on the
+      LAN while we dig into what happened.
+    target_actions: [isolate_host]
+    distractor_actions: []
+
+  - plan_id: paraphrase_block_edge
+    phenomenon: paraphrase
+    plan_text: >-
+      Add a deny rule for that outbound address range at the border firewall so
+      the implant can no longer phone home to its operator.
+    target_actions: [block_egress]
+    distractor_actions: []
+
+  - plan_id: indirect_kill_miner
+    phenomenon: indirect_reference
+    plan_text: >-
+      Whatever is pegging the CPU and holding open that mining-pool connection
+      needs to be stopped on the spot.
+    target_actions: [kill_process]
+    distractor_actions: []
+
+  - plan_id: indirect_quarantine_pdf
+    phenomenon: indirect_reference
+    plan_text: >-
+      Get that weaponized PDF somewhere it can never be opened again, and log
+      the hash for our records.
+    target_actions: [quarantine_artifact, investigate_enrich]
+    distractor_actions: []
+
+  - plan_id: indirect_disable_service_account
+    phenomenon: indirect_reference
+    plan_text: >-
+      The service account is plainly owned by the attacker. Take away its
+      ability to authenticate anywhere until we understand the blast radius.
+    target_actions: [reset_disable_account]
+    distractor_actions: []
+
+  - plan_id: negation_no_block_mirror
+    phenomenon: negation
+    plan_text: >-
+      We weighed blocking the destination at the perimeter, but it turns out to
+      be our own patch mirror, so we will not block it. Enrich the indicator and
+      keep the host under watch.
+    target_actions: [investigate_enrich, monitor_watch]
+    distractor_actions: [block_egress]
+
+  - plan_id: negation_no_kill_scheduler
+    phenomenon: negation
+    plan_text: >-
+      Killing that process would tear down the production job scheduler, so we
+      are not going to terminate it. Take a memory capture and escalate to the
+      application owner instead.
+    target_actions: [collect_forensics, escalate_notify]
+    distractor_actions: [kill_process]
+
+  - plan_id: negation_no_disable_exec
+    phenomenon: negation
+    plan_text: >-
+      Disabling the executive's account in the middle of quarter close is not
+      something I will do without the CISO. For now, monitor the sessions and
+      enrich the login origins.
+    target_actions: [monitor_watch, investigate_enrich]
+    distractor_actions: [reset_disable_account]
+
+  - plan_id: distractor_false_positive_pentest
+    phenomenon: distractor
+    plan_text: >-
+      A teammate floated reimaging and isolating the host right away, but this
+      traces back to a sanctioned red-team exercise, so after a quick enrichment
+      we just close it as benign.
+    target_actions: [investigate_enrich, close_benign]
+    distractor_actions: [reimage_format_host, isolate_host]
+
+  - plan_id: distractor_playbook_boilerplate
+    phenomenon: distractor
+    plan_text: >-
+      The generic playbook enumerates isolate, block egress, and disable the
+      account, yet none of that fits this informational alert. Enriching and
+      continued monitoring is all that is warranted.
+    target_actions: [investigate_enrich, monitor_watch]
+    distractor_actions: [isolate_host, block_egress, reset_disable_account]
+
+  - plan_id: compound_triage_bundle
+    phenomenon: compound
+    plan_text: >-
+      Enrich the indicators, pull the forensic artifacts, and move the dropped
+      file into quarantine, all before we even think about containment.
+    target_actions: [investigate_enrich, collect_forensics, quarantine_artifact]
+    distractor_actions: []
+
+  - plan_id: compound_contain_notify
+    phenomenon: compound
+    plan_text: >-
+      Isolate the box and page the on-call incident manager in the same breath;
+      this one cannot wait.
+    target_actions: [isolate_host, escalate_notify]
+    distractor_actions: []
+
+  - plan_id: reorder_block_then_enrich
+    phenomenon: reorder
+    plan_text: >-
+      Cut the egress to that address immediately, and once that control is in
+      place, start enriching the destination against our feeds.
+    target_actions: [block_egress, investigate_enrich]
+    distractor_actions: []
+
+  - plan_id: reorder_evidence_before_rebuild
+    phenomenon: reorder
+    plan_text: >-
+      No rebuild until the evidence is secured: take the forensic capture first,
+      then reimage the endpoint, and only afterwards bring it back onto the
+      network.
+    target_actions: [collect_forensics, reimage_format_host, lift_isolation]
+    distractor_actions: []
+
+  - plan_id: approval_disable_after_signoff
+    phenomenon: approval_gating
+    plan_text: >-
+      Once the identity team approves, disable the compromised account. In the
+      meantime, block the attacker's source address at the perimeter.
+    target_actions: [reset_disable_account, block_egress]
+    distractor_actions: []
+
+  - plan_id: approval_reimage_pending
+    phenomenon: approval_gating
+    plan_text: >-
+      Pending management approval, rebuild the endpoint from the gold image.
+      Until that sign-off lands, keep it isolated and under active monitoring.
+    target_actions: [reimage_format_host, isolate_host, monitor_watch]
+    distractor_actions: []
+
+  - plan_id: hedged_maybe_enrich
+    phenomenon: hedged
+    plan_text: >-
+      I am not convinced this is malicious yet. Let us just enrich the
+      indicators and keep an eye on the host for now, nothing drastic.
+    target_actions: [investigate_enrich, monitor_watch]
+    distractor_actions: []
+
+  - plan_id: hedged_lean_isolate
+    phenomenon: hedged
+    plan_text: >-
+      Given the lateral-movement signals it probably warrants pulling the host
+      off the network, and I would grab forensics while we still can.
+    target_actions: [isolate_host, collect_forensics]
+    distractor_actions: []
+
+  - plan_id: coreference_kill_then_quarantine
+    phenomenon: coreference
+    plan_text: >-
+      Terminate the dropper process. Then take the binary it wrote to disk and
+      lock it away so it can never run again.
+    target_actions: [kill_process, quarantine_artifact]
+    distractor_actions: []
+
+  - plan_id: coreference_isolate_then_lift
+    phenomenon: coreference
+    plan_text: >-
+      Pull the host offline now. Once forensics clears it and the coordinator
+      signs off, put it back on the network.
+    target_actions: [isolate_host, lift_isolation]
+    distractor_actions: []
+
+  - plan_id: long_confirmed_intrusion
+    phenomenon: long_multistep
+    plan_text: >-
+      This is a confirmed intrusion. Enrich the indicators, capture forensics,
+      isolate the host, block the command-and-control channel at the edge, and
+      escalate to the incident commander.
+    target_actions: [investigate_enrich, collect_forensics, isolate_host, block_egress, escalate_notify]
+    distractor_actions: []
+
+  - plan_id: long_ransomware_response
+    phenomenon: long_multistep
+    plan_text: >-
+      Shadow copies are being wiped as we speak. Kill the encryptor, quarantine
+      the payload, take the machine off the network, collect whatever forensic
+      artifacts remain, and page the IR manager.
+    target_actions: [kill_process, quarantine_artifact, isolate_host, collect_forensics, escalate_notify]
+    distractor_actions: []
+
+  - plan_id: benign_sanctioned_scan
+    phenomenon: paraphrase
+    plan_text: >-
+      Enrichment shows this maps cleanly to the approved monthly vulnerability
+      scan window. There is no malice here, so close it out as benign.
+    target_actions: [investigate_enrich, close_benign]
+    distractor_actions: []
+
+  - plan_id: waf_block_sqli
+    phenomenon: paraphrase
+    plan_text: >-
+      Push a web-application-firewall signature to block the SQL injection
+      pattern hitting the login endpoint, and preserve the raw request logs as
+      evidence.
+    target_actions: [apply_ips_waf_rule, collect_forensics]
+    distractor_actions: []
+
+  - plan_id: waf_ips_exploit_enrich
+    phenomenon: indirect_reference
+    plan_text: >-
+      Stand up an intrusion-prevention rule to drop the exploit traffic for that
+      CVE at the sensor, then look up who owns the source addresses.
+    target_actions: [apply_ips_waf_rule, investigate_enrich]
+    distractor_actions: []
+
+  - plan_id: monitor_only_testbox
+    phenomenon: hedged
+    plan_text: >-
+      Low-confidence anomaly on a throwaway test box. Keep monitoring it; no
+      containment is justified at this point.
+    target_actions: [monitor_watch]
+    distractor_actions: []
+
+  - plan_id: distractor_hypothetical_disable
+    phenomenon: distractor
+    plan_text: >-
+      In a worse scenario we might have had to disable the account and reimage
+      the laptop, but here the phish was reported before any click, so we simply
+      quarantine the message and enrich the sender.
+    target_actions: [quarantine_artifact, investigate_enrich]
+    distractor_actions: [reset_disable_account, reimage_format_host]
+
+  - plan_id: compound_block_kill_forensics
+    phenomenon: compound
+    plan_text: >-
+      Sever the outbound channel, stop the malicious process, and snapshot the
+      host's memory for analysis, in that order.
+    target_actions: [block_egress, kill_process, collect_forensics]
+    distractor_actions: []

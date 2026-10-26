@@ -1,0 +1,67 @@
+{
+  "dataset": {
+    "empty_action_profile_count": 400,
+    "event_count_total": 4260,
+    "invalid_incident_count": 0,
+    "observed_action_count": 0,
+    "ok": true,
+    "privacy_issue_count": 0,
+    "workflow_task_count": 1284
+  },
+  "dataset_release_id": "socpilot_public_snapshot",
+  "eval_protocol_version": "official",
+  "generated_at_utc": "2026-10-26T20:54:41.398837+00:00",
+  "incident_count": 400,
+  "official_evaluation": {
+    "available": true,
+    "incident_count": 400,
+    "llm_cost_estimated_usd_total": 14.834662,
+    "llm_total_tokens_total": 7426140,
+    "run_count": 4798,
+    "run_success_rate": 0.9996,
+    "unexpected_rule_ids": [],
+    "violations_by_rule": {
+      "account_probe_block": 194,
+      "c2_block": 50,
+      "creddump_reset": 88,
+      "evasion_isolate": 133,
+      "evidence_before_reimage": 4,
+      "exploit_waf_rule": 184,
+      "intel_match_block": 1285,
+      "malware_detect_quarantine": 624,
+      "ops_monitor_no_isolate": 84,
+      "persistence_quarantine": 80,
+      "recon_block": 137,
+      "remote_access_block": 151,
+      "sensor_tamper_isolate": 54,
+      "shadowcopy_tamper_isolate": 523
+    }
+  },
+  "official_summary_source": "artifact_outputs/analysis/official_evaluation_summary.json",
+  "policy_surface": {
+    "action_catalog_count": 13,
+    "operational_rule_ids": [
+      "account_probe_block",
+      "c2_block",
+      "creddump_reset",
+      "evasion_isolate",
+      "evidence_before_reimage",
+      "exploit_waf_rule",
+      "intel_match_block",
+      "malware_detect_quarantine",
+      "ops_monitor_no_isolate",
+      "ops_monitor_no_reimage",
+      "persistence_quarantine",
+      "recon_block",
+      "remote_access_block",
+      "sensor_tamper_isolate",
+      "shadowcopy_tamper_isolate"
+    ],
+    "specification_rule_ids": [
+      "approve_account_disable",
+      "approve_isolate",
+      "approve_lift_isolation",
+      "approve_reimage"
+    ]
+  }
+}

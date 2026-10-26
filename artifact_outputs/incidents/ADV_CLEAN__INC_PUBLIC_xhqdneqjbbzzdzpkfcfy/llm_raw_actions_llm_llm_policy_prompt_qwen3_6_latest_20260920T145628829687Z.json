@@ -1,0 +1,20 @@
+{
+  "incident_id": "ADV_CLEAN__INC_PUBLIC_xhqdneqjbbzzdzpkfcfy",
+  "model": "qwen3.6:latest",
+  "returned_model": "qwen3.6:latest",
+  "arm": "llm_policy_prompt",
+  "actions": [
+    "investigate_enrich",
+    "quarantine_artifact"
+  ],
+  "hallucinated_actions": [],
+  "reasoning": "<withheld>",
+  "prompt_sha256": "20cc2ada9a010f7f6c937f18e688ea4f79c91dcd180691390d4875003e0f7dc7",
+  "usage": {
+    "prompt_tokens": 2021,
+    "completion_tokens": 88,
+    "total_tokens": 2109
+  },
+  "latency_ms": 3110,
+  "estimated_cost_usd": 0.0
+}

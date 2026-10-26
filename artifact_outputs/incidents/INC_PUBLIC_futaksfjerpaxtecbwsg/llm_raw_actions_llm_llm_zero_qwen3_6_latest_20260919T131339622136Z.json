@@ -1,0 +1,20 @@
+{
+  "incident_id": "INC_PUBLIC_futaksfjerpaxtecbwsg",
+  "model": "qwen3.6:latest",
+  "returned_model": "qwen3.6:latest",
+  "arm": "llm_zero",
+  "actions": [
+    "investigate_enrich",
+    "monitor_watch"
+  ],
+  "hallucinated_actions": [],
+  "reasoning": "<withheld>",
+  "prompt_sha256": "e7799ae30309b85ceb30eefa38dee74465b0a6e985b89b253753aea765b20a1b",
+  "usage": {
+    "prompt_tokens": 1175,
+    "completion_tokens": 85,
+    "total_tokens": 1260
+  },
+  "latency_ms": 2178,
+  "estimated_cost_usd": 0.0
+}

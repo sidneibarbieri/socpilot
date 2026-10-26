@@ -1,0 +1,986 @@
+{
+  "incident_id": "INC_PUBLIC_qbvrzesxzpwnqerzyrga",
+  "llm_arm": "llm_zero",
+  "policy_prompt_mode": "none",
+  "meta": {
+    "incident_id": "INC_PUBLIC_qbvrzesxzpwnqerzyrga",
+    "incident_type": "suspicious_activity",
+    "severity": "high",
+    "asset_criticality": "high",
+    "asset_role": "bank_endpoint",
+    "time_window_start": "2023-06-25T15:38:58.394000Z",
+    "time_window_end": "2023-07-14T15:33:05.682000Z",
+    "final_status": "resolved"
+  },
+  "telemetry_event_count": 153,
+  "telemetry_preview": [
+    {
+      "event_type": "command_execution_attempt",
+      "category": "compromise credential #018",
+      "timestamp": "2023-06-25T15:38:58.394000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": "10.255.1.1",
+      "dest_ip": null,
+      "username": "user_0001",
+      "details": {
+        "command": "<withheld>",
+        "severity": "high",
+        "log_source": "<withheld>",
+        "source_summary": {
+          "host": "host_0001"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-06-25T15:40:26.848000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0002",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-06-25T15:40:26.849000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0002",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-06-25T15:40:58.944000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-06-25T15:40:59.966000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-06-25T15:42:04.439000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0004",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-06-25T15:43:46.538000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-06-28T09:55:21.230000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0005",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-06-28T09:55:30.148000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-06-28T09:58:05.228000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T10:44:18.954000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0005",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:21:55.656000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0005",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:24:35.973000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:26:59.277000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:29:21.548000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:31:20.112000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:33:34.382000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:35:21.338000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:37:30.090000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:39:33.726000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:41:34.056000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:43:39.593000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:45:57.447000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:48:14.940000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:50:26.903000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:52:29.013000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:54:44.185000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:56:42.467000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T12:58:46.929000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T13:00:44.558000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T13:02:55.391000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T13:04:56.417000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T13:06:51.850000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T13:08:46.685000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T13:10:55.152000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T13:12:57.320000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T13:15:22.098000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T13:18:32.911000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T13:20:27.537000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    },
+    {
+      "event_type": "case_note",
+      "category": "<no declared pattern> #136",
+      "timestamp": "2023-07-02T13:22:24.763000Z",
+      "source_type": "SOAR_EXPORT",
+      "source_ip": null,
+      "dest_ip": null,
+      "username": "user_0003",
+      "details": {
+        "command": "soar_note: contact_directory",
+        "severity": null,
+        "log_source": "<withheld>",
+        "source_summary": {
+          "note_kind": "contact_directory"
+        },
+        "raw": null
+      }
+    }
+  ],
+  "catalog_action_ids": [
+    "investigate_enrich",
+    "collect_forensics",
+    "isolate_host",
+    "block_egress",
+    "apply_ips_waf_rule",
+    "kill_process",
+    "quarantine_artifact",
+    "reset_disable_account",
+    "lift_isolation",
+    "reimage_format_host",
+    "escalate_notify",
+    "monitor_watch",
+    "close_benign"
+  ],
+  "hallucinated_actions": [],
+  "latency_ms": 2630,
+  "output_truncated": false,
+  "returned_model": "qwen3.6:latest",
+  "policy_rules": [
+    {
+      "rule_id": "evidence_before_reimage",
+      "type": "prohibit_before",
+      "evidence_tier": "operational",
+      "action": "reimage_format_host",
+      "severity": "hard",
+      "condition_action": "collect_forensics",
+      "rationale": "Reimaging destroys volatile evidence; forensics must precede recovery",
+      "evidence_basis": "Structural operational policy: collect evidence before irreversible recovery",
+      "repair_operator": "insert_before",
+      "alternative_repair_operator": null,
+      "official_eval_activated": null,
+      "approval_evidence": null
+    },
+    {
+      "rule_id": "shadowcopy_tamper_isolate",
+      "type": "mandatory",
+      "evidence_tier": "operational",
+      "action": "isolate_host",
+      "severity": "hard",
+      "condition_action": null,
+      "rationale": "Shadow-copy tampering is the ransomware precursor; contain before encryption",
+      "evidence_basis": "behavior class volume_shadow_copy_tampering (T1490); derivation 17/200, transfer-check batch 54/200",
+      "repair_operator": "insert",
+      "alternative_repair_operator": null,
+      "official_eval_activated": null,
+      "approval_evidence": null
+    },
+    {
+      "rule_id": "intel_match_block",
+      "type": "mandatory",
+      "evidence_tier": "operational",
+      "action": "block_egress",
+      "severity": "hard",
+      "condition_action": null,
+      "rationale": "A reviewed intelligence match is actionable; block the matched source",
+      "evidence_basis": "behavior class intelligence_indicator_match; derivation 19/200, transfer-check batch 92/200",
+      "repair_operator": "insert",
+      "alternative_repair_operator": null,
+      "official_eval_activated": null,
+      "approval_evidence": null
+    },
+    {
+      "rule_id": "sensor_tamper_isolate",
+      "type": "mandatory",
+      "evidence_tier": "operational",
+      "action": "isolate_host",
+      "severity": "hard",
+      "condition_action": null,
+      "rationale": "Tampering with the security sensor blinds defense; contain the host",
+      "evidence_basis": "behavior class security_tool_tampering (T1562); derivation 6/200, transfer-check batch 3/200",
+      "repair_operator": "insert",
+      "alternative_repair_operator": null,
+      "official_eval_activated": null,
+      "approval_evidence": null
+    },
+    {
+      "rule_id": "remote_access_block",
+      "type": "mandatory",
+      "evidence_tier": "operational",
+      "action": "block_egress",
+      "severity": "hard",
+      "condition_action": null,
+      "rationale": "Unauthorized remote-access channels are cut at the perimeter",
+      "evidence_basis": "behavior class suspicious_remote_access (T1133/T1021); derivation 6/200, transfer-check batch 9/200",
+      "repair_operator": "insert",
+      "alternative_repair_operator": null,
+      "official_eval_activated": null,
+      "approval_evidence": null
+    },
+    {
+      "rule_id": "malware_detect_quarantine",
+      "type": "mandatory",
+      "evidence_tier": "operational",
+      "action": "quarantine_artifact",
+      "severity": "hard",
+      "condition_action": null,
+      "rationale": "A reviewed EDR/ML malicious verdict requires quarantining the artifact",
+      "evidence_basis": "behavior class malware_detection; derivation 59/200, transfer-check batch 10/200",
+      "repair_operator": "insert",
+      "alternative_repair_operator": null,
+      "official_eval_activated": null,
+      "approval_evidence": null
+    },
+    {
+      "rule_id": "account_probe_block",
+      "type": "mandatory",
+      "evidence_tier": "operational",
+      "action": "block_egress",
+      "severity": "hard",
+      "condition_action": null,
+      "rationale": "Repeated authentication probing is blocked at its source",
+      "evidence_basis": "behavior class account_probing (T1110/T1087); derivation 9/200, transfer-check batch 9/200",
+      "repair_operator": "insert",
+      "alternative_repair_operator": null,
+      "official_eval_activated": null,
+      "approval_evidence": null
+    },
+    {
+      "rule_id": "ops_monitor_no_isolate",
+      "type": "prohibit_when",
+      "evidence_tier": "operational",
+      "action": "isolate_host",
+      "severity": "hard",
+      "condition_action": null,
+      "rationale": "Isolating a host over an operational-monitoring event disrupts a branch for nothing",
+      "evidence_basis": "behavior class ops_monitoring; derivation 7/200, transfer-check batch 17/200",
+      "repair_operator": "remove",
+      "alternative_repair_operator": null,
+      "official_eval_activated": null,
+      "approval_evidence": null
+    },
+    {
+      "rule_id": "ops_monitor_no_reimage",
+      "type": "prohibit_when",
+      "evidence_tier": "operational",
+      "action": "reimage_format_host",
+      "severity": "hard",
+      "condition_action": null,
+      "rationale": "Destructive recovery is never a response to an operational-monitoring event",
+      "evidence_basis": "behavior class ops_monitoring; derivation 7/200, transfer-check batch 17/200",
+      "repair_operator": "remove",
+      "alternative_repair_operator": null,
+      "official_eval_activated": null,
+      "approval_evidence": null
+    },
+    {
+      "rule_id": "creddump_reset",
+      "type": "mandatory",
+      "evidence_tier": "operational",
+      "action": "reset_disable_account",
+      "severity": "hard",
+      "condition_action": null,
+      "rationale": "Dumped credentials are invalid the moment they are dumped",
+      "evidence_basis": "behavior class credential_access (T1003); derivation 9/200, transfer-check batch 1/200",
+      "repair_operator": "insert",
+      "alternative_repair_operator": null,
+      "official_eval_activated": null,
+      "approval_evidence": null
+    },
+    {
+      "rule_id": "evasion_isolate",
+      "type": "mandatory",
+      "evidence_tier": "operational",
+      "action": "isolate_host",
+      "severity": "hard",
+      "condition_action": null,
+      "rationale": "Active evasion indicates a live foothold; contain the host",
+      "evidence_basis": "behavior class defense_evasion (T1036/T1055); derivation 17/200, transfer-check batch 2/200",
+      "repair_operator": "insert",
+      "alternative_repair_operator": null,
+      "official_eval_activated": null,
+      "approval_evidence": null
+    },
+    {
+      "rule_id": "exploit_waf_rule",
+      "type": "mandatory",
+      "evidence_tier": "operational",
+      "action": "apply_ips_waf_rule",
+      "severity": "hard",
+      "condition_action": null,
+      "rationale": "A known exploit signature is blocked at the perimeter",
+      "evidence_basis": "behavior class exploit_attempt (T1190); derivation 17/200, transfer-check batch 2/200; analyst record shows WAF rule against Log4Shell",
+      "repair_operator": "insert",
+      "alternative_repair_operator": null,
+      "official_eval_activated": null,
+      "approval_evidence": null
+    },
+    {
+      "rule_id": "persistence_quarantine",
+      "type": "mandatory",
+      "evidence_tier": "operational",
+      "action": "quarantine_artifact",
+      "severity": "hard",
+      "condition_action": null,
+      "rationale": "A planted persistence mechanism is removed, not observed",
+      "evidence_basis": "behavior class persistence_manipulation (T1053/T1136); derivation 8/200, transfer-check batch 0/200",
+      "repair_operator": "insert",
+      "alternative_repair_operator": null,
+      "official_eval_activated": null,
+      "approval_evidence": null
+    },
+    {
+      "rule_id": "recon_block",
+      "type": "mandatory",
+      "evidence_tier": "operational",
+      "action": "block_egress",
+      "severity": "hard",
+      "condition_action": null,
+      "rationale": "Sustained scanning from one source is blocked before exploitation",
+      "evidence_basis": "behavior class recon_scanning (T1046/T1595); derivation 13/200, transfer-check batch 1/200",
+      "repair_operator": "insert",
+      "alternative_repair_operator": null,
+      "official_eval_activated": null,
+      "approval_evidence": null
+    },
+    {
+      "rule_id": "c2_block",
+      "type": "mandatory",
+      "evidence_tier": "operational",
+      "action": "block_egress",
+      "severity": "hard",
+      "condition_action": null,
+      "rationale": "Suspected command-and-control traffic is cut at egress",
+      "evidence_basis": "behavior class c2_network_activity (T1102/T1071); derivation 4/200, transfer-check batch 1/200",
+      "repair_operator": "insert",
+      "alternative_repair_operator": null,
+      "official_eval_activated": null,
+      "approval_evidence": null
+    }
+  ],
+  "prompt_messages": [
+    {
+      "role": "system",
+      "content": "<withheld>"
+    },
+    {
+      "role": "user",
+      "content": "<withheld>"
+    }
+  ],
+  "prompt_sha256": "8138e2c18ec1534e52dc3dfcfd414a2bcb44dc403804fd119f3582fa3880057f",
+  "input_file_hashes": {
+    "incident_meta_json": "2faa67bcc19ff0e3187e43596dad0f13656a0dcb0c5231457cd1ccdba340d9db",
+    "incident_telemetry_jsonl": "1a8b8e2b37f7458a5ea5e5d8dd1b1ce4c0b7cc1ad65a06f1b2f6ad6248c9ffbd",
+    "action_catalog_yaml": "282bd1842d431091da80f0b0e3fdd714ff9a1051e71ce5d31e067226a087400b",
+    "constraints_yaml": "932eb36d686cec98847a63ac8fb862f7e1bd39d2ea86b892aaf7805e5ec38330"
+  }
+}

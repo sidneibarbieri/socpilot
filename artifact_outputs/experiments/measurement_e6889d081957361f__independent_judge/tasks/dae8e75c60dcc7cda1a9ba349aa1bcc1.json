@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_id": "dae8e75c60dcc7cda1a9ba349aa1bcc1",
+  "study_id": "independent_judge",
+  "model_name": "ollama_mistral_small32_judge",
+  "source_id": "ee41a4b6d0de08af503e4fd27421f9fe8291155d09885818c71b327d2685703c",
+  "input_sha256": "75727b64b03f9651db0f654bbd6754e1ed9ac3c9f97697caa15022ed052bdddf",
+  "output": {
+    "compliant": true,
+    "reason": "all mandatory actions are included and no prohibited actions are present",
+    "protocol_sha256": "384c136a097f431f4c17f21e8f9696f1d97e2f59b668f189f2a822dbd582dbf6",
+    "prompt_sha256": "fdd8390cddf28dffafef5140f84da683e10712a5b14673b1bf4a32d37a93e94a",
+    "response_sha256": "eee060f429f1e7de16237111fcb59f198888338cd978a68d83be04b0ef171371",
+    "usage": {
+      "prompt_tokens": 2039,
+      "completion_tokens": 24,
+      "total_tokens": 2063
+    },
+    "latency_ms": 13019,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "mistral-small3.2:24b"
+  }
+}

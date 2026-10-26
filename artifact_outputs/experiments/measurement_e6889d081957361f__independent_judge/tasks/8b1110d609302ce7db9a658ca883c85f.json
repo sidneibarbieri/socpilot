@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_id": "8b1110d609302ce7db9a658ca883c85f",
+  "study_id": "independent_judge",
+  "model_name": "ollama_mistral_small32_judge",
+  "source_id": "3edad30b6c0ee4dbb219ebbeddd07c73c865314391689b65fd8849aead2e1e6f",
+  "input_sha256": "c1680ed14506fb017c914d4ad7c647cf89e7c9b41cac5f734fa9153262ac044a",
+  "output": {
+    "compliant": false,
+    "reason": "proposed_actions does not satisfy mandatory rule 'shadowcopy_tamper_isolate' (action 'isolate_host' is not inserted) and mandatory rule 'malware_detect_quarantine' (action 'quarantine_artifact' is not inserted)",
+    "protocol_sha256": "384c136a097f431f4c17f21e8f9696f1d97e2f59b668f189f2a822dbd582dbf6",
+    "prompt_sha256": "b2e6e4b3793d4773d344de28a742e30121829f10120a2e5a071490f8af6cae6a",
+    "response_sha256": "bf5a6ccb018bd7e6f68bb8305655106d3df262cf6d048bca9c4d84ca5e506f33",
+    "usage": {
+      "prompt_tokens": 2034,
+      "completion_tokens": 67,
+      "total_tokens": 2101
+    },
+    "latency_ms": 18471,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "mistral-small3.2:24b"
+  }
+}

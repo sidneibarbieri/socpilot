@@ -1,0 +1,297 @@
+- rule_id: evidence_before_reimage
+  type: prohibit_before
+  action: reimage_format_host
+  governance_scope: endpoint
+  condition_action: collect_forensics
+  severity: hard
+  repair_operator: insert_before
+  rationale: Reimaging destroys volatile evidence; forensics must precede recovery
+  evidence_basis: 'Structural operational policy: collect evidence before irreversible
+    recovery'
+- rule_id: approve_isolate
+  type: require_approval
+  evidence_tier: specification
+  action: isolate_host
+  governance_scope: endpoint
+  severity: hard
+  repair_operator: remove
+  alternative_repair_operator: defer_to_human_approval
+  rationale: Host isolation interrupts agency business and needs coordinator sign-off
+  evidence_basis: Authored safety requirement for deployments with authenticated approval
+    records
+  approval_evidence:
+    source: agency_coordinator_signoff
+    default_when_absent: not_approved
+- rule_id: approve_reimage
+  type: require_approval
+  evidence_tier: specification
+  action: reimage_format_host
+  governance_scope: endpoint
+  severity: hard
+  repair_operator: remove
+  alternative_repair_operator: defer_to_human_approval
+  rationale: Reimaging is the catalog's only irreversible action
+  evidence_basis: Authored safety requirement for irreversible recovery actions
+  approval_evidence:
+    source: agency_coordinator_signoff
+    default_when_absent: not_approved
+- rule_id: approve_lift_isolation
+  type: require_approval
+  evidence_tier: specification
+  action: lift_isolation
+  governance_scope: endpoint
+  severity: hard
+  repair_operator: remove
+  alternative_repair_operator: defer_to_human_approval
+  rationale: Returning a host to the network reopens the risk isolation contained
+  evidence_basis: Authored safety requirement for returning a contained host to the
+    network
+  approval_evidence:
+    source: agency_coordinator_signoff
+    default_when_absent: not_approved
+- rule_id: approve_account_disable
+  type: require_approval
+  evidence_tier: specification
+  action: reset_disable_account
+  governance_scope: identity
+  severity: hard
+  repair_operator: remove
+  alternative_repair_operator: defer_to_human_approval
+  rationale: Disabling an account locks a person out of business systems
+  evidence_basis: Authored safety requirement for disruptive identity actions
+  approval_evidence:
+    source: agency_coordinator_signoff
+    default_when_absent: not_approved
+- rule_id: shadowcopy_tamper_isolate
+  type: mandatory
+  action: isolate_host
+  governance_scope: endpoint
+  severity: hard
+  repair_operator: insert
+  rationale: Shadow-copy tampering is the ransomware precursor; contain before encryption
+  evidence_basis: behavior class volume_shadow_copy_tampering (T1490); derivation
+    17/200, transfer-check batch 54/200
+  scope:
+    category_contains:
+    - volume_shadow
+- rule_id: intel_match_block
+  type: mandatory
+  action: block_egress
+  governance_scope: network
+  severity: hard
+  repair_operator: insert
+  rationale: A reviewed intelligence match is actionable; block the matched source
+  evidence_basis: behavior class intelligence_indicator_match; derivation 19/200,
+    transfer-check batch 92/200
+  scope:
+    category_contains:
+    - custom_intelligence_indicator
+    - ioc_management_action
+    - edr_intelligence_indicator
+    - indicator_of_compromise
+    - quarenten
+- rule_id: sensor_tamper_isolate
+  type: mandatory
+  action: isolate_host
+  governance_scope: endpoint
+  severity: hard
+  repair_operator: insert
+  rationale: Tampering with the security sensor blinds defense; contain the host
+  evidence_basis: behavior class security_tool_tampering (T1562); derivation 6/200,
+    transfer-check batch 3/200
+  scope:
+    category_contains:
+    - falcon_sensor
+    - disable_or_modify_tools
+- rule_id: remote_access_block
+  type: mandatory
+  action: block_egress
+  governance_scope: network
+  severity: hard
+  repair_operator: insert
+  rationale: Unauthorized remote-access channels are cut at the perimeter
+  evidence_basis: behavior class suspicious_remote_access (T1133/T1021); derivation
+    6/200, transfer-check batch 9/200
+  scope:
+    category_contains:
+    - accept_remote
+    - acesso_remoto
+    - ssh_or_telnet
+    - remoteaccess
+    - remote_administrat
+    - lateral_movement
+    - remote_services
+- rule_id: malware_detect_quarantine
+  type: mandatory
+  action: quarantine_artifact
+  governance_scope: endpoint
+  severity: hard
+  repair_operator: insert
+  rationale: A reviewed EDR/ML malicious verdict requires quarantining the artifact
+  evidence_basis: behavior class malware_detection; derivation 59/200, transfer-check
+    batch 10/200
+  scope:
+    category_contains:
+    - machine_learning
+    - sensor_based_ml
+    - ml_algorithm
+    - adware_pup
+    - malware
+    - malicious
+    - suspicious
+    - suspei
+    - powershell
+    - command_line
+    - edr_detection
+    - ml
+- rule_id: account_probe_block
+  type: mandatory
+  action: block_egress
+  governance_scope: network
+  severity: hard
+  repair_operator: insert
+  rationale: Repeated authentication probing is blocked at its source
+  evidence_basis: behavior class account_probing (T1110/T1087); derivation 9/200,
+    transfer-check batch 9/200
+  scope:
+    category_contains:
+    - login_failure
+    - falhas_de_login
+    - locked_out
+    - contas_bloqueadas
+    - enumerated_users
+    - context_label_004
+    - diversos_ip
+- rule_id: ops_monitor_no_isolate
+  type: prohibit_when
+  action: isolate_host
+  governance_scope: endpoint
+  severity: hard
+  repair_operator: remove
+  rationale: Isolating a host over an operational-monitoring event disrupts a branch
+    for nothing
+  evidence_basis: behavior class ops_monitoring; derivation 7/200, transfer-check
+    batch 17/200
+  scope:
+    category_contains:
+    - zabbix
+    - context_label_001
+    - administration_edit
+    - stopped_sending_events
+    - monitoramento
+    - context_label_003
+    - context_label_002
+    - unomi
+- rule_id: ops_monitor_no_reimage
+  type: prohibit_when
+  action: reimage_format_host
+  governance_scope: endpoint
+  severity: hard
+  repair_operator: remove
+  rationale: Destructive recovery is never a response to an operational-monitoring
+    event
+  evidence_basis: behavior class ops_monitoring; derivation 7/200, transfer-check
+    batch 17/200
+  scope:
+    category_contains:
+    - zabbix
+    - context_label_001
+    - administration_edit
+    - stopped_sending_events
+    - monitoramento
+    - context_label_003
+    - context_label_002
+    - unomi
+- rule_id: creddump_reset
+  type: mandatory
+  action: reset_disable_account
+  governance_scope: identity
+  severity: hard
+  repair_operator: insert
+  rationale: Dumped credentials are invalid the moment they are dumped
+  evidence_basis: behavior class credential_access (T1003); derivation 9/200, transfer-check
+    batch 1/200
+  scope:
+    category_contains:
+    - credential
+    - dumping
+- rule_id: evasion_isolate
+  type: mandatory
+  action: isolate_host
+  governance_scope: endpoint
+  severity: hard
+  repair_operator: insert
+  rationale: Active evasion indicates a live foothold; contain the host
+  evidence_basis: behavior class defense_evasion (T1036/T1055); derivation 17/200,
+    transfer-check batch 2/200
+  scope:
+    category_contains:
+    - masquerading
+    - evasion
+    - injection
+    - injected
+    - recycle_bin
+    - bypass
+- rule_id: exploit_waf_rule
+  type: mandatory
+  action: apply_ips_waf_rule
+  governance_scope: network
+  severity: hard
+  repair_operator: insert
+  rationale: A known exploit signature is blocked at the perimeter
+  evidence_basis: behavior class exploit_attempt (T1190); derivation 17/200, transfer-check
+    batch 2/200; analyst record shows WAF rule against Log4Shell
+  scope:
+    category_contains:
+    - exploit
+    - log4shell
+    - ssrf
+    - smuggling
+    - heap_spray
+    - cgi
+    - worm
+- rule_id: persistence_quarantine
+  type: mandatory
+  action: quarantine_artifact
+  governance_scope: endpoint
+  severity: hard
+  repair_operator: insert
+  rationale: A planted persistence mechanism is removed, not observed
+  evidence_basis: behavior class persistence_manipulation (T1053/T1136); derivation
+    8/200, transfer-check batch 0/200
+  scope:
+    category_contains:
+    - scheduled_task
+    - schedule_a_task
+    - usu_aacute_rio_local
+    - atributos_de_conta
+    - password_never
+- rule_id: recon_block
+  type: mandatory
+  action: block_egress
+  governance_scope: network
+  severity: hard
+  repair_operator: insert
+  rationale: Sustained scanning from one source is blocked before exploitation
+  evidence_basis: behavior class recon_scanning (T1046/T1595); derivation 13/200,
+    transfer-check batch 1/200
+  scope:
+    category_contains:
+    - scan
+    - nmap
+    - recon
+- rule_id: c2_block
+  type: mandatory
+  action: block_egress
+  governance_scope: network
+  severity: hard
+  repair_operator: insert
+  rationale: Suspected command-and-control traffic is cut at egress
+  evidence_basis: behavior class c2_network_activity (T1102/T1071); derivation 4/200,
+    transfer-check batch 1/200
+  scope:
+    category_contains:
+    - web_service
+    - application_layer_protocols
+    - network_activity_with_a_remote_destination
+    - https_ou_ssh

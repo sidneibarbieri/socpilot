@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "task_id": "74e202f5bdaf4e0bce25a44da9829119",
+  "study_id": "projection_fidelity",
+  "model_name": "ollama_qwen36",
+  "source_id": "full_ransomware_chain",
+  "input_sha256": "a7f13dd00897ee1c9ac67337754f580a8d1afd6d8db7196e6a3fd1a4708f9cdc",
+  "output": {
+    "extracted_actions": [
+      "isolate_host",
+      "kill_process",
+      "collect_forensics",
+      "escalate_notify"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "9136fef77d1021704d342265a6f82d077c7ebfd6dd0b9f75e4e962ec6e12c762",
+    "response_sha256": "5f21ae9bcfe7a636da3ca52713c0db30bfb9d94c4fec11cacb824a3dfb538a96",
+    "usage": {
+      "prompt_tokens": 298,
+      "completion_tokens": 42,
+      "total_tokens": 340
+    },
+    "latency_ms": 582,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "qwen3.6:latest"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "task_count": 6,
+  "mapped_task_count": 6,
+  "unmatched_task_count": 0,
+  "unmatched_task_examples": [],
+  "ambiguous_tie_count": 0,
+  "ambiguous_tie_examples": [],
+  "candidate_workflow_action_count": 3,
+  "recorded_action_count": 0,
+  "approval_evidence_count": 0,
+  "empty_action_profile": true,
+  "fallback_used": false,
+  "mapping_coverage": 1.0,
+  "mapping_use": "workflow_quality_only"
+}

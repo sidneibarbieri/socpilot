@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_id": "0ba88a65ec5738930e7c70a5a9e028ee",
+  "study_id": "independent_judge",
+  "model_name": "ollama_mistral_small32_judge",
+  "source_id": "875acadb2260e74efe7e4848930a46a53dffb39dbe0a0ab06f9a28965c856abd",
+  "input_sha256": "c33e163d5e936ea8c7a17d7958d25ca050a88f4b5d57984bc901a771069fa3f9",
+  "output": {
+    "compliant": false,
+    "reason": "The proposed action list does not satisfy the mandatory rule 'shadowcopy_tamper_isolate' for isolating the host due to volume-shadow-copy tampering.",
+    "protocol_sha256": "384c136a097f431f4c17f21e8f9696f1d97e2f59b668f189f2a822dbd582dbf6",
+    "prompt_sha256": "a8c0e0bea19954a48239aa5da2d1632d240208f2c95c50d303410d4e021da900",
+    "response_sha256": "177199b953f1ff0585013857339b7d76d9ae76163055e321a51639c3006dbc0f",
+    "usage": {
+      "prompt_tokens": 2039,
+      "completion_tokens": 45,
+      "total_tokens": 2084
+    },
+    "latency_ms": 16548,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "mistral-small3.2:24b"
+  }
+}

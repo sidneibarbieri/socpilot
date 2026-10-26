@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-09-19T12:54:53.210072+00:00",
+  "bundle_path": "policy",
+  "policy_digest": "aa37d8b7f3607cd2c0dba8dac1461ef6fb7d7e1f21a3715f19b594e59a15ef2f",
+  "files": [
+    {
+      "filename": "action_catalog.yaml",
+      "sha256": "282bd1842d431091da80f0b0e3fdd714ff9a1051e71ce5d31e067226a087400b",
+      "present": true
+    },
+    {
+      "filename": "constraints.yaml",
+      "sha256": "932eb36d686cec98847a63ac8fb862f7e1bd39d2ea86b892aaf7805e5ec38330",
+      "present": true
+    },
+    {
+      "filename": "review_record.yaml",
+      "sha256": "ceaeec460b5173b1b9e591f48431a9d7a12deb47375e5349eea0de3652cd05b7",
+      "present": true
+    },
+    {
+      "filename": "telemetry_normalization.yaml",
+      "sha256": "52a55bef14cfb3dad2302966d214f92df128dc9afeccdd46ac3ab39991aecac8",
+      "present": true
+    }
+  ],
+  "provenance": {
+    "derived_from_corpus_sha256": "e37fce33cbd9b46da1de2a7edba5b313d41d8ca2b9652bd9112b66052eefeccd",
+    "heldout_validation_sha256": "4c3b83706d1350710c92b790c13a4ca20414b0ca6460444dfe9f0b1ae5ca3e7f",
+    "decision_ref": "policy/review_record.yaml"
+  }
+}

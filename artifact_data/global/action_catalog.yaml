@@ -1,0 +1,81 @@
+# Candidate action vocabulary.
+# The catalog is a research abstraction used to make proposed plans comparable.
+# The exported workflow tasks are not treated as observed response actions.
+
+- action_id: investigate_enrich
+  phase: triage
+  requires_approval: false
+  reversible: true
+  operational_role: gather context and enrich indicators before deciding
+
+- action_id: collect_forensics
+  phase: investigation
+  requires_approval: false
+  reversible: true
+  operational_role: preserve evidence and support root-cause analysis
+
+- action_id: isolate_host
+  phase: containment
+  requires_approval: true
+  reversible: true
+  operational_role: interrupt active host-level risk
+
+- action_id: block_egress
+  phase: containment
+  requires_approval: false
+  reversible: true
+  operational_role: block a suspicious outbound or external source
+
+- action_id: apply_ips_waf_rule
+  phase: containment
+  requires_approval: false
+  reversible: true
+  operational_role: block a known exploit signature at the perimeter
+
+- action_id: kill_process
+  phase: containment
+  requires_approval: false
+  reversible: true
+  operational_role: terminate a confirmed malicious process
+
+- action_id: quarantine_artifact
+  phase: containment
+  requires_approval: false
+  reversible: true
+  operational_role: remove or quarantine a malicious file
+
+- action_id: reset_disable_account
+  phase: containment
+  requires_approval: true
+  reversible: true
+  operational_role: cut credential-reuse risk after account exposure
+
+- action_id: lift_isolation
+  phase: recovery
+  requires_approval: true
+  reversible: true
+  operational_role: return an isolated host to the network after validation
+
+- action_id: reimage_format_host
+  phase: recovery
+  requires_approval: true
+  reversible: false
+  operational_role: rebuild a compromised host from a clean image
+
+- action_id: escalate_notify
+  phase: post_incident
+  requires_approval: false
+  reversible: true
+  operational_role: hand off to the agency or coordinator
+
+- action_id: monitor_watch
+  phase: post_incident
+  requires_approval: false
+  reversible: true
+  operational_role: keep the host or indicator under observation
+
+- action_id: close_benign
+  phase: post_incident
+  requires_approval: false
+  reversible: true
+  operational_role: close the incident when the verdict is benign

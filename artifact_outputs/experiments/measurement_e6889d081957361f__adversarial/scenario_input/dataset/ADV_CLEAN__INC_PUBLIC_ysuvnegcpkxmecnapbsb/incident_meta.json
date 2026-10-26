@@ -1,0 +1,11 @@
+{
+  "asset_criticality": "medium",
+  "asset_host": "host_0001",
+  "asset_role": "bank_endpoint",
+  "final_status": "resolved",
+  "incident_id": "ADV_CLEAN__INC_PUBLIC_ysuvnegcpkxmecnapbsb",
+  "incident_type": "malware",
+  "severity": "medium",
+  "time_window_end": "2022-02-03T23:07:50.512000Z",
+  "time_window_start": "2022-02-03T21:21:47.296000Z"
+}

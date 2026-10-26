@@ -1,0 +1,315 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-10-26T20:54:41.591864+00:00",
+  "source_hashes": {
+    "constraints_sha256": "932eb36d686cec98847a63ac8fb862f7e1bd39d2ea86b892aaf7805e5ec38330",
+    "official_bundle_sha256": "e32c81f72b7d8cb7ba5e8cb1d04e355a8fab58123684a40dfd7b45c9a3f15dc5",
+    "repeat_assignments_sha256": null
+  },
+  "corpus": {
+    "incident_count": 400,
+    "human_action_counts": {}
+  },
+  "official_evidence": {
+    "row_count": 4798,
+    "rows_with_llm_actions": 0,
+    "violations_by_rule": {
+      "remote_access_block": 151,
+      "intel_match_block": 1285,
+      "account_probe_block": 194,
+      "evasion_isolate": 133,
+      "malware_detect_quarantine": 624,
+      "ops_monitor_no_isolate": 84,
+      "shadowcopy_tamper_isolate": 523,
+      "c2_block": 50,
+      "sensor_tamper_isolate": 54,
+      "creddump_reset": 88,
+      "recon_block": 137,
+      "exploit_waf_rule": 184,
+      "evidence_before_reimage": 4,
+      "persistence_quarantine": 80
+    },
+    "assignment_count": 0,
+    "directly_available_source_count": 0,
+    "missing_source_count": 0,
+    "bundle_action_trace_ready": false,
+    "assigned_raw_outputs_ready": false,
+    "posthoc_candidate_rule_evaluation_ready": false,
+    "raw_output_availability_basis": "not_assessed_bundle_actions_only",
+    "limitation": "Sanitized rows omit action lists or assigned raw outputs are missing; new predicates cannot be evaluated on the fixed provider campaign."
+  },
+  "declared_rule_surface": [
+    {
+      "rule_id": "evidence_before_reimage",
+      "type": "prohibit_before",
+      "action": "reimage_format_host",
+      "condition_action": "collect_forensics",
+      "scope_support_incident_count": 0,
+      "human_trace_support": {
+        "trigger_count": 0,
+        "violation_count": 0
+      },
+      "official_llm_observed_violation_count": 4,
+      "official_llm_status": "observed_violation"
+    },
+    {
+      "rule_id": "approve_isolate",
+      "type": "require_approval",
+      "action": "isolate_host",
+      "condition_action": null,
+      "scope_support_incident_count": 0,
+      "human_trace_support": {
+        "trigger_count": 0,
+        "violation_count": 0
+      },
+      "official_llm_observed_violation_count": 0,
+      "official_llm_status": "no_observed_violation"
+    },
+    {
+      "rule_id": "approve_reimage",
+      "type": "require_approval",
+      "action": "reimage_format_host",
+      "condition_action": null,
+      "scope_support_incident_count": 0,
+      "human_trace_support": {
+        "trigger_count": 0,
+        "violation_count": 0
+      },
+      "official_llm_observed_violation_count": 0,
+      "official_llm_status": "no_observed_violation"
+    },
+    {
+      "rule_id": "approve_lift_isolation",
+      "type": "require_approval",
+      "action": "lift_isolation",
+      "condition_action": null,
+      "scope_support_incident_count": 0,
+      "human_trace_support": {
+        "trigger_count": 0,
+        "violation_count": 0
+      },
+      "official_llm_observed_violation_count": 0,
+      "official_llm_status": "no_observed_violation"
+    },
+    {
+      "rule_id": "approve_account_disable",
+      "type": "require_approval",
+      "action": "reset_disable_account",
+      "condition_action": null,
+      "scope_support_incident_count": 0,
+      "human_trace_support": {
+        "trigger_count": 0,
+        "violation_count": 0
+      },
+      "official_llm_observed_violation_count": 0,
+      "official_llm_status": "no_observed_violation"
+    },
+    {
+      "rule_id": "shadowcopy_tamper_isolate",
+      "type": "mandatory",
+      "action": "isolate_host",
+      "condition_action": null,
+      "scope_support_incident_count": 71,
+      "human_trace_support": {
+        "trigger_count": 71,
+        "violation_count": 71
+      },
+      "official_llm_observed_violation_count": 523,
+      "official_llm_status": "observed_violation"
+    },
+    {
+      "rule_id": "intel_match_block",
+      "type": "mandatory",
+      "action": "block_egress",
+      "condition_action": null,
+      "scope_support_incident_count": 111,
+      "human_trace_support": {
+        "trigger_count": 111,
+        "violation_count": 111
+      },
+      "official_llm_observed_violation_count": 1285,
+      "official_llm_status": "observed_violation"
+    },
+    {
+      "rule_id": "sensor_tamper_isolate",
+      "type": "mandatory",
+      "action": "isolate_host",
+      "condition_action": null,
+      "scope_support_incident_count": 9,
+      "human_trace_support": {
+        "trigger_count": 9,
+        "violation_count": 9
+      },
+      "official_llm_observed_violation_count": 54,
+      "official_llm_status": "observed_violation"
+    },
+    {
+      "rule_id": "remote_access_block",
+      "type": "mandatory",
+      "action": "block_egress",
+      "condition_action": null,
+      "scope_support_incident_count": 15,
+      "human_trace_support": {
+        "trigger_count": 15,
+        "violation_count": 15
+      },
+      "official_llm_observed_violation_count": 151,
+      "official_llm_status": "observed_violation"
+    },
+    {
+      "rule_id": "malware_detect_quarantine",
+      "type": "mandatory",
+      "action": "quarantine_artifact",
+      "condition_action": null,
+      "scope_support_incident_count": 69,
+      "human_trace_support": {
+        "trigger_count": 69,
+        "violation_count": 69
+      },
+      "official_llm_observed_violation_count": 624,
+      "official_llm_status": "observed_violation"
+    },
+    {
+      "rule_id": "account_probe_block",
+      "type": "mandatory",
+      "action": "block_egress",
+      "condition_action": null,
+      "scope_support_incident_count": 18,
+      "human_trace_support": {
+        "trigger_count": 18,
+        "violation_count": 18
+      },
+      "official_llm_observed_violation_count": 194,
+      "official_llm_status": "observed_violation"
+    },
+    {
+      "rule_id": "ops_monitor_no_isolate",
+      "type": "prohibit_when",
+      "action": "isolate_host",
+      "condition_action": null,
+      "scope_support_incident_count": 24,
+      "human_trace_support": {
+        "trigger_count": 0,
+        "violation_count": 0
+      },
+      "official_llm_observed_violation_count": 84,
+      "official_llm_status": "observed_violation"
+    },
+    {
+      "rule_id": "ops_monitor_no_reimage",
+      "type": "prohibit_when",
+      "action": "reimage_format_host",
+      "condition_action": null,
+      "scope_support_incident_count": 24,
+      "human_trace_support": {
+        "trigger_count": 0,
+        "violation_count": 0
+      },
+      "official_llm_observed_violation_count": 0,
+      "official_llm_status": "no_observed_violation"
+    },
+    {
+      "rule_id": "creddump_reset",
+      "type": "mandatory",
+      "action": "reset_disable_account",
+      "condition_action": null,
+      "scope_support_incident_count": 10,
+      "human_trace_support": {
+        "trigger_count": 10,
+        "violation_count": 10
+      },
+      "official_llm_observed_violation_count": 88,
+      "official_llm_status": "observed_violation"
+    },
+    {
+      "rule_id": "evasion_isolate",
+      "type": "mandatory",
+      "action": "isolate_host",
+      "condition_action": null,
+      "scope_support_incident_count": 19,
+      "human_trace_support": {
+        "trigger_count": 19,
+        "violation_count": 19
+      },
+      "official_llm_observed_violation_count": 133,
+      "official_llm_status": "observed_violation"
+    },
+    {
+      "rule_id": "exploit_waf_rule",
+      "type": "mandatory",
+      "action": "apply_ips_waf_rule",
+      "condition_action": null,
+      "scope_support_incident_count": 19,
+      "human_trace_support": {
+        "trigger_count": 19,
+        "violation_count": 19
+      },
+      "official_llm_observed_violation_count": 184,
+      "official_llm_status": "observed_violation"
+    },
+    {
+      "rule_id": "persistence_quarantine",
+      "type": "mandatory",
+      "action": "quarantine_artifact",
+      "condition_action": null,
+      "scope_support_incident_count": 8,
+      "human_trace_support": {
+        "trigger_count": 8,
+        "violation_count": 8
+      },
+      "official_llm_observed_violation_count": 80,
+      "official_llm_status": "observed_violation"
+    },
+    {
+      "rule_id": "recon_block",
+      "type": "mandatory",
+      "action": "block_egress",
+      "condition_action": null,
+      "scope_support_incident_count": 14,
+      "human_trace_support": {
+        "trigger_count": 14,
+        "violation_count": 14
+      },
+      "official_llm_observed_violation_count": 137,
+      "official_llm_status": "observed_violation"
+    },
+    {
+      "rule_id": "c2_block",
+      "type": "mandatory",
+      "action": "block_egress",
+      "condition_action": null,
+      "scope_support_incident_count": 5,
+      "human_trace_support": {
+        "trigger_count": 5,
+        "violation_count": 5
+      },
+      "official_llm_observed_violation_count": 50,
+      "official_llm_status": "observed_violation"
+    }
+  ],
+  "descriptive_human_regularities": [
+    {
+      "prerequisite": "collect_forensics",
+      "action": "isolate_host",
+      "action_trace_count": 0,
+      "both_actions_trace_count": 0,
+      "prerequisite_first_count": 0,
+      "prerequisite_first_rate": null,
+      "interpretation": "descriptive_regularities_only"
+    },
+    {
+      "prerequisite": "collect_forensics",
+      "action": "reset_admin_credentials",
+      "action_trace_count": 0,
+      "both_actions_trace_count": 0,
+      "prerequisite_first_count": 0,
+      "prerequisite_first_rate": null,
+      "interpretation": "descriptive_regularities_only"
+    }
+  ],
+  "claim_boundary": {
+    "official_rule_results": "Only observed violations in the preserved campaign evidence.",
+    "human_regularities": "Hypothesis generation, not normative policy evidence.",
+    "authored_witnesses": "Conformance evidence only, never corpus-rate estimates."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "study_id": "independent_judge",
+  "run_id": "measurement_e6889d081957361f",
+  "protocol_freeze_sha256": "e6889d081957361fe7249325e09baf9c14f23e58bdfc4191bcf3b6e67a3fadf6",
+  "population_source_count": 4800,
+  "selected_source_count": 4800,
+  "provider_task_count": 4798,
+  "source_unavailable_count": 2,
+  "status_counts": {
+    "completed": 4798
+  },
+  "scored_count": 4798,
+  "verdicts_path": "artifact_outputs/analysis/llm_judge_verdicts.json",
+  "verdicts_sha256": "e809cc54bec53d6a1b39145985ce1546ae1298c98418c8566dd3e196bce4f406"
+}

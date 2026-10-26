@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "deployment": "fixture-replay",
+  "responses": [
+    {
+      "incident_id": "INC_PUBLIC_ujquramxyqvpmkmahbbg",
+      "policy_prompt_mode": "none",
+      "recommended_actions": [
+        "collect_forensics"
+      ],
+      "reasoning": "Declared zero-cost response for pipeline validation."
+    },
+    {
+      "incident_id": "INC_PUBLIC_ujquramxyqvpmkmahbbg",
+      "policy_prompt_mode": "inline_constraints",
+      "recommended_actions": [
+        "collect_forensics"
+      ],
+      "reasoning": "Declared zero-cost response for pipeline validation."
+    }
+  ]
+}

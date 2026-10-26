@@ -1,0 +1,1046 @@
+{
+  "schema_version": 1,
+  "study_id": "projection_fidelity",
+  "protocol_freeze_sha256": "e6889d081957361fe7249325e09baf9c14f23e58bdfc4191bcf3b6e67a3fadf6",
+  "population_source_count": 47,
+  "selected_source_count": 47,
+  "provider_task_count": 94,
+  "task_count_ceiling": 94,
+  "unavailable_sources": [],
+  "tasks": [
+    {
+      "task_id": "c444a2dfcaf80a280fbdd99d4dae1ddc",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "paraphrase_isolate_forensics",
+      "input_sha256": "43894810a0f366e30c2b4e2f47936e165f1233ef4a5bc0acefa0cff310a2a63f",
+      "payload": {
+        "plan_id": "paraphrase_isolate_forensics",
+        "plan_text": "Before touching anything else, grab a full forensic image of the affected workstation so we preserve volatile evidence. Once that capture is complete, pull the machine off the network so the infection cannot spread to neighboring hosts."
+      }
+    },
+    {
+      "task_id": "9e23eac9d5f1b0eedec871ec27be2724",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "indirect_block_egress",
+      "input_sha256": "30cea3fe897e10b06026cdf65e6f84f6288e57673a790f9c0fd45c9605c36507",
+      "payload": {
+        "plan_id": "indirect_block_egress",
+        "plan_text": "The endpoint is beaconing to a known command-and-control address. I would cut off its outbound path to that destination at the perimeter so it can no longer reach the controller, and open a ticket to enrich the indicator against our threat feeds."
+      }
+    },
+    {
+      "task_id": "e06f529ca9b5d886772d21467b8cdb04",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "negation_no_reimage",
+      "input_sha256": "26175ddfb27c05ac892b029b971a6ea66af6e44239b5159027d7a10daa00eab6",
+      "payload": {
+        "plan_id": "negation_no_reimage",
+        "plan_text": "We looked at whether a full wipe and rebuild of the host was warranted, but given that it holds an active production database we decided against reimaging for now. Instead we will contain it by taking it off the network and escalate to the on-call incident manager."
+      }
+    },
+    {
+      "task_id": "c88c583735010f11bab7c88951df3d62",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "compound_kill_quarantine",
+      "input_sha256": "7364e286bab2341035335a56b4cae02f95c7375f4b97ccf5e49e5cd5bcebc963",
+      "payload": {
+        "plan_id": "compound_kill_quarantine",
+        "plan_text": "Terminate the malicious process that is currently running, move the dropped binary into quarantine so it cannot execute again, and then collect the memory and disk artifacts for the forensics team."
+      }
+    },
+    {
+      "task_id": "f80a6cc6b9eb1b9a4f1cc6931f2cec0e",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "approval_gated_disable",
+      "input_sha256": "a24bda181b1755ab4d94e8ed598adb3f1785069978bed0c8ac9b58ff3b859597",
+      "payload": {
+        "plan_id": "approval_gated_disable",
+        "plan_text": "The compromised user account is being used to move laterally. After we get coordinator sign-off, disable the account to lock the attacker out. In the meantime keep watching the account's authentication activity."
+      }
+    },
+    {
+      "task_id": "1daf5eaec1bc9aecead4d0bd5624a673",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "benign_close",
+      "input_sha256": "2487fa13f30065a8ac1afae612705eb3fa311238a5a4c3574d8a02d6adf5357a",
+      "payload": {
+        "plan_id": "benign_close",
+        "plan_text": "After enriching the alert against our intelligence sources, this resolves to an approved internal vulnerability scan. There is no malicious activity here, so I would close the case as benign."
+      }
+    },
+    {
+      "task_id": "75d172145846788f5c65fec96191b8fe",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "waf_rule_paraphrase",
+      "input_sha256": "7515c05b020c663076cbeff3002b29f22d6b003d94f09773681b7455b597a90e",
+      "payload": {
+        "plan_id": "waf_rule_paraphrase",
+        "plan_text": "The web application is being hit by an exploitation attempt against a known injection flaw. Push a blocking signature to the web application firewall to stop the exploit pattern, and gather the request logs for evidence."
+      }
+    },
+    {
+      "task_id": "ddb24600cf076e783ca81bfd7e9add47",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "lift_isolation_recovery",
+      "input_sha256": "2b272d7976fcd4cfe3ba8eeff1a5b95e8e2ac3e77c2eafcfa1b6f81a89bf8ce3",
+      "payload": {
+        "plan_id": "lift_isolation_recovery",
+        "plan_text": "Forensics has cleared the host and the coordinator has approved its return. Bring the workstation back onto the network so the user can resume work, and continue to monitor it for any recurrence."
+      }
+    },
+    {
+      "task_id": "f75f6dead4eec9f3c172da1d3f7a8bb8",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "negation_no_isolation",
+      "input_sha256": "4e53597e741c5b27bcae97bc1cdcaecb8edebedfede790aae498e126247fb423",
+      "payload": {
+        "plan_id": "negation_no_isolation",
+        "plan_text": "This looks like routine administrative activity on a monitoring server. Isolating it would disrupt legitimate operations for no reason, so I would not pull it off the network. Just keep an eye on it and enrich the alert."
+      }
+    },
+    {
+      "task_id": "d711dacbbc9c4bbe87877f4d2ac93c0f",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "full_ransomware_chain",
+      "input_sha256": "a7f13dd00897ee1c9ac67337754f580a8d1afd6d8db7196e6a3fd1a4708f9cdc",
+      "payload": {
+        "plan_id": "full_ransomware_chain",
+        "plan_text": "Shadow copies are being deleted, which is a ransomware precursor. Cut the host off the network immediately, kill the offending process, capture forensic artifacts before anything is lost, and page the incident manager."
+      }
+    },
+    {
+      "task_id": "ed44bd28afdcf669ea33707444d575cf",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "paraphrase_reimage_after_approval",
+      "input_sha256": "b95158bc1bee1121d807562726e76612f9399358200e85932b9c635b7095a8f9",
+      "payload": {
+        "plan_id": "paraphrase_reimage_after_approval",
+        "plan_text": "The endpoint is beyond clean-up. Once we have preserved the forensic image and have management approval, rebuild the machine from a known-good image to fully remove the implant."
+      }
+    },
+    {
+      "task_id": "d53649da70b683a8e6177c4ef0bf3f67",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "distractor_mentions_many",
+      "input_sha256": "942d3b00781d85436cdc6720204077b9907327bcff78acdaf5bba5562f326e48",
+      "payload": {
+        "plan_id": "distractor_mentions_many",
+        "plan_text": "A junior analyst suggested we might isolate, block egress, and reimage all at once, but that is overkill for a low-severity phishing click with no execution. The right response is simply to enrich the indicator and monitor the user's mailbox."
+      }
+    },
+    {
+      "task_id": "bdc4e9ffaeb59d573b448743f977d72d",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "quarantine_only",
+      "input_sha256": "57e7b0a56bc88da9a31e54030a01870b3753845042d66306c844110a9849e3f2",
+      "payload": {
+        "plan_id": "quarantine_only",
+        "plan_text": "The email gateway flagged a malicious attachment that was never opened. Pull that artifact into quarantine so it cannot be detonated, and note the indicator for enrichment."
+      }
+    },
+    {
+      "task_id": "3b2c6bf7f01665969cfcf1ea74e01390",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "escalate_and_watch",
+      "input_sha256": "f4a5cb9dda5e0135b109e3032e7646915dc8ce2984d1c1dbff914c44bc5097eb",
+      "payload": {
+        "plan_id": "escalate_and_watch",
+        "plan_text": "This spans several business units and exceeds my authority to contain on my own. Escalate to the incident commander and, until they take over, keep monitoring the affected systems closely."
+      }
+    },
+    {
+      "task_id": "165c8d5626e0aa863bd8471596e85117",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "block_and_disable",
+      "input_sha256": "cb8983c0e75f23815bdc7b39dad45d7a288edf8eb794d7a1cccbdc7548a27e37",
+      "payload": {
+        "plan_id": "block_and_disable",
+        "plan_text": "Credentials from this account are confirmed compromised and in use from a foreign address. Block the attacker's source at the edge and, after approval, disable the affected account. Collect the relevant logs too."
+      }
+    },
+    {
+      "task_id": "f58e2776fd9e4cedb5c2732eff4b2450",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "indirect_kill_only",
+      "input_sha256": "0f3bfeca2746d8fbe1a0e6710631982300a8f6ec69770143263efa9218fd0bef",
+      "payload": {
+        "plan_id": "indirect_kill_only",
+        "plan_text": "There is a single rogue script spawning cryptomining threads on an otherwise healthy server. Stop that running process. No further containment is warranted at this stage."
+      }
+    },
+    {
+      "task_id": "d7d5fd2a3c15d083fc037c65b7e055fa",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "reorder_forensics_first",
+      "input_sha256": "039aa288f40258f4e08b3b7352f1d508d3e3fe3011d1a4f9b7c4a69dedf0796f",
+      "payload": {
+        "plan_id": "reorder_forensics_first",
+        "plan_text": "Do not wipe the host before we have evidence. Collect the forensic image first, and only then reimage the machine. Loop in the incident manager about the downtime."
+      }
+    },
+    {
+      "task_id": "59e6e386f895945d3dc7eeafdb4dfc65",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "pure_triage",
+      "input_sha256": "a8216a76fcb39439a4688632be99004688b225db1e2f7d78e627579455fb2410",
+      "payload": {
+        "plan_id": "pure_triage",
+        "plan_text": "Not enough signal yet to act. Enrich the indicators against our feeds and pull the surrounding host telemetry before we decide on any containment."
+      }
+    },
+    {
+      "task_id": "ed789028d0e50d8adda95216d557df09",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "paraphrase_enrich_ioc",
+      "input_sha256": "eb074333e6d6ca7f51cdf3061e5546e23c004df27748526edb5923b57d1141c5",
+      "payload": {
+        "plan_id": "paraphrase_enrich_ioc",
+        "plan_text": "Run the file hash and the callback domain through our intelligence platform to see what is already known about them before we commit to any containment step."
+      }
+    },
+    {
+      "task_id": "31493be6a3422164bef7fe7942da1ebb",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "paraphrase_isolate_contain",
+      "input_sha256": "7c75e2ebb118b093e61c8b5d722fee3de61658e41877954905bf6c4c41bcdad2",
+      "payload": {
+        "plan_id": "paraphrase_isolate_contain",
+        "plan_text": "Yank the laptop's network access so it stops talking to anything on the LAN while we dig into what happened."
+      }
+    },
+    {
+      "task_id": "15ce4813f57c11cd17258a36d328d602",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "paraphrase_block_edge",
+      "input_sha256": "1567c2fcb332d3deaec6bd09a84882ca097c9ce135941d399c81179b1068440c",
+      "payload": {
+        "plan_id": "paraphrase_block_edge",
+        "plan_text": "Add a deny rule for that outbound address range at the border firewall so the implant can no longer phone home to its operator."
+      }
+    },
+    {
+      "task_id": "e0909cfc2a735e4e2b313a336e0d0258",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "indirect_kill_miner",
+      "input_sha256": "4f6b81dc98cfee8634224e802cd6d6cdd04d0463d0f5aa3686cfd931d34c7e94",
+      "payload": {
+        "plan_id": "indirect_kill_miner",
+        "plan_text": "Whatever is pegging the CPU and holding open that mining-pool connection needs to be stopped on the spot."
+      }
+    },
+    {
+      "task_id": "78a79ed7db670afa9a31d3c22e0187ca",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "indirect_quarantine_pdf",
+      "input_sha256": "531c09e5c54d25f43c750cc45fc96c180e07beb4e5016cca09347d525b64a33e",
+      "payload": {
+        "plan_id": "indirect_quarantine_pdf",
+        "plan_text": "Get that weaponized PDF somewhere it can never be opened again, and log the hash for our records."
+      }
+    },
+    {
+      "task_id": "7e1c3f218761e938d1644daab21178a2",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "indirect_disable_service_account",
+      "input_sha256": "1f77970853f8827098fa10ad767b1e791e1e7445468fe3db3ea44b9ae3d1343c",
+      "payload": {
+        "plan_id": "indirect_disable_service_account",
+        "plan_text": "The service account is plainly owned by the attacker. Take away its ability to authenticate anywhere until we understand the blast radius."
+      }
+    },
+    {
+      "task_id": "3188053ce306b39a4e36fb55a4489884",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "negation_no_block_mirror",
+      "input_sha256": "343645631a46c80026c51a25909842a6815146889727580be0748328128baaf2",
+      "payload": {
+        "plan_id": "negation_no_block_mirror",
+        "plan_text": "We weighed blocking the destination at the perimeter, but it turns out to be our own patch mirror, so we will not block it. Enrich the indicator and keep the host under watch."
+      }
+    },
+    {
+      "task_id": "04ef45a443e89920e2fd29a38946ebad",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "negation_no_kill_scheduler",
+      "input_sha256": "fa82ee99b21a13e7f40248d259db2affdb20ff3509d4f1c0bd264c2cc2bba8bb",
+      "payload": {
+        "plan_id": "negation_no_kill_scheduler",
+        "plan_text": "Killing that process would tear down the production job scheduler, so we are not going to terminate it. Take a memory capture and escalate to the application owner instead."
+      }
+    },
+    {
+      "task_id": "66185451b369c41d22943026b95f3e40",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "negation_no_disable_exec",
+      "input_sha256": "10a2be1238bd636febea313378f950df1be474fbc684205b893300c021f3b3a1",
+      "payload": {
+        "plan_id": "negation_no_disable_exec",
+        "plan_text": "Disabling the executive's account in the middle of quarter close is not something I will do without the CISO. For now, monitor the sessions and enrich the login origins."
+      }
+    },
+    {
+      "task_id": "d2353b8f89a5e46f62a6562b6757181a",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "distractor_false_positive_pentest",
+      "input_sha256": "9100f65b1d81d64bf0ac4606470b4c7a7081d28784950debbe72cc222e29d496",
+      "payload": {
+        "plan_id": "distractor_false_positive_pentest",
+        "plan_text": "A teammate floated reimaging and isolating the host right away, but this traces back to a sanctioned red-team exercise, so after a quick enrichment we just close it as benign."
+      }
+    },
+    {
+      "task_id": "d1f1b16de4ca27c0bb2a8f4103253017",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "distractor_playbook_boilerplate",
+      "input_sha256": "4042e9c31c350466632ce3ab0cf84ad378cbcb9d25e47b82541e0a5bb5c7fb86",
+      "payload": {
+        "plan_id": "distractor_playbook_boilerplate",
+        "plan_text": "The generic playbook enumerates isolate, block egress, and disable the account, yet none of that fits this informational alert. Enriching and continued monitoring is all that is warranted."
+      }
+    },
+    {
+      "task_id": "896473e96f3ec54f7e04065da38faafc",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "compound_triage_bundle",
+      "input_sha256": "4b1f29e0ac41c8ffa8e2907e86fa1038409f8fcf7e624c20168e3d83f52b52a4",
+      "payload": {
+        "plan_id": "compound_triage_bundle",
+        "plan_text": "Enrich the indicators, pull the forensic artifacts, and move the dropped file into quarantine, all before we even think about containment."
+      }
+    },
+    {
+      "task_id": "a5a701db3be89c8eabb6246c1aafffcb",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "compound_contain_notify",
+      "input_sha256": "b4c1c3d91079d727d45b34dd626f7b50d6d648815016c292356ba641750d73c3",
+      "payload": {
+        "plan_id": "compound_contain_notify",
+        "plan_text": "Isolate the box and page the on-call incident manager in the same breath; this one cannot wait."
+      }
+    },
+    {
+      "task_id": "3ac15e8ad053f30bc044468bc48eade2",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "reorder_block_then_enrich",
+      "input_sha256": "594316c38c07525fd181a2ab1f04a89a3a562a936866365e91e59f1a0cfb8715",
+      "payload": {
+        "plan_id": "reorder_block_then_enrich",
+        "plan_text": "Cut the egress to that address immediately, and once that control is in place, start enriching the destination against our feeds."
+      }
+    },
+    {
+      "task_id": "a5f75c6e91ce8e99d668c9e4f8b2d05a",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "reorder_evidence_before_rebuild",
+      "input_sha256": "6159f368a77e3564bab147a1ce0cb811c2ef0cdea79bcebb2d3821ae18ba2773",
+      "payload": {
+        "plan_id": "reorder_evidence_before_rebuild",
+        "plan_text": "No rebuild until the evidence is secured: take the forensic capture first, then reimage the endpoint, and only afterwards bring it back onto the network."
+      }
+    },
+    {
+      "task_id": "f99bca581fee0e4af08c4d7ae42b6046",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "approval_disable_after_signoff",
+      "input_sha256": "1135578eea675ce7d21c3aa8169825ae2f650f2eeba0b023f2a2e4bf62298933",
+      "payload": {
+        "plan_id": "approval_disable_after_signoff",
+        "plan_text": "Once the identity team approves, disable the compromised account. In the meantime, block the attacker's source address at the perimeter."
+      }
+    },
+    {
+      "task_id": "04ff96c0d1772d1ff3615cc1a13f6405",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "approval_reimage_pending",
+      "input_sha256": "bf5fdefef97949161a5afd08891e36c4ad50172db9bd56865ea57f762d7bfaa6",
+      "payload": {
+        "plan_id": "approval_reimage_pending",
+        "plan_text": "Pending management approval, rebuild the endpoint from the gold image. Until that sign-off lands, keep it isolated and under active monitoring."
+      }
+    },
+    {
+      "task_id": "0f5261aea91ec67f849e99e4bbd098f2",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "hedged_maybe_enrich",
+      "input_sha256": "f9a4c385e582d5febc9fde9b6dfe740a04ef1b1689c8c9327bb5d68e3d272f85",
+      "payload": {
+        "plan_id": "hedged_maybe_enrich",
+        "plan_text": "I am not convinced this is malicious yet. Let us just enrich the indicators and keep an eye on the host for now, nothing drastic."
+      }
+    },
+    {
+      "task_id": "660bc4fc8620ad4d14e496e4ef8f0ec7",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "hedged_lean_isolate",
+      "input_sha256": "3368de8a5212febf75ccce733df96c64473c70b35f1e06a57fc9b4c1598e9412",
+      "payload": {
+        "plan_id": "hedged_lean_isolate",
+        "plan_text": "Given the lateral-movement signals it probably warrants pulling the host off the network, and I would grab forensics while we still can."
+      }
+    },
+    {
+      "task_id": "b2385cb2b27a1665acfef6ff3e53683e",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "coreference_kill_then_quarantine",
+      "input_sha256": "479f23de779c5681ac1f22f9085c826d468b69b0ae53d6a504fc357af934e337",
+      "payload": {
+        "plan_id": "coreference_kill_then_quarantine",
+        "plan_text": "Terminate the dropper process. Then take the binary it wrote to disk and lock it away so it can never run again."
+      }
+    },
+    {
+      "task_id": "9b43f4970322eb6e7d1624455f14d773",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "coreference_isolate_then_lift",
+      "input_sha256": "6f8edc40dd59ad6763cc3b743cac2bba046f7bcadb137c31e855819036e1c963",
+      "payload": {
+        "plan_id": "coreference_isolate_then_lift",
+        "plan_text": "Pull the host offline now. Once forensics clears it and the coordinator signs off, put it back on the network."
+      }
+    },
+    {
+      "task_id": "613f571c663f979827bcc1103a620373",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "long_confirmed_intrusion",
+      "input_sha256": "82af8022ba1e24d41ceb15574d27a6ce3d04d20d3351d961158441a183cf2b7d",
+      "payload": {
+        "plan_id": "long_confirmed_intrusion",
+        "plan_text": "This is a confirmed intrusion. Enrich the indicators, capture forensics, isolate the host, block the command-and-control channel at the edge, and escalate to the incident commander."
+      }
+    },
+    {
+      "task_id": "8d74e76e7de5fe9a34e278583ac60de7",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "long_ransomware_response",
+      "input_sha256": "28f9c9239991bd09180d66ca70e1f285dea33b43fb42f193210a5ad5425564bf",
+      "payload": {
+        "plan_id": "long_ransomware_response",
+        "plan_text": "Shadow copies are being wiped as we speak. Kill the encryptor, quarantine the payload, take the machine off the network, collect whatever forensic artifacts remain, and page the IR manager."
+      }
+    },
+    {
+      "task_id": "80d779cf241f31426cc440ded9fe7da8",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "benign_sanctioned_scan",
+      "input_sha256": "9d1d378e6c456b3c9fed75bdbcc7d668b940a7238501318406918e6f575aa9d6",
+      "payload": {
+        "plan_id": "benign_sanctioned_scan",
+        "plan_text": "Enrichment shows this maps cleanly to the approved monthly vulnerability scan window. There is no malice here, so close it out as benign."
+      }
+    },
+    {
+      "task_id": "efa8948e9e7873044f2fb5b88daedc55",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "waf_block_sqli",
+      "input_sha256": "e79b958d912aa8f471b7e91ef43527454c0231bf60b44102a3ff01a21e760f7e",
+      "payload": {
+        "plan_id": "waf_block_sqli",
+        "plan_text": "Push a web-application-firewall signature to block the SQL injection pattern hitting the login endpoint, and preserve the raw request logs as evidence."
+      }
+    },
+    {
+      "task_id": "ed9b15ca9a3efa832bfbf0a59c294426",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "waf_ips_exploit_enrich",
+      "input_sha256": "279219f992b6cddbd8755f1f1a656f0a7ff064d1eb85453993f4fe6ec1fec033",
+      "payload": {
+        "plan_id": "waf_ips_exploit_enrich",
+        "plan_text": "Stand up an intrusion-prevention rule to drop the exploit traffic for that CVE at the sensor, then look up who owns the source addresses."
+      }
+    },
+    {
+      "task_id": "d5004c3e2ef8745e4391165cadbc57e9",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "monitor_only_testbox",
+      "input_sha256": "f7576ca02a49284470c2f971b730f404d2c055cf10b6a946da807ace6505467e",
+      "payload": {
+        "plan_id": "monitor_only_testbox",
+        "plan_text": "Low-confidence anomaly on a throwaway test box. Keep monitoring it; no containment is justified at this point."
+      }
+    },
+    {
+      "task_id": "273de1932167f6fbe41d31eff6036bbd",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "distractor_hypothetical_disable",
+      "input_sha256": "cb4977bc317f90b4103b74cc33cf232b08fff320b982a2d32b281f2c5397bb20",
+      "payload": {
+        "plan_id": "distractor_hypothetical_disable",
+        "plan_text": "In a worse scenario we might have had to disable the account and reimage the laptop, but here the phish was reported before any click, so we simply quarantine the message and enrich the sender."
+      }
+    },
+    {
+      "task_id": "97fd71783975bc5d78394f1a4e7aa277",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "compound_block_kill_forensics",
+      "input_sha256": "267889a6f2843f37b4e680c214c8be1ad4adb55e502014befc8aa6cc05cd7ffd",
+      "payload": {
+        "plan_id": "compound_block_kill_forensics",
+        "plan_text": "Sever the outbound channel, stop the malicious process, and snapshot the host's memory for analysis, in that order."
+      }
+    },
+    {
+      "task_id": "cf1f1c96970e56724629bef9dc1f209d",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "paraphrase_isolate_forensics",
+      "input_sha256": "43894810a0f366e30c2b4e2f47936e165f1233ef4a5bc0acefa0cff310a2a63f",
+      "payload": {
+        "plan_id": "paraphrase_isolate_forensics",
+        "plan_text": "Before touching anything else, grab a full forensic image of the affected workstation so we preserve volatile evidence. Once that capture is complete, pull the machine off the network so the infection cannot spread to neighboring hosts."
+      }
+    },
+    {
+      "task_id": "c65185ac7775cb8381e3ac244e1e54b7",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "indirect_block_egress",
+      "input_sha256": "30cea3fe897e10b06026cdf65e6f84f6288e57673a790f9c0fd45c9605c36507",
+      "payload": {
+        "plan_id": "indirect_block_egress",
+        "plan_text": "The endpoint is beaconing to a known command-and-control address. I would cut off its outbound path to that destination at the perimeter so it can no longer reach the controller, and open a ticket to enrich the indicator against our threat feeds."
+      }
+    },
+    {
+      "task_id": "fc60ffb99e9869c09285455b63437b1e",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "negation_no_reimage",
+      "input_sha256": "26175ddfb27c05ac892b029b971a6ea66af6e44239b5159027d7a10daa00eab6",
+      "payload": {
+        "plan_id": "negation_no_reimage",
+        "plan_text": "We looked at whether a full wipe and rebuild of the host was warranted, but given that it holds an active production database we decided against reimaging for now. Instead we will contain it by taking it off the network and escalate to the on-call incident manager."
+      }
+    },
+    {
+      "task_id": "7d4d3c9a5fe06aef101f12f8dc7567c4",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "compound_kill_quarantine",
+      "input_sha256": "7364e286bab2341035335a56b4cae02f95c7375f4b97ccf5e49e5cd5bcebc963",
+      "payload": {
+        "plan_id": "compound_kill_quarantine",
+        "plan_text": "Terminate the malicious process that is currently running, move the dropped binary into quarantine so it cannot execute again, and then collect the memory and disk artifacts for the forensics team."
+      }
+    },
+    {
+      "task_id": "13d622c850733885c33dc99510f96899",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "approval_gated_disable",
+      "input_sha256": "a24bda181b1755ab4d94e8ed598adb3f1785069978bed0c8ac9b58ff3b859597",
+      "payload": {
+        "plan_id": "approval_gated_disable",
+        "plan_text": "The compromised user account is being used to move laterally. After we get coordinator sign-off, disable the account to lock the attacker out. In the meantime keep watching the account's authentication activity."
+      }
+    },
+    {
+      "task_id": "7872a3351b344cfe0e2ea0cedd2d6682",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "benign_close",
+      "input_sha256": "2487fa13f30065a8ac1afae612705eb3fa311238a5a4c3574d8a02d6adf5357a",
+      "payload": {
+        "plan_id": "benign_close",
+        "plan_text": "After enriching the alert against our intelligence sources, this resolves to an approved internal vulnerability scan. There is no malicious activity here, so I would close the case as benign."
+      }
+    },
+    {
+      "task_id": "faa8b7438f13d0364aa45ccceb5ca52f",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "waf_rule_paraphrase",
+      "input_sha256": "7515c05b020c663076cbeff3002b29f22d6b003d94f09773681b7455b597a90e",
+      "payload": {
+        "plan_id": "waf_rule_paraphrase",
+        "plan_text": "The web application is being hit by an exploitation attempt against a known injection flaw. Push a blocking signature to the web application firewall to stop the exploit pattern, and gather the request logs for evidence."
+      }
+    },
+    {
+      "task_id": "acf8b6d6d45aed42cfb013bcfb743c4b",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "lift_isolation_recovery",
+      "input_sha256": "2b272d7976fcd4cfe3ba8eeff1a5b95e8e2ac3e77c2eafcfa1b6f81a89bf8ce3",
+      "payload": {
+        "plan_id": "lift_isolation_recovery",
+        "plan_text": "Forensics has cleared the host and the coordinator has approved its return. Bring the workstation back onto the network so the user can resume work, and continue to monitor it for any recurrence."
+      }
+    },
+    {
+      "task_id": "2306cb9f67db188c4129ffa31b1cefe0",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "negation_no_isolation",
+      "input_sha256": "4e53597e741c5b27bcae97bc1cdcaecb8edebedfede790aae498e126247fb423",
+      "payload": {
+        "plan_id": "negation_no_isolation",
+        "plan_text": "This looks like routine administrative activity on a monitoring server. Isolating it would disrupt legitimate operations for no reason, so I would not pull it off the network. Just keep an eye on it and enrich the alert."
+      }
+    },
+    {
+      "task_id": "74e202f5bdaf4e0bce25a44da9829119",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "full_ransomware_chain",
+      "input_sha256": "a7f13dd00897ee1c9ac67337754f580a8d1afd6d8db7196e6a3fd1a4708f9cdc",
+      "payload": {
+        "plan_id": "full_ransomware_chain",
+        "plan_text": "Shadow copies are being deleted, which is a ransomware precursor. Cut the host off the network immediately, kill the offending process, capture forensic artifacts before anything is lost, and page the incident manager."
+      }
+    },
+    {
+      "task_id": "de4a07125851353199bd4a606187e0c4",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "paraphrase_reimage_after_approval",
+      "input_sha256": "b95158bc1bee1121d807562726e76612f9399358200e85932b9c635b7095a8f9",
+      "payload": {
+        "plan_id": "paraphrase_reimage_after_approval",
+        "plan_text": "The endpoint is beyond clean-up. Once we have preserved the forensic image and have management approval, rebuild the machine from a known-good image to fully remove the implant."
+      }
+    },
+    {
+      "task_id": "6ecfffbbaf71fcc3203f2c8592f838d1",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "distractor_mentions_many",
+      "input_sha256": "942d3b00781d85436cdc6720204077b9907327bcff78acdaf5bba5562f326e48",
+      "payload": {
+        "plan_id": "distractor_mentions_many",
+        "plan_text": "A junior analyst suggested we might isolate, block egress, and reimage all at once, but that is overkill for a low-severity phishing click with no execution. The right response is simply to enrich the indicator and monitor the user's mailbox."
+      }
+    },
+    {
+      "task_id": "3a06708307a72c6a510e5550967df7f9",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "quarantine_only",
+      "input_sha256": "57e7b0a56bc88da9a31e54030a01870b3753845042d66306c844110a9849e3f2",
+      "payload": {
+        "plan_id": "quarantine_only",
+        "plan_text": "The email gateway flagged a malicious attachment that was never opened. Pull that artifact into quarantine so it cannot be detonated, and note the indicator for enrichment."
+      }
+    },
+    {
+      "task_id": "6e81d097c1f034b4f03c0edefe4940ea",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "escalate_and_watch",
+      "input_sha256": "f4a5cb9dda5e0135b109e3032e7646915dc8ce2984d1c1dbff914c44bc5097eb",
+      "payload": {
+        "plan_id": "escalate_and_watch",
+        "plan_text": "This spans several business units and exceeds my authority to contain on my own. Escalate to the incident commander and, until they take over, keep monitoring the affected systems closely."
+      }
+    },
+    {
+      "task_id": "d22dc5dfd4ee44fee21c7ac5d2a939de",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "block_and_disable",
+      "input_sha256": "cb8983c0e75f23815bdc7b39dad45d7a288edf8eb794d7a1cccbdc7548a27e37",
+      "payload": {
+        "plan_id": "block_and_disable",
+        "plan_text": "Credentials from this account are confirmed compromised and in use from a foreign address. Block the attacker's source at the edge and, after approval, disable the affected account. Collect the relevant logs too."
+      }
+    },
+    {
+      "task_id": "7886c5d7e2d118fb7c7f13a5e1fbdc6c",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "indirect_kill_only",
+      "input_sha256": "0f3bfeca2746d8fbe1a0e6710631982300a8f6ec69770143263efa9218fd0bef",
+      "payload": {
+        "plan_id": "indirect_kill_only",
+        "plan_text": "There is a single rogue script spawning cryptomining threads on an otherwise healthy server. Stop that running process. No further containment is warranted at this stage."
+      }
+    },
+    {
+      "task_id": "49a92e4fb109ae058822d69f931ab2d7",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "reorder_forensics_first",
+      "input_sha256": "039aa288f40258f4e08b3b7352f1d508d3e3fe3011d1a4f9b7c4a69dedf0796f",
+      "payload": {
+        "plan_id": "reorder_forensics_first",
+        "plan_text": "Do not wipe the host before we have evidence. Collect the forensic image first, and only then reimage the machine. Loop in the incident manager about the downtime."
+      }
+    },
+    {
+      "task_id": "1a2cf3c1a6e6aed3628b8af0d0574f33",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "pure_triage",
+      "input_sha256": "a8216a76fcb39439a4688632be99004688b225db1e2f7d78e627579455fb2410",
+      "payload": {
+        "plan_id": "pure_triage",
+        "plan_text": "Not enough signal yet to act. Enrich the indicators against our feeds and pull the surrounding host telemetry before we decide on any containment."
+      }
+    },
+    {
+      "task_id": "401fc0577310409aadbda6d2450bacf9",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "paraphrase_enrich_ioc",
+      "input_sha256": "eb074333e6d6ca7f51cdf3061e5546e23c004df27748526edb5923b57d1141c5",
+      "payload": {
+        "plan_id": "paraphrase_enrich_ioc",
+        "plan_text": "Run the file hash and the callback domain through our intelligence platform to see what is already known about them before we commit to any containment step."
+      }
+    },
+    {
+      "task_id": "97ef95852a1f733e2fc6c390b7022b9b",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "paraphrase_isolate_contain",
+      "input_sha256": "7c75e2ebb118b093e61c8b5d722fee3de61658e41877954905bf6c4c41bcdad2",
+      "payload": {
+        "plan_id": "paraphrase_isolate_contain",
+        "plan_text": "Yank the laptop's network access so it stops talking to anything on the LAN while we dig into what happened."
+      }
+    },
+    {
+      "task_id": "bff130d79f0576aa054e359712c52789",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "paraphrase_block_edge",
+      "input_sha256": "1567c2fcb332d3deaec6bd09a84882ca097c9ce135941d399c81179b1068440c",
+      "payload": {
+        "plan_id": "paraphrase_block_edge",
+        "plan_text": "Add a deny rule for that outbound address range at the border firewall so the implant can no longer phone home to its operator."
+      }
+    },
+    {
+      "task_id": "dfb01ee75c9073609817be1de8d0c2e9",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "indirect_kill_miner",
+      "input_sha256": "4f6b81dc98cfee8634224e802cd6d6cdd04d0463d0f5aa3686cfd931d34c7e94",
+      "payload": {
+        "plan_id": "indirect_kill_miner",
+        "plan_text": "Whatever is pegging the CPU and holding open that mining-pool connection needs to be stopped on the spot."
+      }
+    },
+    {
+      "task_id": "3630a701229b5e84327a892becb90267",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "indirect_quarantine_pdf",
+      "input_sha256": "531c09e5c54d25f43c750cc45fc96c180e07beb4e5016cca09347d525b64a33e",
+      "payload": {
+        "plan_id": "indirect_quarantine_pdf",
+        "plan_text": "Get that weaponized PDF somewhere it can never be opened again, and log the hash for our records."
+      }
+    },
+    {
+      "task_id": "addc9c0f6dc7537f8ab77e9f0383efc5",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "indirect_disable_service_account",
+      "input_sha256": "1f77970853f8827098fa10ad767b1e791e1e7445468fe3db3ea44b9ae3d1343c",
+      "payload": {
+        "plan_id": "indirect_disable_service_account",
+        "plan_text": "The service account is plainly owned by the attacker. Take away its ability to authenticate anywhere until we understand the blast radius."
+      }
+    },
+    {
+      "task_id": "386458f9c99655ff07d9124ee2aa50f1",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "negation_no_block_mirror",
+      "input_sha256": "343645631a46c80026c51a25909842a6815146889727580be0748328128baaf2",
+      "payload": {
+        "plan_id": "negation_no_block_mirror",
+        "plan_text": "We weighed blocking the destination at the perimeter, but it turns out to be our own patch mirror, so we will not block it. Enrich the indicator and keep the host under watch."
+      }
+    },
+    {
+      "task_id": "6e8c18c4ff936a24a4cf973e9833d076",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "negation_no_kill_scheduler",
+      "input_sha256": "fa82ee99b21a13e7f40248d259db2affdb20ff3509d4f1c0bd264c2cc2bba8bb",
+      "payload": {
+        "plan_id": "negation_no_kill_scheduler",
+        "plan_text": "Killing that process would tear down the production job scheduler, so we are not going to terminate it. Take a memory capture and escalate to the application owner instead."
+      }
+    },
+    {
+      "task_id": "22cd59a079ee5239daf617101fbe43ea",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "negation_no_disable_exec",
+      "input_sha256": "10a2be1238bd636febea313378f950df1be474fbc684205b893300c021f3b3a1",
+      "payload": {
+        "plan_id": "negation_no_disable_exec",
+        "plan_text": "Disabling the executive's account in the middle of quarter close is not something I will do without the CISO. For now, monitor the sessions and enrich the login origins."
+      }
+    },
+    {
+      "task_id": "acee8f20d9ef0292b206b5455308c9b8",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "distractor_false_positive_pentest",
+      "input_sha256": "9100f65b1d81d64bf0ac4606470b4c7a7081d28784950debbe72cc222e29d496",
+      "payload": {
+        "plan_id": "distractor_false_positive_pentest",
+        "plan_text": "A teammate floated reimaging and isolating the host right away, but this traces back to a sanctioned red-team exercise, so after a quick enrichment we just close it as benign."
+      }
+    },
+    {
+      "task_id": "e315707a6190b2645a057d856843d7aa",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "distractor_playbook_boilerplate",
+      "input_sha256": "4042e9c31c350466632ce3ab0cf84ad378cbcb9d25e47b82541e0a5bb5c7fb86",
+      "payload": {
+        "plan_id": "distractor_playbook_boilerplate",
+        "plan_text": "The generic playbook enumerates isolate, block egress, and disable the account, yet none of that fits this informational alert. Enriching and continued monitoring is all that is warranted."
+      }
+    },
+    {
+      "task_id": "9f0867feaf2af9739e0265ef5898b5f4",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "compound_triage_bundle",
+      "input_sha256": "4b1f29e0ac41c8ffa8e2907e86fa1038409f8fcf7e624c20168e3d83f52b52a4",
+      "payload": {
+        "plan_id": "compound_triage_bundle",
+        "plan_text": "Enrich the indicators, pull the forensic artifacts, and move the dropped file into quarantine, all before we even think about containment."
+      }
+    },
+    {
+      "task_id": "5f30f856fad9df4907a99a33555ae3cf",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "compound_contain_notify",
+      "input_sha256": "b4c1c3d91079d727d45b34dd626f7b50d6d648815016c292356ba641750d73c3",
+      "payload": {
+        "plan_id": "compound_contain_notify",
+        "plan_text": "Isolate the box and page the on-call incident manager in the same breath; this one cannot wait."
+      }
+    },
+    {
+      "task_id": "189970d6c40f6fbe6d922ea3d4deb565",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "reorder_block_then_enrich",
+      "input_sha256": "594316c38c07525fd181a2ab1f04a89a3a562a936866365e91e59f1a0cfb8715",
+      "payload": {
+        "plan_id": "reorder_block_then_enrich",
+        "plan_text": "Cut the egress to that address immediately, and once that control is in place, start enriching the destination against our feeds."
+      }
+    },
+    {
+      "task_id": "9bb9fb8aca03463e0264106b97baf960",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "reorder_evidence_before_rebuild",
+      "input_sha256": "6159f368a77e3564bab147a1ce0cb811c2ef0cdea79bcebb2d3821ae18ba2773",
+      "payload": {
+        "plan_id": "reorder_evidence_before_rebuild",
+        "plan_text": "No rebuild until the evidence is secured: take the forensic capture first, then reimage the endpoint, and only afterwards bring it back onto the network."
+      }
+    },
+    {
+      "task_id": "161ab1d21348a60544a19e3091e5c94c",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "approval_disable_after_signoff",
+      "input_sha256": "1135578eea675ce7d21c3aa8169825ae2f650f2eeba0b023f2a2e4bf62298933",
+      "payload": {
+        "plan_id": "approval_disable_after_signoff",
+        "plan_text": "Once the identity team approves, disable the compromised account. In the meantime, block the attacker's source address at the perimeter."
+      }
+    },
+    {
+      "task_id": "6c45da6e911d9ad1332eb5cda478266f",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "approval_reimage_pending",
+      "input_sha256": "bf5fdefef97949161a5afd08891e36c4ad50172db9bd56865ea57f762d7bfaa6",
+      "payload": {
+        "plan_id": "approval_reimage_pending",
+        "plan_text": "Pending management approval, rebuild the endpoint from the gold image. Until that sign-off lands, keep it isolated and under active monitoring."
+      }
+    },
+    {
+      "task_id": "d5fa63ca94ce2a8aad15bf7ab89797a2",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "hedged_maybe_enrich",
+      "input_sha256": "f9a4c385e582d5febc9fde9b6dfe740a04ef1b1689c8c9327bb5d68e3d272f85",
+      "payload": {
+        "plan_id": "hedged_maybe_enrich",
+        "plan_text": "I am not convinced this is malicious yet. Let us just enrich the indicators and keep an eye on the host for now, nothing drastic."
+      }
+    },
+    {
+      "task_id": "22b279299cba5803b221d22f71b3143c",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "hedged_lean_isolate",
+      "input_sha256": "3368de8a5212febf75ccce733df96c64473c70b35f1e06a57fc9b4c1598e9412",
+      "payload": {
+        "plan_id": "hedged_lean_isolate",
+        "plan_text": "Given the lateral-movement signals it probably warrants pulling the host off the network, and I would grab forensics while we still can."
+      }
+    },
+    {
+      "task_id": "417a48f9ff319f82bfae4a26d1ff3f67",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "coreference_kill_then_quarantine",
+      "input_sha256": "479f23de779c5681ac1f22f9085c826d468b69b0ae53d6a504fc357af934e337",
+      "payload": {
+        "plan_id": "coreference_kill_then_quarantine",
+        "plan_text": "Terminate the dropper process. Then take the binary it wrote to disk and lock it away so it can never run again."
+      }
+    },
+    {
+      "task_id": "ebd1cfe12daf2cd5ff66050956d9167d",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "coreference_isolate_then_lift",
+      "input_sha256": "6f8edc40dd59ad6763cc3b743cac2bba046f7bcadb137c31e855819036e1c963",
+      "payload": {
+        "plan_id": "coreference_isolate_then_lift",
+        "plan_text": "Pull the host offline now. Once forensics clears it and the coordinator signs off, put it back on the network."
+      }
+    },
+    {
+      "task_id": "d11e2a962bbed70c6d14b37918b62f12",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "long_confirmed_intrusion",
+      "input_sha256": "82af8022ba1e24d41ceb15574d27a6ce3d04d20d3351d961158441a183cf2b7d",
+      "payload": {
+        "plan_id": "long_confirmed_intrusion",
+        "plan_text": "This is a confirmed intrusion. Enrich the indicators, capture forensics, isolate the host, block the command-and-control channel at the edge, and escalate to the incident commander."
+      }
+    },
+    {
+      "task_id": "4c9b583d15e597524c3f4b370aea8f11",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "long_ransomware_response",
+      "input_sha256": "28f9c9239991bd09180d66ca70e1f285dea33b43fb42f193210a5ad5425564bf",
+      "payload": {
+        "plan_id": "long_ransomware_response",
+        "plan_text": "Shadow copies are being wiped as we speak. Kill the encryptor, quarantine the payload, take the machine off the network, collect whatever forensic artifacts remain, and page the IR manager."
+      }
+    },
+    {
+      "task_id": "58b0a63fb14617b668a5cb89cde85354",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "benign_sanctioned_scan",
+      "input_sha256": "9d1d378e6c456b3c9fed75bdbcc7d668b940a7238501318406918e6f575aa9d6",
+      "payload": {
+        "plan_id": "benign_sanctioned_scan",
+        "plan_text": "Enrichment shows this maps cleanly to the approved monthly vulnerability scan window. There is no malice here, so close it out as benign."
+      }
+    },
+    {
+      "task_id": "8a84514a91fd39ba3dcc6951ca4518c2",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "waf_block_sqli",
+      "input_sha256": "e79b958d912aa8f471b7e91ef43527454c0231bf60b44102a3ff01a21e760f7e",
+      "payload": {
+        "plan_id": "waf_block_sqli",
+        "plan_text": "Push a web-application-firewall signature to block the SQL injection pattern hitting the login endpoint, and preserve the raw request logs as evidence."
+      }
+    },
+    {
+      "task_id": "80e8b93bbe023162ec6c7dbfb80ad986",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "waf_ips_exploit_enrich",
+      "input_sha256": "279219f992b6cddbd8755f1f1a656f0a7ff064d1eb85453993f4fe6ec1fec033",
+      "payload": {
+        "plan_id": "waf_ips_exploit_enrich",
+        "plan_text": "Stand up an intrusion-prevention rule to drop the exploit traffic for that CVE at the sensor, then look up who owns the source addresses."
+      }
+    },
+    {
+      "task_id": "09272759c2945892e87515e520485079",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "monitor_only_testbox",
+      "input_sha256": "f7576ca02a49284470c2f971b730f404d2c055cf10b6a946da807ace6505467e",
+      "payload": {
+        "plan_id": "monitor_only_testbox",
+        "plan_text": "Low-confidence anomaly on a throwaway test box. Keep monitoring it; no containment is justified at this point."
+      }
+    },
+    {
+      "task_id": "b735cf0824db7759aa8848669fef660c",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "distractor_hypothetical_disable",
+      "input_sha256": "cb4977bc317f90b4103b74cc33cf232b08fff320b982a2d32b281f2c5397bb20",
+      "payload": {
+        "plan_id": "distractor_hypothetical_disable",
+        "plan_text": "In a worse scenario we might have had to disable the account and reimage the laptop, but here the phish was reported before any click, so we simply quarantine the message and enrich the sender."
+      }
+    },
+    {
+      "task_id": "e3a843f1b06165a9dbfedd301251110b",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "compound_block_kill_forensics",
+      "input_sha256": "267889a6f2843f37b4e680c214c8be1ad4adb55e502014befc8aa6cc05cd7ffd",
+      "payload": {
+        "plan_id": "compound_block_kill_forensics",
+        "plan_text": "Sever the outbound channel, stop the malicious process, and snapshot the host's memory for analysis, in that order."
+      }
+    }
+  ]
+}

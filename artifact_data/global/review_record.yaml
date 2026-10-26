@@ -1,0 +1,366 @@
+schema_version: 2
+policy_id: socpilot_behavior_grounded_policy
+status: approved_for_controlled_experiment
+approved_by_role: research_maintainer
+approved_at_utc: "2026-07-07T00:00:00Z"
+constraints_sha256: 932eb36d686cec98847a63ac8fb862f7e1bd39d2ea86b892aaf7805e5ec38330
+action_catalog_sha256: 282bd1842d431091da80f0b0e3fdd714ff9a1051e71ce5d31e067226a087400b
+scope_limitation: >-
+  Research-authored experimental policy for controlled measurement, selected
+  under decisions D15 and D16. Content-triggered rules fire on behavior classes defined by the
+  audited telemetry normalization (telemetry_normalization.yaml), so triggers
+  are anchored to observed behaviors, not product strings. Rules were derived
+  on the 200-incident derivation corpus and checked on a disjoint 200-incident
+  second export batch excluded from rule derivation
+  (results/analysis/heldout_activation.json). Transfer support requires at least
+  three transfer-check activations. The incident exports contain telemetry and
+  workflow tasks, but no authenticated approval record or per-incident action
+  trace. The four approval gates are therefore specification-only and are never
+  included in prompts, operational verdicts, or corpus rates. This bundle is not
+  an institutionally approved policy.
+normalization_sensitivity:
+  leave_one_out_status: acknowledged_sensitive
+  reviewed_by_role: research_maintainer
+  reviewed_at_utc: "2026-07-10T00:00:00Z"
+  decision: >-
+    Retain the behavior-class surface for controlled measurement and report
+    leave-one-pattern-out sensitivity rather than claiming invariance to every
+    category pattern.
+  limitation: >-
+    Removing one category pattern reduces transfer-check support below the
+    floor for four content-triggered rules; this bounds transfer claims.
+reviewed_rules:
+  - rule_id: evidence_before_reimage
+    decision: structural
+    provenance: corpus_derived_policy
+    design:
+      normative_basis: >-
+        Evidence collection precedes irreversible recovery; reimaging first
+        destroys volatile evidence irreversibly.
+      alternatives_considered:
+        - "d1 prohibit reimage entirely: blocks a legitimate recovery action"
+        - "d2 require forensics before reimage: preserves evidence and recovery"
+      chosen_because: d2 is the minimal constraint that protects both.
+      activation_tier: coverage
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_evidence_before_reimage_inserts_forensics
+      - tests/test_data_grounded_bundle.py::test_evidence_before_reimage_silent_when_order_correct
+    limitation: Global scope; plan-shape property, never counted as corpus coverage.
+  - rule_id: approve_isolate
+    decision: specification_only
+    provenance: authored_experimental_policy
+    design:
+      normative_basis: >-
+        Isolation interrupts business operations and requires an authenticated
+        authorization channel in deployments that enforce this gate.
+      alternatives_considered:
+        - "d1 remove the unapproved action: safe under absent evidence"
+        - "d2 defer to human approval: preserves the proposal, withholds execution"
+      chosen_because: d1 gives the specification a deterministic fail-closed repair.
+      activation_tier: coverage
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_approve_isolate_removes_unapproved
+      - tests/test_data_grounded_bundle.py::test_approve_isolate_accepts_with_evidence
+      - tests/test_data_grounded_bundle.py::test_approve_isolate_defer_mode_keeps_action
+    limitation: Specification-only; excluded from corpus prompts, verdicts, and rates.
+  - rule_id: approve_reimage
+    decision: specification_only
+    provenance: authored_experimental_policy
+    design:
+      normative_basis: >-
+        Reimaging is the catalog's only irreversible action; irreversible
+        production changes require explicit approval.
+      alternatives_considered:
+        - "d1 remove the unapproved action: safe under absent evidence"
+        - "d2 defer to human approval: preserves the proposal, withholds execution"
+      chosen_because: Same criterion as approve_isolate.
+      activation_tier: coverage
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_approval_gates_remove_unapproved_actions
+    limitation: Specification-only; excluded from corpus prompts, verdicts, and rates.
+  - rule_id: approve_lift_isolation
+    decision: specification_only
+    provenance: authored_experimental_policy
+    design:
+      normative_basis: >-
+        Returning a contained host to the network reopens risk and requires an
+        authenticated authorization channel when this gate is deployed.
+      alternatives_considered:
+        - "d1 remove the unapproved action: keeps the host contained"
+        - "d2 defer to human approval: preserves the proposal, withholds execution"
+      chosen_because: Same criterion as approve_isolate.
+      activation_tier: coverage
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_approval_gates_remove_unapproved_actions
+    limitation: Specification-only; excluded from corpus prompts, verdicts, and rates.
+  - rule_id: approve_account_disable
+    decision: specification_only
+    provenance: authored_experimental_policy
+    design:
+      normative_basis: >-
+        Disabling an account interrupts access to business systems and requires
+        authenticated authorization when this gate is deployed.
+      alternatives_considered:
+        - "d1 remove the unapproved action: safe under absent evidence"
+        - "d2 defer to human approval: preserves the proposal, withholds execution"
+      chosen_because: Same criterion as approve_isolate.
+      activation_tier: coverage
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_approval_gates_remove_unapproved_actions
+    limitation: Specification-only; excluded from corpus prompts, verdicts, and rates.
+  - rule_id: shadowcopy_tamper_isolate
+    decision: transfer_supporting
+    provenance: corpus_derived_policy
+    design:
+      normative_basis: >-
+        Shadow-copy tampering (ATT&CK T1490) is the canonical ransomware
+        precursor; the experimental policy requires containment before recovery.
+      alternatives_considered:
+        - "d1 block_egress: leaves local encryption free to proceed"
+        - "d2 isolate_host: stops both encryption spread and command traffic"
+      chosen_because: >-
+        d2 interrupts the precursor before damage; the behavior-anchored
+        trigger remains active (17/200 derivation, 54/200 transfer-check batch).
+      activation_tier: operational
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_shadowcopy_tamper_mandates_isolation
+      - tests/test_data_grounded_bundle.py::test_shadowcopy_insertion_surfaces_approval_gate_without_evidence
+    limitation: >-
+      Category strings evidence tampering attempts, not adjudicated intent.
+  - rule_id: intel_match_block
+    decision: transfer_supporting
+    provenance: corpus_derived_policy
+    design:
+      normative_basis: >-
+        A reviewed threat-intelligence match on a hash, IP, or domain is
+        actionable by definition; blocking the matched source is the standing
+        response and the corpus's most frequent detection family.
+      alternatives_considered:
+        - "d1 investigate_enrich only: leaves a known-bad source connected"
+        - "d2 block_egress: acts on intelligence the SOC already reviewed"
+      chosen_because: >-
+        d2; the class aggregates detector strings that lexical triggers
+        missed entirely (19/200 derivation, 92/200 transfer-check batch).
+      activation_tier: operational
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_intel_match_block_fires_on_both_collection_windows
+    limitation: >-
+      Match quality depends on the institution's intelligence feeds; the rule
+      trusts the reviewed match, it does not re-adjudicate it.
+  - rule_id: sensor_tamper_isolate
+    decision: transfer_supporting
+    provenance: corpus_derived_policy
+    design:
+      normative_basis: >-
+        Tampering with the EDR sensor (ATT&CK T1562) blinds defense; a host
+        whose sensor is under attack cannot be trusted to report further.
+      alternatives_considered:
+        - "d1 kill_process: races the tampering process"
+        - "d2 isolate_host: contains the host whose telemetry is now suspect"
+      chosen_because: >-
+        d2; activation persists across export batches (6/200 derivation,
+        3/200 transfer-check batch).
+      activation_tier: operational
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_transfer_supporting_rules_fire_on_their_behavior_class
+    limitation: Small transfer-check support (3 incidents), at the retention floor.
+  - rule_id: remote_access_block
+    decision: transfer_supporting
+    provenance: corpus_derived_policy
+    design:
+      normative_basis: >-
+        Unauthorized remote-access channels (ATT&CK T1133/T1021) are cut at
+        the perimeter; the experimental policy blocks the implicated channel.
+      alternatives_considered:
+        - "d1 isolate_host: heavier disruption than the channel requires"
+        - "d2 block_egress: cuts the channel with minimal blast radius"
+      chosen_because: >-
+        d2 is proportionate; activation persists across export batches
+        (6/200 derivation, 9/200 transfer-check batch).
+      activation_tier: operational
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_transfer_supporting_rules_fire_on_their_behavior_class
+    limitation: Authorized remote administration must be labeled by the oracle.
+  - rule_id: malware_detect_quarantine
+    decision: transfer_supporting
+    provenance: corpus_derived_policy
+    design:
+      normative_basis: >-
+        A reviewed EDR/ML malicious verdict on a file or process requires
+        quarantining the artifact; EDR quarantine is the standard response and
+        the class is the derivation corpus's largest (59/200 derivation,
+        10/200 transfer-check batch).
+      alternatives_considered:
+        - "d1 isolate_host on every ML verdict: over-contains on low-confidence detections"
+        - "d2 quarantine_artifact: removes the detected artifact, reversible"
+      chosen_because: d2 matches the verdict's granularity and is reversible.
+      activation_tier: operational
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_transfer_supporting_rules_fire_on_their_behavior_class
+    limitation: >-
+      The class aggregates heterogeneous detections under one response; finer
+      per-verdict responses are future policy work.
+  - rule_id: account_probe_block
+    decision: transfer_supporting
+    provenance: corpus_derived_policy
+    design:
+      normative_basis: >-
+        Repeated authentication probing (ATT&CK T1110/T1087) is blocked at its
+        source; the experimental policy blocks the implicated source.
+      alternatives_considered:
+        - "d1 reset_disable_account: punishes the probed account, not the prober"
+        - "d2 block_egress: cuts the probing source"
+      chosen_because: >-
+        d2 targets the attacker; activation persists across export batches
+        (9/200 derivation, 9/200 transfer-check batch).
+      activation_tier: operational
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_transfer_supporting_rules_fire_on_their_behavior_class
+    limitation: >-
+      Benign lockouts exist; the rule is limited to the reviewed probing class
+      and does not read incident disposition.
+  - rule_id: ops_monitor_no_isolate
+    decision: transfer_supporting
+    provenance: corpus_derived_policy
+    design:
+      normative_basis: >-
+        An operational-monitoring event (Zabbix notification, log-source
+        outage, administration edit) is not an attack; isolating a branch host
+        over one disrupts business for nothing. Restraint on non-malicious
+        incidents is the corpus's most common correct response.
+      alternatives_considered:
+        - "d1 no restraint rule, rely on the model: the failure mode goes unmeasured"
+        - "d2 prohibit isolation while the ops-monitoring class holds: decidable restraint"
+      chosen_because: >-
+        d2 makes over-containment measurable and repairable; the trigger is
+        telemetry-observable (7/200 derivation, 17/200 transfer-check batch), so no
+        outcome label enters the predicate.
+      activation_tier: operational
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_ops_monitor_restraint_removes_isolation
+      - tests/test_data_grounded_bundle.py::test_ops_monitor_restraint_silent_on_attack_telemetry
+    limitation: >-
+      High-precision ops patterns only; unclassifiable noise categories never
+      trigger restraint (enforced by test).
+  - rule_id: ops_monitor_no_reimage
+    decision: transfer_supporting
+    provenance: corpus_derived_policy
+    design:
+      normative_basis: >-
+        Destructive recovery is never a response to an operational-monitoring
+        event; one rule per prohibited action per the engine's restraint
+        semantics.
+      alternatives_considered:
+        - "d1 fold into a single restraint rule: engine semantics are one action per rule"
+        - "d2 separate prohibition for the irreversible action: explicit and auditable"
+      chosen_because: d2 keeps the irreversible action's protection explicit.
+      activation_tier: operational
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_ops_monitor_restraint_removes_reimage
+    limitation: Same precision bound as ops_monitor_no_isolate.
+  - rule_id: creddump_reset
+    decision: operational_local
+    provenance: corpus_derived_policy
+    design:
+      normative_basis: >-
+        Dumped credentials (ATT&CK T1003) are invalid the moment they are
+        dumped; resetting the exposed account cuts reuse risk.
+      alternatives_considered:
+        - "d1 isolate_host: contains the host, leaves stolen credentials valid"
+        - "d2 reset_disable_account: invalidates the stolen material"
+      chosen_because: d2 addresses the harm the technique causes.
+      activation_tier: operational
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_local_rules_fire_on_their_behavior_class
+    limitation: >-
+      Derivation-active with low transfer-check support (9/200, 1/200);
+      local-only; it does not support the transfer claim.
+  - rule_id: evasion_isolate
+    decision: operational_local
+    provenance: corpus_derived_policy
+    design:
+      normative_basis: >-
+        Masquerading and injection (ATT&CK T1036/T1055) indicate a live
+        foothold actively evading detection.
+      alternatives_considered:
+        - "d1 quarantine_artifact: cleans one file, not the running foothold"
+        - "d2 isolate_host: interrupts the active technique"
+      chosen_because: d2 stops the behavior, not one artifact.
+      activation_tier: operational
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_local_rules_fire_on_their_behavior_class
+    limitation: >-
+      17/200 derivation, 2/200 transfer-check batch; local-only, not transfer
+      evidence.
+  - rule_id: exploit_waf_rule
+    decision: operational_local
+    provenance: corpus_derived_policy
+    design:
+      normative_basis: >-
+        A known exploit signature (ATT&CK T1190) is blocked at the perimeter;
+        a web-application firewall rule addresses the exploit class rather than
+        one source address.
+      alternatives_considered:
+        - "d1 block_egress: blocks one source, not the exploit class"
+        - "d2 apply_ips_waf_rule: blocks the signature for every source"
+      chosen_because: d2 matches the exploit scope rather than one source address.
+      activation_tier: operational
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_local_rules_fire_on_their_behavior_class
+    limitation: >-
+      17/200 derivation, 2/200 transfer-check batch; local-only, not transfer
+      evidence.
+  - rule_id: persistence_quarantine
+    decision: operational_local
+    provenance: corpus_derived_policy
+    design:
+      normative_basis: >-
+        A planted persistence mechanism (ATT&CK T1053/T1136) is removed, not
+        observed; leaving it re-arms the attacker after cleanup.
+      alternatives_considered:
+        - "d1 monitor_watch: leaves the mechanism armed"
+        - "d2 quarantine_artifact: removes the planted mechanism"
+      chosen_because: d2 disarms the persistence.
+      activation_tier: operational
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_local_rules_fire_on_their_behavior_class
+    limitation: >-
+      8/200 derivation, 0/200 transfer-check batch; local-only, not transfer
+      evidence.
+  - rule_id: recon_block
+    decision: operational_local
+    provenance: corpus_derived_policy
+    design:
+      normative_basis: >-
+        Sustained scanning from one source (ATT&CK T1046/T1595) precedes
+        exploitation; blocking the source interrupts the kill chain early.
+      alternatives_considered:
+        - "d1 monitor_watch: watches the scan complete"
+        - "d2 block_egress: cuts the scanning source"
+      chosen_because: d2 acts before exploitation.
+      activation_tier: operational
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_local_rules_fire_on_their_behavior_class
+    limitation: >-
+      13/200 derivation, 1/200 transfer-check batch; local-only, not transfer
+      evidence.
+  - rule_id: c2_block
+    decision: operational_local
+    provenance: corpus_derived_policy
+    design:
+      normative_basis: >-
+        Suspected command-and-control traffic (ATT&CK T1102/T1071) is cut at
+        egress to sever attacker control.
+      alternatives_considered:
+        - "d1 isolate_host: heavier than the channel-level risk"
+        - "d2 block_egress: severs the control channel"
+      chosen_because: d2 is proportionate to the observed signal.
+      activation_tier: operational
+    oracle_tests:
+      - tests/test_data_grounded_bundle.py::test_local_rules_fire_on_their_behavior_class
+    limitation: >-
+      4/200 derivation, 1/200 transfer-check batch; local-only, not transfer
+      evidence.
+excluded_candidate_surfaces:
+  - protocol_extensions/expanded_policy_surface_candidate
+  - protocol_extensions/scoped_governance_candidate

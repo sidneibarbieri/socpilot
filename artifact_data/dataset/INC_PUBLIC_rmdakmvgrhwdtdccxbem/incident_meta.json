@@ -1,0 +1,11 @@
+{
+  "incident_id": "INC_PUBLIC_rmdakmvgrhwdtdccxbem",
+  "incident_type": "authentication",
+  "severity": "medium",
+  "asset_criticality": "medium",
+  "asset_role": "bank_endpoint",
+  "time_window_start": "2021-11-22T20:54:29.067000Z",
+  "time_window_end": "2021-11-28T21:52:04.350000Z",
+  "final_status": "not_an_issue",
+  "asset_host": "host_0001"
+}

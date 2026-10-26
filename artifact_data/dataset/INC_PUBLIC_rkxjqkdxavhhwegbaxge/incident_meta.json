@@ -1,0 +1,11 @@
+{
+  "incident_id": "INC_PUBLIC_rkxjqkdxavhhwegbaxge",
+  "incident_type": "recon",
+  "severity": "low",
+  "asset_criticality": "low",
+  "asset_role": "bank_endpoint",
+  "time_window_start": "2021-11-22T18:51:11.527000Z",
+  "time_window_end": "2021-11-24T17:01:31.364000Z",
+  "final_status": "resolved",
+  "asset_host": "host_0001"
+}

@@ -1,0 +1,37 @@
+# Example model registry for experiment_runner.
+# Copy to config/models.local.yaml for local execution overrides.
+# The fixed study registry is kept separately in config/models.freeze.yaml.
+#
+# For azure_openai: deployment is your Azure deployment name.
+# For openai/anthropic: deployment is the model ID used in API calls.
+# Keep diagnostic-only profiles disabled so they cannot enter a primary matrix
+# through the default enabled-model selection.
+# Record pricing_source_url and pricing_verified_on for every paid profile.
+# Use pricing_valid_through when a provider publishes time-limited pricing.
+
+- name: azure_openai_example
+  deployment: your-azure-deployment
+  provider: azure_openai
+  model: provider-model-id
+  api_version: 2024-02-15-preview
+  enabled: false
+  prompt_price_per_1k_usd: 0.0
+  completion_price_per_1k_usd: 0.0
+
+- name: openai_example
+  deployment: provider-model-id
+  provider: openai
+  model: provider-model-id
+  api_version: ""
+  enabled: false
+  prompt_price_per_1k_usd: 0.0
+  completion_price_per_1k_usd: 0.0
+
+- name: anthropic_example
+  deployment: provider-model-id
+  provider: anthropic
+  model: provider-model-id
+  api_version: 2023-06-01
+  enabled: false
+  prompt_price_per_1k_usd: 0.0
+  completion_price_per_1k_usd: 0.0

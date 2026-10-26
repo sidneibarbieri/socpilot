@@ -1,0 +1,14 @@
+{
+  "cell_count": 4798,
+  "completion_token_cap": 4000,
+  "empty_plan_count": 0,
+  "hallucinated_action_count": 0,
+  "max_completion_tokens": 410,
+  "max_plan_length": 10,
+  "min_plan_length": 1,
+  "parse_error_count": 2,
+  "run_ids": [
+    "measurement_e6889d081957361f"
+  ],
+  "schema_version": 2
+}

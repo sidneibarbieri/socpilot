@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "1a2cf3c1a6e6aed3628b8af0d0574f33",
+  "study_id": "projection_fidelity",
+  "model_name": "ollama_qwen36",
+  "source_id": "pure_triage",
+  "input_sha256": "a8216a76fcb39439a4688632be99004688b225db1e2f7d78e627579455fb2410",
+  "output": {
+    "extracted_actions": [
+      "investigate_enrich",
+      "collect_forensics"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "381467ea25230508c50c5b6155cc97dd1dbabe601bd28cf04ab97bf986bc8ca6",
+    "response_sha256": "67cee4b6e9658a93cbfcf6031fce516ec8b50517fc13b49fa986109b18929764",
+    "usage": {
+      "prompt_tokens": 285,
+      "completion_tokens": 30,
+      "total_tokens": 315
+    },
+    "latency_ms": 493,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "qwen3.6:latest"
+  }
+}

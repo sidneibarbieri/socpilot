@@ -1,0 +1,8 @@
+{
+  "stix_path": "reference_data/mitre/enterprise-attack.json",
+  "sha256": "f857d8f78f2f0c0b7db321a711a39fba98546c1e3076a657684850c83d0962fb",
+  "object_count": 24772,
+  "technique_count": 691,
+  "tactic_count": 14,
+  "latest_modified": "2025-11-13T14:00:00.188Z"
+}

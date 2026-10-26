@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "artifact_stage": "reported_results",
+  "claims": [
+    {
+      "claim_id": "corpus_scope",
+      "claim": "The evaluation corpus contains 400 incidents in two disjoint export batches.",
+      "status": "supported",
+      "evidence": [
+        "artifact_outputs/analysis/corpus_campaign.json",
+        "artifact_outputs/analysis/policy_preflight/policy_preflight/corpus_partition_audit.json"
+      ],
+      "audit_command": "bash run.sh validate-public-artifact"
+    },
+    {
+      "claim_id": "policy_selection",
+      "claim": "The reviewed bundle separates operational rules from specification-only approval gates and records the transfer check.",
+      "status": "supported",
+      "evidence": [
+        "artifact_data/global/constraints.yaml",
+        "artifact_outputs/analysis/policy_preflight/policy_preflight/policy_preflight.json"
+      ],
+      "audit_command": "bash run.sh validate-public-artifact"
+    },
+    {
+      "claim_id": "verifier_semantics",
+      "claim": "The shipped verifier implements deterministic typed checks and repairs over ordered action lists.",
+      "status": "supported",
+      "evidence": [
+        "src/soc_llm_policy/verify.py",
+        "artifact_outputs/analysis/protocol_freeze.json"
+      ],
+      "audit_command": "bash run.sh validate-public-artifact"
+    },
+    {
+      "claim_id": "model_results",
+      "claim": "The reported model comparisons, violation rates, judge results, adversarial results, and projection-fidelity results follow from one terminal model execution.",
+      "status": "supported",
+      "evidence": [
+        "artifact_outputs/analysis/run_ledger.json",
+        "artifact_outputs/analysis/official_evaluation_summary.json"
+      ],
+      "audit_command": "bash run.sh reproduce-results"
+    }
+  ]
+}

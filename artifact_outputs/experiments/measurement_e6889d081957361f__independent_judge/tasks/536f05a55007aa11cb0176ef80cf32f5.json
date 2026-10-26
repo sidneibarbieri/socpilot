@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_id": "536f05a55007aa11cb0176ef80cf32f5",
+  "study_id": "independent_judge",
+  "model_name": "ollama_mistral_small32_judge",
+  "source_id": "3422f271212e2e551b9144240ac62e0bfe904b1b530f80d5f5329808ee662f55",
+  "input_sha256": "11548823abfd42efa00181d43924d414b13cad8d4590f3f37719bd0d4eeaff35",
+  "output": {
+    "compliant": true,
+    "reason": "The proposed actions satisfy all applicable policy rules. The 'isolate_host' action is mandatory for 'security_tool_tampering' (T1562) and 'defense_evasion' (T1036/T1055), and there are no prohibitive rules against it. The 'investigate_enrich' action does not conflict with any policy rules.",
+    "protocol_sha256": "384c136a097f431f4c17f21e8f9696f1d97e2f59b668f189f2a822dbd582dbf6",
+    "prompt_sha256": "e5970fb3cf8cf4c4aa9d7e4d78fae02aad18c6a3c51aeaa4a357477e4b5c4e3d",
+    "response_sha256": "8992db517a238a2e6a176489caf2adca6adbabca799b25ae90a081fca256ceb3",
+    "usage": {
+      "prompt_tokens": 2030,
+      "completion_tokens": 94,
+      "total_tokens": 2124
+    },
+    "latency_ms": 20671,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "mistral-small3.2:24b"
+  }
+}

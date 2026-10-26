@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "task_id": "d11e2a962bbed70c6d14b37918b62f12",
+  "study_id": "projection_fidelity",
+  "model_name": "ollama_qwen36",
+  "source_id": "long_confirmed_intrusion",
+  "input_sha256": "82af8022ba1e24d41ceb15574d27a6ce3d04d20d3351d961158441a183cf2b7d",
+  "output": {
+    "extracted_actions": [
+      "investigate_enrich",
+      "collect_forensics",
+      "isolate_host",
+      "block_egress",
+      "escalate_notify"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "349ef12aed7b4ecc8eb402bde81331ac1936b4d890bb2e7b1825016f05a7137b",
+    "response_sha256": "dd0aca3cde6415190490da1020fb55ad8104c091a3f5e347541b15c67b5ce16d",
+    "usage": {
+      "prompt_tokens": 295,
+      "completion_tokens": 32,
+      "total_tokens": 327
+    },
+    "latency_ms": 579,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "qwen3.6:latest"
+  }
+}

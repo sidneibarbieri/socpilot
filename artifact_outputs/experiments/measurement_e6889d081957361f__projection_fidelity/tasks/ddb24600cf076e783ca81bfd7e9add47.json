@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "ddb24600cf076e783ca81bfd7e9add47",
+  "study_id": "projection_fidelity",
+  "model_name": "azure_gpt54",
+  "source_id": "lift_isolation_recovery",
+  "input_sha256": "2b272d7976fcd4cfe3ba8eeff1a5b95e8e2ac3e77c2eafcfa1b6f81a89bf8ce3",
+  "output": {
+    "extracted_actions": [
+      "lift_isolation",
+      "monitor_watch"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "1c6132048ad29eb6cafb2cafaecb55aedd831dc00aec0f166cbee4b90dd39510",
+    "response_sha256": "19c859839b1703beca778be4ba7fe5127acbb06c877c33379de6031d8e00ec43",
+    "usage": {
+      "prompt_tokens": 285,
+      "completion_tokens": 15,
+      "total_tokens": 300
+    },
+    "latency_ms": 2089,
+    "estimated_cost_usd": 0.000937,
+    "returned_model": "gpt-5.4-2026-03-05"
+  }
+}

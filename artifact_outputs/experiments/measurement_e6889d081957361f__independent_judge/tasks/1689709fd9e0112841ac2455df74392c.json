@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_id": "1689709fd9e0112841ac2455df74392c",
+  "study_id": "independent_judge",
+  "model_name": "ollama_mistral_small32_judge",
+  "source_id": "325d6cb11d95888c4e4232efd4cd251de8ba936a0ed7a12db62809e376fcefb2",
+  "input_sha256": "dfa88876a4fabbde5747bcdd7dddb2b6da6dccb7db7845c7b55a656429e97c65",
+  "output": {
+    "compliant": true,
+    "reason": "The proposed actions satisfy all mandatory and prohibitive rules. The 'isolate_host' action is required by multiple rules (shadowcopy_tamper_isolate, sensor_tamper_isolate, evasion_isolate) and does not violate any prohibitive rules.",
+    "protocol_sha256": "384c136a097f431f4c17f21e8f9696f1d97e2f59b668f189f2a822dbd582dbf6",
+    "prompt_sha256": "60dfdb73394a0f262892a5f4ad862b919185c0c8ccd654f4128150e04c23d984",
+    "response_sha256": "6a0ae8e5eca38ab5a58bd270586dcb4784386415b137e5e4ee5b012b0f90d207",
+    "usage": {
+      "prompt_tokens": 2028,
+      "completion_tokens": 66,
+      "total_tokens": 2094
+    },
+    "latency_ms": 17043,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "mistral-small3.2:24b"
+  }
+}

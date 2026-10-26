@@ -1,0 +1,59 @@
+{
+  "action_count_max": 0,
+  "action_count_min": 0,
+  "action_count_total": 0,
+  "actions_per_incident_avg": 0.0,
+  "conversion_quality": {
+    "empty_action_profile_count": 400,
+    "incidents_missing_conversion_quality": 0,
+    "incidents_with_conversion_quality": 400,
+    "task_count_total": 1284,
+    "task_semantics": "workflow_stage_not_response_action",
+    "tasks_per_incident_avg": 3.21
+  },
+  "event_count_max": 153,
+  "event_count_min": 3,
+  "event_count_total": 4260,
+  "events_per_incident_avg": 10.65,
+  "generated_at_utc": "2026-10-26T20:54:41.071733+00:00",
+  "global_artifact_scope": {
+    "action_catalog_count": 13,
+    "constrained_action_count": 7,
+    "policy_action_coverage_over_catalog": 0.5385,
+    "policy_rule_count": 19,
+    "policy_rule_type_counts": {
+      "mandatory": 12,
+      "prohibit_before": 1,
+      "prohibit_when": 2,
+      "require_approval": 4
+    },
+    "policy_severity_counts": {
+      "hard": 19
+    },
+    "requires_approval_action_count": 4,
+    "reversible_action_count": 12
+  },
+  "incident_count": 400,
+  "incident_type_counts": {
+    "access": 15,
+    "authentication": 4,
+    "exploit": 19,
+    "incident_type_001": 4,
+    "malware": 174,
+    "policy": 3,
+    "potential_exploit": 4,
+    "recon": 2,
+    "suspicious_activity": 164,
+    "system": 11
+  },
+  "invalid_incident_count": 0,
+  "mitre_technique_diversity": {
+    "technique_id_count": 0,
+    "technique_ids": [],
+    "technique_label_count": 0
+  },
+  "privacy_incident_count": 0,
+  "privacy_issue_count": 0,
+  "privacy_pass_rate": 1.0,
+  "valid_incident_count": 400
+}

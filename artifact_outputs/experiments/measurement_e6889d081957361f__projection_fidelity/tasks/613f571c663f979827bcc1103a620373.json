@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "task_id": "613f571c663f979827bcc1103a620373",
+  "study_id": "projection_fidelity",
+  "model_name": "azure_gpt54",
+  "source_id": "long_confirmed_intrusion",
+  "input_sha256": "82af8022ba1e24d41ceb15574d27a6ce3d04d20d3351d961158441a183cf2b7d",
+  "output": {
+    "extracted_actions": [
+      "investigate_enrich",
+      "collect_forensics",
+      "isolate_host",
+      "block_egress",
+      "escalate_notify"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "349ef12aed7b4ecc8eb402bde81331ac1936b4d890bb2e7b1825016f05a7137b",
+    "response_sha256": "767c6104762b7923d3d904d4dbaa53f2b8de9ecb9c8da6e1a9b1bdd775eb47f0",
+    "usage": {
+      "prompt_tokens": 284,
+      "completion_tokens": 31,
+      "total_tokens": 315
+    },
+    "latency_ms": 1916,
+    "estimated_cost_usd": 0.001175,
+    "returned_model": "gpt-5.4-2026-03-05"
+  }
+}

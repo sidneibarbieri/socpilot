@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "task_id": "ed789028d0e50d8adda95216d557df09",
+  "study_id": "projection_fidelity",
+  "model_name": "azure_gpt54",
+  "source_id": "paraphrase_enrich_ioc",
+  "input_sha256": "eb074333e6d6ca7f51cdf3061e5546e23c004df27748526edb5923b57d1141c5",
+  "output": {
+    "extracted_actions": [
+      "investigate_enrich"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "ab44c8f70082c6b5293c27a5ea24dc98f0686f5f1a0bc71d5dac11d0d91c244d",
+    "response_sha256": "316f9cd6dd8f438fc6cf86ae5c3b410ba8cfece5917b40af7c4b104074861318",
+    "usage": {
+      "prompt_tokens": 276,
+      "completion_tokens": 13,
+      "total_tokens": 289
+    },
+    "latency_ms": 2085,
+    "estimated_cost_usd": 0.000885,
+    "returned_model": "gpt-5.4-2026-03-05"
+  }
+}

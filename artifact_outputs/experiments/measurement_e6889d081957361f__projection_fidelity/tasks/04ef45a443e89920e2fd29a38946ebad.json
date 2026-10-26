@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "04ef45a443e89920e2fd29a38946ebad",
+  "study_id": "projection_fidelity",
+  "model_name": "azure_gpt54",
+  "source_id": "negation_no_kill_scheduler",
+  "input_sha256": "fa82ee99b21a13e7f40248d259db2affdb20ff3509d4f1c0bd264c2cc2bba8bb",
+  "output": {
+    "extracted_actions": [
+      "collect_forensics",
+      "escalate_notify"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "eab4ff1ecd2e923f342b6c4c54d9a7007cf5a3be0a39c429586cb7a09cc84eb3",
+    "response_sha256": "791c7140756ed0c103be4579d6dbf75b73739f18ae41bf0e8d06334ef0c1e595",
+    "usage": {
+      "prompt_tokens": 281,
+      "completion_tokens": 17,
+      "total_tokens": 298
+    },
+    "latency_ms": 2484,
+    "estimated_cost_usd": 0.000958,
+    "returned_model": "gpt-5.4-2026-03-05"
+  }
+}

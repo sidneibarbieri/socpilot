@@ -1,0 +1,85 @@
+{
+  "schema_version": 1,
+  "task_id": "0473527d5c00c40791b5200bd2535dff",
+  "study_id": "judge_ablation",
+  "model_name": "ollama_mistral_small32_judge",
+  "source_id": "686f05be986263902fc3ddbc667cde3ece03a98bfb45f5e03d068719140956ad",
+  "input_sha256": "e2ed6f9c2f5b6b888136fd7f2cef480f0c757dfc8f1e449d39676163bea3388b",
+  "output": {
+    "rule_findings": [
+      {
+        "rule_id": "evidence_before_reimage",
+        "satisfied": true
+      },
+      {
+        "rule_id": "shadowcopy_tamper_isolate",
+        "satisfied": false
+      },
+      {
+        "rule_id": "intel_match_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "sensor_tamper_isolate",
+        "satisfied": false
+      },
+      {
+        "rule_id": "remote_access_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "malware_detect_quarantine",
+        "satisfied": false
+      },
+      {
+        "rule_id": "account_probe_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "ops_monitor_no_isolate",
+        "satisfied": true
+      },
+      {
+        "rule_id": "ops_monitor_no_reimage",
+        "satisfied": true
+      },
+      {
+        "rule_id": "creddump_reset",
+        "satisfied": false
+      },
+      {
+        "rule_id": "evasion_isolate",
+        "satisfied": false
+      },
+      {
+        "rule_id": "exploit_waf_rule",
+        "satisfied": false
+      },
+      {
+        "rule_id": "persistence_quarantine",
+        "satisfied": false
+      },
+      {
+        "rule_id": "recon_block",
+        "satisfied": false
+      },
+      {
+        "rule_id": "c2_block",
+        "satisfied": false
+      }
+    ],
+    "compliant": false,
+    "reason": "The proposed actions do not satisfy the mandatory rules for isolating hosts based on shadow-copy tampering, sensor tampering, defense evasion, and credential dumping, nor do they include the mandatory actions for blocking egress based on intelligence matches, remote access, malware detection, account probing, exploit attempts, persistence manipulation, reconnaissance scanning, and command-and-control network activity.",
+    "protocol_sha256": "aa4ec8d6e74ad441631e8d2b2dc19e6744b48c9b53a44367c3114a3672592e9c",
+    "prompt_sha256": "4f2009e8a098f81ea6714c373b40d08be6fd8b3d7e1ffec64eaab06355f469fa",
+    "response_sha256": "9b2fe4adfd3eeb3737cd8ff7654c9bbcf062652f637ec40e8c7eed375737d0d3",
+    "usage": {
+      "prompt_tokens": 2416,
+      "completion_tokens": 365,
+      "total_tokens": 2781
+    },
+    "latency_ms": 25728,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "mistral-small3.2:24b"
+  }
+}

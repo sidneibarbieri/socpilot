@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "task_id": "9f0867feaf2af9739e0265ef5898b5f4",
+  "study_id": "projection_fidelity",
+  "model_name": "ollama_qwen36",
+  "source_id": "compound_triage_bundle",
+  "input_sha256": "4b1f29e0ac41c8ffa8e2907e86fa1038409f8fcf7e624c20168e3d83f52b52a4",
+  "output": {
+    "extracted_actions": [
+      "investigate_enrich",
+      "collect_forensics",
+      "quarantine_artifact"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "dd1afa85e26766767cbdc7e008084c5d7a0dd23fcc55940cd124783e872128fc",
+    "response_sha256": "a3751587745dd0da6301a31cf23e0fca181aabda53774dbeea71d7345164c076",
+    "usage": {
+      "prompt_tokens": 284,
+      "completion_tokens": 39,
+      "total_tokens": 323
+    },
+    "latency_ms": 603,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "qwen3.6:latest"
+  }
+}

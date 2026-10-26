@@ -1,0 +1,111 @@
+{
+  "campaign_id": "measurement_e6889d081957361f",
+  "constitutes_model_evidence": true,
+  "derived_files": {
+    "corpus_readiness": {
+      "path": "artifact_outputs/analysis/corpus_readiness.json",
+      "sha256": "4dfc000a298b47e6a61ef004f703300003ce42f94f18a934491e08f2d4ffd3d1"
+    },
+    "dataset_audit": {
+      "path": "artifact_outputs/analysis/dataset_audit.json",
+      "sha256": "63cfb44e82532f402ff55d54a89b0c7dff38e90742e56fdadb2e57aa1a06743d"
+    },
+    "global_artifact_assessment": {
+      "path": "artifact_outputs/analysis/global_artifact_assessment.json",
+      "sha256": "a3e4d6d8b2895299eeb7b58610f57b222d528941295da1142a91991d5d7cd292"
+    },
+    "official_pairwise_tests": {
+      "path": "artifact_outputs/analysis/official_pairwise_tests.json",
+      "sha256": "cedf424ec4ea0f022b68d3bbb0bfba47f9d081c1dccc3d04fd8be0c41b779261"
+    },
+    "official_public_consistency": {
+      "path": "artifact_outputs/analysis/official_public_consistency.json",
+      "sha256": "7e06c1f412bc2250fae9b344d741590c84b68869a75d2ff63d0e5c751cac1bd3"
+    },
+    "official_runs_manifest": {
+      "path": "artifact_outputs/analysis/official_runs_manifest.json",
+      "sha256": "afd37c577a15f07b9b4877148a607458daceb7718da1aed6d804bb39777f812d"
+    },
+    "policy_surface_audit": {
+      "path": "artifact_outputs/analysis/policy_surface_audit.json",
+      "sha256": "3ae893f579d85cf4913e73d178742a86460370bcb278f88daea93c4995d40919"
+    }
+  },
+  "public_files": {
+    "analysis_bundle": {
+      "path": "artifact_outputs/analysis/official_llm_analysis_bundle.json",
+      "sha256": "e32c81f72b7d8cb7ba5e8cb1d04e355a8fab58123684a40dfd7b45c9a3f15dc5"
+    },
+    "connectivity_recovery": {
+      "path": "artifact_outputs/analysis/connectivity_recovery.jsonl",
+      "sha256": "f9da39f6dfc64ff099c773d4c221c92ef8db2e77ccbc58744b31ecf1c7f96bc1"
+    },
+    "data_preflight": {
+      "path": "artifact_outputs/analysis/data_preflight.json",
+      "sha256": "c8e1c6cda5ca0b4c2d506c2d62596018172a33a73e3c4c79891ce7d6e4bf3c89"
+    },
+    "data_quality": {
+      "path": "artifact_outputs/analysis/data_quality_report.json",
+      "sha256": "3a23eab0de46bf902d97eb88232f19d426d3ea5083245015d700e8c149657eff"
+    },
+    "ledger": {
+      "path": "artifact_outputs/analysis/run_ledger.json",
+      "sha256": "9b2492f8edda28083e29b0732197f06196fba6188a406bee0184f3b3e81ce500"
+    },
+    "manifest": {
+      "path": "artifact_outputs/analysis/run_manifest.json",
+      "sha256": "e43d4e9d709a61e15f7d114d58de09fa65860068b0170bab02f127fd2c5c18b8"
+    },
+    "provider_attempts": {
+      "path": "artifact_outputs/analysis/provider_attempts.jsonl",
+      "sha256": "41ec3a5498a5fb44f998ac3480218555ad20076a180f0b14e04a39147c663d6f"
+    },
+    "run_matrix": {
+      "path": "artifact_outputs/analysis/run_matrix.json",
+      "sha256": "be40873d53435d592eff19be9c7d1acb2bff0b109f54907f805e3cfab6de494a"
+    },
+    "summary": {
+      "path": "artifact_outputs/analysis/official_evaluation_summary.json",
+      "sha256": "83a6d76f2d0a590bbf2fc8c9bed38724dac45f908506d777ab7a321ed890105d"
+    }
+  },
+  "schema_version": 2,
+  "source_campaign_evidence_sha256": "41920aa5398b38bebfa5a134e8b155188ab286b5d8953d33287b8657040ab4f4",
+  "source_execution_evidence_sha256": "b596f1bba25d53285aa2bc05747cbb9c419d83f5674860084e3c1ff200f5283c",
+  "source_files": {
+    "analysis_bundle": {
+      "sha256": "e32c81f72b7d8cb7ba5e8cb1d04e355a8fab58123684a40dfd7b45c9a3f15dc5"
+    },
+    "connectivity_recovery": {
+      "sha256": "f9da39f6dfc64ff099c773d4c221c92ef8db2e77ccbc58744b31ecf1c7f96bc1"
+    },
+    "data_preflight": {
+      "sha256": "c8e1c6cda5ca0b4c2d506c2d62596018172a33a73e3c4c79891ce7d6e4bf3c89"
+    },
+    "data_quality": {
+      "sha256": "3a23eab0de46bf902d97eb88232f19d426d3ea5083245015d700e8c149657eff"
+    },
+    "ledger": {
+      "sha256": "9b2492f8edda28083e29b0732197f06196fba6188a406bee0184f3b3e81ce500"
+    },
+    "manifest": {
+      "sha256": "e43d4e9d709a61e15f7d114d58de09fa65860068b0170bab02f127fd2c5c18b8"
+    },
+    "provider_attempts": {
+      "sha256": "41ec3a5498a5fb44f998ac3480218555ad20076a180f0b14e04a39147c663d6f"
+    },
+    "run_matrix": {
+      "sha256": "be40873d53435d592eff19be9c7d1acb2bff0b109f54907f805e3cfab6de494a"
+    },
+    "summary": {
+      "sha256": "83a6d76f2d0a590bbf2fc8c9bed38724dac45f908506d777ab7a321ed890105d"
+    }
+  },
+  "source_protocol_freeze_sha256": "e6889d081957361fe7249325e09baf9c14f23e58bdfc4191bcf3b6e67a3fadf6",
+  "state": "public_campaign_evidence_projection",
+  "terminal_evidence_bytes_preserved": true,
+  "transformations": [
+    "primary evidence files were copied to stable reviewer-facing names",
+    "paired-test and run-accounting summaries were derived from the bound primary evidence"
+  ]
+}

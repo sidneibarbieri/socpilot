@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "task_id": "896473e96f3ec54f7e04065da38faafc",
+  "study_id": "projection_fidelity",
+  "model_name": "azure_gpt54",
+  "source_id": "compound_triage_bundle",
+  "input_sha256": "4b1f29e0ac41c8ffa8e2907e86fa1038409f8fcf7e624c20168e3d83f52b52a4",
+  "output": {
+    "extracted_actions": [
+      "investigate_enrich",
+      "collect_forensics",
+      "quarantine_artifact"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "dd1afa85e26766767cbdc7e008084c5d7a0dd23fcc55940cd124783e872128fc",
+    "response_sha256": "cfd58bcab94699dc66d6a78d76565198f49e9bf266dacc83aca34394ba93e183",
+    "usage": {
+      "prompt_tokens": 274,
+      "completion_tokens": 22,
+      "total_tokens": 296
+    },
+    "latency_ms": 2130,
+    "estimated_cost_usd": 0.001015,
+    "returned_model": "gpt-5.4-2026-03-05"
+  }
+}

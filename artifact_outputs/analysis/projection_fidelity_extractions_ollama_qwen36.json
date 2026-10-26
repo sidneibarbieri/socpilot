@@ -1,0 +1,484 @@
+{
+  "schema_version": 1,
+  "study_id": "projection_fidelity",
+  "run_id": "measurement_e6889d081957361f",
+  "model": "ollama_qwen36",
+  "records": [
+    {
+      "plan_id": "approval_disable_after_signoff",
+      "extracted_actions": [
+        "block_egress",
+        "reset_disable_account"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "approval_gated_disable",
+      "extracted_actions": [
+        "monitor_watch",
+        "reset_disable_account"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "approval_reimage_pending",
+      "extracted_actions": [
+        "reimage_format_host"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "benign_close",
+      "extracted_actions": [
+        "investigate_enrich",
+        "close_benign"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "benign_sanctioned_scan",
+      "extracted_actions": [
+        "close_benign"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "block_and_disable",
+      "extracted_actions": [
+        "block_egress",
+        "reset_disable_account",
+        "collect_forensics"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "compound_block_kill_forensics",
+      "extracted_actions": [
+        "block_egress",
+        "kill_process",
+        "collect_forensics"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "compound_contain_notify",
+      "extracted_actions": [
+        "isolate_host",
+        "escalate_notify"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "compound_kill_quarantine",
+      "extracted_actions": [
+        "kill_process",
+        "quarantine_artifact",
+        "collect_forensics"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "compound_triage_bundle",
+      "extracted_actions": [
+        "investigate_enrich",
+        "collect_forensics",
+        "quarantine_artifact"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "coreference_isolate_then_lift",
+      "extracted_actions": [
+        "isolate_host",
+        "lift_isolation"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "coreference_kill_then_quarantine",
+      "extracted_actions": [
+        "kill_process",
+        "quarantine_artifact"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "distractor_false_positive_pentest",
+      "extracted_actions": [
+        "investigate_enrich",
+        "close_benign"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "distractor_hypothetical_disable",
+      "extracted_actions": [
+        "quarantine_artifact",
+        "investigate_enrich"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "distractor_mentions_many",
+      "extracted_actions": [
+        "investigate_enrich",
+        "monitor_watch"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "distractor_playbook_boilerplate",
+      "extracted_actions": [
+        "investigate_enrich",
+        "monitor_watch"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "escalate_and_watch",
+      "extracted_actions": [
+        "escalate_notify",
+        "monitor_watch"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "full_ransomware_chain",
+      "extracted_actions": [
+        "isolate_host",
+        "kill_process",
+        "collect_forensics",
+        "escalate_notify"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "hedged_lean_isolate",
+      "extracted_actions": [
+        "isolate_host",
+        "collect_forensics"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "hedged_maybe_enrich",
+      "extracted_actions": [
+        "investigate_enrich",
+        "monitor_watch"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "indirect_block_egress",
+      "extracted_actions": [
+        "block_egress",
+        "investigate_enrich"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "indirect_disable_service_account",
+      "extracted_actions": [
+        "reset_disable_account"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "indirect_kill_miner",
+      "extracted_actions": [
+        "kill_process",
+        "investigate_enrich"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "indirect_kill_only",
+      "extracted_actions": [
+        "kill_process"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "indirect_quarantine_pdf",
+      "extracted_actions": [
+        "quarantine_artifact"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "lift_isolation_recovery",
+      "extracted_actions": [
+        "lift_isolation",
+        "monitor_watch"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "long_confirmed_intrusion",
+      "extracted_actions": [
+        "investigate_enrich",
+        "collect_forensics",
+        "isolate_host",
+        "block_egress",
+        "escalate_notify"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "long_ransomware_response",
+      "extracted_actions": [
+        "kill_process",
+        "quarantine_artifact",
+        "isolate_host",
+        "collect_forensics",
+        "escalate_notify"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "monitor_only_testbox",
+      "extracted_actions": [
+        "monitor_watch"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "negation_no_block_mirror",
+      "extracted_actions": [
+        "investigate_enrich",
+        "monitor_watch"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "negation_no_disable_exec",
+      "extracted_actions": [
+        "investigate_enrich",
+        "monitor_watch"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "negation_no_isolation",
+      "extracted_actions": [
+        "monitor_watch"
+      ],
+      "out_of_catalog": [
+        "enrich_alert"
+      ],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "negation_no_kill_scheduler",
+      "extracted_actions": [
+        "collect_forensics",
+        "escalate_notify"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "negation_no_reimage",
+      "extracted_actions": [
+        "isolate_host",
+        "escalate_notify"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "paraphrase_block_edge",
+      "extracted_actions": [
+        "block_egress"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "paraphrase_enrich_ioc",
+      "extracted_actions": [
+        "investigate_enrich"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "paraphrase_isolate_contain",
+      "extracted_actions": [
+        "isolate_host"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "paraphrase_isolate_forensics",
+      "extracted_actions": [
+        "collect_forensics",
+        "isolate_host"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "paraphrase_reimage_after_approval",
+      "extracted_actions": [
+        "collect_forensics",
+        "reimage_format_host"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "pure_triage",
+      "extracted_actions": [
+        "investigate_enrich",
+        "collect_forensics"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "quarantine_only",
+      "extracted_actions": [
+        "quarantine_artifact",
+        "investigate_enrich"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "reorder_block_then_enrich",
+      "extracted_actions": [
+        "block_egress",
+        "investigate_enrich"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "reorder_evidence_before_rebuild",
+      "extracted_actions": [
+        "collect_forensics",
+        "reimage_format_host",
+        "lift_isolation"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "reorder_forensics_first",
+      "extracted_actions": [
+        "collect_forensics",
+        "reimage_format_host",
+        "escalate_notify"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "waf_block_sqli",
+      "extracted_actions": [
+        "apply_ips_waf_rule",
+        "collect_forensics"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "waf_ips_exploit_enrich",
+      "extracted_actions": [
+        "apply_ips_waf_rule",
+        "investigate_enrich"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    },
+    {
+      "plan_id": "waf_rule_paraphrase",
+      "extracted_actions": [
+        "apply_ips_waf_rule",
+        "collect_forensics"
+      ],
+      "out_of_catalog": [],
+      "refused": false,
+      "parse_failed": false
+    }
+  ]
+}

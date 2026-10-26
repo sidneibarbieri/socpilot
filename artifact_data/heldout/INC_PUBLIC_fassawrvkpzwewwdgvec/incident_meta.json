@@ -1,0 +1,11 @@
+{
+  "incident_id": "INC_PUBLIC_fassawrvkpzwewwdgvec",
+  "incident_type": "suspicious_activity",
+  "severity": "high",
+  "asset_criticality": "high",
+  "asset_role": "bank_endpoint",
+  "time_window_start": "2020-07-17T21:16:54Z",
+  "time_window_end": "2020-07-17T22:09:56.683000Z",
+  "final_status": "resolved",
+  "asset_host": "host_0001"
+}

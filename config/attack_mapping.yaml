@@ -1,0 +1,557 @@
+# ATT&CK mapping rules.
+# Frozen before any LLM execution. Changes require a new protocol version.
+#
+# These rules map normalized SOAR telemetry events to MITRE ATT&CK
+# techniques via weighted signal scoring (see attack.py).
+#
+# Telemetry characteristics:
+#   - command_execution events carry the richest detection-name signal
+#   - case_note events carry normalized SIEM or analyst label text
+#   - source_type is effectively uniform (SOAR_EXPORT) and is therefore kept
+#     at near-zero discriminative weight
+#
+# Weight design:
+#   event_type_weight: 0.40  - necessary but not sufficient alone
+#   category_weight:   0.30  - most discriminative signal (detection name)
+#   command_weight:    0.25  - discriminative on case_note events
+#   source_type_weight: 0.05 - uniform (SOAR_EXPORT), near-zero signal
+#   Sum: 1.0 (perfect match)
+#
+# Threshold: min_confidence 0.55 requires event_type + at least one
+# discriminative signal (category or command) to fire.
+
+# Execution
+
+- rule_id: ATTACK_R01
+  technique_id: T1059.001
+  technique_name: PowerShell
+  tactic_id: TA0002
+  tactic_name: Execution
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - powershell
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+- rule_id: ATTACK_R02
+  technique_id: T1059.003
+  technique_name: Windows Command Shell
+  tactic_id: TA0002
+  tactic_name: Execution
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - cmd_exe
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+- rule_id: ATTACK_R03
+  technique_id: T1059
+  technique_name: Command and Scripting Interpreter
+  tactic_id: TA0002
+  tactic_name: Execution
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - command_injection
+    - code_injection
+    - indirect_command
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+# Initial Access
+
+- rule_id: ATTACK_R04
+  technique_id: T1190
+  technique_name: Exploit Public-Facing Application
+  tactic_id: TA0001
+  tactic_name: Initial Access
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - exploit
+    - sql_injection
+    - log4shell
+    - request_smuggling
+    - ssrf
+    - server_side_request_forgery
+    - struts
+    - unomi
+    - cve
+    - browser_exploit
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+- rule_id: ATTACK_R05
+  technique_id: T1190
+  technique_name: Exploit Public-Facing Application
+  tactic_id: TA0001
+  tactic_name: Initial Access
+  event_type_contains:
+    - case_note
+  command_contains:
+    - exploit
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+- rule_id: ATTACK_R06
+  technique_id: T1190
+  technique_name: Exploit Public-Facing Application
+  tactic_id: TA0001
+  tactic_name: Initial Access
+  event_type_contains:
+    - case_note
+  command_contains:
+    - sql injection
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+# Lateral Movement
+
+- rule_id: ATTACK_R07
+  technique_id: T1569.002
+  technique_name: Service Execution
+  tactic_id: TA0008
+  tactic_name: Lateral Movement
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - psexec
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+# Defense Evasion
+
+- rule_id: ATTACK_R08
+  technique_id: T1140
+  technique_name: Deobfuscate/Decode Files or Information
+  tactic_id: TA0005
+  tactic_name: Defense Evasion
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - certutil
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+- rule_id: ATTACK_R09
+  technique_id: T1562.001
+  technique_name: Disable or Modify Tools
+  tactic_id: TA0005
+  tactic_name: Defense Evasion
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - defense_evasion
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+- rule_id: ATTACK_R10
+  technique_id: T1112
+  technique_name: Modify Registry
+  tactic_id: TA0005
+  tactic_name: Defense Evasion
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - reg_exe
+    - registry
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+# Persistence
+
+- rule_id: ATTACK_R11
+  technique_id: T1546.008
+  technique_name: Accessibility Features
+  tactic_id: TA0003
+  tactic_name: Persistence
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - sethc
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+- rule_id: ATTACK_R12
+  technique_id: T1098
+  technique_name: Account Manipulation
+  tactic_id: TA0003
+  tactic_name: Persistence
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - account_was_changed
+    - password_never_expires
+    - alteracao_indevida
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+# Impact
+
+- rule_id: ATTACK_R13
+  technique_id: T1490
+  technique_name: Inhibit System Recovery
+  tactic_id: TA0040
+  tactic_name: Impact
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - bcdedit
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+# Discovery
+
+- rule_id: ATTACK_R14
+  technique_id: T1087
+  technique_name: Account Discovery
+  tactic_id: TA0007
+  tactic_name: Discovery
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - net_exe
+    - enumerated_users
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+- rule_id: ATTACK_R15
+  technique_id: T1016
+  technique_name: System Network Configuration Discovery
+  tactic_id: TA0007
+  tactic_name: Discovery
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - ipconfig
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+# Reconnaissance
+
+- rule_id: ATTACK_R16
+  technique_id: T1595
+  technique_name: Active Scanning
+  tactic_id: TA0043
+  tactic_name: Reconnaissance
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - scanning
+    - scanner
+    - recon
+    - nmap
+    - vulnerability_scan
+    - port_scanning
+    - udp_scan
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+- rule_id: ATTACK_R17
+  technique_id: T1595
+  technique_name: Active Scanning
+  tactic_id: TA0043
+  tactic_name: Reconnaissance
+  event_type_contains:
+    - case_note
+  command_contains:
+    - reconnaissance
+    - ftp reconnaissance
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+# Credential Access
+
+- rule_id: ATTACK_R18
+  technique_id: T1110
+  technique_name: Brute Force
+  tactic_id: TA0006
+  tactic_name: Credential Access
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - login_failure
+    - falhas_de_login
+    - account_was_locked
+    - contas_bloqueadas
+    - disabled_account
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+- rule_id: ATTACK_R19
+  technique_id: T1110
+  technique_name: Brute Force
+  tactic_id: TA0006
+  tactic_name: Credential Access
+  event_type_contains:
+    - case_note
+  command_contains:
+    - login failed
+    - authentication failed
+    - account locked
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+# Command and Control
+
+- rule_id: ATTACK_R20
+  technique_id: T1219
+  technique_name: Remote Access Software
+  tactic_id: TA0011
+  tactic_name: Command and Control
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - anydesk
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+- rule_id: ATTACK_R21
+  technique_id: T1571
+  technique_name: Non-Standard Port
+  tactic_id: TA0011
+  tactic_name: Command and Control
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - non_standard_port
+    - ssh_or_telnet
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+- rule_id: ATTACK_R22
+  technique_id: T1105
+  technique_name: Ingress Tool Transfer
+  tactic_id: TA0011
+  tactic_name: Command and Control
+  event_type_contains:
+    - case_note
+  command_contains:
+    - backdoor
+    - remote access
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+# Privilege Escalation
+
+- rule_id: ATTACK_R23
+  technique_id: T1078.004
+  technique_name: Cloud Accounts
+  tactic_id: TA0004
+  tactic_name: Privilege Escalation
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - privilege_escalation
+    - instance_profile
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+# Case note enrichment (SIEM category labels)
+
+- rule_id: ATTACK_R24
+  technique_id: T1204
+  technique_name: User Execution
+  tactic_id: TA0002
+  tactic_name: Execution
+  event_type_contains:
+    - case_note
+  command_contains:
+    - adware
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+- rule_id: ATTACK_R25
+  technique_id: T1059
+  technique_name: Command and Scripting Interpreter
+  tactic_id: TA0002
+  tactic_name: Execution
+  event_type_contains:
+    - case_note
+  command_contains:
+    - code injection
+    - remote code execution
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+# Network / Firewall
+
+- rule_id: ATTACK_R26
+  technique_id: T1071
+  technique_name: Application Layer Protocol
+  tactic_id: TA0011
+  tactic_name: Command and Control
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - quarentenado
+    - firewall
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+- rule_id: ATTACK_R27
+  technique_id: T1071
+  technique_name: Application Layer Protocol
+  tactic_id: TA0011
+  tactic_name: Command and Control
+  event_type_contains:
+    - case_note
+  command_contains:
+    - firewall
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+# Valid Accounts / Suspicious Logon
+
+- rule_id: ATTACK_R29
+  technique_id: T1078
+  technique_name: Valid Accounts
+  tactic_id: TA0001
+  tactic_name: Initial Access
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - unusual_number_of_devices
+    - session_join
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+- rule_id: ATTACK_R30
+  technique_id: T1078
+  technique_name: Valid Accounts
+  tactic_id: TA0001
+  tactic_name: Initial Access
+  event_type_contains:
+    - case_note
+  command_contains:
+    - login success
+    - user login success
+    - session opened
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+# Container Execution
+
+- rule_id: ATTACK_R31
+  technique_id: T1610
+  technique_name: Deploy Container
+  tactic_id: TA0005
+  tactic_name: Defense Evasion
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - traefik
+    - docker
+    - container
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55
+
+# Email-based attacks
+
+- rule_id: ATTACK_R28
+  technique_id: T1114
+  technique_name: Email Collection
+  tactic_id: TA0009
+  tactic_name: Collection
+  event_type_contains:
+    - command_execution
+  category_contains:
+    - emails
+    - invalid_recipients
+  event_type_weight: 0.40
+  category_weight: 0.30
+  command_weight: 0.25
+  source_type_weight: 0.05
+  min_confidence: 0.55

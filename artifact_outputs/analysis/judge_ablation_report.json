@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "study_id": "judge_ablation",
+  "run_id": "measurement_e6889d081957361f",
+  "protocol_freeze_sha256": "e6889d081957361fe7249325e09baf9c14f23e58bdfc4191bcf3b6e67a3fadf6",
+  "sample_size": 240,
+  "provider_task_count": 240,
+  "source_unavailable_count": 0,
+  "status_counts": {
+    "completed": 240
+  },
+  "scored": 240,
+  "missing_independent_judge": 0,
+  "ablation_judge": {
+    "false_accept": 0,
+    "false_accept_denominator": 176,
+    "false_accept_rate": 0.0,
+    "false_reject": 64,
+    "false_reject_denominator": 64,
+    "false_reject_rate": 1.0
+  },
+  "frozen_judge_on_same_sample": {
+    "false_accept": 133,
+    "false_accept_denominator": 176,
+    "false_accept_rate": 0.7556818181818182,
+    "false_reject": 17,
+    "false_reject_denominator": 64,
+    "false_reject_rate": 0.265625
+  }
+}

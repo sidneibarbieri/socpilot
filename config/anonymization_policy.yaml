@@ -1,0 +1,11 @@
+forbidden_terms:
+  - banco
+
+text_file_suffixes:
+  - .json
+  - .jsonl
+  - .yaml
+  - .yml
+  - .txt
+  - .md
+  - .csv

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "experiment_run_id": "measurement_e6889d081957361f__adversarial",
+  "policy_bundle": {
+    "schema_version": 1,
+    "bundle_sha256": "76ecc850217a8eeb6c804cc838aecbc14c3a90a14831363eceeae9b64a4cfa4c",
+    "inputs": [
+      {
+        "role": "action_catalog",
+        "path": "artifact_outputs/global/action_catalog.yaml",
+        "sha256": "282bd1842d431091da80f0b0e3fdd714ff9a1051e71ce5d31e067226a087400b",
+        "policy_id": null,
+        "review_status": "declared"
+      },
+      {
+        "role": "policy_rules",
+        "path": "artifact_outputs/global/constraints.yaml",
+        "sha256": "932eb36d686cec98847a63ac8fb862f7e1bd39d2ea86b892aaf7805e5ec38330",
+        "policy_id": null,
+        "review_status": "declared"
+      }
+    ]
+  },
+  "expected_cell_count": 160,
+  "observed_cell_count": 160,
+  "metrics": {
+    "schema_version": 1,
+    "total_cells": 160,
+    "families": [
+      {
+        "family_id": "mandatory",
+        "scope_kind": "content_triggered",
+        "cell_count": 160,
+        "applicable_count": 136,
+        "violated_count": 99,
+        "applicability_rate": 0.85,
+        "violation_rate": 0.7279
+      },
+      {
+        "family_id": "ordering",
+        "scope_kind": "global",
+        "cell_count": 160,
+        "applicable_count": 5,
+        "violated_count": 1,
+        "applicability_rate": 0.0312,
+        "violation_rate": 0.2
+      },
+      {
+        "family_id": "restraint",
+        "scope_kind": "content_triggered",
+        "cell_count": 160,
+        "applicable_count": 8,
+        "violated_count": 1,
+        "applicability_rate": 0.05,
+        "violation_rate": 0.125
+      }
+    ]
+  }
+}

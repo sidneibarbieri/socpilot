@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "6e8c18c4ff936a24a4cf973e9833d076",
+  "study_id": "projection_fidelity",
+  "model_name": "ollama_qwen36",
+  "source_id": "negation_no_kill_scheduler",
+  "input_sha256": "fa82ee99b21a13e7f40248d259db2affdb20ff3509d4f1c0bd264c2cc2bba8bb",
+  "output": {
+    "extracted_actions": [
+      "collect_forensics",
+      "escalate_notify"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "eab4ff1ecd2e923f342b6c4c54d9a7007cf5a3be0a39c429586cb7a09cc84eb3",
+    "response_sha256": "2c9a6f432e62ee1698c71bcccba8c22e75aa35a242dfc4268dc6dd47833d532e",
+    "usage": {
+      "prompt_tokens": 291,
+      "completion_tokens": 16,
+      "total_tokens": 307
+    },
+    "latency_ms": 405,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "qwen3.6:latest"
+  }
+}

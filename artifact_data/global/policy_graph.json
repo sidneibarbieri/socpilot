@@ -1,0 +1,1792 @@
+{
+  "edges": [
+    {
+      "edge_id": "account_probe_block:applies_when",
+      "kind": "applies_when",
+      "rule_id": "account_probe_block",
+      "source": "scope:account_probe_block",
+      "target": "rule:account_probe_block"
+    },
+    {
+      "edge_id": "account_probe_block:governs",
+      "kind": "governs",
+      "rule_id": "account_probe_block",
+      "source": "rule:account_probe_block",
+      "target": "action:block_egress"
+    },
+    {
+      "edge_id": "account_probe_block:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "account_probe_block",
+      "source": "rule:account_probe_block",
+      "target": "repair:account_probe_block"
+    },
+    {
+      "edge_id": "approve_account_disable:governs",
+      "kind": "governs",
+      "rule_id": "approve_account_disable",
+      "source": "rule:approve_account_disable",
+      "target": "action:reset_disable_account"
+    },
+    {
+      "edge_id": "approve_account_disable:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "approve_account_disable",
+      "source": "rule:approve_account_disable",
+      "target": "repair:approve_account_disable"
+    },
+    {
+      "edge_id": "approve_account_disable:requires_approval",
+      "kind": "requires_approval",
+      "rule_id": "approve_account_disable",
+      "source": "approval:approve_account_disable",
+      "target": "rule:approve_account_disable"
+    },
+    {
+      "edge_id": "approve_isolate:governs",
+      "kind": "governs",
+      "rule_id": "approve_isolate",
+      "source": "rule:approve_isolate",
+      "target": "action:isolate_host"
+    },
+    {
+      "edge_id": "approve_isolate:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "approve_isolate",
+      "source": "rule:approve_isolate",
+      "target": "repair:approve_isolate"
+    },
+    {
+      "edge_id": "approve_isolate:requires_approval",
+      "kind": "requires_approval",
+      "rule_id": "approve_isolate",
+      "source": "approval:approve_isolate",
+      "target": "rule:approve_isolate"
+    },
+    {
+      "edge_id": "approve_lift_isolation:governs",
+      "kind": "governs",
+      "rule_id": "approve_lift_isolation",
+      "source": "rule:approve_lift_isolation",
+      "target": "action:lift_isolation"
+    },
+    {
+      "edge_id": "approve_lift_isolation:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "approve_lift_isolation",
+      "source": "rule:approve_lift_isolation",
+      "target": "repair:approve_lift_isolation"
+    },
+    {
+      "edge_id": "approve_lift_isolation:requires_approval",
+      "kind": "requires_approval",
+      "rule_id": "approve_lift_isolation",
+      "source": "approval:approve_lift_isolation",
+      "target": "rule:approve_lift_isolation"
+    },
+    {
+      "edge_id": "approve_reimage:governs",
+      "kind": "governs",
+      "rule_id": "approve_reimage",
+      "source": "rule:approve_reimage",
+      "target": "action:reimage_format_host"
+    },
+    {
+      "edge_id": "approve_reimage:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "approve_reimage",
+      "source": "rule:approve_reimage",
+      "target": "repair:approve_reimage"
+    },
+    {
+      "edge_id": "approve_reimage:requires_approval",
+      "kind": "requires_approval",
+      "rule_id": "approve_reimage",
+      "source": "approval:approve_reimage",
+      "target": "rule:approve_reimage"
+    },
+    {
+      "edge_id": "c2_block:applies_when",
+      "kind": "applies_when",
+      "rule_id": "c2_block",
+      "source": "scope:c2_block",
+      "target": "rule:c2_block"
+    },
+    {
+      "edge_id": "c2_block:governs",
+      "kind": "governs",
+      "rule_id": "c2_block",
+      "source": "rule:c2_block",
+      "target": "action:block_egress"
+    },
+    {
+      "edge_id": "c2_block:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "c2_block",
+      "source": "rule:c2_block",
+      "target": "repair:c2_block"
+    },
+    {
+      "edge_id": "creddump_reset:applies_when",
+      "kind": "applies_when",
+      "rule_id": "creddump_reset",
+      "source": "scope:creddump_reset",
+      "target": "rule:creddump_reset"
+    },
+    {
+      "edge_id": "creddump_reset:governs",
+      "kind": "governs",
+      "rule_id": "creddump_reset",
+      "source": "rule:creddump_reset",
+      "target": "action:reset_disable_account"
+    },
+    {
+      "edge_id": "creddump_reset:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "creddump_reset",
+      "source": "rule:creddump_reset",
+      "target": "repair:creddump_reset"
+    },
+    {
+      "edge_id": "evasion_isolate:applies_when",
+      "kind": "applies_when",
+      "rule_id": "evasion_isolate",
+      "source": "scope:evasion_isolate",
+      "target": "rule:evasion_isolate"
+    },
+    {
+      "edge_id": "evasion_isolate:governs",
+      "kind": "governs",
+      "rule_id": "evasion_isolate",
+      "source": "rule:evasion_isolate",
+      "target": "action:isolate_host"
+    },
+    {
+      "edge_id": "evasion_isolate:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "evasion_isolate",
+      "source": "rule:evasion_isolate",
+      "target": "repair:evasion_isolate"
+    },
+    {
+      "edge_id": "evidence_before_reimage:governs",
+      "kind": "governs",
+      "rule_id": "evidence_before_reimage",
+      "source": "rule:evidence_before_reimage",
+      "target": "action:reimage_format_host"
+    },
+    {
+      "edge_id": "evidence_before_reimage:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "evidence_before_reimage",
+      "source": "rule:evidence_before_reimage",
+      "target": "repair:evidence_before_reimage"
+    },
+    {
+      "edge_id": "evidence_before_reimage:requires_before",
+      "kind": "requires_before",
+      "rule_id": "evidence_before_reimage",
+      "source": "action:collect_forensics",
+      "target": "action:reimage_format_host"
+    },
+    {
+      "edge_id": "exploit_waf_rule:applies_when",
+      "kind": "applies_when",
+      "rule_id": "exploit_waf_rule",
+      "source": "scope:exploit_waf_rule",
+      "target": "rule:exploit_waf_rule"
+    },
+    {
+      "edge_id": "exploit_waf_rule:governs",
+      "kind": "governs",
+      "rule_id": "exploit_waf_rule",
+      "source": "rule:exploit_waf_rule",
+      "target": "action:apply_ips_waf_rule"
+    },
+    {
+      "edge_id": "exploit_waf_rule:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "exploit_waf_rule",
+      "source": "rule:exploit_waf_rule",
+      "target": "repair:exploit_waf_rule"
+    },
+    {
+      "edge_id": "intel_match_block:applies_when",
+      "kind": "applies_when",
+      "rule_id": "intel_match_block",
+      "source": "scope:intel_match_block",
+      "target": "rule:intel_match_block"
+    },
+    {
+      "edge_id": "intel_match_block:governs",
+      "kind": "governs",
+      "rule_id": "intel_match_block",
+      "source": "rule:intel_match_block",
+      "target": "action:block_egress"
+    },
+    {
+      "edge_id": "intel_match_block:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "intel_match_block",
+      "source": "rule:intel_match_block",
+      "target": "repair:intel_match_block"
+    },
+    {
+      "edge_id": "malware_detect_quarantine:applies_when",
+      "kind": "applies_when",
+      "rule_id": "malware_detect_quarantine",
+      "source": "scope:malware_detect_quarantine",
+      "target": "rule:malware_detect_quarantine"
+    },
+    {
+      "edge_id": "malware_detect_quarantine:governs",
+      "kind": "governs",
+      "rule_id": "malware_detect_quarantine",
+      "source": "rule:malware_detect_quarantine",
+      "target": "action:quarantine_artifact"
+    },
+    {
+      "edge_id": "malware_detect_quarantine:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "malware_detect_quarantine",
+      "source": "rule:malware_detect_quarantine",
+      "target": "repair:malware_detect_quarantine"
+    },
+    {
+      "edge_id": "ops_monitor_no_isolate:applies_when",
+      "kind": "applies_when",
+      "rule_id": "ops_monitor_no_isolate",
+      "source": "scope:ops_monitor_no_isolate",
+      "target": "rule:ops_monitor_no_isolate"
+    },
+    {
+      "edge_id": "ops_monitor_no_isolate:governs",
+      "kind": "governs",
+      "rule_id": "ops_monitor_no_isolate",
+      "source": "rule:ops_monitor_no_isolate",
+      "target": "action:isolate_host"
+    },
+    {
+      "edge_id": "ops_monitor_no_isolate:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "ops_monitor_no_isolate",
+      "source": "rule:ops_monitor_no_isolate",
+      "target": "repair:ops_monitor_no_isolate"
+    },
+    {
+      "edge_id": "ops_monitor_no_reimage:applies_when",
+      "kind": "applies_when",
+      "rule_id": "ops_monitor_no_reimage",
+      "source": "scope:ops_monitor_no_reimage",
+      "target": "rule:ops_monitor_no_reimage"
+    },
+    {
+      "edge_id": "ops_monitor_no_reimage:governs",
+      "kind": "governs",
+      "rule_id": "ops_monitor_no_reimage",
+      "source": "rule:ops_monitor_no_reimage",
+      "target": "action:reimage_format_host"
+    },
+    {
+      "edge_id": "ops_monitor_no_reimage:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "ops_monitor_no_reimage",
+      "source": "rule:ops_monitor_no_reimage",
+      "target": "repair:ops_monitor_no_reimage"
+    },
+    {
+      "edge_id": "persistence_quarantine:applies_when",
+      "kind": "applies_when",
+      "rule_id": "persistence_quarantine",
+      "source": "scope:persistence_quarantine",
+      "target": "rule:persistence_quarantine"
+    },
+    {
+      "edge_id": "persistence_quarantine:governs",
+      "kind": "governs",
+      "rule_id": "persistence_quarantine",
+      "source": "rule:persistence_quarantine",
+      "target": "action:quarantine_artifact"
+    },
+    {
+      "edge_id": "persistence_quarantine:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "persistence_quarantine",
+      "source": "rule:persistence_quarantine",
+      "target": "repair:persistence_quarantine"
+    },
+    {
+      "edge_id": "recon_block:applies_when",
+      "kind": "applies_when",
+      "rule_id": "recon_block",
+      "source": "scope:recon_block",
+      "target": "rule:recon_block"
+    },
+    {
+      "edge_id": "recon_block:governs",
+      "kind": "governs",
+      "rule_id": "recon_block",
+      "source": "rule:recon_block",
+      "target": "action:block_egress"
+    },
+    {
+      "edge_id": "recon_block:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "recon_block",
+      "source": "rule:recon_block",
+      "target": "repair:recon_block"
+    },
+    {
+      "edge_id": "remote_access_block:applies_when",
+      "kind": "applies_when",
+      "rule_id": "remote_access_block",
+      "source": "scope:remote_access_block",
+      "target": "rule:remote_access_block"
+    },
+    {
+      "edge_id": "remote_access_block:governs",
+      "kind": "governs",
+      "rule_id": "remote_access_block",
+      "source": "rule:remote_access_block",
+      "target": "action:block_egress"
+    },
+    {
+      "edge_id": "remote_access_block:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "remote_access_block",
+      "source": "rule:remote_access_block",
+      "target": "repair:remote_access_block"
+    },
+    {
+      "edge_id": "sensor_tamper_isolate:applies_when",
+      "kind": "applies_when",
+      "rule_id": "sensor_tamper_isolate",
+      "source": "scope:sensor_tamper_isolate",
+      "target": "rule:sensor_tamper_isolate"
+    },
+    {
+      "edge_id": "sensor_tamper_isolate:governs",
+      "kind": "governs",
+      "rule_id": "sensor_tamper_isolate",
+      "source": "rule:sensor_tamper_isolate",
+      "target": "action:isolate_host"
+    },
+    {
+      "edge_id": "sensor_tamper_isolate:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "sensor_tamper_isolate",
+      "source": "rule:sensor_tamper_isolate",
+      "target": "repair:sensor_tamper_isolate"
+    },
+    {
+      "edge_id": "shadowcopy_tamper_isolate:applies_when",
+      "kind": "applies_when",
+      "rule_id": "shadowcopy_tamper_isolate",
+      "source": "scope:shadowcopy_tamper_isolate",
+      "target": "rule:shadowcopy_tamper_isolate"
+    },
+    {
+      "edge_id": "shadowcopy_tamper_isolate:governs",
+      "kind": "governs",
+      "rule_id": "shadowcopy_tamper_isolate",
+      "source": "rule:shadowcopy_tamper_isolate",
+      "target": "action:isolate_host"
+    },
+    {
+      "edge_id": "shadowcopy_tamper_isolate:repairs_with",
+      "kind": "repairs_with",
+      "rule_id": "shadowcopy_tamper_isolate",
+      "source": "rule:shadowcopy_tamper_isolate",
+      "target": "repair:shadowcopy_tamper_isolate"
+    }
+  ],
+  "nodes": [
+    {
+      "action": {
+        "action_id": "apply_ips_waf_rule",
+        "baseline_support": null,
+        "operational_role": "block a known exploit signature at the perimeter",
+        "phase": "containment",
+        "requires_approval": false,
+        "reversible": true
+      },
+      "approval_source": null,
+      "kind": "action",
+      "label": "apply_ips_waf_rule",
+      "node_id": "action:apply_ips_waf_rule",
+      "ordinal": 4,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": {
+        "action_id": "block_egress",
+        "baseline_support": null,
+        "operational_role": "block a suspicious outbound or external source",
+        "phase": "containment",
+        "requires_approval": false,
+        "reversible": true
+      },
+      "approval_source": null,
+      "kind": "action",
+      "label": "block_egress",
+      "node_id": "action:block_egress",
+      "ordinal": 3,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": {
+        "action_id": "close_benign",
+        "baseline_support": null,
+        "operational_role": "close the incident when the verdict is benign",
+        "phase": "post_incident",
+        "requires_approval": false,
+        "reversible": true
+      },
+      "approval_source": null,
+      "kind": "action",
+      "label": "close_benign",
+      "node_id": "action:close_benign",
+      "ordinal": 12,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": {
+        "action_id": "collect_forensics",
+        "baseline_support": null,
+        "operational_role": "preserve evidence and support root-cause analysis",
+        "phase": "investigation",
+        "requires_approval": false,
+        "reversible": true
+      },
+      "approval_source": null,
+      "kind": "action",
+      "label": "collect_forensics",
+      "node_id": "action:collect_forensics",
+      "ordinal": 1,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": {
+        "action_id": "escalate_notify",
+        "baseline_support": null,
+        "operational_role": "hand off to the agency or coordinator",
+        "phase": "post_incident",
+        "requires_approval": false,
+        "reversible": true
+      },
+      "approval_source": null,
+      "kind": "action",
+      "label": "escalate_notify",
+      "node_id": "action:escalate_notify",
+      "ordinal": 10,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": {
+        "action_id": "investigate_enrich",
+        "baseline_support": null,
+        "operational_role": "gather context and enrich indicators before deciding",
+        "phase": "triage",
+        "requires_approval": false,
+        "reversible": true
+      },
+      "approval_source": null,
+      "kind": "action",
+      "label": "investigate_enrich",
+      "node_id": "action:investigate_enrich",
+      "ordinal": 0,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": {
+        "action_id": "isolate_host",
+        "baseline_support": null,
+        "operational_role": "interrupt active host-level risk",
+        "phase": "containment",
+        "requires_approval": true,
+        "reversible": true
+      },
+      "approval_source": null,
+      "kind": "action",
+      "label": "isolate_host",
+      "node_id": "action:isolate_host",
+      "ordinal": 2,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": {
+        "action_id": "kill_process",
+        "baseline_support": null,
+        "operational_role": "terminate a confirmed malicious process",
+        "phase": "containment",
+        "requires_approval": false,
+        "reversible": true
+      },
+      "approval_source": null,
+      "kind": "action",
+      "label": "kill_process",
+      "node_id": "action:kill_process",
+      "ordinal": 5,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": {
+        "action_id": "lift_isolation",
+        "baseline_support": null,
+        "operational_role": "return an isolated host to the network after validation",
+        "phase": "recovery",
+        "requires_approval": true,
+        "reversible": true
+      },
+      "approval_source": null,
+      "kind": "action",
+      "label": "lift_isolation",
+      "node_id": "action:lift_isolation",
+      "ordinal": 8,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": {
+        "action_id": "monitor_watch",
+        "baseline_support": null,
+        "operational_role": "keep the host or indicator under observation",
+        "phase": "post_incident",
+        "requires_approval": false,
+        "reversible": true
+      },
+      "approval_source": null,
+      "kind": "action",
+      "label": "monitor_watch",
+      "node_id": "action:monitor_watch",
+      "ordinal": 11,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": {
+        "action_id": "quarantine_artifact",
+        "baseline_support": null,
+        "operational_role": "remove or quarantine a malicious file",
+        "phase": "containment",
+        "requires_approval": false,
+        "reversible": true
+      },
+      "approval_source": null,
+      "kind": "action",
+      "label": "quarantine_artifact",
+      "node_id": "action:quarantine_artifact",
+      "ordinal": 6,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": {
+        "action_id": "reimage_format_host",
+        "baseline_support": null,
+        "operational_role": "rebuild a compromised host from a clean image",
+        "phase": "recovery",
+        "requires_approval": true,
+        "reversible": false
+      },
+      "approval_source": null,
+      "kind": "action",
+      "label": "reimage_format_host",
+      "node_id": "action:reimage_format_host",
+      "ordinal": 9,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": {
+        "action_id": "reset_disable_account",
+        "baseline_support": null,
+        "operational_role": "cut credential-reuse risk after account exposure",
+        "phase": "containment",
+        "requires_approval": true,
+        "reversible": true
+      },
+      "approval_source": null,
+      "kind": "action",
+      "label": "reset_disable_account",
+      "node_id": "action:reset_disable_account",
+      "ordinal": 7,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": "agency_coordinator_signoff",
+      "kind": "approval",
+      "label": "agency_coordinator_signoff",
+      "node_id": "approval:approve_account_disable",
+      "ordinal": 4,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": "agency_coordinator_signoff",
+      "kind": "approval",
+      "label": "agency_coordinator_signoff",
+      "node_id": "approval:approve_isolate",
+      "ordinal": 1,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": "agency_coordinator_signoff",
+      "kind": "approval",
+      "label": "agency_coordinator_signoff",
+      "node_id": "approval:approve_lift_isolation",
+      "ordinal": 3,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": "agency_coordinator_signoff",
+      "kind": "approval",
+      "label": "agency_coordinator_signoff",
+      "node_id": "approval:approve_reimage",
+      "ordinal": 2,
+      "repair_operator": null,
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "insert",
+      "node_id": "repair:account_probe_block",
+      "ordinal": 10,
+      "repair_operator": "insert",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "remove",
+      "node_id": "repair:approve_account_disable",
+      "ordinal": 4,
+      "repair_operator": "remove",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "remove",
+      "node_id": "repair:approve_isolate",
+      "ordinal": 1,
+      "repair_operator": "remove",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "remove",
+      "node_id": "repair:approve_lift_isolation",
+      "ordinal": 3,
+      "repair_operator": "remove",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "remove",
+      "node_id": "repair:approve_reimage",
+      "ordinal": 2,
+      "repair_operator": "remove",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "insert",
+      "node_id": "repair:c2_block",
+      "ordinal": 18,
+      "repair_operator": "insert",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "insert",
+      "node_id": "repair:creddump_reset",
+      "ordinal": 13,
+      "repair_operator": "insert",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "insert",
+      "node_id": "repair:evasion_isolate",
+      "ordinal": 14,
+      "repair_operator": "insert",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "insert_before",
+      "node_id": "repair:evidence_before_reimage",
+      "ordinal": 0,
+      "repair_operator": "insert_before",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "insert",
+      "node_id": "repair:exploit_waf_rule",
+      "ordinal": 15,
+      "repair_operator": "insert",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "insert",
+      "node_id": "repair:intel_match_block",
+      "ordinal": 6,
+      "repair_operator": "insert",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "insert",
+      "node_id": "repair:malware_detect_quarantine",
+      "ordinal": 9,
+      "repair_operator": "insert",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "remove",
+      "node_id": "repair:ops_monitor_no_isolate",
+      "ordinal": 11,
+      "repair_operator": "remove",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "remove",
+      "node_id": "repair:ops_monitor_no_reimage",
+      "ordinal": 12,
+      "repair_operator": "remove",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "insert",
+      "node_id": "repair:persistence_quarantine",
+      "ordinal": 16,
+      "repair_operator": "insert",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "insert",
+      "node_id": "repair:recon_block",
+      "ordinal": 17,
+      "repair_operator": "insert",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "insert",
+      "node_id": "repair:remote_access_block",
+      "ordinal": 8,
+      "repair_operator": "insert",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "insert",
+      "node_id": "repair:sensor_tamper_isolate",
+      "ordinal": 7,
+      "repair_operator": "insert",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "repair",
+      "label": "insert",
+      "node_id": "repair:shadowcopy_tamper_isolate",
+      "ordinal": 5,
+      "repair_operator": "insert",
+      "rule": null,
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "account_probe_block",
+      "node_id": "rule:account_probe_block",
+      "ordinal": 10,
+      "repair_operator": null,
+      "rule": {
+        "action": "block_egress",
+        "alternative_repair_operator": null,
+        "approval_evidence": null,
+        "condition_action": null,
+        "evidence_basis": "behavior class account_probing (T1110/T1087); derivation 9/200, transfer-check batch 9/200",
+        "evidence_tier": "operational",
+        "governance_scope": "network",
+        "official_eval_activated": null,
+        "rationale": "Repeated authentication probing is blocked at its source",
+        "repair_operator": "insert",
+        "rule_id": "account_probe_block",
+        "scope": {
+          "category_contains": [
+            "login_failure",
+            "falhas_de_login",
+            "locked_out",
+            "contas_bloqueadas",
+            "enumerated_users",
+            "context_label_004",
+            "diversos_ip"
+          ]
+        },
+        "severity": "hard",
+        "type": "mandatory"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "approve_account_disable",
+      "node_id": "rule:approve_account_disable",
+      "ordinal": 4,
+      "repair_operator": null,
+      "rule": {
+        "action": "reset_disable_account",
+        "alternative_repair_operator": "defer_to_human_approval",
+        "approval_evidence": {
+          "default_when_absent": "not_approved",
+          "source": "agency_coordinator_signoff"
+        },
+        "condition_action": null,
+        "evidence_basis": "Authored safety requirement for disruptive identity actions",
+        "evidence_tier": "specification",
+        "governance_scope": "identity",
+        "official_eval_activated": null,
+        "rationale": "Disabling an account locks a person out of business systems",
+        "repair_operator": "remove",
+        "rule_id": "approve_account_disable",
+        "scope": null,
+        "severity": "hard",
+        "type": "require_approval"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "approve_isolate",
+      "node_id": "rule:approve_isolate",
+      "ordinal": 1,
+      "repair_operator": null,
+      "rule": {
+        "action": "isolate_host",
+        "alternative_repair_operator": "defer_to_human_approval",
+        "approval_evidence": {
+          "default_when_absent": "not_approved",
+          "source": "agency_coordinator_signoff"
+        },
+        "condition_action": null,
+        "evidence_basis": "Authored safety requirement for deployments with authenticated approval records",
+        "evidence_tier": "specification",
+        "governance_scope": "endpoint",
+        "official_eval_activated": null,
+        "rationale": "Host isolation interrupts agency business and needs coordinator sign-off",
+        "repair_operator": "remove",
+        "rule_id": "approve_isolate",
+        "scope": null,
+        "severity": "hard",
+        "type": "require_approval"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "approve_lift_isolation",
+      "node_id": "rule:approve_lift_isolation",
+      "ordinal": 3,
+      "repair_operator": null,
+      "rule": {
+        "action": "lift_isolation",
+        "alternative_repair_operator": "defer_to_human_approval",
+        "approval_evidence": {
+          "default_when_absent": "not_approved",
+          "source": "agency_coordinator_signoff"
+        },
+        "condition_action": null,
+        "evidence_basis": "Authored safety requirement for returning a contained host to the network",
+        "evidence_tier": "specification",
+        "governance_scope": "endpoint",
+        "official_eval_activated": null,
+        "rationale": "Returning a host to the network reopens the risk isolation contained",
+        "repair_operator": "remove",
+        "rule_id": "approve_lift_isolation",
+        "scope": null,
+        "severity": "hard",
+        "type": "require_approval"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "approve_reimage",
+      "node_id": "rule:approve_reimage",
+      "ordinal": 2,
+      "repair_operator": null,
+      "rule": {
+        "action": "reimage_format_host",
+        "alternative_repair_operator": "defer_to_human_approval",
+        "approval_evidence": {
+          "default_when_absent": "not_approved",
+          "source": "agency_coordinator_signoff"
+        },
+        "condition_action": null,
+        "evidence_basis": "Authored safety requirement for irreversible recovery actions",
+        "evidence_tier": "specification",
+        "governance_scope": "endpoint",
+        "official_eval_activated": null,
+        "rationale": "Reimaging is the catalog's only irreversible action",
+        "repair_operator": "remove",
+        "rule_id": "approve_reimage",
+        "scope": null,
+        "severity": "hard",
+        "type": "require_approval"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "c2_block",
+      "node_id": "rule:c2_block",
+      "ordinal": 18,
+      "repair_operator": null,
+      "rule": {
+        "action": "block_egress",
+        "alternative_repair_operator": null,
+        "approval_evidence": null,
+        "condition_action": null,
+        "evidence_basis": "behavior class c2_network_activity (T1102/T1071); derivation 4/200, transfer-check batch 1/200",
+        "evidence_tier": "operational",
+        "governance_scope": "network",
+        "official_eval_activated": null,
+        "rationale": "Suspected command-and-control traffic is cut at egress",
+        "repair_operator": "insert",
+        "rule_id": "c2_block",
+        "scope": {
+          "category_contains": [
+            "web_service",
+            "application_layer_protocols",
+            "network_activity_with_a_remote_destination",
+            "https_ou_ssh"
+          ]
+        },
+        "severity": "hard",
+        "type": "mandatory"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "creddump_reset",
+      "node_id": "rule:creddump_reset",
+      "ordinal": 13,
+      "repair_operator": null,
+      "rule": {
+        "action": "reset_disable_account",
+        "alternative_repair_operator": null,
+        "approval_evidence": null,
+        "condition_action": null,
+        "evidence_basis": "behavior class credential_access (T1003); derivation 9/200, transfer-check batch 1/200",
+        "evidence_tier": "operational",
+        "governance_scope": "identity",
+        "official_eval_activated": null,
+        "rationale": "Dumped credentials are invalid the moment they are dumped",
+        "repair_operator": "insert",
+        "rule_id": "creddump_reset",
+        "scope": {
+          "category_contains": [
+            "credential",
+            "dumping"
+          ]
+        },
+        "severity": "hard",
+        "type": "mandatory"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "evasion_isolate",
+      "node_id": "rule:evasion_isolate",
+      "ordinal": 14,
+      "repair_operator": null,
+      "rule": {
+        "action": "isolate_host",
+        "alternative_repair_operator": null,
+        "approval_evidence": null,
+        "condition_action": null,
+        "evidence_basis": "behavior class defense_evasion (T1036/T1055); derivation 17/200, transfer-check batch 2/200",
+        "evidence_tier": "operational",
+        "governance_scope": "endpoint",
+        "official_eval_activated": null,
+        "rationale": "Active evasion indicates a live foothold; contain the host",
+        "repair_operator": "insert",
+        "rule_id": "evasion_isolate",
+        "scope": {
+          "category_contains": [
+            "masquerading",
+            "evasion",
+            "injection",
+            "injected",
+            "recycle_bin",
+            "bypass"
+          ]
+        },
+        "severity": "hard",
+        "type": "mandatory"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "evidence_before_reimage",
+      "node_id": "rule:evidence_before_reimage",
+      "ordinal": 0,
+      "repair_operator": null,
+      "rule": {
+        "action": "reimage_format_host",
+        "alternative_repair_operator": null,
+        "approval_evidence": null,
+        "condition_action": "collect_forensics",
+        "evidence_basis": "Structural operational policy: collect evidence before irreversible recovery",
+        "evidence_tier": "operational",
+        "governance_scope": "endpoint",
+        "official_eval_activated": null,
+        "rationale": "Reimaging destroys volatile evidence; forensics must precede recovery",
+        "repair_operator": "insert_before",
+        "rule_id": "evidence_before_reimage",
+        "scope": null,
+        "severity": "hard",
+        "type": "prohibit_before"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "exploit_waf_rule",
+      "node_id": "rule:exploit_waf_rule",
+      "ordinal": 15,
+      "repair_operator": null,
+      "rule": {
+        "action": "apply_ips_waf_rule",
+        "alternative_repair_operator": null,
+        "approval_evidence": null,
+        "condition_action": null,
+        "evidence_basis": "behavior class exploit_attempt (T1190); derivation 17/200, transfer-check batch 2/200; analyst record shows WAF rule against Log4Shell",
+        "evidence_tier": "operational",
+        "governance_scope": "network",
+        "official_eval_activated": null,
+        "rationale": "A known exploit signature is blocked at the perimeter",
+        "repair_operator": "insert",
+        "rule_id": "exploit_waf_rule",
+        "scope": {
+          "category_contains": [
+            "exploit",
+            "log4shell",
+            "ssrf",
+            "smuggling",
+            "heap_spray",
+            "cgi",
+            "worm"
+          ]
+        },
+        "severity": "hard",
+        "type": "mandatory"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "intel_match_block",
+      "node_id": "rule:intel_match_block",
+      "ordinal": 6,
+      "repair_operator": null,
+      "rule": {
+        "action": "block_egress",
+        "alternative_repair_operator": null,
+        "approval_evidence": null,
+        "condition_action": null,
+        "evidence_basis": "behavior class intelligence_indicator_match; derivation 19/200, transfer-check batch 92/200",
+        "evidence_tier": "operational",
+        "governance_scope": "network",
+        "official_eval_activated": null,
+        "rationale": "A reviewed intelligence match is actionable; block the matched source",
+        "repair_operator": "insert",
+        "rule_id": "intel_match_block",
+        "scope": {
+          "category_contains": [
+            "custom_intelligence_indicator",
+            "ioc_management_action",
+            "edr_intelligence_indicator",
+            "indicator_of_compromise",
+            "quarenten"
+          ]
+        },
+        "severity": "hard",
+        "type": "mandatory"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "malware_detect_quarantine",
+      "node_id": "rule:malware_detect_quarantine",
+      "ordinal": 9,
+      "repair_operator": null,
+      "rule": {
+        "action": "quarantine_artifact",
+        "alternative_repair_operator": null,
+        "approval_evidence": null,
+        "condition_action": null,
+        "evidence_basis": "behavior class malware_detection; derivation 59/200, transfer-check batch 10/200",
+        "evidence_tier": "operational",
+        "governance_scope": "endpoint",
+        "official_eval_activated": null,
+        "rationale": "A reviewed EDR/ML malicious verdict requires quarantining the artifact",
+        "repair_operator": "insert",
+        "rule_id": "malware_detect_quarantine",
+        "scope": {
+          "category_contains": [
+            "machine_learning",
+            "sensor_based_ml",
+            "ml_algorithm",
+            "adware_pup",
+            "malware",
+            "malicious",
+            "suspicious",
+            "suspei",
+            "powershell",
+            "command_line",
+            "edr_detection",
+            "ml"
+          ]
+        },
+        "severity": "hard",
+        "type": "mandatory"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "ops_monitor_no_isolate",
+      "node_id": "rule:ops_monitor_no_isolate",
+      "ordinal": 11,
+      "repair_operator": null,
+      "rule": {
+        "action": "isolate_host",
+        "alternative_repair_operator": null,
+        "approval_evidence": null,
+        "condition_action": null,
+        "evidence_basis": "behavior class ops_monitoring; derivation 7/200, transfer-check batch 17/200",
+        "evidence_tier": "operational",
+        "governance_scope": "endpoint",
+        "official_eval_activated": null,
+        "rationale": "Isolating a host over an operational-monitoring event disrupts a branch for nothing",
+        "repair_operator": "remove",
+        "rule_id": "ops_monitor_no_isolate",
+        "scope": {
+          "category_contains": [
+            "zabbix",
+            "context_label_001",
+            "administration_edit",
+            "stopped_sending_events",
+            "monitoramento",
+            "context_label_003",
+            "context_label_002",
+            "unomi"
+          ]
+        },
+        "severity": "hard",
+        "type": "prohibit_when"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "ops_monitor_no_reimage",
+      "node_id": "rule:ops_monitor_no_reimage",
+      "ordinal": 12,
+      "repair_operator": null,
+      "rule": {
+        "action": "reimage_format_host",
+        "alternative_repair_operator": null,
+        "approval_evidence": null,
+        "condition_action": null,
+        "evidence_basis": "behavior class ops_monitoring; derivation 7/200, transfer-check batch 17/200",
+        "evidence_tier": "operational",
+        "governance_scope": "endpoint",
+        "official_eval_activated": null,
+        "rationale": "Destructive recovery is never a response to an operational-monitoring event",
+        "repair_operator": "remove",
+        "rule_id": "ops_monitor_no_reimage",
+        "scope": {
+          "category_contains": [
+            "zabbix",
+            "context_label_001",
+            "administration_edit",
+            "stopped_sending_events",
+            "monitoramento",
+            "context_label_003",
+            "context_label_002",
+            "unomi"
+          ]
+        },
+        "severity": "hard",
+        "type": "prohibit_when"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "persistence_quarantine",
+      "node_id": "rule:persistence_quarantine",
+      "ordinal": 16,
+      "repair_operator": null,
+      "rule": {
+        "action": "quarantine_artifact",
+        "alternative_repair_operator": null,
+        "approval_evidence": null,
+        "condition_action": null,
+        "evidence_basis": "behavior class persistence_manipulation (T1053/T1136); derivation 8/200, transfer-check batch 0/200",
+        "evidence_tier": "operational",
+        "governance_scope": "endpoint",
+        "official_eval_activated": null,
+        "rationale": "A planted persistence mechanism is removed, not observed",
+        "repair_operator": "insert",
+        "rule_id": "persistence_quarantine",
+        "scope": {
+          "category_contains": [
+            "scheduled_task",
+            "schedule_a_task",
+            "usu_aacute_rio_local",
+            "atributos_de_conta",
+            "password_never"
+          ]
+        },
+        "severity": "hard",
+        "type": "mandatory"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "recon_block",
+      "node_id": "rule:recon_block",
+      "ordinal": 17,
+      "repair_operator": null,
+      "rule": {
+        "action": "block_egress",
+        "alternative_repair_operator": null,
+        "approval_evidence": null,
+        "condition_action": null,
+        "evidence_basis": "behavior class recon_scanning (T1046/T1595); derivation 13/200, transfer-check batch 1/200",
+        "evidence_tier": "operational",
+        "governance_scope": "network",
+        "official_eval_activated": null,
+        "rationale": "Sustained scanning from one source is blocked before exploitation",
+        "repair_operator": "insert",
+        "rule_id": "recon_block",
+        "scope": {
+          "category_contains": [
+            "scan",
+            "nmap",
+            "recon"
+          ]
+        },
+        "severity": "hard",
+        "type": "mandatory"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "remote_access_block",
+      "node_id": "rule:remote_access_block",
+      "ordinal": 8,
+      "repair_operator": null,
+      "rule": {
+        "action": "block_egress",
+        "alternative_repair_operator": null,
+        "approval_evidence": null,
+        "condition_action": null,
+        "evidence_basis": "behavior class suspicious_remote_access (T1133/T1021); derivation 6/200, transfer-check batch 9/200",
+        "evidence_tier": "operational",
+        "governance_scope": "network",
+        "official_eval_activated": null,
+        "rationale": "Unauthorized remote-access channels are cut at the perimeter",
+        "repair_operator": "insert",
+        "rule_id": "remote_access_block",
+        "scope": {
+          "category_contains": [
+            "accept_remote",
+            "acesso_remoto",
+            "ssh_or_telnet",
+            "remoteaccess",
+            "remote_administrat",
+            "lateral_movement",
+            "remote_services"
+          ]
+        },
+        "severity": "hard",
+        "type": "mandatory"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "sensor_tamper_isolate",
+      "node_id": "rule:sensor_tamper_isolate",
+      "ordinal": 7,
+      "repair_operator": null,
+      "rule": {
+        "action": "isolate_host",
+        "alternative_repair_operator": null,
+        "approval_evidence": null,
+        "condition_action": null,
+        "evidence_basis": "behavior class security_tool_tampering (T1562); derivation 6/200, transfer-check batch 3/200",
+        "evidence_tier": "operational",
+        "governance_scope": "endpoint",
+        "official_eval_activated": null,
+        "rationale": "Tampering with the security sensor blinds defense; contain the host",
+        "repair_operator": "insert",
+        "rule_id": "sensor_tamper_isolate",
+        "scope": {
+          "category_contains": [
+            "falcon_sensor",
+            "disable_or_modify_tools"
+          ]
+        },
+        "severity": "hard",
+        "type": "mandatory"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "rule",
+      "label": "shadowcopy_tamper_isolate",
+      "node_id": "rule:shadowcopy_tamper_isolate",
+      "ordinal": 5,
+      "repair_operator": null,
+      "rule": {
+        "action": "isolate_host",
+        "alternative_repair_operator": null,
+        "approval_evidence": null,
+        "condition_action": null,
+        "evidence_basis": "behavior class volume_shadow_copy_tampering (T1490); derivation 17/200, transfer-check batch 54/200",
+        "evidence_tier": "operational",
+        "governance_scope": "endpoint",
+        "official_eval_activated": null,
+        "rationale": "Shadow-copy tampering is the ransomware precursor; contain before encryption",
+        "repair_operator": "insert",
+        "rule_id": "shadowcopy_tamper_isolate",
+        "scope": {
+          "category_contains": [
+            "volume_shadow"
+          ]
+        },
+        "severity": "hard",
+        "type": "mandatory"
+      },
+      "scope": null
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "scope",
+      "label": "category_contains",
+      "node_id": "scope:account_probe_block",
+      "ordinal": 10,
+      "repair_operator": null,
+      "rule": null,
+      "scope": {
+        "category_contains": [
+          "login_failure",
+          "falhas_de_login",
+          "locked_out",
+          "contas_bloqueadas",
+          "enumerated_users",
+          "context_label_004",
+          "diversos_ip"
+        ]
+      }
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "scope",
+      "label": "category_contains",
+      "node_id": "scope:c2_block",
+      "ordinal": 18,
+      "repair_operator": null,
+      "rule": null,
+      "scope": {
+        "category_contains": [
+          "web_service",
+          "application_layer_protocols",
+          "network_activity_with_a_remote_destination",
+          "https_ou_ssh"
+        ]
+      }
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "scope",
+      "label": "category_contains",
+      "node_id": "scope:creddump_reset",
+      "ordinal": 13,
+      "repair_operator": null,
+      "rule": null,
+      "scope": {
+        "category_contains": [
+          "credential",
+          "dumping"
+        ]
+      }
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "scope",
+      "label": "category_contains",
+      "node_id": "scope:evasion_isolate",
+      "ordinal": 14,
+      "repair_operator": null,
+      "rule": null,
+      "scope": {
+        "category_contains": [
+          "masquerading",
+          "evasion",
+          "injection",
+          "injected",
+          "recycle_bin",
+          "bypass"
+        ]
+      }
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "scope",
+      "label": "category_contains",
+      "node_id": "scope:exploit_waf_rule",
+      "ordinal": 15,
+      "repair_operator": null,
+      "rule": null,
+      "scope": {
+        "category_contains": [
+          "exploit",
+          "log4shell",
+          "ssrf",
+          "smuggling",
+          "heap_spray",
+          "cgi",
+          "worm"
+        ]
+      }
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "scope",
+      "label": "category_contains",
+      "node_id": "scope:intel_match_block",
+      "ordinal": 6,
+      "repair_operator": null,
+      "rule": null,
+      "scope": {
+        "category_contains": [
+          "custom_intelligence_indicator",
+          "ioc_management_action",
+          "edr_intelligence_indicator",
+          "indicator_of_compromise",
+          "quarenten"
+        ]
+      }
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "scope",
+      "label": "category_contains",
+      "node_id": "scope:malware_detect_quarantine",
+      "ordinal": 9,
+      "repair_operator": null,
+      "rule": null,
+      "scope": {
+        "category_contains": [
+          "machine_learning",
+          "sensor_based_ml",
+          "ml_algorithm",
+          "adware_pup",
+          "malware",
+          "malicious",
+          "suspicious",
+          "suspei",
+          "powershell",
+          "command_line",
+          "edr_detection",
+          "ml"
+        ]
+      }
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "scope",
+      "label": "category_contains",
+      "node_id": "scope:ops_monitor_no_isolate",
+      "ordinal": 11,
+      "repair_operator": null,
+      "rule": null,
+      "scope": {
+        "category_contains": [
+          "zabbix",
+          "context_label_001",
+          "administration_edit",
+          "stopped_sending_events",
+          "monitoramento",
+          "context_label_003",
+          "context_label_002",
+          "unomi"
+        ]
+      }
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "scope",
+      "label": "category_contains",
+      "node_id": "scope:ops_monitor_no_reimage",
+      "ordinal": 12,
+      "repair_operator": null,
+      "rule": null,
+      "scope": {
+        "category_contains": [
+          "zabbix",
+          "context_label_001",
+          "administration_edit",
+          "stopped_sending_events",
+          "monitoramento",
+          "context_label_003",
+          "context_label_002",
+          "unomi"
+        ]
+      }
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "scope",
+      "label": "category_contains",
+      "node_id": "scope:persistence_quarantine",
+      "ordinal": 16,
+      "repair_operator": null,
+      "rule": null,
+      "scope": {
+        "category_contains": [
+          "scheduled_task",
+          "schedule_a_task",
+          "usu_aacute_rio_local",
+          "atributos_de_conta",
+          "password_never"
+        ]
+      }
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "scope",
+      "label": "category_contains",
+      "node_id": "scope:recon_block",
+      "ordinal": 17,
+      "repair_operator": null,
+      "rule": null,
+      "scope": {
+        "category_contains": [
+          "scan",
+          "nmap",
+          "recon"
+        ]
+      }
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "scope",
+      "label": "category_contains",
+      "node_id": "scope:remote_access_block",
+      "ordinal": 8,
+      "repair_operator": null,
+      "rule": null,
+      "scope": {
+        "category_contains": [
+          "accept_remote",
+          "acesso_remoto",
+          "ssh_or_telnet",
+          "remoteaccess",
+          "remote_administrat",
+          "lateral_movement",
+          "remote_services"
+        ]
+      }
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "scope",
+      "label": "category_contains",
+      "node_id": "scope:sensor_tamper_isolate",
+      "ordinal": 7,
+      "repair_operator": null,
+      "rule": null,
+      "scope": {
+        "category_contains": [
+          "falcon_sensor",
+          "disable_or_modify_tools"
+        ]
+      }
+    },
+    {
+      "action": null,
+      "approval_source": null,
+      "kind": "scope",
+      "label": "category_contains",
+      "node_id": "scope:shadowcopy_tamper_isolate",
+      "ordinal": 5,
+      "repair_operator": null,
+      "rule": null,
+      "scope": {
+        "category_contains": [
+          "volume_shadow"
+        ]
+      }
+    }
+  ],
+  "policy_digest": "6db986bc5b4c183c48f2db2bf8150526b57f1b310f32ea38ab3816242c44bffd",
+  "schema_version": 1
+}

@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOCpilot Audit Dashboard</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%230b1b33%22%2F%3E%3Cpath%20d%3D%22M47%2017%2021%2030l11%203%203%2011z%22%20fill%3D%22%232463d6%22%2F%3E%3C%2Fsvg%3E">
+<style>
+:root {
+  color-scheme: light;
+  --bg: #f7f8fa;
+  --ink: #17202a;
+  --muted: #5e6a78;
+  --line: #d8dee8;
+  --blue: #1c5a86;
+  --green: #176d55;
+  --red: #a13f35;
+  --surface: #ffffff;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font: 14px/1.45 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+}
+header {
+  padding: 28px 32px 20px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+h1 { margin: 0 0 6px; font-size: 28px; letter-spacing: 0; }
+.subtitle { color: var(--muted); max-width: 980px; }
+.toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 32px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255,255,255,.96);
+}
+select, input, button {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: white;
+  min-width: 160px;
+}
+button { color: var(--ink); cursor: pointer; min-width: auto; }
+button:hover { border-color: var(--blue); color: var(--blue); }
+select:focus-visible, input:focus-visible, button:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+#filterStatus { flex-basis: 100%; color: var(--muted); }
+.toolbar { flex-wrap: wrap; }
+.table-scroll { max-width: 100%; overflow-x: auto; }
+.table-scroll:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.empty-results { color: var(--muted); }
+main { padding: 24px 32px 40px; }
+.quickstart {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.quick-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 14px;
+}
+.quick-card h2 { margin: 0 0 8px; font-size: 15px; }
+.quick-card p { margin: 0 0 10px; color: var(--muted); }
+.quick-card code {
+  display: block;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  background: #f1f5f8;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 8px;
+}
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+.metric { padding: 14px; background: var(--surface); min-height: 96px; }
+.metric-label { color: var(--muted); font-size: 12px; text-transform: uppercase; }
+.metric-value { font-size: 25px; font-weight: 720; margin: 4px 0; }
+.metric-detail { color: var(--muted); font-size: 12px; }
+section { margin-top: 28px; }
+h2 { margin: 0 0 10px; font-size: 18px; }
+.note { color: var(--muted); margin: -4px 0 12px; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+th, td {
+  padding: 9px 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  vertical-align: middle;
+}
+th { font-size: 12px; color: var(--muted); text-transform: uppercase; }
+tbody tr:hover { background: #f1f5f8; }
+.bar {
+  display: inline-block;
+  width: 96px;
+  height: 8px;
+  margin-right: 8px;
+  background: #e8edf3;
+  vertical-align: middle;
+}
+.bar span { display: block; height: 100%; background: var(--blue); }
+.grid2 { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 18px; }
+.grid2 > div { min-width: 0; }
+.evidence-list {
+  columns: 2;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 14px 18px;
+}
+.evidence-list li { break-inside: avoid; margin: 0 0 7px; }
+.evidence-list a { color: var(--blue); text-decoration: none; }
+.evidence-list a:hover { text-decoration: underline; }
+.pill {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 2px 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+details { max-width: 100%; }
+summary { color: var(--blue); cursor: pointer; }
+.identifier-list { margin-top: 7px; color: var(--muted); overflow-wrap: anywhere; }
+@media (max-width: 1100px) { .metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 680px) { .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 860px) {
+  header, main, .toolbar { padding-left: 16px; padding-right: 16px; }
+  .toolbar { flex-wrap: wrap; }
+  .grid2, .quickstart { grid-template-columns: minmax(0, 1fr); }
+  .evidence-list { columns: 1; }
+  table { font-size: 12px; }
+}
+@media (max-width: 480px) { .metrics { grid-template-columns: 1fr; } }
+@media (max-width: 860px), (max-height: 600px) {
+  .toolbar { position: static; }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>SOCpilot Audit Dashboard</h1>
+  <div class="subtitle">Reviewer-facing view of the packaged analysis evidence: corpus readiness, run accounting, rule activation, paired contrasts, and replay consistency. All values are loaded from files in <code>artifact_outputs/analysis</code>. This dashboard does not establish public availability or authorize distribution.</div>
+</header>
+<section class="toolbar" aria-label="Outcome filters">
+  <label>Model <select id="modelFilter"><option value="">All models</option></select></label>
+  <label>Arm <select id="armFilter"><option value="">All arms</option></select></label>
+  <label>Search outcomes and contrasts <input id="searchBox" placeholder="model, arm, population, or value"></label>
+  <button id="clearFilters" type="button">Clear filters</button>
+  <span class="pill">zero-cost offline audit</span>
+  <span id="filterStatus" role="status" aria-live="polite"></span>
+</section>
+<main>
+  <section class="quickstart" aria-label="Reviewer quickstart">
+    <div class="quick-card"><h2>1. Inspect</h2><p>Open this file first. It summarizes the corpus, evaluation runs, policy coverage, paired contrasts, and replay checks from the analysis evidence bundle.</p><code>REVIEWER_DASHBOARD.html</code></div>
+<div class="quick-card"><h2>2. Reproduce</h2><p>Run the zero-cost path to validate manifests, regenerate evidence reports, rebuild this dashboard, and write the reproduction report.</p><code>bash ../../reproduce.sh reproduce-results</code></div>
+<div class="quick-card"><h2>3. Audit</h2><p>Follow exact source files for run accounting, pairwise tests, rule coverage, and release hygiene.</p><code>artifact_outputs/analysis/</code></div>
+  </section>
+
+  <div class="metrics">
+    <div class="metric"><div class="metric-label">Evaluation corpus</div><div class="metric-value">400</div><div class="metric-detail">model-evaluation incidents</div></div>
+<div class="metric"><div class="metric-label">Completed runs</div><div class="metric-value">4,798</div><div class="metric-detail">LLM trajectories</div></div>
+<div class="metric"><div class="metric-label">Trajectory completion</div><div class="metric-value">4,798 / 4,800</div><div class="metric-detail">2 failed; 99.96% completed</div></div>
+<div class="metric"><div class="metric-label">Corpus scan findings</div><div class="metric-value">0</div><div class="metric-detail">automated readiness scan</div></div>
+<div class="metric"><div class="metric-label">Telemetry events</div><div class="metric-value">4,260</div><div class="metric-detail">audited corpus</div></div>
+<div class="metric"><div class="metric-label">Incident violation rate</div><div class="metric-value">89.2%</div><div class="metric-detail">incidents with any violating cell</div></div>
+<div class="metric"><div class="metric-label">Actions inserted</div><div class="metric-value">3,503</div><div class="metric-detail">missing mandatory</div></div>
+<div class="metric"><div class="metric-label">Actions removed</div><div class="metric-value">84</div><div class="metric-detail">recorded policy repairs</div></div>
+<div class="metric"><div class="metric-label">Cost</div><div class="metric-value">$14.8347</div><div class="metric-detail">reported execution</div></div>
+<div class="metric"><div class="metric-label">Consistency checks</div><div class="metric-value">0/97</div><div class="metric-detail">failed/total</div></div>
+  </div>
+
+  <section>
+    <h2>Model and Arm Outcomes</h2>
+    <p class="note">Violation and enforcement rates expose the provider split; task coverage shows whether deterministic enforcement removed baseline-covered work. All incidents and the two export batches are overlapping summaries, not additional runs. Do not sum their counts or costs.</p>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Model and Arm Outcomes"><table id="outcomesTable" aria-label="Model and Arm Outcomes">
+      <thead><tr><th>Model</th><th>Arm</th><th>Population</th><th>Runs</th><th>Violation</th><th>Modified</th><th>Task coverage</th><th>Delta Jaccard</th><th>Cost</th></tr></thead>
+      <tbody><tr data-cells="gpt-5.4|policy"><td>gpt-5.4</td><td>policy</td><td>All incidents</td><td>1,199</td><td><span class="bar" aria-hidden="true"><span style="width:66.1%">&nbsp;</span></span>66.1%</td><td>66.1%</td><td>N/A</td><td>N/A</td><td>$8.0054</td></tr>
+<tr data-cells="gpt-5.4|policy"><td>gpt-5.4</td><td>policy</td><td>Batch 1</td><td>599</td><td><span class="bar" aria-hidden="true"><span style="width:72.0%">&nbsp;</span></span>72.0%</td><td>72.0%</td><td>N/A</td><td>N/A</td><td>$3.8649</td></tr>
+<tr data-cells="gpt-5.4|policy"><td>gpt-5.4</td><td>policy</td><td>Batch 2</td><td>600</td><td><span class="bar" aria-hidden="true"><span style="width:60.2%">&nbsp;</span></span>60.2%</td><td>60.2%</td><td>N/A</td><td>N/A</td><td>$4.1405</td></tr>
+<tr data-cells="gpt-5.4|zero"><td>gpt-5.4</td><td>zero</td><td>All incidents</td><td>1,200</td><td><span class="bar" aria-hidden="true"><span style="width:66.5%">&nbsp;</span></span>66.5%</td><td>66.5%</td><td>N/A</td><td>N/A</td><td>$6.8293</td></tr>
+<tr data-cells="gpt-5.4|zero"><td>gpt-5.4</td><td>zero</td><td>Batch 1</td><td>600</td><td><span class="bar" aria-hidden="true"><span style="width:56.2%">&nbsp;</span></span>56.2%</td><td>56.2%</td><td>N/A</td><td>N/A</td><td>$3.3468</td></tr>
+<tr data-cells="gpt-5.4|zero"><td>gpt-5.4</td><td>zero</td><td>Batch 2</td><td>600</td><td><span class="bar" aria-hidden="true"><span style="width:76.8%">&nbsp;</span></span>76.8%</td><td>76.8%</td><td>N/A</td><td>N/A</td><td>$3.4824</td></tr>
+<tr data-cells="qwen3.6:latest|policy"><td>qwen3.6:latest</td><td>policy</td><td>All incidents</td><td>1,199</td><td><span class="bar" aria-hidden="true"><span style="width:67.8%">&nbsp;</span></span>67.8%</td><td>67.8%</td><td>N/A</td><td>N/A</td><td>$0.0000</td></tr>
+<tr data-cells="qwen3.6:latest|policy"><td>qwen3.6:latest</td><td>policy</td><td>Batch 1</td><td>599</td><td><span class="bar" aria-hidden="true"><span style="width:52.3%">&nbsp;</span></span>52.3%</td><td>52.3%</td><td>N/A</td><td>N/A</td><td>$0.0000</td></tr>
+<tr data-cells="qwen3.6:latest|policy"><td>qwen3.6:latest</td><td>policy</td><td>Batch 2</td><td>600</td><td><span class="bar" aria-hidden="true"><span style="width:83.3%">&nbsp;</span></span>83.3%</td><td>83.3%</td><td>N/A</td><td>N/A</td><td>$0.0000</td></tr>
+<tr data-cells="qwen3.6:latest|zero"><td>qwen3.6:latest</td><td>zero</td><td>All incidents</td><td>1,200</td><td><span class="bar" aria-hidden="true"><span style="width:80.4%">&nbsp;</span></span>80.4%</td><td>80.4%</td><td>N/A</td><td>N/A</td><td>$0.0000</td></tr>
+<tr data-cells="qwen3.6:latest|zero"><td>qwen3.6:latest</td><td>zero</td><td>Batch 1</td><td>600</td><td><span class="bar" aria-hidden="true"><span style="width:73.3%">&nbsp;</span></span>73.3%</td><td>73.3%</td><td>N/A</td><td>N/A</td><td>$0.0000</td></tr>
+<tr data-cells="qwen3.6:latest|zero"><td>qwen3.6:latest</td><td>zero</td><td>Batch 2</td><td>600</td><td><span class="bar" aria-hidden="true"><span style="width:87.5%">&nbsp;</span></span>87.5%</td><td>87.5%</td><td>N/A</td><td>N/A</td><td>$0.0000</td></tr></tbody>
+    </table></div>
+    <p class="empty-results" id="outcomesEmpty" hidden>No runs match these filters. Clear filters to restore all runs.</p>
+  </section>
+
+  <section class="grid2">
+    <div>
+      <h2>Rule Activation</h2>
+      <p class="note">Per-rule counts describe the preserved run. Operational violations and specification-only rules are reported separately; a declared rule need not activate in this corpus.</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Rule Activation"><table aria-label="Rule Activation"><thead><tr><th>Rule</th><th>Family</th><th>Action</th><th>Repair</th><th>Violations</th><th>Status</th></tr></thead><tbody><tr data-rule-status="active"><td>intel_match_block</td><td>Mandatory</td><td>block_egress</td><td>insert</td><td>1285</td><td>active</td></tr>
+<tr data-rule-status="active"><td>malware_detect_quarantine</td><td>Mandatory</td><td>quarantine_artifact</td><td>insert</td><td>624</td><td>active</td></tr>
+<tr data-rule-status="active"><td>shadowcopy_tamper_isolate</td><td>Mandatory</td><td>isolate_host</td><td>insert</td><td>523</td><td>active</td></tr>
+<tr data-rule-status="active"><td>account_probe_block</td><td>Mandatory</td><td>block_egress</td><td>insert</td><td>194</td><td>active</td></tr>
+<tr data-rule-status="active"><td>exploit_waf_rule</td><td>Mandatory</td><td>apply_ips_waf_rule</td><td>insert</td><td>184</td><td>active</td></tr>
+<tr data-rule-status="active"><td>remote_access_block</td><td>Mandatory</td><td>block_egress</td><td>insert</td><td>151</td><td>active</td></tr>
+<tr data-rule-status="active"><td>recon_block</td><td>Mandatory</td><td>block_egress</td><td>insert</td><td>137</td><td>active</td></tr>
+<tr data-rule-status="active"><td>evasion_isolate</td><td>Mandatory</td><td>isolate_host</td><td>insert</td><td>133</td><td>active</td></tr>
+<tr data-rule-status="active"><td>creddump_reset</td><td>Mandatory</td><td>reset_disable_account</td><td>insert</td><td>88</td><td>active</td></tr>
+<tr data-rule-status="active"><td>ops_monitor_no_isolate</td><td>Restraint</td><td>isolate_host</td><td>remove</td><td>84</td><td>active</td></tr>
+<tr data-rule-status="active"><td>persistence_quarantine</td><td>Mandatory</td><td>quarantine_artifact</td><td>insert</td><td>80</td><td>active</td></tr>
+<tr data-rule-status="active"><td>sensor_tamper_isolate</td><td>Mandatory</td><td>isolate_host</td><td>insert</td><td>54</td><td>active</td></tr>
+<tr data-rule-status="active"><td>c2_block</td><td>Mandatory</td><td>block_egress</td><td>insert</td><td>50</td><td>active</td></tr>
+<tr data-rule-status="active"><td>evidence_before_reimage</td><td>Ordering</td><td>reimage_format_host</td><td>insert_before</td><td>4</td><td>active</td></tr>
+<tr data-rule-status="inactive"><td>approve_account_disable</td><td>Approval</td><td>reset_disable_account</td><td>remove</td><td>0</td><td>inactive</td></tr>
+<tr data-rule-status="inactive"><td>approve_isolate</td><td>Approval</td><td>isolate_host</td><td>remove</td><td>0</td><td>inactive</td></tr>
+<tr data-rule-status="inactive"><td>approve_lift_isolation</td><td>Approval</td><td>lift_isolation</td><td>remove</td><td>0</td><td>inactive</td></tr>
+<tr data-rule-status="inactive"><td>approve_reimage</td><td>Approval</td><td>reimage_format_host</td><td>remove</td><td>0</td><td>inactive</td></tr>
+<tr data-rule-status="inactive"><td>ops_monitor_no_reimage</td><td>Restraint</td><td>reimage_format_host</td><td>remove</td><td>0</td><td>inactive</td></tr></tbody></table></div>
+    </div>
+    <div>
+      <h2>Protocol Surface</h2>
+      <p class="note">These rows show why the claim is a declared protocol state rather than a generic SOC benchmark.</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Protocol Surface"><table aria-label="Protocol Surface"><thead><tr><th>Surface</th><th>Count</th><th>Evidence</th></tr></thead><tbody><tr><td>Action catalog</td><td>13</td><td>research action abstraction</td></tr>
+<tr><td>Operational rules</td><td>15</td><td><details><summary>15 identifiers</summary><div class="identifier-list"><code>account_probe_block</code><br><code>c2_block</code><br><code>creddump_reset</code><br><code>evasion_isolate</code><br><code>evidence_before_reimage</code><br><code>exploit_waf_rule</code><br><code>intel_match_block</code><br><code>malware_detect_quarantine</code><br><code>ops_monitor_no_isolate</code><br><code>ops_monitor_no_reimage</code><br><code>persistence_quarantine</code><br><code>recon_block</code><br><code>remote_access_block</code><br><code>sensor_tamper_isolate</code><br><code>shadowcopy_tamper_isolate</code></div></details></td></tr>
+<tr><td>Specification-only rules</td><td>4</td><td><details><summary>4 identifiers</summary><div class="identifier-list"><code>approve_account_disable</code><br><code>approve_isolate</code><br><code>approve_lift_isolation</code><br><code>approve_reimage</code></div></details></td></tr>
+<tr><td>Observed response actions</td><td>0</td><td>none recorded in source exports</td></tr>
+<tr><td>Workflow tasks</td><td>1284</td><td>not treated as response actions</td></tr></tbody></table></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Paired Contrasts</h2>
+    <p class="note">Each row compares the same incident set across two model/arm cells, over all incidents or one export batch.</p>
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Paired Contrasts"><table id="pairwiseTable" aria-label="Paired Contrasts"><thead><tr><th>Contrast</th><th>Stratum</th><th>n</th><th>Rate diff</th><th>Cohen h</th><th>Holm p</th></tr></thead><tbody><tr data-cells="gpt-5.4|policy;gpt-5.4|zero"><td>gpt-5.4 policy vs gpt-5.4 zero</td><td>All incidents</td><td>399</td><td>+0.005</td><td>+0.011</td><td>1.000</td></tr>
+<tr data-cells="gpt-5.4|policy;qwen3.6:latest|policy"><td>gpt-5.4 policy vs qwen3.6:latest policy</td><td>All incidents</td><td>398</td><td>-0.040</td><td>-0.087</td><td>0.491</td></tr>
+<tr data-cells="gpt-5.4|zero;qwen3.6:latest|zero"><td>gpt-5.4 zero vs qwen3.6:latest zero</td><td>All incidents</td><td>400</td><td>-0.158</td><td>-0.362</td><td>&lt;0.001</td></tr>
+<tr data-cells="qwen3.6:latest|policy;qwen3.6:latest|zero"><td>qwen3.6:latest policy vs qwen3.6:latest zero</td><td>All incidents</td><td>399</td><td>-0.113</td><td>-0.266</td><td>&lt;0.001</td></tr>
+<tr data-cells="gpt-5.4|policy;gpt-5.4|zero"><td>gpt-5.4 policy vs gpt-5.4 zero</td><td>Batch 1</td><td>199</td><td>+0.161</td><td>+0.339</td><td>&lt;0.001</td></tr>
+<tr data-cells="gpt-5.4|policy;qwen3.6:latest|policy"><td>gpt-5.4 policy vs qwen3.6:latest policy</td><td>Batch 1</td><td>198</td><td>+0.202</td><td>+0.421</td><td>&lt;0.001</td></tr>
+<tr data-cells="gpt-5.4|zero;qwen3.6:latest|zero"><td>gpt-5.4 zero vs qwen3.6:latest zero</td><td>Batch 1</td><td>200</td><td>-0.180</td><td>-0.382</td><td>&lt;0.001</td></tr>
+<tr data-cells="qwen3.6:latest|policy;qwen3.6:latest|zero"><td>qwen3.6:latest policy vs qwen3.6:latest zero</td><td>Batch 1</td><td>199</td><td>-0.221</td><td>-0.464</td><td>&lt;0.001</td></tr>
+<tr data-cells="gpt-5.4|policy;gpt-5.4|zero"><td>gpt-5.4 policy vs gpt-5.4 zero</td><td>Batch 2</td><td>200</td><td>-0.150</td><td>-0.324</td><td>&lt;0.001</td></tr>
+<tr data-cells="gpt-5.4|policy;qwen3.6:latest|policy"><td>gpt-5.4 policy vs qwen3.6:latest policy</td><td>Batch 2</td><td>200</td><td>-0.280</td><td>-0.667</td><td>&lt;0.001</td></tr>
+<tr data-cells="gpt-5.4|zero;qwen3.6:latest|zero"><td>gpt-5.4 zero vs qwen3.6:latest zero</td><td>Batch 2</td><td>200</td><td>-0.135</td><td>-0.359</td><td>&lt;0.001</td></tr>
+<tr data-cells="qwen3.6:latest|policy;qwen3.6:latest|zero"><td>qwen3.6:latest policy vs qwen3.6:latest zero</td><td>Batch 2</td><td>200</td><td>-0.005</td><td>-0.016</td><td>1.000</td></tr></tbody></table></div>
+    <p class="empty-results" id="pairwiseEmpty" hidden>No paired contrasts match these filters. Clear filters to restore all contrasts.</p>
+  </section>
+
+  <section><h2>Preserved studies</h2><p class="note">Separation, adversarial, and projection studies behind the H2, H3, and fidelity claims. Each panel is loaded from its preserved report.</p><div class="grid2"><div><h2>Separation study (H2)</h2><p class="note">False accept and false reject of each text-level baseline against the typed verifier's verdict over the evaluated cells.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Separation study (H2)"><table aria-label="Separation study (H2)"><thead><tr><th>Baseline</th><th>False accept</th><th>False reject</th><th>n (accept / reject)</th></tr></thead><tbody><tr><td>LLM judge (independent)</td><td>70.5%</td><td>29.7%</td><td>3,368 / 1,430</td></tr>
+<tr><td>Accept-all guardrail</td><td>100.0%</td><td>0.0%</td><td>3,368 / 1,430</td></tr></tbody></table></div></div><div><h2>Adversarial study (H3)</h2><p class="note">Injection-induced violations over clean/injected pairs whose clean plan is compliant; the typed decision surfaces each one.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Adversarial study (H3)"><table aria-label="Adversarial study (H3)"><tbody><tr><th>Induced violations</th><td>28 / 42 (66.7%)</td></tr><tr><th>Complete pairs</th><td>80</td></tr><tr><th>Refusal pairs (excluded)</th><td>0</td></tr></tbody></table></div></div><div><h2>Projection fidelity</h2><p class="note">Extraction over authored free-form plans with known targets and distractors (paraphrase, indirect reference, negation).</p><div class="table-scroll" tabindex="0" role="region" aria-label="Projection fidelity"><table aria-label="Projection fidelity"><tbody><tr><th>Precision</th><td>98.5%</td></tr><tr><th>Recall</th><td>95.0%</td></tr><tr><th>Distractors rejected</th><td>34 / 34</td></tr></tbody></table></div></div><div><h2>Extraction diagnostics</h2><p class="note">Signals that bound projection under structured output over 4,798 cells.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Extraction diagnostics"><table aria-label="Extraction diagnostics"><tbody><tr><th>Parse errors</th><td>2</td></tr><tr><th>Out-of-catalog actions</th><td>0</td></tr><tr><th>Empty plans</th><td>0</td></tr><tr><th>Max completion tokens / cap</th><td>410 / 4,000</td></tr></tbody></table></div></div></div></section>
+
+  <section><h2>Corpus Partition and Policy Derivation</h2><p class="note">The model-evaluation corpus and the policy-development audit are distinct objects. The partition is deterministic and disjoint; content-triggered scope support is measured before any model response exists.</p><div class="table-scroll" tabindex="0" role="region" aria-label="Corpus Partition and Policy Derivation"><table aria-label="Corpus Partition and Policy Derivation"><tbody><tr><th>Derivation partition</th><td>200 incidents</td></tr><tr><th>Batch 2 transfer check</th><td>200 incidents</td></tr><tr><th>Normalized total</th><td>400 incidents</td></tr><tr><th>Source-to-normalized lineage</th><td>400 / 400 one-to-one</td></tr><tr><th>Shared primary categories</th><td>7</td></tr><tr><th>Content rules meeting the transfer floor</th><td>8 / 14</td></tr></tbody></table></div></section>
+
+  <section>
+    <h2>Evidence Map</h2>
+    <p class="note">Direct links to the files supporting the reported claims.</p>
+    <ul class="evidence-list"><li><a href="../../artifact_outputs/reproduction_report.md">Reproduction report</a></li>
+<li><a href="../../artifact_outputs/analysis/protocol_freeze.json">Protocol manifest</a></li>
+<li><a href="../../artifact_outputs/analysis/public_evidence_provenance.json">Analysis evidence provenance</a></li>
+<li><a href="../../artifact_outputs/analysis/official_runs_manifest.json">Evaluation run manifest</a></li>
+<li><a href="../../artifact_outputs/analysis/official_pairwise_tests.json">Evaluation pairwise tests</a></li>
+<li><a href="../../artifact_outputs/analysis/official_public_consistency.json">Evaluation consistency checks</a></li>
+<li><a href="../../artifact_outputs/analysis/corpus_readiness.json">Corpus readiness</a></li>
+<li><a href="../../artifact_outputs/analysis/global_artifact_assessment.json">Global artifact assessment</a></li>
+<li><a href="../../artifact_outputs/analysis/policy_surface_audit.json">Policy surface audit</a></li>
+<li><a href="../../artifact_outputs/analysis/separation_report.json">Separation report</a></li>
+<li><a href="../../artifact_outputs/analysis/adversarial_report.json">Adversarial report</a></li>
+<li><a href="../../artifact_outputs/analysis/projection_fidelity_report.json">Projection fidelity report</a></li>
+<li><a href="../../artifact_outputs/analysis/projection_diagnostics.json">Projection diagnostics</a></li>
+<li><a href="../../artifact_outputs/analysis/policy_preflight/policy_preflight/corpus_partition_audit.json">Corpus partition audit</a></li>
+<li><a href="../../artifact_outputs/analysis/policy_preflight/policy_preflight/heldout_activation.json">Cross-batch activation report</a></li>
+<li><a href="../../artifact_outputs/analysis/policy_preflight/policy_preflight/normalization_ablation.json">Normalization ablation</a></li></ul>
+  </section>
+
+  <section class="grid2">
+    <div>
+      <h2>Replay Stability</h2>
+      <p class="note">A separate repeat-stability report is not part of this execution state.</p>
+    </div>
+    <div>
+      <h2>Repair Accounting</h2>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="Repair Accounting"><table aria-label="Repair Accounting"><tbody>
+        <tr><th>Removed</th><td>84</td></tr>
+        <tr><th>Inserted</th><td>3,503</td></tr>
+        <tr><th>Reordered</th><td>4</td></tr>
+        <tr><th>Deferred</th><td>0</td></tr>
+      </tbody></table></div>
+    </div>
+  </section>
+</main>
+<script>
+const rows = [...document.querySelectorAll("#outcomesTable tbody tr, #pairwiseTable tbody tr")];
+const cellsOf = row => row.dataset.cells.split(";").map(cell => cell.split("|"));
+const outcomeCells = [...document.querySelectorAll("#outcomesTable tbody tr")].flatMap(cellsOf);
+const modelFilter = document.querySelector("#modelFilter");
+const armFilter = document.querySelector("#armFilter");
+const searchBox = document.querySelector("#searchBox");
+const clearFilters = document.querySelector("#clearFilters");
+const filterStatus = document.querySelector("#filterStatus");
+function revealTableContext(region) {
+  if (document.activeElement !== region) return;
+  const firstRow = region.querySelector("tr");
+  if (!firstRow) return;
+  const toolbar = document.querySelector(".toolbar");
+  const pinned = ["sticky", "fixed"].includes(getComputedStyle(toolbar).position);
+  const safeTop = pinned ? Math.max(0, toolbar.getBoundingClientRect().bottom) : 0;
+  const header = firstRow.getBoundingClientRect();
+  const heading = region.parentElement.querySelector("h2, h3");
+  const contextTop = heading ? heading.getBoundingClientRect().top : header.top;
+  if (contextTop < safeTop + 8 || header.bottom > innerHeight - 8) {
+    window.scrollBy({ top: contextTop - safeTop - 8, left: 0, behavior: "auto" });
+  }
+}
+document.addEventListener("focusin", event => {
+  const region = event.target;
+  if (region.matches(".table-scroll")) {
+    requestAnimationFrame(() => revealTableContext(region));
+  }
+});
+for (const value of [...new Set(outcomeCells.map(([model]) => model))].sort()) {
+  modelFilter.add(new Option(value, value));
+}
+for (const value of [...new Set(outcomeCells.map(([, arm]) => arm))].sort()) {
+  armFilter.add(new Option(value, value));
+}
+function applyFilters() {
+  const model = modelFilter.value;
+  const arm = armFilter.value;
+  const query = searchBox.value.trim().toLowerCase();
+  for (const row of rows) {
+    const cellMatches = cellsOf(row).some(([rowModel, rowArm]) =>
+      (!model || rowModel === model) && (!arm || rowArm === arm));
+    const visible = cellMatches && (!query || row.innerText.toLowerCase().includes(query));
+    row.style.display = visible ? "" : "none";
+  }
+  const outcomes = [...document.querySelectorAll("#outcomesTable tbody tr")];
+  const contrasts = [...document.querySelectorAll("#pairwiseTable tbody tr")];
+  const shownOutcomes = outcomes.filter(row => row.style.display !== "none").length;
+  const shownContrasts = contrasts.filter(row => row.style.display !== "none").length;
+  document.querySelector("#outcomesEmpty").hidden = shownOutcomes > 0;
+  document.querySelector("#pairwiseEmpty").hidden = shownContrasts > 0;
+  filterStatus.textContent = `Showing ${shownOutcomes} of ${outcomes.length} outcome rows and ${shownContrasts} of ${contrasts.length} contrast rows.`;
+}
+modelFilter.addEventListener("change", applyFilters);
+armFilter.addEventListener("change", applyFilters);
+searchBox.addEventListener("input", applyFilters);
+clearFilters.addEventListener("click", () => {
+  modelFilter.value = "";
+  armFilter.value = "";
+  searchBox.value = "";
+  applyFilters();
+});
+applyFilters();
+</script>
+</body>
+</html>

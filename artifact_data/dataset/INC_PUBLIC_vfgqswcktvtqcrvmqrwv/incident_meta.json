@@ -1,0 +1,11 @@
+{
+  "incident_id": "INC_PUBLIC_vfgqswcktvtqcrvmqrwv",
+  "incident_type": "system",
+  "severity": "high",
+  "asset_criticality": "high",
+  "asset_role": "bank_endpoint",
+  "time_window_start": "2023-05-28T17:18:32.495000Z",
+  "time_window_end": "2023-05-30T02:23:23.642000Z",
+  "final_status": "resolved",
+  "asset_host": "host_0001"
+}

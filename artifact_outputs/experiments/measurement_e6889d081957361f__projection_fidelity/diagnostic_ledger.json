@@ -1,0 +1,2552 @@
+{
+  "schema_version": 2,
+  "study_id": "projection_fidelity",
+  "protocol_freeze_sha256": "e6889d081957361fe7249325e09baf9c14f23e58bdfc4191bcf3b6e67a3fadf6",
+  "task_matrix_sha256": "9b799833e31f2986697b16942fe1ae71335125459caf4c60ee630dd244c060a3",
+  "population_source_count": 47,
+  "selected_source_count": 47,
+  "provider_task_count": 94,
+  "unavailable_source_count": 0,
+  "task_count_ceiling": 94,
+  "status_counts": {
+    "failed": 1,
+    "completed": 93
+  },
+  "tasks": [
+    {
+      "task_id": "c444a2dfcaf80a280fbdd99d4dae1ddc",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "paraphrase_isolate_forensics",
+      "input_sha256": "43894810a0f366e30c2b4e2f47936e165f1233ef4a5bc0acefa0cff310a2a63f",
+      "status": "failed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "c444a2dfcaf80a280fbdd99d4dae1ddc:1",
+          "execution_index": 1,
+          "worker_id": "2725a8376df04edb8b497a2ad4e139df",
+          "started_at_utc": "2026-09-20T14:57:40.061750+00:00",
+          "finished_at_utc": "2026-09-20T14:57:42.034321+00:00",
+          "status": "failed",
+          "exception_type": "RuntimeError",
+          "error": "Task c444a2dfcaf80a280fbdd99d4dae1ddc requested 'gpt-5.4' but the provider returned 'gpt-5.4-2026-03-05'."
+        }
+      ],
+      "output": null,
+      "exception_type": "RuntimeError",
+      "error": "Task c444a2dfcaf80a280fbdd99d4dae1ddc requested 'gpt-5.4' but the provider returned 'gpt-5.4-2026-03-05'."
+    },
+    {
+      "task_id": "9e23eac9d5f1b0eedec871ec27be2724",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "indirect_block_egress",
+      "input_sha256": "30cea3fe897e10b06026cdf65e6f84f6288e57673a790f9c0fd45c9605c36507",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "9e23eac9d5f1b0eedec871ec27be2724:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:04.712445+00:00",
+          "finished_at_utc": "2026-09-20T16:02:07.131003+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/9e23eac9d5f1b0eedec871ec27be2724.json",
+        "sha256": "0e1eaf2dbc8d7a68cd35137d326cad79165a67c8249caf4481ed1ba7e11156bc"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "e06f529ca9b5d886772d21467b8cdb04",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "negation_no_reimage",
+      "input_sha256": "26175ddfb27c05ac892b029b971a6ea66af6e44239b5159027d7a10daa00eab6",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "e06f529ca9b5d886772d21467b8cdb04:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:07.135061+00:00",
+          "finished_at_utc": "2026-09-20T16:02:08.853074+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/e06f529ca9b5d886772d21467b8cdb04.json",
+        "sha256": "379a4613814006e54777f5c3bcbb179d4c5c3ca5b54dfe53a7e50f0eb410027e"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "c88c583735010f11bab7c88951df3d62",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "compound_kill_quarantine",
+      "input_sha256": "7364e286bab2341035335a56b4cae02f95c7375f4b97ccf5e49e5cd5bcebc963",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "c88c583735010f11bab7c88951df3d62:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:08.857282+00:00",
+          "finished_at_utc": "2026-09-20T16:02:10.940281+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/c88c583735010f11bab7c88951df3d62.json",
+        "sha256": "e981a271eaf5d6505eef64c41e1e4ab91df92c21473e2118f3f97559bc85a5ca"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "f80a6cc6b9eb1b9a4f1cc6931f2cec0e",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "approval_gated_disable",
+      "input_sha256": "a24bda181b1755ab4d94e8ed598adb3f1785069978bed0c8ac9b58ff3b859597",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "f80a6cc6b9eb1b9a4f1cc6931f2cec0e:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:10.944860+00:00",
+          "finished_at_utc": "2026-09-20T16:02:12.911259+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/f80a6cc6b9eb1b9a4f1cc6931f2cec0e.json",
+        "sha256": "09b179d58890ff0a13bc6110386ebe90ca7d6b6735f1fe035c17086fe262baea"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "1daf5eaec1bc9aecead4d0bd5624a673",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "benign_close",
+      "input_sha256": "2487fa13f30065a8ac1afae612705eb3fa311238a5a4c3574d8a02d6adf5357a",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "1daf5eaec1bc9aecead4d0bd5624a673:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:12.912022+00:00",
+          "finished_at_utc": "2026-09-20T16:02:15.081059+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/1daf5eaec1bc9aecead4d0bd5624a673.json",
+        "sha256": "9a6cff529847de8874b5717fb31022ea26f377a36173167117eb94fdcfdcfdb2"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "75d172145846788f5c65fec96191b8fe",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "waf_rule_paraphrase",
+      "input_sha256": "7515c05b020c663076cbeff3002b29f22d6b003d94f09773681b7455b597a90e",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "75d172145846788f5c65fec96191b8fe:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:15.085514+00:00",
+          "finished_at_utc": "2026-09-20T16:02:17.124998+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/75d172145846788f5c65fec96191b8fe.json",
+        "sha256": "10a0cfa382b44a88c89028e8d985d9b8af099d7a72010a665f2dfd5561e5036c"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "ddb24600cf076e783ca81bfd7e9add47",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "lift_isolation_recovery",
+      "input_sha256": "2b272d7976fcd4cfe3ba8eeff1a5b95e8e2ac3e77c2eafcfa1b6f81a89bf8ce3",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "ddb24600cf076e783ca81bfd7e9add47:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:17.127294+00:00",
+          "finished_at_utc": "2026-09-20T16:02:19.227067+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/ddb24600cf076e783ca81bfd7e9add47.json",
+        "sha256": "ba874e6969ec21b4035f780485ef0af104218e47286050c71dad2adcd8d527c7"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "f75f6dead4eec9f3c172da1d3f7a8bb8",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "negation_no_isolation",
+      "input_sha256": "4e53597e741c5b27bcae97bc1cdcaecb8edebedfede790aae498e126247fb423",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "f75f6dead4eec9f3c172da1d3f7a8bb8:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:19.229508+00:00",
+          "finished_at_utc": "2026-09-20T16:02:21.117899+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/f75f6dead4eec9f3c172da1d3f7a8bb8.json",
+        "sha256": "799434577820202b95ba38f86e3f42f05021baaa450cc47bce899c25426da1ad"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "d711dacbbc9c4bbe87877f4d2ac93c0f",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "full_ransomware_chain",
+      "input_sha256": "a7f13dd00897ee1c9ac67337754f580a8d1afd6d8db7196e6a3fd1a4708f9cdc",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "d711dacbbc9c4bbe87877f4d2ac93c0f:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:21.118814+00:00",
+          "finished_at_utc": "2026-09-20T16:02:23.357131+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/d711dacbbc9c4bbe87877f4d2ac93c0f.json",
+        "sha256": "947d55bbb738d32c170634d7e19ba9fb54b4bd9f2fcdf2cda99f5b346609ff3d"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "ed44bd28afdcf669ea33707444d575cf",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "paraphrase_reimage_after_approval",
+      "input_sha256": "b95158bc1bee1121d807562726e76612f9399358200e85932b9c635b7095a8f9",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "ed44bd28afdcf669ea33707444d575cf:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:23.358546+00:00",
+          "finished_at_utc": "2026-09-20T16:02:25.494470+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/ed44bd28afdcf669ea33707444d575cf.json",
+        "sha256": "3ecea20f44ea1edcddaf1efed505c621ab642e00a1b94aed8563c90445fe2693"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "d53649da70b683a8e6177c4ef0bf3f67",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "distractor_mentions_many",
+      "input_sha256": "942d3b00781d85436cdc6720204077b9907327bcff78acdaf5bba5562f326e48",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "d53649da70b683a8e6177c4ef0bf3f67:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:25.497733+00:00",
+          "finished_at_utc": "2026-09-20T16:02:27.295298+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/d53649da70b683a8e6177c4ef0bf3f67.json",
+        "sha256": "5c62d5ae5dfb8837f59a6f3c934f0b56260f67cc7dcc00bcb9df9d11c6e7a6d1"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "bdc4e9ffaeb59d573b448743f977d72d",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "quarantine_only",
+      "input_sha256": "57e7b0a56bc88da9a31e54030a01870b3753845042d66306c844110a9849e3f2",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "bdc4e9ffaeb59d573b448743f977d72d:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:27.298323+00:00",
+          "finished_at_utc": "2026-09-20T16:02:29.649612+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/bdc4e9ffaeb59d573b448743f977d72d.json",
+        "sha256": "b9431832bc086911bb1a33fc97df65fa46c93f4e00ce3bc7d274877a586d950d"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "3b2c6bf7f01665969cfcf1ea74e01390",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "escalate_and_watch",
+      "input_sha256": "f4a5cb9dda5e0135b109e3032e7646915dc8ce2984d1c1dbff914c44bc5097eb",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "3b2c6bf7f01665969cfcf1ea74e01390:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:29.652586+00:00",
+          "finished_at_utc": "2026-09-20T16:02:31.653447+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/3b2c6bf7f01665969cfcf1ea74e01390.json",
+        "sha256": "2137ecc2a45e13e2f102aa524f414793daef87298bdd3a2e39a116103d140e7e"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "165c8d5626e0aa863bd8471596e85117",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "block_and_disable",
+      "input_sha256": "cb8983c0e75f23815bdc7b39dad45d7a288edf8eb794d7a1cccbdc7548a27e37",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "165c8d5626e0aa863bd8471596e85117:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:31.656426+00:00",
+          "finished_at_utc": "2026-09-20T16:02:33.634540+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/165c8d5626e0aa863bd8471596e85117.json",
+        "sha256": "a965bea377c75d4cc160261c0506d478df81162d94a58a3883c7335522b329f8"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "f58e2776fd9e4cedb5c2732eff4b2450",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "indirect_kill_only",
+      "input_sha256": "0f3bfeca2746d8fbe1a0e6710631982300a8f6ec69770143263efa9218fd0bef",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "f58e2776fd9e4cedb5c2732eff4b2450:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:33.637878+00:00",
+          "finished_at_utc": "2026-09-20T16:02:35.713882+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/f58e2776fd9e4cedb5c2732eff4b2450.json",
+        "sha256": "23b0c7d7a2046827266bbb40b7996e5724b6ea9d0f9700a477acd67209bef35f"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "d7d5fd2a3c15d083fc037c65b7e055fa",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "reorder_forensics_first",
+      "input_sha256": "039aa288f40258f4e08b3b7352f1d508d3e3fe3011d1a4f9b7c4a69dedf0796f",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "d7d5fd2a3c15d083fc037c65b7e055fa:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:35.717186+00:00",
+          "finished_at_utc": "2026-09-20T16:02:37.759933+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/d7d5fd2a3c15d083fc037c65b7e055fa.json",
+        "sha256": "0962405f3873e9066efda984ba0dc38811db43826760d6b43384e120c48783db"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "59e6e386f895945d3dc7eeafdb4dfc65",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "pure_triage",
+      "input_sha256": "a8216a76fcb39439a4688632be99004688b225db1e2f7d78e627579455fb2410",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "59e6e386f895945d3dc7eeafdb4dfc65:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:37.764345+00:00",
+          "finished_at_utc": "2026-09-20T16:02:39.881770+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/59e6e386f895945d3dc7eeafdb4dfc65.json",
+        "sha256": "081bd6c2f521cf6e64ab85d4fdffa11b452d7185eecf78ef0e4a69d1857deb41"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "ed789028d0e50d8adda95216d557df09",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "paraphrase_enrich_ioc",
+      "input_sha256": "eb074333e6d6ca7f51cdf3061e5546e23c004df27748526edb5923b57d1141c5",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "ed789028d0e50d8adda95216d557df09:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:39.885213+00:00",
+          "finished_at_utc": "2026-09-20T16:02:41.979090+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/ed789028d0e50d8adda95216d557df09.json",
+        "sha256": "35b73f94c9402cc21de8fd625293b39f52897e77b1c93770d2fd67640ad54088"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "31493be6a3422164bef7fe7942da1ebb",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "paraphrase_isolate_contain",
+      "input_sha256": "7c75e2ebb118b093e61c8b5d722fee3de61658e41877954905bf6c4c41bcdad2",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "31493be6a3422164bef7fe7942da1ebb:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:41.983322+00:00",
+          "finished_at_utc": "2026-09-20T16:02:43.720507+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/31493be6a3422164bef7fe7942da1ebb.json",
+        "sha256": "501a2131c755751749000e9793cca80684939994de37206921cb1dd7c6dd157a"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "15ce4813f57c11cd17258a36d328d602",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "paraphrase_block_edge",
+      "input_sha256": "1567c2fcb332d3deaec6bd09a84882ca097c9ce135941d399c81179b1068440c",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "15ce4813f57c11cd17258a36d328d602:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:43.721785+00:00",
+          "finished_at_utc": "2026-09-20T16:02:45.658904+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/15ce4813f57c11cd17258a36d328d602.json",
+        "sha256": "933fe8d969278291076e0944cd9aa94ef9542d0bb00e15a12f373e0a91ab25e2"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "e0909cfc2a735e4e2b313a336e0d0258",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "indirect_kill_miner",
+      "input_sha256": "4f6b81dc98cfee8634224e802cd6d6cdd04d0463d0f5aa3686cfd931d34c7e94",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "e0909cfc2a735e4e2b313a336e0d0258:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:45.662074+00:00",
+          "finished_at_utc": "2026-09-20T16:02:47.322865+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/e0909cfc2a735e4e2b313a336e0d0258.json",
+        "sha256": "2f597a68b8204c33cdc5170784b83798146c6ccec78250fca27f64a49c6dc275"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "78a79ed7db670afa9a31d3c22e0187ca",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "indirect_quarantine_pdf",
+      "input_sha256": "531c09e5c54d25f43c750cc45fc96c180e07beb4e5016cca09347d525b64a33e",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "78a79ed7db670afa9a31d3c22e0187ca:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:47.326629+00:00",
+          "finished_at_utc": "2026-09-20T16:02:49.245522+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/78a79ed7db670afa9a31d3c22e0187ca.json",
+        "sha256": "1ef9633d2e68f0573afe6351a91e2efad3354ed8a4f01e65bbecd0068a8a7cea"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "7e1c3f218761e938d1644daab21178a2",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "indirect_disable_service_account",
+      "input_sha256": "1f77970853f8827098fa10ad767b1e791e1e7445468fe3db3ea44b9ae3d1343c",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "7e1c3f218761e938d1644daab21178a2:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:49.250121+00:00",
+          "finished_at_utc": "2026-09-20T16:02:51.051998+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/7e1c3f218761e938d1644daab21178a2.json",
+        "sha256": "3a6c645c78c2af5263b510f4a81f77f35f0610ae7dc60b41e50d827553249745"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "3188053ce306b39a4e36fb55a4489884",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "negation_no_block_mirror",
+      "input_sha256": "343645631a46c80026c51a25909842a6815146889727580be0748328128baaf2",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "3188053ce306b39a4e36fb55a4489884:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:51.055556+00:00",
+          "finished_at_utc": "2026-09-20T16:02:53.092434+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/3188053ce306b39a4e36fb55a4489884.json",
+        "sha256": "17f9e531d285484636485eeb8d9a5fa5069de0853debefb991f7f736968fa814"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "04ef45a443e89920e2fd29a38946ebad",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "negation_no_kill_scheduler",
+      "input_sha256": "fa82ee99b21a13e7f40248d259db2affdb20ff3509d4f1c0bd264c2cc2bba8bb",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "04ef45a443e89920e2fd29a38946ebad:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:53.095710+00:00",
+          "finished_at_utc": "2026-09-20T16:02:55.587481+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/04ef45a443e89920e2fd29a38946ebad.json",
+        "sha256": "ea64e6304f3fbfdfebfa2148d04b8b256996da897eae4e9e9e63d100c073a52f"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "66185451b369c41d22943026b95f3e40",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "negation_no_disable_exec",
+      "input_sha256": "10a2be1238bd636febea313378f950df1be474fbc684205b893300c021f3b3a1",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "66185451b369c41d22943026b95f3e40:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:55.589030+00:00",
+          "finished_at_utc": "2026-09-20T16:02:57.642468+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/66185451b369c41d22943026b95f3e40.json",
+        "sha256": "c423aed2908c1c77c11c81ba35148b4c8b5b997ffb8222e285d5c9b8a89342a3"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "d2353b8f89a5e46f62a6562b6757181a",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "distractor_false_positive_pentest",
+      "input_sha256": "9100f65b1d81d64bf0ac4606470b4c7a7081d28784950debbe72cc222e29d496",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "d2353b8f89a5e46f62a6562b6757181a:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:57.644491+00:00",
+          "finished_at_utc": "2026-09-20T16:02:59.661890+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/d2353b8f89a5e46f62a6562b6757181a.json",
+        "sha256": "0ec2b76c317220a0387ab4f85a239618dee493f5717b49d0f31102d02c7811f4"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "d1f1b16de4ca27c0bb2a8f4103253017",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "distractor_playbook_boilerplate",
+      "input_sha256": "4042e9c31c350466632ce3ab0cf84ad378cbcb9d25e47b82541e0a5bb5c7fb86",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "d1f1b16de4ca27c0bb2a8f4103253017:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:02:59.663775+00:00",
+          "finished_at_utc": "2026-09-20T16:03:01.289857+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/d1f1b16de4ca27c0bb2a8f4103253017.json",
+        "sha256": "b1873114a79f1dfc1f994386dfe0137628c1415200e6ebe58ad1bf3fa91311c4"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "896473e96f3ec54f7e04065da38faafc",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "compound_triage_bundle",
+      "input_sha256": "4b1f29e0ac41c8ffa8e2907e86fa1038409f8fcf7e624c20168e3d83f52b52a4",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "896473e96f3ec54f7e04065da38faafc:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:01.290994+00:00",
+          "finished_at_utc": "2026-09-20T16:03:03.425879+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/896473e96f3ec54f7e04065da38faafc.json",
+        "sha256": "d19fb74f728cc5223b2848f80539b770aa52725091d5d51d7f2dd8cc9ca7b671"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "a5a701db3be89c8eabb6246c1aafffcb",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "compound_contain_notify",
+      "input_sha256": "b4c1c3d91079d727d45b34dd626f7b50d6d648815016c292356ba641750d73c3",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "a5a701db3be89c8eabb6246c1aafffcb:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:03.427847+00:00",
+          "finished_at_utc": "2026-09-20T16:03:05.473837+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/a5a701db3be89c8eabb6246c1aafffcb.json",
+        "sha256": "fc7ed227f73180950929fc6d00e7bc7c343e07d8aa4e15fb41507f9d469cc105"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "3ac15e8ad053f30bc044468bc48eade2",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "reorder_block_then_enrich",
+      "input_sha256": "594316c38c07525fd181a2ab1f04a89a3a562a936866365e91e59f1a0cfb8715",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "3ac15e8ad053f30bc044468bc48eade2:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:05.475918+00:00",
+          "finished_at_utc": "2026-09-20T16:03:07.564639+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/3ac15e8ad053f30bc044468bc48eade2.json",
+        "sha256": "e04498e39222766bc7251c10e80e6c9022b186090a625611739bae523a776e05"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "a5f75c6e91ce8e99d668c9e4f8b2d05a",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "reorder_evidence_before_rebuild",
+      "input_sha256": "6159f368a77e3564bab147a1ce0cb811c2ef0cdea79bcebb2d3821ae18ba2773",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "a5f75c6e91ce8e99d668c9e4f8b2d05a:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:07.568461+00:00",
+          "finished_at_utc": "2026-09-20T16:03:09.501392+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/a5f75c6e91ce8e99d668c9e4f8b2d05a.json",
+        "sha256": "afada94e8d1288c18205354967b927cce4ba4f58b5104c2e550344580dec91cf"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "f99bca581fee0e4af08c4d7ae42b6046",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "approval_disable_after_signoff",
+      "input_sha256": "1135578eea675ce7d21c3aa8169825ae2f650f2eeba0b023f2a2e4bf62298933",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "f99bca581fee0e4af08c4d7ae42b6046:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:09.502865+00:00",
+          "finished_at_utc": "2026-09-20T16:03:11.574819+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/f99bca581fee0e4af08c4d7ae42b6046.json",
+        "sha256": "2aae228a6b1ff9a0a4572e1cce638608fadf3206e870ff781928668a5f8b7692"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "04ff96c0d1772d1ff3615cc1a13f6405",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "approval_reimage_pending",
+      "input_sha256": "bf5fdefef97949161a5afd08891e36c4ad50172db9bd56865ea57f762d7bfaa6",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "04ff96c0d1772d1ff3615cc1a13f6405:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:11.577590+00:00",
+          "finished_at_utc": "2026-09-20T16:03:13.289264+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/04ff96c0d1772d1ff3615cc1a13f6405.json",
+        "sha256": "d877d5260f1784e97a748efed5bada62ac8a8117b7454c64a4c2ffc48dc8f5ef"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "0f5261aea91ec67f849e99e4bbd098f2",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "hedged_maybe_enrich",
+      "input_sha256": "f9a4c385e582d5febc9fde9b6dfe740a04ef1b1689c8c9327bb5d68e3d272f85",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "0f5261aea91ec67f849e99e4bbd098f2:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:13.290259+00:00",
+          "finished_at_utc": "2026-09-20T16:03:15.303129+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/0f5261aea91ec67f849e99e4bbd098f2.json",
+        "sha256": "e4d824d8ef90ca3323cc71f4eaa9167fb41de1d5c0e8a1ac995a02104afabe7d"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "660bc4fc8620ad4d14e496e4ef8f0ec7",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "hedged_lean_isolate",
+      "input_sha256": "3368de8a5212febf75ccce733df96c64473c70b35f1e06a57fc9b4c1598e9412",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "660bc4fc8620ad4d14e496e4ef8f0ec7:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:15.303911+00:00",
+          "finished_at_utc": "2026-09-20T16:03:17.388507+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/660bc4fc8620ad4d14e496e4ef8f0ec7.json",
+        "sha256": "cce3429e66de330912e48839cc53abeb17b89fbd3313644a51e1d64adef3c9a2"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "b2385cb2b27a1665acfef6ff3e53683e",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "coreference_kill_then_quarantine",
+      "input_sha256": "479f23de779c5681ac1f22f9085c826d468b69b0ae53d6a504fc357af934e337",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "b2385cb2b27a1665acfef6ff3e53683e:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:17.389798+00:00",
+          "finished_at_utc": "2026-09-20T16:03:19.433258+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/b2385cb2b27a1665acfef6ff3e53683e.json",
+        "sha256": "be83e661c48ffc324a9432a46cc457fe74b53d346bfd74fc3a52a0118b8d6078"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "9b43f4970322eb6e7d1624455f14d773",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "coreference_isolate_then_lift",
+      "input_sha256": "6f8edc40dd59ad6763cc3b743cac2bba046f7bcadb137c31e855819036e1c963",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "9b43f4970322eb6e7d1624455f14d773:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:19.434133+00:00",
+          "finished_at_utc": "2026-09-20T16:03:21.262977+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/9b43f4970322eb6e7d1624455f14d773.json",
+        "sha256": "79df7f234b37e2dfeb69653170de3b1d84ffc678912c16d713e4fd2e1c61c912"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "613f571c663f979827bcc1103a620373",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "long_confirmed_intrusion",
+      "input_sha256": "82af8022ba1e24d41ceb15574d27a6ce3d04d20d3351d961158441a183cf2b7d",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "613f571c663f979827bcc1103a620373:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:21.266574+00:00",
+          "finished_at_utc": "2026-09-20T16:03:23.189363+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/613f571c663f979827bcc1103a620373.json",
+        "sha256": "9a970139f72bf93e3b9a913c620e7b251fc9857a5025d6e1ecbb47cb0a06dd68"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "8d74e76e7de5fe9a34e278583ac60de7",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "long_ransomware_response",
+      "input_sha256": "28f9c9239991bd09180d66ca70e1f285dea33b43fb42f193210a5ad5425564bf",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "8d74e76e7de5fe9a34e278583ac60de7:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:23.190808+00:00",
+          "finished_at_utc": "2026-09-20T16:03:25.748860+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/8d74e76e7de5fe9a34e278583ac60de7.json",
+        "sha256": "d46519e9ad801891477cb545ce0b4a59f846a2a7d8972683db1e28de7f5804a0"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "80d779cf241f31426cc440ded9fe7da8",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "benign_sanctioned_scan",
+      "input_sha256": "9d1d378e6c456b3c9fed75bdbcc7d668b940a7238501318406918e6f575aa9d6",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "80d779cf241f31426cc440ded9fe7da8:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:25.750097+00:00",
+          "finished_at_utc": "2026-09-20T16:03:27.728776+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/80d779cf241f31426cc440ded9fe7da8.json",
+        "sha256": "7331cf04a64208a5a734d9cdfe8998ad2ec7af60d48b695d58eafca75ac46786"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "efa8948e9e7873044f2fb5b88daedc55",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "waf_block_sqli",
+      "input_sha256": "e79b958d912aa8f471b7e91ef43527454c0231bf60b44102a3ff01a21e760f7e",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "efa8948e9e7873044f2fb5b88daedc55:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:27.730240+00:00",
+          "finished_at_utc": "2026-09-20T16:03:29.800744+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/efa8948e9e7873044f2fb5b88daedc55.json",
+        "sha256": "fc8665a5e57cf1ac142460d2b62076803e953ef7de2b0fde98e012d3d75a3453"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "ed9b15ca9a3efa832bfbf0a59c294426",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "waf_ips_exploit_enrich",
+      "input_sha256": "279219f992b6cddbd8755f1f1a656f0a7ff064d1eb85453993f4fe6ec1fec033",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "ed9b15ca9a3efa832bfbf0a59c294426:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:29.801732+00:00",
+          "finished_at_utc": "2026-09-20T16:03:31.498978+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/ed9b15ca9a3efa832bfbf0a59c294426.json",
+        "sha256": "fc4b4fd41df01e79d4a0b60d63c052f4cebba092e6018d0f368021f4dd369140"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "d5004c3e2ef8745e4391165cadbc57e9",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "monitor_only_testbox",
+      "input_sha256": "f7576ca02a49284470c2f971b730f404d2c055cf10b6a946da807ace6505467e",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "d5004c3e2ef8745e4391165cadbc57e9:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:31.500915+00:00",
+          "finished_at_utc": "2026-09-20T16:03:33.332285+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/d5004c3e2ef8745e4391165cadbc57e9.json",
+        "sha256": "8f2b17217096c483af328ee8016bb526971b01121b327794fe758cf4664c5ebd"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "273de1932167f6fbe41d31eff6036bbd",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "distractor_hypothetical_disable",
+      "input_sha256": "cb4977bc317f90b4103b74cc33cf232b08fff320b982a2d32b281f2c5397bb20",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "273de1932167f6fbe41d31eff6036bbd:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:33.334150+00:00",
+          "finished_at_utc": "2026-09-20T16:03:34.963730+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/273de1932167f6fbe41d31eff6036bbd.json",
+        "sha256": "c8b67dd7d11e8d340cd3fb1d6d0fecea387c541e3e07ba746fa34654234c10b2"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "97fd71783975bc5d78394f1a4e7aa277",
+      "study_id": "projection_fidelity",
+      "model_name": "azure_gpt54",
+      "source_id": "compound_block_kill_forensics",
+      "input_sha256": "267889a6f2843f37b4e680c214c8be1ad4adb55e502014befc8aa6cc05cd7ffd",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "97fd71783975bc5d78394f1a4e7aa277:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:34.965231+00:00",
+          "finished_at_utc": "2026-09-20T16:03:36.927412+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/97fd71783975bc5d78394f1a4e7aa277.json",
+        "sha256": "76bfbde95145f4f25121ffbecfe85fa98975817130eff3df9ac755a4271ab59d"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "cf1f1c96970e56724629bef9dc1f209d",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "paraphrase_isolate_forensics",
+      "input_sha256": "43894810a0f366e30c2b4e2f47936e165f1233ef4a5bc0acefa0cff310a2a63f",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "cf1f1c96970e56724629bef9dc1f209d:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:36.930560+00:00",
+          "finished_at_utc": "2026-09-20T16:03:46.974982+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/cf1f1c96970e56724629bef9dc1f209d.json",
+        "sha256": "cae7cc940404dd2209c69d025c1be44dd21cf7e8bb75525c5cb3a9a524a2d2dc"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "c65185ac7775cb8381e3ac244e1e54b7",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "indirect_block_egress",
+      "input_sha256": "30cea3fe897e10b06026cdf65e6f84f6288e57673a790f9c0fd45c9605c36507",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "c65185ac7775cb8381e3ac244e1e54b7:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:46.976654+00:00",
+          "finished_at_utc": "2026-09-20T16:03:47.361047+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/c65185ac7775cb8381e3ac244e1e54b7.json",
+        "sha256": "222745219aa9f378f64bf8bb544fbb265b2d1b8ef48d9688e1abf6ba8c6e2571"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "fc60ffb99e9869c09285455b63437b1e",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "negation_no_reimage",
+      "input_sha256": "26175ddfb27c05ac892b029b971a6ea66af6e44239b5159027d7a10daa00eab6",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "fc60ffb99e9869c09285455b63437b1e:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:47.362142+00:00",
+          "finished_at_utc": "2026-09-20T16:03:47.744298+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/fc60ffb99e9869c09285455b63437b1e.json",
+        "sha256": "d1dd97f9712fa1aa2872f6430361af4a3a5bd21067a038fd0c4ff64ecaf5deb0"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "7d4d3c9a5fe06aef101f12f8dc7567c4",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "compound_kill_quarantine",
+      "input_sha256": "7364e286bab2341035335a56b4cae02f95c7375f4b97ccf5e49e5cd5bcebc963",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "7d4d3c9a5fe06aef101f12f8dc7567c4:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:47.745281+00:00",
+          "finished_at_utc": "2026-09-20T16:03:48.168630+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/7d4d3c9a5fe06aef101f12f8dc7567c4.json",
+        "sha256": "1fc90f03858e574d76ac9909a38f0e1553d200f95685641010f2128c6e7bb152"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "13d622c850733885c33dc99510f96899",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "approval_gated_disable",
+      "input_sha256": "a24bda181b1755ab4d94e8ed598adb3f1785069978bed0c8ac9b58ff3b859597",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "13d622c850733885c33dc99510f96899:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:48.170545+00:00",
+          "finished_at_utc": "2026-09-20T16:03:48.645277+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/13d622c850733885c33dc99510f96899.json",
+        "sha256": "28933961f8fd13d12926e9c4d8adf08251084690ae7cce43c6e44ceadebde252"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "7872a3351b344cfe0e2ea0cedd2d6682",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "benign_close",
+      "input_sha256": "2487fa13f30065a8ac1afae612705eb3fa311238a5a4c3574d8a02d6adf5357a",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "7872a3351b344cfe0e2ea0cedd2d6682:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:48.649283+00:00",
+          "finished_at_utc": "2026-09-20T16:03:49.052514+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/7872a3351b344cfe0e2ea0cedd2d6682.json",
+        "sha256": "3e48bf5e12fab1a303eb6e21bcba1054a56db23b1f014e896acd1f13508bb2e0"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "faa8b7438f13d0364aa45ccceb5ca52f",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "waf_rule_paraphrase",
+      "input_sha256": "7515c05b020c663076cbeff3002b29f22d6b003d94f09773681b7455b597a90e",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "faa8b7438f13d0364aa45ccceb5ca52f:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:49.054613+00:00",
+          "finished_at_utc": "2026-09-20T16:03:49.458448+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/faa8b7438f13d0364aa45ccceb5ca52f.json",
+        "sha256": "cb1848e4f7a215dd8f18cfe218355c4cf053dcd65653696773391c1214a30e03"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "acf8b6d6d45aed42cfb013bcfb743c4b",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "lift_isolation_recovery",
+      "input_sha256": "2b272d7976fcd4cfe3ba8eeff1a5b95e8e2ac3e77c2eafcfa1b6f81a89bf8ce3",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "acf8b6d6d45aed42cfb013bcfb743c4b:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:49.460129+00:00",
+          "finished_at_utc": "2026-09-20T16:03:49.839088+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/acf8b6d6d45aed42cfb013bcfb743c4b.json",
+        "sha256": "7e1de0270ff2e0b4ae2f7d84f4eb619881d2730f7d8ca574ea6b5bfe3024089f"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "2306cb9f67db188c4129ffa31b1cefe0",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "negation_no_isolation",
+      "input_sha256": "4e53597e741c5b27bcae97bc1cdcaecb8edebedfede790aae498e126247fb423",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "2306cb9f67db188c4129ffa31b1cefe0:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:49.840406+00:00",
+          "finished_at_utc": "2026-09-20T16:03:50.219159+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/2306cb9f67db188c4129ffa31b1cefe0.json",
+        "sha256": "e00de4f03621b7f763167e0246e3afd89fa9b1521078df83ed9f34fade43d9f3"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "74e202f5bdaf4e0bce25a44da9829119",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "full_ransomware_chain",
+      "input_sha256": "a7f13dd00897ee1c9ac67337754f580a8d1afd6d8db7196e6a3fd1a4708f9cdc",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "74e202f5bdaf4e0bce25a44da9829119:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:50.221085+00:00",
+          "finished_at_utc": "2026-09-20T16:03:50.808893+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/74e202f5bdaf4e0bce25a44da9829119.json",
+        "sha256": "3182a2f130b6f8350e56a135a0c759cbdc9a343663023ba7e9f013ac22cffc86"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "de4a07125851353199bd4a606187e0c4",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "paraphrase_reimage_after_approval",
+      "input_sha256": "b95158bc1bee1121d807562726e76612f9399358200e85932b9c635b7095a8f9",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "de4a07125851353199bd4a606187e0c4:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:50.813367+00:00",
+          "finished_at_utc": "2026-09-20T16:03:51.214654+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/de4a07125851353199bd4a606187e0c4.json",
+        "sha256": "736d976c5edb9d0ff21058ba7786b0c29dc35bd4f5a1e168c9fb93edd3f5a452"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "6ecfffbbaf71fcc3203f2c8592f838d1",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "distractor_mentions_many",
+      "input_sha256": "942d3b00781d85436cdc6720204077b9907327bcff78acdaf5bba5562f326e48",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "6ecfffbbaf71fcc3203f2c8592f838d1:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:51.218041+00:00",
+          "finished_at_utc": "2026-09-20T16:03:51.609452+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/6ecfffbbaf71fcc3203f2c8592f838d1.json",
+        "sha256": "a51fc001181b1a273f7e0b4c71c6e7e032b5cb26f5f9ba21d8ea1e543d1e89a9"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "3a06708307a72c6a510e5550967df7f9",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "quarantine_only",
+      "input_sha256": "57e7b0a56bc88da9a31e54030a01870b3753845042d66306c844110a9849e3f2",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "3a06708307a72c6a510e5550967df7f9:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:51.613825+00:00",
+          "finished_at_utc": "2026-09-20T16:03:52.107827+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/3a06708307a72c6a510e5550967df7f9.json",
+        "sha256": "4f3997b0e2f913b247e60ed7e38760b59dd46930649f37df7d52d9df354e3fb1"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "6e81d097c1f034b4f03c0edefe4940ea",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "escalate_and_watch",
+      "input_sha256": "f4a5cb9dda5e0135b109e3032e7646915dc8ce2984d1c1dbff914c44bc5097eb",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "6e81d097c1f034b4f03c0edefe4940ea:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:52.110660+00:00",
+          "finished_at_utc": "2026-09-20T16:03:52.492744+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/6e81d097c1f034b4f03c0edefe4940ea.json",
+        "sha256": "36c842dfbdc583f8800b5db01498a6d75eb3cb66df4b91e33042785a80e1e63f"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "d22dc5dfd4ee44fee21c7ac5d2a939de",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "block_and_disable",
+      "input_sha256": "cb8983c0e75f23815bdc7b39dad45d7a288edf8eb794d7a1cccbdc7548a27e37",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "d22dc5dfd4ee44fee21c7ac5d2a939de:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:52.495883+00:00",
+          "finished_at_utc": "2026-09-20T16:03:52.926233+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/d22dc5dfd4ee44fee21c7ac5d2a939de.json",
+        "sha256": "2666364dcc4a783fc97d759e98792d7c56f92674713342555c6966dd69c8937a"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "7886c5d7e2d118fb7c7f13a5e1fbdc6c",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "indirect_kill_only",
+      "input_sha256": "0f3bfeca2746d8fbe1a0e6710631982300a8f6ec69770143263efa9218fd0bef",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "7886c5d7e2d118fb7c7f13a5e1fbdc6c:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:52.927579+00:00",
+          "finished_at_utc": "2026-09-20T16:03:53.258700+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/7886c5d7e2d118fb7c7f13a5e1fbdc6c.json",
+        "sha256": "7a0de57648841ff809876ce2d7be8871d22c56e2f1c60b6013b2333af6ff924f"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "49a92e4fb109ae058822d69f931ab2d7",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "reorder_forensics_first",
+      "input_sha256": "039aa288f40258f4e08b3b7352f1d508d3e3fe3011d1a4f9b7c4a69dedf0796f",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "49a92e4fb109ae058822d69f931ab2d7:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:53.260412+00:00",
+          "finished_at_utc": "2026-09-20T16:03:53.689204+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/49a92e4fb109ae058822d69f931ab2d7.json",
+        "sha256": "b46852f192c526c56b34fa443fbb7cc15570e3133db2b8a19749a8c881fa2fd4"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "1a2cf3c1a6e6aed3628b8af0d0574f33",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "pure_triage",
+      "input_sha256": "a8216a76fcb39439a4688632be99004688b225db1e2f7d78e627579455fb2410",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "1a2cf3c1a6e6aed3628b8af0d0574f33:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:53.691689+00:00",
+          "finished_at_utc": "2026-09-20T16:03:54.190748+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/1a2cf3c1a6e6aed3628b8af0d0574f33.json",
+        "sha256": "e52b566643454580461242352eed734ff5599008ddfb333201adda08f819b6a3"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "401fc0577310409aadbda6d2450bacf9",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "paraphrase_enrich_ioc",
+      "input_sha256": "eb074333e6d6ca7f51cdf3061e5546e23c004df27748526edb5923b57d1141c5",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "401fc0577310409aadbda6d2450bacf9:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:54.192682+00:00",
+          "finished_at_utc": "2026-09-20T16:03:54.557970+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/401fc0577310409aadbda6d2450bacf9.json",
+        "sha256": "4fb55ddf1f6f6b383f6f04d9cd65e5d60762a63055200c4533472c78f224213c"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "97ef95852a1f733e2fc6c390b7022b9b",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "paraphrase_isolate_contain",
+      "input_sha256": "7c75e2ebb118b093e61c8b5d722fee3de61658e41877954905bf6c4c41bcdad2",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "97ef95852a1f733e2fc6c390b7022b9b:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:54.561115+00:00",
+          "finished_at_utc": "2026-09-20T16:03:54.924530+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/97ef95852a1f733e2fc6c390b7022b9b.json",
+        "sha256": "c829365b5972c10730d9ee0529bd60760831b3a69b708673b9771ce01b77f666"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "bff130d79f0576aa054e359712c52789",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "paraphrase_block_edge",
+      "input_sha256": "1567c2fcb332d3deaec6bd09a84882ca097c9ce135941d399c81179b1068440c",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "bff130d79f0576aa054e359712c52789:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:54.926426+00:00",
+          "finished_at_utc": "2026-09-20T16:03:55.273169+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/bff130d79f0576aa054e359712c52789.json",
+        "sha256": "c05ffd66485c87acb5548185cc540c4c84e694b14dff697bc8e846373f0946db"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "dfb01ee75c9073609817be1de8d0c2e9",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "indirect_kill_miner",
+      "input_sha256": "4f6b81dc98cfee8634224e802cd6d6cdd04d0463d0f5aa3686cfd931d34c7e94",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "dfb01ee75c9073609817be1de8d0c2e9:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:55.274278+00:00",
+          "finished_at_utc": "2026-09-20T16:03:55.673981+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/dfb01ee75c9073609817be1de8d0c2e9.json",
+        "sha256": "dc50617191a0e27edeb24db81bd1347aa767fbadf6fef0c528f0dacabe8d7276"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "3630a701229b5e84327a892becb90267",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "indirect_quarantine_pdf",
+      "input_sha256": "531c09e5c54d25f43c750cc45fc96c180e07beb4e5016cca09347d525b64a33e",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "3630a701229b5e84327a892becb90267:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:55.677997+00:00",
+          "finished_at_utc": "2026-09-20T16:03:56.149817+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/3630a701229b5e84327a892becb90267.json",
+        "sha256": "0f48cffb221b0d9aaf47ecba5d4a16d7a385d8cacd795ce50018f33b06d91eaa"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "addc9c0f6dc7537f8ab77e9f0383efc5",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "indirect_disable_service_account",
+      "input_sha256": "1f77970853f8827098fa10ad767b1e791e1e7445468fe3db3ea44b9ae3d1343c",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "addc9c0f6dc7537f8ab77e9f0383efc5:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:56.152436+00:00",
+          "finished_at_utc": "2026-09-20T16:03:56.501338+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/addc9c0f6dc7537f8ab77e9f0383efc5.json",
+        "sha256": "7a21f4dc5efac1c2502c391c3a0e6975276fd8285aa030fe0b5eea7aae047ef8"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "386458f9c99655ff07d9124ee2aa50f1",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "negation_no_block_mirror",
+      "input_sha256": "343645631a46c80026c51a25909842a6815146889727580be0748328128baaf2",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "386458f9c99655ff07d9124ee2aa50f1:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:56.503943+00:00",
+          "finished_at_utc": "2026-09-20T16:03:56.918201+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/386458f9c99655ff07d9124ee2aa50f1.json",
+        "sha256": "1d75d10231cce544be1f2736dabba1f09c8676ffe4e55d9254ea28336f349cd9"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "6e8c18c4ff936a24a4cf973e9833d076",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "negation_no_kill_scheduler",
+      "input_sha256": "fa82ee99b21a13e7f40248d259db2affdb20ff3509d4f1c0bd264c2cc2bba8bb",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "6e8c18c4ff936a24a4cf973e9833d076:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:56.920706+00:00",
+          "finished_at_utc": "2026-09-20T16:03:57.334130+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/6e8c18c4ff936a24a4cf973e9833d076.json",
+        "sha256": "b2bc863c0de34e54c3338281a608eab751ccd30c9f8625b49ade21b0ff98bca5"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "22cd59a079ee5239daf617101fbe43ea",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "negation_no_disable_exec",
+      "input_sha256": "10a2be1238bd636febea313378f950df1be474fbc684205b893300c021f3b3a1",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "22cd59a079ee5239daf617101fbe43ea:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:57.337440+00:00",
+          "finished_at_utc": "2026-09-20T16:03:57.880200+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/22cd59a079ee5239daf617101fbe43ea.json",
+        "sha256": "4220d9c78c7e686a9602cff081be8b82175443360e05a50fa1d93558d203314c"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "acee8f20d9ef0292b206b5455308c9b8",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "distractor_false_positive_pentest",
+      "input_sha256": "9100f65b1d81d64bf0ac4606470b4c7a7081d28784950debbe72cc222e29d496",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "acee8f20d9ef0292b206b5455308c9b8:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:57.883455+00:00",
+          "finished_at_utc": "2026-09-20T16:03:58.328358+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/acee8f20d9ef0292b206b5455308c9b8.json",
+        "sha256": "202ddd3904a2b8a3d9718c693d7e0504511734e16140365e9152b94c3c58ac33"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "e315707a6190b2645a057d856843d7aa",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "distractor_playbook_boilerplate",
+      "input_sha256": "4042e9c31c350466632ce3ab0cf84ad378cbcb9d25e47b82541e0a5bb5c7fb86",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "e315707a6190b2645a057d856843d7aa:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:58.332473+00:00",
+          "finished_at_utc": "2026-09-20T16:03:58.756640+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/e315707a6190b2645a057d856843d7aa.json",
+        "sha256": "92a50cb1ed207ae415329396f0f03ef4d21e3a84824c6e46710bbde8b94d30f0"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "9f0867feaf2af9739e0265ef5898b5f4",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "compound_triage_bundle",
+      "input_sha256": "4b1f29e0ac41c8ffa8e2907e86fa1038409f8fcf7e624c20168e3d83f52b52a4",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "9f0867feaf2af9739e0265ef5898b5f4:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:58.761687+00:00",
+          "finished_at_utc": "2026-09-20T16:03:59.372935+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/9f0867feaf2af9739e0265ef5898b5f4.json",
+        "sha256": "6117d2dae222f8855dbf9c0627f7fe2e0868ccfab9f6d967bd21896f0a9f34e6"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "5f30f856fad9df4907a99a33555ae3cf",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "compound_contain_notify",
+      "input_sha256": "b4c1c3d91079d727d45b34dd626f7b50d6d648815016c292356ba641750d73c3",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "5f30f856fad9df4907a99a33555ae3cf:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:59.375598+00:00",
+          "finished_at_utc": "2026-09-20T16:03:59.781550+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/5f30f856fad9df4907a99a33555ae3cf.json",
+        "sha256": "1bffaa1489c1d6f36d8378b1c7a9e039ab32bf3a020b52c6f68c7d5beb70d09d"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "189970d6c40f6fbe6d922ea3d4deb565",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "reorder_block_then_enrich",
+      "input_sha256": "594316c38c07525fd181a2ab1f04a89a3a562a936866365e91e59f1a0cfb8715",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "189970d6c40f6fbe6d922ea3d4deb565:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:03:59.783291+00:00",
+          "finished_at_utc": "2026-09-20T16:04:00.215199+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/189970d6c40f6fbe6d922ea3d4deb565.json",
+        "sha256": "a3a6cf86cee7fcc86d20723ce2d514bdd1c21c0f5c7bebf5c42029b9b126db3c"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "9bb9fb8aca03463e0264106b97baf960",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "reorder_evidence_before_rebuild",
+      "input_sha256": "6159f368a77e3564bab147a1ce0cb811c2ef0cdea79bcebb2d3821ae18ba2773",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "9bb9fb8aca03463e0264106b97baf960:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:04:00.216216+00:00",
+          "finished_at_utc": "2026-09-20T16:04:00.697194+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/9bb9fb8aca03463e0264106b97baf960.json",
+        "sha256": "583972eecdb450fff5bb0c2cf1acaa6137abc5f9260fad3ccfd241082b310e9f"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "161ab1d21348a60544a19e3091e5c94c",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "approval_disable_after_signoff",
+      "input_sha256": "1135578eea675ce7d21c3aa8169825ae2f650f2eeba0b023f2a2e4bf62298933",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "161ab1d21348a60544a19e3091e5c94c:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:04:00.699175+00:00",
+          "finished_at_utc": "2026-09-20T16:04:01.126032+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/161ab1d21348a60544a19e3091e5c94c.json",
+        "sha256": "5ef276eb41d43dafe0702336f0c74cb81e279ffbfcc788aeb40a30085b5e3741"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "6c45da6e911d9ad1332eb5cda478266f",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "approval_reimage_pending",
+      "input_sha256": "bf5fdefef97949161a5afd08891e36c4ad50172db9bd56865ea57f762d7bfaa6",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "6c45da6e911d9ad1332eb5cda478266f:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:04:01.129306+00:00",
+          "finished_at_utc": "2026-09-20T16:04:01.555705+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/6c45da6e911d9ad1332eb5cda478266f.json",
+        "sha256": "57fff6f9435750c64351f36a8dcae45ee4fe71198dc8664c47fbaae9cd7ae5c3"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "d5fa63ca94ce2a8aad15bf7ab89797a2",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "hedged_maybe_enrich",
+      "input_sha256": "f9a4c385e582d5febc9fde9b6dfe740a04ef1b1689c8c9327bb5d68e3d272f85",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "d5fa63ca94ce2a8aad15bf7ab89797a2:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:04:01.557523+00:00",
+          "finished_at_utc": "2026-09-20T16:04:01.984191+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/d5fa63ca94ce2a8aad15bf7ab89797a2.json",
+        "sha256": "0056f006467b32f7a9abd305d49b755b2ea97447ae9b03868e4e39608ff2f57c"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "22b279299cba5803b221d22f71b3143c",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "hedged_lean_isolate",
+      "input_sha256": "3368de8a5212febf75ccce733df96c64473c70b35f1e06a57fc9b4c1598e9412",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "22b279299cba5803b221d22f71b3143c:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:04:01.986914+00:00",
+          "finished_at_utc": "2026-09-20T16:04:02.413200+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/22b279299cba5803b221d22f71b3143c.json",
+        "sha256": "5a73304de67c2da5fde1f91a9560d33ea33518ac7ee74844130ae02461345797"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "417a48f9ff319f82bfae4a26d1ff3f67",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "coreference_kill_then_quarantine",
+      "input_sha256": "479f23de779c5681ac1f22f9085c826d468b69b0ae53d6a504fc357af934e337",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "417a48f9ff319f82bfae4a26d1ff3f67:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:04:02.414778+00:00",
+          "finished_at_utc": "2026-09-20T16:04:02.835655+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/417a48f9ff319f82bfae4a26d1ff3f67.json",
+        "sha256": "6416dc80206234c3ac264d08f1238fb4822b69e40a0b616529785bf2a7e784a2"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "ebd1cfe12daf2cd5ff66050956d9167d",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "coreference_isolate_then_lift",
+      "input_sha256": "6f8edc40dd59ad6763cc3b743cac2bba046f7bcadb137c31e855819036e1c963",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "ebd1cfe12daf2cd5ff66050956d9167d:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:04:02.837733+00:00",
+          "finished_at_utc": "2026-09-20T16:04:03.265738+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/ebd1cfe12daf2cd5ff66050956d9167d.json",
+        "sha256": "9f489946d93a8f362fdf0409c0750e174d97b1eac7340a0151d29ab4fbc111f5"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "d11e2a962bbed70c6d14b37918b62f12",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "long_confirmed_intrusion",
+      "input_sha256": "82af8022ba1e24d41ceb15574d27a6ce3d04d20d3351d961158441a183cf2b7d",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "d11e2a962bbed70c6d14b37918b62f12:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:04:03.269382+00:00",
+          "finished_at_utc": "2026-09-20T16:04:03.854898+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/d11e2a962bbed70c6d14b37918b62f12.json",
+        "sha256": "1b682d1d0ab89dd3aa53406dff1779f7ca61c55099cd0eee40e5228fa9002dd4"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "4c9b583d15e597524c3f4b370aea8f11",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "long_ransomware_response",
+      "input_sha256": "28f9c9239991bd09180d66ca70e1f285dea33b43fb42f193210a5ad5425564bf",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "4c9b583d15e597524c3f4b370aea8f11:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:04:03.856419+00:00",
+          "finished_at_utc": "2026-09-20T16:04:04.444396+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/4c9b583d15e597524c3f4b370aea8f11.json",
+        "sha256": "89d665ba4cdadd5ae30c240422b541bd5040d16d3726973eebbe9fc560109738"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "58b0a63fb14617b668a5cb89cde85354",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "benign_sanctioned_scan",
+      "input_sha256": "9d1d378e6c456b3c9fed75bdbcc7d668b940a7238501318406918e6f575aa9d6",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "58b0a63fb14617b668a5cb89cde85354:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:04:04.446303+00:00",
+          "finished_at_utc": "2026-09-20T16:04:04.849325+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/58b0a63fb14617b668a5cb89cde85354.json",
+        "sha256": "476ebf65de22cd85b5d905c15b4cbf2d4f54941b7081e00d2148e1c03b423157"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "8a84514a91fd39ba3dcc6951ca4518c2",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "waf_block_sqli",
+      "input_sha256": "e79b958d912aa8f471b7e91ef43527454c0231bf60b44102a3ff01a21e760f7e",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "8a84514a91fd39ba3dcc6951ca4518c2:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:04:04.850964+00:00",
+          "finished_at_utc": "2026-09-20T16:04:05.307712+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/8a84514a91fd39ba3dcc6951ca4518c2.json",
+        "sha256": "89a479c2211d13d0582464e1e55458df996faa64e599dccf48d4b0549029d3c6"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "80e8b93bbe023162ec6c7dbfb80ad986",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "waf_ips_exploit_enrich",
+      "input_sha256": "279219f992b6cddbd8755f1f1a656f0a7ff064d1eb85453993f4fe6ec1fec033",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "80e8b93bbe023162ec6c7dbfb80ad986:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:04:05.309098+00:00",
+          "finished_at_utc": "2026-09-20T16:04:05.777643+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/80e8b93bbe023162ec6c7dbfb80ad986.json",
+        "sha256": "645ed85a6d0242a1f7997b24ef17863a745ebf39c07bec3ac022eadaaf0d811b"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "09272759c2945892e87515e520485079",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "monitor_only_testbox",
+      "input_sha256": "f7576ca02a49284470c2f971b730f404d2c055cf10b6a946da807ace6505467e",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "09272759c2945892e87515e520485079:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:04:05.778849+00:00",
+          "finished_at_utc": "2026-09-20T16:04:06.166232+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/09272759c2945892e87515e520485079.json",
+        "sha256": "9966b7497b97f142483bded2ff2a55b9d59151a7b4ea184137e052ebc2f72517"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "b735cf0824db7759aa8848669fef660c",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "distractor_hypothetical_disable",
+      "input_sha256": "cb4977bc317f90b4103b74cc33cf232b08fff320b982a2d32b281f2c5397bb20",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "b735cf0824db7759aa8848669fef660c:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:04:06.169403+00:00",
+          "finished_at_utc": "2026-09-20T16:04:06.758855+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/b735cf0824db7759aa8848669fef660c.json",
+        "sha256": "43957ca43765803c9660997a92b8c6e95cbd25f0e0bb852ce931f7e4bfd8cc60"
+      },
+      "exception_type": null,
+      "error": null
+    },
+    {
+      "task_id": "e3a843f1b06165a9dbfedd301251110b",
+      "study_id": "projection_fidelity",
+      "model_name": "ollama_qwen36",
+      "source_id": "compound_block_kill_forensics",
+      "input_sha256": "267889a6f2843f37b4e680c214c8be1ad4adb55e502014befc8aa6cc05cd7ffd",
+      "status": "completed",
+      "execution_count": 1,
+      "executions": [
+        {
+          "execution_id": "e3a843f1b06165a9dbfedd301251110b:1",
+          "execution_index": 1,
+          "worker_id": "bc2be6db30ad4f98a454d423c0dbea19",
+          "started_at_utc": "2026-09-20T16:04:06.760497+00:00",
+          "finished_at_utc": "2026-09-20T16:04:07.342796+00:00",
+          "status": "completed",
+          "exception_type": null,
+          "error": null
+        }
+      ],
+      "output": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f__projection_fidelity/tasks/e3a843f1b06165a9dbfedd301251110b.json",
+        "sha256": "9d1f8b30a7277fac5be75981b4359c8cbf733f2de40bdf4b00701e5987d96b8e"
+      },
+      "exception_type": null,
+      "error": null
+    }
+  ]
+}

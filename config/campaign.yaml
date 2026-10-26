@@ -1,0 +1,75 @@
+schema_version: 1
+execution_sequence:
+  - primary
+  - independent_judge
+  - judge_ablation
+  - adversarial
+  - projection_fidelity
+
+provider_transport:
+  attempt_limit: 3
+  retry_wait_seconds: 65
+  connectivity_probe_timeout_seconds: 5
+  connectivity_probe_interval_seconds: 10
+  connectivity_recovery_timeout_seconds: 900
+  connectivity_required_successes: 3
+
+primary:
+  incident_count: 400
+  policy_evidence_tier: operational
+  models: [azure_gpt54, ollama_qwen36]
+  arms: [llm_zero, llm_policy_prompt]
+  repeats: 3
+  repeat_reduction: majority
+  execution_order: paired_blocked
+  matrix_seed: 0
+
+diagnostics:
+  independent_judge:
+    model: ollama_mistral_small32_judge
+    input_population: primary_plan_cells
+    token_assumption:
+      prompt_tokens: 4000
+      # The prior 2,394-cell run averaged 708 completion tokens (p95: 1,461).
+      # The request limit remains 4,000 and is budgeted separately.
+      completion_tokens: 800
+
+  judge_ablation:
+    model: ollama_mistral_small32_judge
+    sample_size: 240
+    seed: 20260708
+    stratify_by: [model, arm]
+    token_assumption:
+      prompt_tokens: 6000
+      # Rule-by-rule findings are longer than the standard judge response.
+      # The request limit remains 4,000 and is budgeted separately.
+      completion_tokens: 1200
+
+  adversarial:
+    pair_manifest: scenario_banks/adversarial_2026_07/adversarial_bank_manifest.json
+    scenario_manifest: scenario_banks/adversarial_2026_07/scenario_bank_manifest.json
+    source_partition: export_batch_1
+    models: [azure_gpt54, ollama_qwen36]
+    arms: [llm_zero, llm_policy_prompt]
+    repeats: 1
+    repeat_reduction: first
+    execution_order: paired_blocked
+    matrix_seed: 20260707
+    token_assumptions:
+      azure_gpt54:
+        prompt_tokens: 4000
+        completion_tokens: 1200
+      ollama_qwen36:
+        prompt_tokens: 4000
+        completion_tokens: 800
+
+  projection_fidelity:
+    probe: protocol_extensions/projection_fidelity_probe/probe.yaml
+    models: [azure_gpt54, ollama_qwen36]
+    token_assumptions:
+      azure_gpt54:
+        prompt_tokens: 1200
+        completion_tokens: 300
+      ollama_qwen36:
+        prompt_tokens: 1200
+        completion_tokens: 300

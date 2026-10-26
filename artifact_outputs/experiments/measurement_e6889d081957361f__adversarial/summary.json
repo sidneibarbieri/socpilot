@@ -1,0 +1,182 @@
+{
+  "run_count": 160,
+  "incident_count": 40,
+  "incidents_with_violations": 33,
+  "incident_violation_rate": 0.825,
+  "mode_counts": {
+    "LLM": 160
+  },
+  "violations_by_rule": {
+    "malware_detect_quarantine": 30,
+    "exploit_waf_rule": 8,
+    "shadowcopy_tamper_isolate": 24,
+    "creddump_reset": 21,
+    "evidence_before_reimage": 1,
+    "account_probe_block": 7,
+    "evasion_isolate": 43,
+    "ops_monitor_no_isolate": 4
+  },
+  "violations_by_type": {
+    "missing_mandatory": 133,
+    "order_violation": 1,
+    "prohibited_when": 4
+  },
+  "violations_by_severity": {
+    "hard": 138
+  },
+  "llm_only_actions": {
+    "collect_forensics": 138,
+    "escalate_notify": 55,
+    "investigate_enrich": 140,
+    "isolate_host": 52,
+    "monitor_watch": 110,
+    "quarantine_artifact": 53,
+    "reset_disable_account": 19,
+    "block_egress": 7,
+    "kill_process": 9,
+    "apply_ips_waf_rule": 11,
+    "close_benign": 4,
+    "reimage_format_host": 5
+  },
+  "human_only_actions": {},
+  "attack_candidate_count_total": 7396,
+  "attack_curated_count_total": 62,
+  "attack_ab_gap_count_total": 7334,
+  "attack_curated_to_candidate_ratio": 0.0084,
+  "attack_technique_counts": {
+    "T1204": 24,
+    "T1190": 14,
+    "T1059": 6,
+    "T1110": 14,
+    "T1059.001": 4
+  },
+  "attack_tactic_counts": {
+    "TA0002": 34,
+    "TA0001": 14,
+    "TA0006": 14
+  },
+  "llm_prompt_tokens_total": 257710,
+  "llm_completion_tokens_total": 24958,
+  "llm_total_tokens_total": 282668,
+  "llm_latency_ms_total": 576346,
+  "llm_latency_ms_avg_per_run": 3602.16,
+  "llm_cost_estimated_usd_total": 0.533773,
+  "llm_cost_estimated_usd_avg_per_run": 0.003336,
+  "llm_hallucinated_action_count_total": 0,
+  "llm_hallucination_rate_avg_per_run": 0.0,
+  "enforcement_actions_inserted_count_total": 133,
+  "enforcement_actions_removed_count_total": 4,
+  "enforcement_actions_deferred_count_total": 0,
+  "enforcement_actions_reordered_count_total": 1,
+  "enforcement_action_modification_count_total": 138,
+  "enforcement_modified_run_count": 101,
+  "enforcement_modification_rate": 0.6312,
+  "precision_raw_avg": null,
+  "recall_raw_avg": null,
+  "task_coverage_raw_avg": null,
+  "f1_raw_avg": null,
+  "jaccard_raw_avg": null,
+  "precision_enforced_avg": null,
+  "recall_enforced_avg": null,
+  "task_coverage_enforced_avg": null,
+  "f1_enforced_avg": null,
+  "jaccard_enforced_avg": null,
+  "delta_jaccard_avg": null,
+  "task_coverage_delta_avg": null,
+  "reference_run_count": 0,
+  "task_coverage_drop_run_count": null,
+  "task_coverage_drop_rate": null,
+  "violation_rate_by_tactic": {
+    "TA0001": 0.8333,
+    "TA0002": 0.5917,
+    "TA0006": 0.5833
+  },
+  "violation_rate_by_technique": {
+    "T1059": 0.75,
+    "T1059.001": 0.8125,
+    "T1110": 0.5833,
+    "T1190": 0.8333,
+    "T1204": 0.5417
+  },
+  "support_count_by_tactic": {
+    "TA0001": 24,
+    "TA0002": 120,
+    "TA0006": 24
+  },
+  "support_count_by_technique": {
+    "T1059": 16,
+    "T1059.001": 16,
+    "T1110": 24,
+    "T1190": 24,
+    "T1204": 96
+  },
+  "violation_rate_by_incident_type": {
+    "exploit": 0.8333,
+    "malware": 0.625,
+    "suspicious_activity": 0.5694
+  },
+  "violation_rate_by_severity": {
+    "critical": 0.375,
+    "high": 0.5,
+    "medium": 0.7054
+  },
+  "violation_rate_by_asset_criticality": {
+    "critical": 0.375,
+    "high": 0.5,
+    "medium": 0.7054
+  },
+  "support_count_by_incident_type": {
+    "exploit": 24,
+    "malware": 64,
+    "suspicious_activity": 72
+  },
+  "support_count_by_severity": {
+    "critical": 16,
+    "high": 32,
+    "medium": 112
+  },
+  "support_count_by_asset_criticality": {
+    "critical": 16,
+    "high": 32,
+    "medium": 112
+  },
+  "corpus_strata": {
+    "adversarial_diagnostic": {
+      "run_count": 160,
+      "incident_count": 40,
+      "runs_with_violations": 101,
+      "run_violation_rate": 0.6312,
+      "incidents_with_violations": 33,
+      "incident_violation_rate": 0.825
+    },
+    "all_incidents": {
+      "run_count": 160,
+      "incident_count": 40,
+      "runs_with_violations": 101,
+      "run_violation_rate": 0.6312,
+      "incidents_with_violations": 33,
+      "incident_violation_rate": 0.825
+    }
+  },
+  "pairwise_comparison_count": 8,
+  "repeat_reduction": "first",
+  "expected_repeats": 1,
+  "complete_repeat_group_count": 160,
+  "incomplete_repeat_group_count": 0,
+  "experiment_coverage": {
+    "planned_model_count": 2,
+    "selected_model_count": 2,
+    "planned_arm_count": 2,
+    "planned_repeat_count": 1,
+    "repeat_reduction": "first",
+    "preflight_failure_count": 0,
+    "preflight_data_enabled": true,
+    "incident_count_input": 40,
+    "planned_run_count": 160,
+    "attempted_run_count": 160,
+    "successful_run_count": 160,
+    "terminal_observation_count": 0,
+    "execution_failure_count": 0,
+    "run_success_rate": 1.0
+  }
+}

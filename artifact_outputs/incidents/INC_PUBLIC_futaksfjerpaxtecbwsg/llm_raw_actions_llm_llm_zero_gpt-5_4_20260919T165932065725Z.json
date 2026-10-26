@@ -1,0 +1,21 @@
+{
+  "incident_id": "INC_PUBLIC_futaksfjerpaxtecbwsg",
+  "model": "gpt-5.4",
+  "returned_model": "gpt-5.4-2026-03-05",
+  "arm": "llm_zero",
+  "actions": [
+    "investigate_enrich",
+    "monitor_watch",
+    "close_benign"
+  ],
+  "hallucinated_actions": [],
+  "reasoning": "<withheld>",
+  "prompt_sha256": "e7799ae30309b85ceb30eefa38dee74465b0a6e985b89b253753aea765b20a1b",
+  "usage": {
+    "prompt_tokens": 1045,
+    "completion_tokens": 146,
+    "total_tokens": 1191
+  },
+  "latency_ms": 3828,
+  "estimated_cost_usd": 0.004802
+}

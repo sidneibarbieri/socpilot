@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "8a84514a91fd39ba3dcc6951ca4518c2",
+  "study_id": "projection_fidelity",
+  "model_name": "ollama_qwen36",
+  "source_id": "waf_block_sqli",
+  "input_sha256": "e79b958d912aa8f471b7e91ef43527454c0231bf60b44102a3ff01a21e760f7e",
+  "output": {
+    "extracted_actions": [
+      "apply_ips_waf_rule",
+      "collect_forensics"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "f4880e5044f2c46ece3cd6026493d055b7b405e42e88a467e06aad6cfa6492f9",
+    "response_sha256": "c58306b0ec0fedf45f39d551c2f49cd428069baffe7e10580fab6f0e9ceb8582",
+    "usage": {
+      "prompt_tokens": 285,
+      "completion_tokens": 18,
+      "total_tokens": 303
+    },
+    "latency_ms": 450,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "qwen3.6:latest"
+  }
+}

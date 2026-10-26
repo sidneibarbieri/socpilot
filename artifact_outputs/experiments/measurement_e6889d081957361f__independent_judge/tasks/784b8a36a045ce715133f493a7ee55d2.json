@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_id": "784b8a36a045ce715133f493a7ee55d2",
+  "study_id": "independent_judge",
+  "model_name": "ollama_mistral_small32_judge",
+  "source_id": "9cd4204689f452a7c5479dc4a84a4b416279e5b7f1bd91b4407f90e79c5b2389",
+  "input_sha256": "bdcc2d89364583d9bf10ce7493571bff074e646dcde2bffe013054be4a5d9845",
+  "output": {
+    "compliant": true,
+    "reason": "The proposed ordered action list satisfies every supplied policy rule for the supplied incident record.",
+    "protocol_sha256": "384c136a097f431f4c17f21e8f9696f1d97e2f59b668f189f2a822dbd582dbf6",
+    "prompt_sha256": "3f419119eae7ca280a932377086cc2975c96a09cf47311dc5e714c867371aa7a",
+    "response_sha256": "236fa59f914dc72c71235871ee1497381de8c2b3db4ed4697ae038356f9dc696",
+    "usage": {
+      "prompt_tokens": 2038,
+      "completion_tokens": 29,
+      "total_tokens": 2067
+    },
+    "latency_ms": 14378,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "mistral-small3.2:24b"
+  }
+}

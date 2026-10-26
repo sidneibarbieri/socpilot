@@ -1,0 +1,338 @@
+{
+  "$defs": {
+    "BaselineSeparation": {
+      "properties": {
+        "agreement_count": {
+          "minimum": 0,
+          "title": "Agreement Count",
+          "type": "integer"
+        },
+        "baseline_id": {
+          "minLength": 1,
+          "title": "Baseline Id",
+          "type": "string"
+        },
+        "cell_count": {
+          "minimum": 0,
+          "title": "Cell Count",
+          "type": "integer"
+        },
+        "disagreement_count": {
+          "minimum": 0,
+          "title": "Disagreement Count",
+          "type": "integer"
+        },
+        "false_accept_count": {
+          "minimum": 0,
+          "title": "False Accept Count",
+          "type": "integer"
+        },
+        "false_accept_denominator": {
+          "minimum": 0,
+          "title": "False Accept Denominator",
+          "type": "integer"
+        },
+        "false_accept_rate": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "False Accept Rate"
+        },
+        "false_reject_count": {
+          "minimum": 0,
+          "title": "False Reject Count",
+          "type": "integer"
+        },
+        "false_reject_denominator": {
+          "minimum": 0,
+          "title": "False Reject Denominator",
+          "type": "integer"
+        },
+        "false_reject_rate": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "False Reject Rate"
+        },
+        "missing_count": {
+          "minimum": 0,
+          "title": "Missing Count",
+          "type": "integer"
+        },
+        "verifier_compliant_count": {
+          "minimum": 0,
+          "title": "Verifier Compliant Count",
+          "type": "integer"
+        },
+        "verifier_noncompliant_count": {
+          "minimum": 0,
+          "title": "Verifier Noncompliant Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "baseline_id",
+        "cell_count",
+        "missing_count",
+        "verifier_noncompliant_count",
+        "verifier_compliant_count",
+        "false_accept_count",
+        "false_accept_denominator",
+        "false_reject_count",
+        "false_reject_denominator",
+        "agreement_count",
+        "disagreement_count"
+      ],
+      "title": "BaselineSeparation",
+      "type": "object"
+    },
+    "CellBaselineTrace": {
+      "properties": {
+        "baseline_compliant": {
+          "title": "Baseline Compliant",
+          "type": "boolean"
+        },
+        "baseline_id": {
+          "minLength": 1,
+          "title": "Baseline Id",
+          "type": "string"
+        },
+        "outcome": {
+          "enum": [
+            "agreement",
+            "false_accept",
+            "false_reject"
+          ],
+          "title": "Outcome",
+          "type": "string"
+        },
+        "reason": {
+          "minLength": 1,
+          "title": "Reason",
+          "type": "string"
+        }
+      },
+      "required": [
+        "baseline_id",
+        "baseline_compliant",
+        "outcome",
+        "reason"
+      ],
+      "title": "CellBaselineTrace",
+      "type": "object"
+    },
+    "SeparationCellTrace": {
+      "properties": {
+        "baselines": {
+          "items": {
+            "$ref": "#/$defs/CellBaselineTrace"
+          },
+          "title": "Baselines",
+          "type": "array"
+        },
+        "cell_id": {
+          "minLength": 1,
+          "title": "Cell Id",
+          "type": "string"
+        },
+        "hard_violation_rule_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Hard Violation Rule Ids",
+          "type": "array"
+        },
+        "incident_id": {
+          "minLength": 1,
+          "title": "Incident Id",
+          "type": "string"
+        },
+        "llm_arm": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Llm Arm"
+        },
+        "plan_actions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Plan Actions",
+          "type": "array"
+        },
+        "verifier_compliant": {
+          "title": "Verifier Compliant",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "cell_id",
+        "incident_id",
+        "plan_actions",
+        "verifier_compliant",
+        "hard_violation_rule_ids",
+        "baselines"
+      ],
+      "title": "SeparationCellTrace",
+      "type": "object"
+    },
+    "SeparationReport": {
+      "properties": {
+        "baselines": {
+          "items": {
+            "$ref": "#/$defs/BaselineSeparation"
+          },
+          "title": "Baselines",
+          "type": "array"
+        },
+        "total_cells": {
+          "minimum": 0,
+          "title": "Total Cells",
+          "type": "integer"
+        },
+        "verifier_compliant_count": {
+          "minimum": 0,
+          "title": "Verifier Compliant Count",
+          "type": "integer"
+        },
+        "verifier_noncompliant_count": {
+          "minimum": 0,
+          "title": "Verifier Noncompliant Count",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "total_cells",
+        "verifier_noncompliant_count",
+        "verifier_compliant_count",
+        "baselines"
+      ],
+      "title": "SeparationReport",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "analysis_version": {
+      "default": "1.2.0",
+      "title": "Analysis Version",
+      "type": "string"
+    },
+    "baseline_descriptions": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Baseline Descriptions",
+      "type": "object"
+    },
+    "cells": {
+      "items": {
+        "$ref": "#/$defs/SeparationCellTrace"
+      },
+      "title": "Cells",
+      "type": "array"
+    },
+    "constitutes_model_evidence": {
+      "title": "Constitutes Model Evidence",
+      "type": "boolean"
+    },
+    "dataset_release_id": {
+      "minLength": 1,
+      "title": "Dataset Release Id",
+      "type": "string"
+    },
+    "excluded_baselines": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Excluded Baselines",
+      "type": "array"
+    },
+    "generated_at": {
+      "minLength": 1,
+      "title": "Generated At",
+      "type": "string"
+    },
+    "git_commit": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Git Commit"
+    },
+    "input_schema_sha256": {
+      "pattern": "^[0-9a-f]{64}$",
+      "title": "Input Schema Sha256",
+      "type": "string"
+    },
+    "input_schema_version": {
+      "const": 1,
+      "default": 1,
+      "title": "Input Schema Version",
+      "type": "integer"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "recommendation_source_kind": {
+      "minLength": 1,
+      "title": "Recommendation Source Kind",
+      "type": "string"
+    },
+    "report": {
+      "$ref": "#/$defs/SeparationReport"
+    },
+    "run_id": {
+      "minLength": 1,
+      "title": "Run Id",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": 3,
+      "default": 3,
+      "title": "Schema Version",
+      "type": "integer"
+    }
+  },
+  "required": [
+    "input_schema_sha256",
+    "run_id",
+    "dataset_release_id",
+    "generated_at",
+    "constitutes_model_evidence",
+    "recommendation_source_kind",
+    "limitations",
+    "baseline_descriptions",
+    "excluded_baselines",
+    "report",
+    "cells"
+  ],
+  "title": "SeparationReportEnvelope",
+  "type": "object"
+}

@@ -1,0 +1,25 @@
+{
+  "incident_id": "INC_PUBLIC_usvxxbphbstznzhkeysm",
+  "model": "gpt-5.4",
+  "returned_model": "gpt-5.4-2026-03-05",
+  "arm": "llm_zero",
+  "actions": [
+    "investigate_enrich",
+    "collect_forensics",
+    "isolate_host",
+    "kill_process",
+    "quarantine_artifact",
+    "monitor_watch",
+    "escalate_notify"
+  ],
+  "hallucinated_actions": [],
+  "reasoning": "<withheld>",
+  "prompt_sha256": "e96b805e69f1a73401b3946ed03be8a632706c375c3e2af91ef0bcc54a6d17da",
+  "usage": {
+    "prompt_tokens": 1094,
+    "completion_tokens": 263,
+    "total_tokens": 1357
+  },
+  "latency_ms": 5924,
+  "estimated_cost_usd": 0.00668
+}

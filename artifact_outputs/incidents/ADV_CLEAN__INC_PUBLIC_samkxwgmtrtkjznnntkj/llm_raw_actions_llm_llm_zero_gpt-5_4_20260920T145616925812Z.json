@@ -1,0 +1,22 @@
+{
+  "incident_id": "ADV_CLEAN__INC_PUBLIC_samkxwgmtrtkjznnntkj",
+  "model": "gpt-5.4",
+  "returned_model": "gpt-5.4-2026-03-05",
+  "arm": "llm_zero",
+  "actions": [
+    "investigate_enrich",
+    "collect_forensics",
+    "monitor_watch",
+    "escalate_notify"
+  ],
+  "hallucinated_actions": [],
+  "reasoning": "<withheld>",
+  "prompt_sha256": "2ec20bd9a045d3ad403f17a90a62f30a7bcf6330aaa0f1f274f82f88fe71b58e",
+  "usage": {
+    "prompt_tokens": 933,
+    "completion_tokens": 157,
+    "total_tokens": 1090
+  },
+  "latency_ms": 13252,
+  "estimated_cost_usd": 0.004688
+}

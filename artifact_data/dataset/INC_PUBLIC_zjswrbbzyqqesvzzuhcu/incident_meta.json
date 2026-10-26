@@ -1,0 +1,11 @@
+{
+  "incident_id": "INC_PUBLIC_zjswrbbzyqqesvzzuhcu",
+  "incident_type": "malware",
+  "severity": "high",
+  "asset_criticality": "high",
+  "asset_role": "bank_endpoint",
+  "time_window_start": "2023-07-29T01:41:02.435000Z",
+  "time_window_end": "2023-07-29T04:30:51.816000Z",
+  "final_status": "resolved",
+  "asset_host": "host_0001"
+}

@@ -1,0 +1,11 @@
+{
+  "incident_id": "INC_PUBLIC_sdaftrapnrbaqtjdhnjk",
+  "incident_type": "exploit",
+  "severity": "medium",
+  "asset_criticality": "medium",
+  "asset_role": "bank_endpoint",
+  "time_window_start": "2024-06-26T03:38:18.265000Z",
+  "time_window_end": "2024-06-29T12:25:40.558000Z",
+  "final_status": "resolved",
+  "asset_host": "host_0001"
+}

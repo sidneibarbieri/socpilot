@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "task_id": "e0909cfc2a735e4e2b313a336e0d0258",
+  "study_id": "projection_fidelity",
+  "model_name": "azure_gpt54",
+  "source_id": "indirect_kill_miner",
+  "input_sha256": "4f6b81dc98cfee8634224e802cd6d6cdd04d0463d0f5aa3686cfd931d34c7e94",
+  "output": {
+    "extracted_actions": [
+      "kill_process"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "cf568832db1798fa2194fcbb93c241486ddd6ccf68c15c01e1af5ba2e176630b",
+    "response_sha256": "881e1bbce755cd902912fc80b6dc94b6a6838dfacccfdb784ee5a63d522c0f40",
+    "usage": {
+      "prompt_tokens": 270,
+      "completion_tokens": 11,
+      "total_tokens": 281
+    },
+    "latency_ms": 1651,
+    "estimated_cost_usd": 0.00084,
+    "returned_model": "gpt-5.4-2026-03-05"
+  }
+}

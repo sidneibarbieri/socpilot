@@ -1,0 +1,68 @@
+{
+  "checks": {
+    "all_cells_terminally_accounted": true,
+    "analysis_bundle_is_provider_evidence": true,
+    "manifest_matches_protocol_freeze": true,
+    "provider_attempts_match_terminal_cells": true,
+    "snapshot_hashes_recorded": true
+  },
+  "constitutes_model_evidence": true,
+  "generated_at_utc": "2026-10-05T17:23:38.141552+00:00",
+  "protocol_freeze": {
+    "path": "artifact_outputs/experiments/measurement_e6889d081957361f/protocol_freeze.json",
+    "schema_version": 8,
+    "sha256": "e6889d081957361fe7249325e09baf9c14f23e58bdfc4191bcf3b6e67a3fadf6"
+  },
+  "run_id": "measurement_e6889d081957361f",
+  "schema_version": 1,
+  "snapshot": {
+    "files": {
+      "analysis_bundle": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f/analysis_bundle.json",
+        "sha256": "e32c81f72b7d8cb7ba5e8cb1d04e355a8fab58123684a40dfd7b45c9a3f15dc5"
+      },
+      "connectivity_recovery": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f/connectivity_recovery.jsonl",
+        "sha256": "f9da39f6dfc64ff099c773d4c221c92ef8db2e77ccbc58744b31ecf1c7f96bc1"
+      },
+      "data_preflight": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f/data_preflight.json",
+        "sha256": "c8e1c6cda5ca0b4c2d506c2d62596018172a33a73e3c4c79891ce7d6e4bf3c89"
+      },
+      "data_quality": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f/data_quality_report.json",
+        "sha256": "3a23eab0de46bf902d97eb88232f19d426d3ea5083245015d700e8c149657eff"
+      },
+      "experiment_failures": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f/experiment_failures.json",
+        "sha256": "b3cc87cc51898ffe28c81de2b9902f65526e2784cc4f8f4d152688c15ed46ff3"
+      },
+      "ledger": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f/run_ledger.json",
+        "sha256": "9b2492f8edda28083e29b0732197f06196fba6188a406bee0184f3b3e81ce500"
+      },
+      "manifest": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f/manifest.json",
+        "sha256": "e43d4e9d709a61e15f7d114d58de09fa65860068b0170bab02f127fd2c5c18b8"
+      },
+      "protocol_freeze": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f/protocol_freeze.json",
+        "sha256": "e6889d081957361fe7249325e09baf9c14f23e58bdfc4191bcf3b6e67a3fadf6"
+      },
+      "provider_attempts": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f/provider_attempts.jsonl",
+        "sha256": "41ec3a5498a5fb44f998ac3480218555ad20076a180f0b14e04a39147c663d6f"
+      },
+      "run_matrix": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f/run_matrix.json",
+        "sha256": "be40873d53435d592eff19be9c7d1acb2bff0b109f54907f805e3cfab6de494a"
+      },
+      "summary": {
+        "path": "artifact_outputs/experiments/measurement_e6889d081957361f/summary.json",
+        "sha256": "83a6d76f2d0a590bbf2fc8c9bed38724dac45f908506d777ab7a321ed890105d"
+      }
+    },
+    "path": "artifact_outputs/experiments/measurement_e6889d081957361f"
+  },
+  "state": "post_execution_evidence"
+}

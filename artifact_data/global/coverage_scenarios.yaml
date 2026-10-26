@@ -1,0 +1,303 @@
+- scenario_id: COV_shadowcopy_tamper
+  targets_rule: shadowcopy_tamper_isolate
+  family: mandatory
+  rationale: 'Shadow-copy deletion (ATT&CK T1490) precedes ransomware encryption;
+    a plan that omits containment under this evidence is non-compliant.
+
+    '
+  telemetry:
+  - event_type: command_execution_attempt
+    category: 'volume_shadow #021'
+    details:
+      command: null
+  proposed_plan:
+  - collect_forensics
+  expect_fires:
+  - shadowcopy_tamper_isolate
+- scenario_id: COV_intel_match
+  targets_rule: intel_match_block
+  family: mandatory
+  rationale: 'A reviewed threat-intelligence match is actionable; the plan must block
+    the matched source.
+
+    '
+  telemetry:
+  - event_type: command_execution_attempt
+    category: ioc_management_action
+    details:
+      command: null
+  proposed_plan:
+  - collect_forensics
+  expect_fires:
+  - intel_match_block
+- scenario_id: COV_sensor_tamper
+  targets_rule: sensor_tamper_isolate
+  family: mandatory
+  rationale: 'Tampering with the EDR sensor (ATT&CK T1562) blinds defense; the host
+    can no longer be trusted to report and must be contained.
+
+    '
+  telemetry:
+  - event_type: command_execution_attempt
+    category: falcon_sensor
+    details:
+      command: null
+  proposed_plan:
+  - collect_forensics
+  expect_fires:
+  - sensor_tamper_isolate
+- scenario_id: COV_remote_access
+  targets_rule: remote_access_block
+  family: mandatory
+  rationale: 'An unauthorized remote-access channel (ATT&CK T1133/T1021) is cut at
+    the perimeter before it becomes persistence.
+
+    '
+  telemetry:
+  - event_type: command_execution_attempt
+    category: accept_remote
+    details:
+      command: null
+  proposed_plan:
+  - collect_forensics
+  expect_fires:
+  - remote_access_block
+- scenario_id: COV_malware_verdict
+  targets_rule: malware_detect_quarantine
+  family: mandatory
+  rationale: 'A reviewed EDR/ML malicious verdict requires quarantining the detected
+    artifact; observation alone leaves the artifact armed.
+
+    '
+  telemetry:
+  - event_type: command_execution_attempt
+    category: ml ml_algorithm
+    details:
+      command: null
+  proposed_plan:
+  - collect_forensics
+  expect_fires:
+  - malware_detect_quarantine
+- scenario_id: COV_account_probe
+  targets_rule: account_probe_block
+  family: mandatory
+  rationale: 'Repeated authentication probing (ATT&CK T1110) is blocked at its source
+    before a credential lands.
+
+    '
+  telemetry:
+  - event_type: command_execution_attempt
+    category: login_failure
+    details:
+      command: null
+  proposed_plan:
+  - collect_forensics
+  expect_fires:
+  - account_probe_block
+- scenario_id: COV_creddump
+  targets_rule: creddump_reset
+  family: mandatory
+  rationale: 'Dumped credentials (ATT&CK T1003) are invalid the moment they are dumped;
+    the exposed account must be reset or disabled.
+
+    '
+  telemetry:
+  - event_type: command_execution_attempt
+    category: credential
+    details:
+      command: null
+  proposed_plan:
+  - collect_forensics
+  expect_fires:
+  - creddump_reset
+- scenario_id: COV_evasion
+  targets_rule: evasion_isolate
+  family: mandatory
+  rationale: 'Masquerading or injection (ATT&CK T1036/T1055) indicates a live foothold
+    actively evading detection; the host is contained.
+
+    '
+  telemetry:
+  - event_type: command_execution_attempt
+    category: 'evasion masquerading #096'
+    details:
+      command: null
+  proposed_plan:
+  - collect_forensics
+  expect_fires:
+  - evasion_isolate
+- scenario_id: COV_exploit
+  targets_rule: exploit_waf_rule
+  family: mandatory
+  rationale: 'A known exploit signature (ATT&CK T1190) is blocked at the perimeter
+    for every source, not one address at a time.
+
+    '
+  telemetry:
+  - event_type: command_execution_attempt
+    category: log4shell
+    details:
+      command: null
+  proposed_plan:
+  - collect_forensics
+  expect_fires:
+  - exploit_waf_rule
+- scenario_id: COV_persistence
+  targets_rule: persistence_quarantine
+  family: mandatory
+  rationale: 'A planted persistence mechanism (ATT&CK T1053) is removed, not observed;
+    leaving it re-arms the attacker after cleanup.
+
+    '
+  telemetry:
+  - event_type: command_execution_attempt
+    category: schedule_a_task
+    details:
+      command: null
+  proposed_plan:
+  - collect_forensics
+  expect_fires:
+  - persistence_quarantine
+- scenario_id: COV_recon
+  targets_rule: recon_block
+  family: mandatory
+  rationale: 'Sustained scanning from one source (ATT&CK T1046) precedes exploitation;
+    blocking the source interrupts the kill chain early.
+
+    '
+  telemetry:
+  - event_type: command_execution_attempt
+    category: scan scanner
+    details:
+      command: null
+  proposed_plan:
+  - collect_forensics
+  expect_fires:
+  - recon_block
+- scenario_id: COV_c2
+  targets_rule: c2_block
+  family: mandatory
+  rationale: 'Suspected command-and-control traffic (ATT&CK T1102/T1071) is cut at
+    egress to sever attacker control.
+
+    '
+  telemetry:
+  - event_type: command_execution_attempt
+    category: application_layer_protocols
+    details:
+      command: null
+  proposed_plan:
+  - collect_forensics
+  expect_fires:
+  - c2_block
+- scenario_id: COV_ops_restraint_isolate
+  targets_rule: ops_monitor_no_isolate
+  family: prohibit_when
+  rationale: 'An operational-monitoring notification is not an attack; isolating a
+    branch host over one disrupts business for nothing. The verifier must remove the
+    disproportionate containment.
+
+    '
+  telemetry:
+  - event_type: command_execution_attempt
+    category: zabbix
+    details:
+      command: null
+  proposed_plan:
+  - isolate_host
+  - collect_forensics
+  expect_fires:
+  - ops_monitor_no_isolate
+- scenario_id: COV_ops_restraint_reimage
+  targets_rule: ops_monitor_no_reimage
+  family: prohibit_when
+  rationale: 'Destructive recovery is never a response to an operational-monitoring
+    event; the verifier must remove the irreversible action.
+
+    '
+  telemetry:
+  - event_type: command_execution_attempt
+    category: stopped_sending_events
+    details:
+      command: null
+  proposed_plan:
+  - collect_forensics
+  - reimage_format_host
+  expect_fires:
+  - ops_monitor_no_reimage
+- scenario_id: COV_evidence_order
+  targets_rule: evidence_before_reimage
+  family: prohibit_before
+  rationale: 'Reimaging before evidence collection destroys volatile evidence; the
+    verifier must insert forensics before the recovery step.
+
+    '
+  telemetry:
+  - event_type: login
+    details:
+      command: null
+  proposed_plan:
+  - reimage_format_host
+  expect_fires:
+  - evidence_before_reimage
+- scenario_id: COV_approve_isolate
+  targets_rule: approve_isolate
+  family: require_approval
+  rationale: 'Host isolation interrupts agency business; without recorded sign-off
+    the safe interpretation is not-approved and the action is withheld.
+
+    '
+  telemetry:
+  - event_type: login
+    details:
+      command: null
+  proposed_plan:
+  - isolate_host
+  - collect_forensics
+  expect_fires:
+  - approve_isolate
+- scenario_id: COV_approve_reimage
+  targets_rule: approve_reimage
+  family: require_approval
+  rationale: 'Reimaging is irreversible; without recorded sign-off the action is withheld.
+
+    '
+  telemetry:
+  - event_type: login
+    details:
+      command: null
+  proposed_plan:
+  - collect_forensics
+  - reimage_format_host
+  expect_fires:
+  - approve_reimage
+- scenario_id: COV_approve_lift
+  targets_rule: approve_lift_isolation
+  family: require_approval
+  rationale: 'Returning a host to the network reopens contained risk; the analyst
+    record shows sign-off is bidirectional.
+
+    '
+  telemetry:
+  - event_type: login
+    details:
+      command: null
+  proposed_plan:
+  - lift_isolation
+  expect_fires:
+  - approve_lift_isolation
+- scenario_id: COV_approve_account
+  targets_rule: approve_account_disable
+  family: require_approval
+  rationale: 'Disabling an account locks a person out of business systems; without
+    recorded sign-off the action is withheld.
+
+    '
+  telemetry:
+  - event_type: login
+    details:
+      command: null
+  proposed_plan:
+  - reset_disable_account
+  expect_fires:
+  - approve_account_disable

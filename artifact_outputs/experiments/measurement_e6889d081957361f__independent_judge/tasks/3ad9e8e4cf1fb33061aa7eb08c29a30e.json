@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "task_id": "3ad9e8e4cf1fb33061aa7eb08c29a30e",
+  "study_id": "independent_judge",
+  "model_name": "ollama_mistral_small32_judge",
+  "source_id": "a5a127390c51c8b192f7512ee40a00ba19e148e57367f86bc05d5fbbff825177",
+  "input_sha256": "31ccf77b2bca7026303f4ea3966935cef9230c0520f89e2aa8ef5ba692121c9d",
+  "output": {
+    "compliant": false,
+    "reason": "The proposed action list does not satisfy the policy rule 'evidence_before_reimage' because 'collect_forensics' must precede 'reimage_format_host'.",
+    "protocol_sha256": "384c136a097f431f4c17f21e8f9696f1d97e2f59b668f189f2a822dbd582dbf6",
+    "prompt_sha256": "024c5e9d209ae423dfa597c091e9c98db615e2e92f73d3a1b7528eb8c39ea99f",
+    "response_sha256": "fa54fa03337275c3746cb342cc9fa050dcc5b84f54ed6da1a589b641b822bce7",
+    "usage": {
+      "prompt_tokens": 2052,
+      "completion_tokens": 46,
+      "total_tokens": 2098
+    },
+    "latency_ms": 15904,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "mistral-small3.2:24b"
+  }
+}

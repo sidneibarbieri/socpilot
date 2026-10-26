@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "task_id": "6e81d097c1f034b4f03c0edefe4940ea",
+  "study_id": "projection_fidelity",
+  "model_name": "ollama_qwen36",
+  "source_id": "escalate_and_watch",
+  "input_sha256": "f4a5cb9dda5e0135b109e3032e7646915dc8ce2984d1c1dbff914c44bc5097eb",
+  "output": {
+    "extracted_actions": [
+      "escalate_notify",
+      "monitor_watch"
+    ],
+    "out_of_catalog": [],
+    "prompt_sha256": "3482694d3088461e6df330b0bdafa7e6c94186b36dc1ad79c5ce513484cd5e87",
+    "response_sha256": "2cd7d977e4d24f2fb684ec0f281042b2a02c57cb1a005f9b818fb8b1520f9c6c",
+    "usage": {
+      "prompt_tokens": 294,
+      "completion_tokens": 14,
+      "total_tokens": 308
+    },
+    "latency_ms": 372,
+    "estimated_cost_usd": 0.0,
+    "returned_model": "qwen3.6:latest"
+  }
+}
