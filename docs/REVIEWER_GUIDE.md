@@ -1,5 +1,17 @@
 # Reviewer Guide
 
+## Completed-results package: offline review
+
+For this frozen package, use the maintained offline runtime:
+
+```bash
+python3.12 -m venv .venv
+.venv/bin/pip install -r analysis_runtime/requirements.txt -r analysis_runtime/requirements-dev.txt
+bash reproduce.sh validate-public-artifact
+```
+
+This path checks the retained results without model calls. The collection source and operator workflow below are preserved for provenance and extension; repeating collection is separate from offline review.
+
 This is an evaluation tool for incident-response plans. It checks proposed action
 lists against explicit policy rules; it does not execute incident-response actions.
 The source package and a completed-results package serve different purposes.
@@ -51,9 +63,9 @@ Run from the extracted package root in a persistent directory:
 ```bash
 python3.12 -m venv .venv
 .venv/bin/pip install -r requirements.txt -r requirements-dev.txt
-bash run.sh validate-public-artifact
-bash run.sh policy-graph-validate
-bash run.sh rule-coverage
+bash reproduce.sh validate-public-artifact
+bash reproduce.sh policy-graph-validate
+bash reproduce.sh rule-coverage
 PYTHONPATH=src .venv/bin/python -m pytest -q
 bash provider_run.sh prepare
 PLAN=artifact_outputs/provider_state/canonical_campaign/provider_execution_plan.json
@@ -114,7 +126,7 @@ paths. Corpus and policy checks are available in this source package. Empirical
 model-result claims remain pending until all required studies pass finalization.
 
 A completed-results package adds preserved model outputs and derived reports.
-Its `bash run.sh reproduce-results` command rechecks those records without model
+Its `bash reproduce.sh reproduce-results` command rechecks those records without model
 access. A new model execution is a new stochastic measurement, not byte-identical
 reproduction. Do not substitute its results silently for the published evidence.
 Expected primary-result tables, figures, durations, and tolerances must accompany

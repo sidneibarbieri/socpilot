@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-27T05:30:33.360430+00:00",
+  "generated_at_utc": "2026-10-27T15:08:22.899607+00:00",
   "dataset_release_id": "socpilot_public_snapshot",
   "incident_count": 400,
   "measurement_incident_count": 400,
@@ -91005,7 +91005,7 @@
     },
     {
       "path": "docs/REVIEWER_GUIDE.md",
-      "sha256": "856ee311a1e9ebe6699cb1e9188f4e4282a866f745e73d46052fa6d196b3c1a0"
+      "sha256": "10958746da28859107092d1e090f89a28ec4152c711889c8294f083c4762d2a7"
     },
     {
       "path": "protocol_extensions/projection_fidelity_probe/README.md",
