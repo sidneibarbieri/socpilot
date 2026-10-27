@@ -65,6 +65,8 @@ def _replaceable(relative: str) -> bool:
         "REVIEWER_DASHBOARD.html",
         "artifact_outputs/dashboard/index.html",
         "artifact_outputs/analysis/runtime_refresh_receipt.json",
+        "artifact_outputs/analysis/claim_evidence_matrix.json",
+        "CLAIM_EVIDENCE_MATRIX.md",
         "docs/img/reviewer_dashboard.png",
         "docs/img/reviewer_dashboard.preview.json",
     } or relative.startswith("analysis_runtime/")
@@ -141,6 +143,51 @@ def _copy_preview(
         shutil.copyfile(selected / name, target)
 
 
+def _refresh_claim_matrix_commands(source: Path, staging: Path) -> None:
+    """Update reviewer commands while preserving claims and evidence bindings."""
+    matrix_relative = Path("artifact_outputs/analysis/claim_evidence_matrix.json")
+    markdown_relative = Path("CLAIM_EVIDENCE_MATRIX.md")
+    matrix_path = source / matrix_relative
+    markdown_path = source / markdown_relative
+    if not matrix_path.exists() and not markdown_path.exists():
+        return
+    if not matrix_path.is_file() or not markdown_path.is_file():
+        raise ValueError("Claim matrix JSON and Markdown must both be present.")
+
+    matrix = json.loads(matrix_path.read_text(encoding="utf-8"))
+    if matrix.get("artifact_stage") != "reported_results":
+        raise ValueError("Only a reported-results claim matrix can be refreshed.")
+    expected_commands = {
+        "corpus_scope": "validate-public-artifact",
+        "policy_selection": "validate-public-artifact",
+        "verifier_semantics": "validate-public-artifact",
+        "model_results": "reproduce-results",
+    }
+    claims = matrix["claims"]
+    if len(claims) != len(expected_commands) or {
+        claim["claim_id"] for claim in claims
+    } != set(expected_commands):
+        raise ValueError("Unexpected claim matrix; refusing command-only refresh.")
+    markdown = markdown_path.read_text(encoding="utf-8")
+    for claim in claims:
+        command = expected_commands[claim["claim_id"]]
+        old = f"bash run.sh {command}"
+        new = f"bash reproduce.sh {command}"
+        if claim["audit_command"] not in {old, new}:
+            raise ValueError(f"Unexpected audit command for {claim['claim_id']}.")
+        claim["audit_command"] = new
+        if old in markdown:
+            markdown = markdown.replace(f"`{old}`", f"`{new}`")
+        if f"`{new}`" not in markdown:
+            raise ValueError(f"Markdown omits audit command for {claim['claim_id']}.")
+    if "bash run.sh" in markdown:
+        raise ValueError("Legacy audit command remains in claim matrix.")
+    target = staging / matrix_relative
+    target.parent.mkdir(parents=True, exist_ok=True)
+    target.write_text(json.dumps(matrix, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (staging / markdown_relative).write_text(markdown, encoding="utf-8")
+
+
 def refresh_runtime(
     source: Path,
     destination: Path,
@@ -170,6 +217,7 @@ def refresh_runtime(
         staging = Path(temporary) / "package"
         staging.mkdir()
         _copy_bound_files(source, staging, entries)
+        _refresh_claim_matrix_commands(source, staging)
         campaign_manifest = "artifact_outputs/analysis/corpus_campaign.json"
         if any(entry.path == campaign_manifest for entry in entries):
             materialize_campaign_view(

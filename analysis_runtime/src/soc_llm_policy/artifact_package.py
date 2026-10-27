@@ -2529,6 +2529,11 @@ def _write_claim_evidence_matrix(
         return matches[0].relative_to(release_root).as_posix()
 
     model_status = "supported" if provider_evidence_available else "pending"
+    audit_validate_command = (
+        "bash reproduce.sh validate-public-artifact"
+        if provider_evidence_available
+        else "bash run.sh validate-public-artifact"
+    )
     model_evidence = (
         [
             evidence_path("run_ledger.json"),
@@ -2553,7 +2558,7 @@ def _write_claim_evidence_matrix(
                     evidence_path("corpus_campaign.json"),
                     evidence_path("corpus_partition_audit.json"),
                 ],
-                "audit_command": "bash run.sh validate-public-artifact",
+                "audit_command": audit_validate_command,
             },
             {
                 "claim_id": "policy_selection",
@@ -2563,7 +2568,7 @@ def _write_claim_evidence_matrix(
                     evidence_path("constraints.yaml"),
                     evidence_path("policy_preflight.json"),
                 ],
-                "audit_command": "bash run.sh validate-public-artifact",
+                "audit_command": audit_validate_command,
             },
             {
                 "claim_id": "verifier_semantics",
@@ -2573,7 +2578,7 @@ def _write_claim_evidence_matrix(
                     evidence_path("verify.py"),
                     evidence_path("protocol_freeze.json"),
                 ],
-                "audit_command": "bash run.sh validate-public-artifact",
+                "audit_command": audit_validate_command,
             },
             {
                 "claim_id": "model_results",
@@ -2581,7 +2586,7 @@ def _write_claim_evidence_matrix(
                 "status": model_status,
                 "evidence": model_evidence,
                 "audit_command": (
-                    "bash run.sh reproduce-results"
+                    "bash reproduce.sh reproduce-results"
                     if provider_evidence_available
                     else "Provider evidence not present"
                 ),

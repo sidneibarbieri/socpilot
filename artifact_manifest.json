@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-26T21:01:00.503599+00:00",
+  "generated_at_utc": "2026-10-27T05:30:33.360430+00:00",
   "dataset_release_id": "socpilot_public_snapshot",
   "incident_count": 400,
   "measurement_incident_count": 400,
@@ -1229,7 +1229,7 @@
   "run_id": "measurement_e6889d081957361f",
   "campaign_evidence_path": "reconstruction/campaign-evidence-original-source.json",
   "artifact_stage": "reported_results",
-  "file_count": 22765,
+  "file_count": 22766,
   "files": [
     {
       "path": ".env.example",
@@ -1241,7 +1241,7 @@
     },
     {
       "path": "CLAIM_EVIDENCE_MATRIX.md",
-      "sha256": "85e11678022590c4e5cddcf2a48a03d39962c83fe030dcc672a857f72b3ed15e"
+      "sha256": "6868e6aae47eed09a18f567b696c6495a93eab05219a2a4154982495f81b3398"
     },
     {
       "path": "DATA_LICENSE.md",
@@ -1277,7 +1277,7 @@
     },
     {
       "path": "analysis_runtime/runtime_manifest.json",
-      "sha256": "0d93c077cdec87181f65ec641df7f22ce841ead85af5c36d78acf43dfe705239"
+      "sha256": "cbe6ad866ae876fdd3e424faca9b1f3496c839dd0c3ec52579afd2758d33165f"
     },
     {
       "path": "analysis_runtime/scripts/audit_corpus_partitions.py",
@@ -1425,11 +1425,11 @@
     },
     {
       "path": "analysis_runtime/src/soc_llm_policy/artifact_package.py",
-      "sha256": "cbbced1617825be9026838af2f6934842d5f106ccd134d9f6aa89faab476b057"
+      "sha256": "7fc2db6de64897cd9a4efb56076889c0155da928730dda320c380801f268ec04"
     },
     {
       "path": "analysis_runtime/src/soc_llm_policy/artifact_runtime_refresh.py",
-      "sha256": "bcc7a87c81c952409eb41560d429f42c71a1248fa154d2c04c5fcfb57cd01a7d"
+      "sha256": "cc7d10c51dec4a2375395de188d363b8e79389430d60dd2da8c81a1a8ef087eb"
     },
     {
       "path": "analysis_runtime/src/soc_llm_policy/artifact_verify.py",
@@ -9785,7 +9785,7 @@
     },
     {
       "path": "artifact_outputs/analysis/claim_evidence_matrix.json",
-      "sha256": "9e691906aff5027df9c53b91d6d99187e4ed37174e2046f507d2363c694a1d8d"
+      "sha256": "317d183ca8ff19423d6750d71bfaa908048f2c4156d4513e3f400a48bcfc3008"
     },
     {
       "path": "artifact_outputs/analysis/connectivity_recovery.jsonl",
@@ -9950,6 +9950,10 @@
     {
       "path": "artifact_outputs/analysis/run_matrix.json",
       "sha256": "882f2f8b16ad5822626ed5a260739c051a9d59cb51b759a74e72c853d534df98"
+    },
+    {
+      "path": "artifact_outputs/analysis/runtime_refresh_receipt.json",
+      "sha256": "3ef629500a7cedce12842f3c5d677bf10fa66a4386d1eacdf4e01fa24cd3f698"
     },
     {
       "path": "artifact_outputs/analysis/separation_input.schema.json",

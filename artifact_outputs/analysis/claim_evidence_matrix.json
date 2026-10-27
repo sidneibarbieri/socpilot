@@ -10,7 +10,7 @@
         "artifact_outputs/analysis/corpus_campaign.json",
         "artifact_outputs/analysis/policy_preflight/policy_preflight/corpus_partition_audit.json"
       ],
-      "audit_command": "bash run.sh validate-public-artifact"
+      "audit_command": "bash reproduce.sh validate-public-artifact"
     },
     {
       "claim_id": "policy_selection",
@@ -20,7 +20,7 @@
         "artifact_data/global/constraints.yaml",
         "artifact_outputs/analysis/policy_preflight/policy_preflight/policy_preflight.json"
       ],
-      "audit_command": "bash run.sh validate-public-artifact"
+      "audit_command": "bash reproduce.sh validate-public-artifact"
     },
     {
       "claim_id": "verifier_semantics",
@@ -30,7 +30,7 @@
         "src/soc_llm_policy/verify.py",
         "artifact_outputs/analysis/protocol_freeze.json"
       ],
-      "audit_command": "bash run.sh validate-public-artifact"
+      "audit_command": "bash reproduce.sh validate-public-artifact"
     },
     {
       "claim_id": "model_results",
@@ -40,7 +40,7 @@
         "artifact_outputs/analysis/run_ledger.json",
         "artifact_outputs/analysis/official_evaluation_summary.json"
       ],
-      "audit_command": "bash run.sh reproduce-results"
+      "audit_command": "bash reproduce.sh reproduce-results"
     }
   ]
 }
