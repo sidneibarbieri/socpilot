@@ -139,3 +139,7 @@ PREVIEW_ENGINE=playwright PYTHON=.venv/bin/python CHROME_BIN=/path/to/chromium b
 ```
 
 Write the preview outside this verified package. A missing dependency, browser error or timeout fails the capture without a success receipt. Opening the existing HTML needs neither Node.js nor Playwright.
+
+## Policy graph metadata
+
+The collection-bound graph remains unchanged in `artifact_data/global/policy_graph.json`. Its digest is stale for the published typed YAML inputs. The offline review command checks `artifact_outputs/analysis/policy_graph.json`, regenerated from those YAMLs after verifying identical nodes and edges. The runtime refresh receipt records both hashes; collection inputs and decisions are preserved.

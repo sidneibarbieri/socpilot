@@ -3074,6 +3074,32 @@ def _offline_verdict_readme(release_root: Path) -> str:
     )
 
 
+def _rewrite_completed_reviewer_guide(release_root: Path) -> None:
+    guide = release_root / "docs" / "REVIEWER_GUIDE.md"
+    guide.parent.mkdir(parents=True, exist_ok=True)
+    content = guide.read_text(encoding="utf-8") if guide.is_file() else "# Reviewer Guide\n"
+    content = content.replace("bash run.sh", "bash reproduce.sh")
+    content = content.replace("./run.sh validate-public-artifact", "bash reproduce.sh validate-public-artifact")
+    heading = "## Completed-results package: offline review"
+    if heading not in content:
+        content = (
+            "# Reviewer Guide\n\n" + heading + "\n\n"
+            "For this frozen package, use the maintained offline runtime:\n\n"
+            "```bash\n"
+            "python3.12 -m venv .venv\n"
+            ".venv/bin/pip install -r analysis_runtime/requirements.txt "
+            "-r analysis_runtime/requirements-dev.txt\n"
+            "bash reproduce.sh validate-public-artifact\n"
+            "```\n\n"
+            "This path checks the retained results without model calls. "
+            "The collection source and operator workflow below are preserved "
+            "for provenance and extension; repeating collection is separate "
+            "from offline review.\n\n"
+            + content.removeprefix("# Reviewer Guide\n").lstrip()
+        )
+    guide.write_text(content, encoding="utf-8")
+
+
 def _copy_analysis_runtime(release_root: Path) -> None:
     maintenance_root = Path(__file__).resolve().parents[2]
     runtime_root = release_root / "analysis_runtime"
@@ -3183,6 +3209,7 @@ def _copy_analysis_runtime(release_root: Path) -> None:
             "Opening the existing HTML needs neither Node.js nor Playwright.\n"
         )
     readme.write_text(content, encoding="utf-8")
+    _rewrite_completed_reviewer_guide(release_root)
 
 
 def _populate_terminal_campaign_release(
@@ -3420,11 +3447,22 @@ def _require_verified_terminal_release(release_root: Path) -> None:
 
 
 def build_package(*, paths: RepoPaths, options: PackageOptions) -> Path:
+    raw_dir = options.raw_dir or paths.repo_root / "incoming" / "raw"
+    if raw_dir.is_dir() and options.private_correlation_map_path is None:
+        raise ValueError(
+            "A private correlation map path is required when packaging raw exports"
+        )
     for private_path in (
         options.public_category_aliases_path,
         options.private_correlation_map_path,
     ):
         _require_private_alias_path(paths.repo_root, options.heldout_dir, private_path)
+    if options.private_correlation_map_path is not None and (
+        options.private_correlation_map_path.resolve().is_relative_to(
+            options.output_dir.resolve()
+        )
+    ):
+        raise ValueError("Private correlation map must be outside release output")
     _validate_pre_execution_package_options(options)
     ts = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     final_release_root = (

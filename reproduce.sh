@@ -299,8 +299,14 @@ recompute_policy_evidence() {
 }
 
 validate_policy_graph() {
+  local graph_path="artifact_data/global/policy_graph.json"
+  if [[ -f artifact_outputs/analysis/policy_graph.json ]]; then
+    graph_path="artifact_outputs/analysis/policy_graph.json"
+  fi
   "${PYTHON}" "${RUNTIME_ROOT}/scripts/policy_graph.py" validate \
-    --graph artifact_data/global/policy_graph.json
+    --graph "${graph_path}" \
+    --catalog artifact_data/global/action_catalog.yaml \
+    --constraints artifact_data/global/constraints.yaml
   echo "Policy graph matches its typed rules and action catalog."
 }
 
@@ -314,6 +320,7 @@ recount_aggregates() {
 
 reproduce_results() {
   validate_artifact
+  validate_policy_graph
 
   echo "Auditing policy evidence"
   audit_policy_surface

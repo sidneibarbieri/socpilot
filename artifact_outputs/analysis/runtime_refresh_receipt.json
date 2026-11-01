@@ -1,6 +1,14 @@
 {
   "schema_version": 1,
   "purpose": "offline_runtime_refresh_not_new_collection",
-  "parent_manifest_sha256": "2d5474d5ed6c6e0cd20ba4f6c7d1d18d2fe0ce9dd6eb5be249d67aeb29e10f24",
-  "preserved_file_count": 22636
+  "parent_manifest_sha256": "4f824a2cce6f3b135fd5a33d472e9b50d2c6087ef370d52db1551a4cadafebd3",
+  "preserved_file_count": 22636,
+  "policy_graph_metadata_repair": {
+    "source_path": "artifact_data/global/policy_graph.json",
+    "derived_path": "artifact_outputs/analysis/policy_graph.json",
+    "original_sha256": "951547f75248dd7eac08bfd2f1490b77dd4991909cc453e99231ab95146ff5e5",
+    "repaired_sha256": "fc7a63e5b832cac1e2b0fbe28ae16f743eef635976faf449ca832ab0e3911b47",
+    "original_policy_digest": "6db986bc5b4c183c48f2db2bf8150526b57f1b310f32ea38ab3816242c44bffd",
+    "repaired_policy_digest": "75df586b0a39c6ef964d0b2e8b94a3fff6b324a9f2f3d89f00fcdb19d019e292"
+  }
 }

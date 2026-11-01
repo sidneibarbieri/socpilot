@@ -20,6 +20,7 @@ from soc_llm_policy.artifact_package import (
 )
 from soc_llm_policy.artifact_verify import verify_artifact_package
 from soc_llm_policy.corpus_campaign import materialize_campaign_view
+from soc_llm_policy.policy_graph_metadata import repair_graph_digest
 
 
 class ManifestFile(BaseModel):
@@ -184,7 +185,9 @@ def _refresh_claim_matrix_commands(source: Path, staging: Path) -> None:
         raise ValueError("Legacy audit command remains in claim matrix.")
     target = staging / matrix_relative
     target.parent.mkdir(parents=True, exist_ok=True)
-    target.write_text(json.dumps(matrix, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    target.write_text(
+        json.dumps(matrix, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+    )
     (staging / markdown_relative).write_text(markdown, encoding="utf-8")
 
 
@@ -193,6 +196,7 @@ def refresh_runtime(
     destination: Path,
     *,
     preview_root: Path | None = None,
+    repair_policy_graph_digest: bool = False,
 ) -> Path:
     """Create a verified derivative, leaving the original package unchanged."""
     source = source.resolve(strict=True)
@@ -217,7 +221,25 @@ def refresh_runtime(
         staging = Path(temporary) / "package"
         staging.mkdir()
         _copy_bound_files(source, staging, entries)
+        graph_repair = (
+            repair_graph_digest(staging) if repair_policy_graph_digest else None
+        )
         _refresh_claim_matrix_commands(source, staging)
+        if graph_repair is not None:
+            readme_path = staging / "README.md"
+            readme = readme_path.read_text()
+            note = (
+                "\n## Policy graph metadata\n\n"
+                "The collection-bound graph remains unchanged in "
+                "`artifact_data/global/policy_graph.json`. Its digest is stale for "
+                "the published typed YAML inputs. The offline review command checks "
+                "`artifact_outputs/analysis/policy_graph.json`, regenerated from "
+                "those YAMLs after verifying identical nodes and edges. The "
+                "runtime refresh receipt records both hashes; collection inputs "
+                "and decisions are preserved.\n"
+            )
+            if note not in readme:
+                readme_path.write_text(readme + note)
         campaign_manifest = "artifact_outputs/analysis/corpus_campaign.json"
         if any(entry.path == campaign_manifest for entry in entries):
             materialize_campaign_view(
@@ -236,6 +258,8 @@ def refresh_runtime(
             "parent_manifest_sha256": parent_manifest_sha256,
             "preserved_file_count": len(preserved),
         }
+        if graph_repair is not None:
+            receipt["policy_graph_metadata_repair"] = graph_repair.model_dump()
         receipt_path = (
             staging / "artifact_outputs/analysis/runtime_refresh_receipt.json"
         )
@@ -300,18 +324,28 @@ def main(argv: list[str] | None = None) -> int:
         help="Directory with reviewer_dashboard.png and its receipt bound to refreshed HTML.",
     )
     parser.add_argument(
+        "--repair-policy-graph-digest",
+        action="store_true",
+        help="Rebind only stale graph metadata after exact typed-content comparison.",
+    )
+    parser.add_argument(
         "--pre-execution-source",
         action="store_true",
         help="Remove only an unbound legacy preview from a pre-execution package.",
     )
     args = parser.parse_args(argv)
     if args.pre_execution_source:
-        if args.preview_root is not None:
-            raise ValueError("A pre-execution source refresh cannot accept a preview.")
+        if args.preview_root is not None or args.repair_policy_graph_digest:
+            raise ValueError(
+                "A pre-execution source refresh cannot accept a preview or graph repair."
+            )
         refreshed = refresh_pre_execution_source(args.source, args.destination)
     else:
         refreshed = refresh_runtime(
-            args.source, args.destination, preview_root=args.preview_root
+            args.source,
+            args.destination,
+            preview_root=args.preview_root,
+            repair_policy_graph_digest=args.repair_policy_graph_digest,
         )
     print(refreshed)
     return 0

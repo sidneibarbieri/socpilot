@@ -295,6 +295,8 @@ def write_private_map(projection: CorrelationProjection, path: Path) -> None:
     payload = {
         "incident_ids": dict(projection.incident_ids),
         "timestamps": dict(projection.timestamps),
+        "second_prefixes": dict(projection.second_prefixes),
+        "export_names": dict(projection.export_names),
         "ip_aliases": dict(projection.ip_aliases),
     }
     descriptor = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600)

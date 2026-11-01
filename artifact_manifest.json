@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-27T15:08:22.899607+00:00",
+  "generated_at_utc": "2026-11-01T20:36:34.601198+00:00",
   "dataset_release_id": "socpilot_public_snapshot",
   "incident_count": 400,
   "measurement_incident_count": 400,
@@ -1229,7 +1229,7 @@
   "run_id": "measurement_e6889d081957361f",
   "campaign_evidence_path": "reconstruction/campaign-evidence-original-source.json",
   "artifact_stage": "reported_results",
-  "file_count": 22766,
+  "file_count": 22768,
   "files": [
     {
       "path": ".env.example",
@@ -1257,7 +1257,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "f31e9de1bc3150471432a06d9bd78fb223a73751705ea8ebcb9a6ef897af3ee1"
+      "sha256": "2148d4b53cb7894506ac3adea774206ee3df96e1a7818d62cb61284f0ca59b48"
     },
     {
       "path": "REVIEWER_DASHBOARD.html",
@@ -1277,7 +1277,7 @@
     },
     {
       "path": "analysis_runtime/runtime_manifest.json",
-      "sha256": "cbe6ad866ae876fdd3e424faca9b1f3496c839dd0c3ec52579afd2758d33165f"
+      "sha256": "db2f634bf186624ce607f3fc947dcf0765a245708d14c945d19dc5901e78087e"
     },
     {
       "path": "analysis_runtime/scripts/audit_corpus_partitions.py",
@@ -1353,7 +1353,7 @@
     },
     {
       "path": "analysis_runtime/scripts/policy_graph.py",
-      "sha256": "ec109929ed3c6dbc1312e601c73f6e68333acd7266a7cb6e5c4f38aaa34ed78e"
+      "sha256": "39e85a85339614f30e9fbd60d87dda1fdcdb7ece04af3a72f96b7b794eb0ed11"
     },
     {
       "path": "analysis_runtime/scripts/recount_aggregates_from_cells.py",
@@ -1425,11 +1425,11 @@
     },
     {
       "path": "analysis_runtime/src/soc_llm_policy/artifact_package.py",
-      "sha256": "7fc2db6de64897cd9a4efb56076889c0155da928730dda320c380801f268ec04"
+      "sha256": "cae8c452dac177895268483d6d17d2f388e0cdbcda40caa740e5a45103b397f7"
     },
     {
       "path": "analysis_runtime/src/soc_llm_policy/artifact_runtime_refresh.py",
-      "sha256": "cc7d10c51dec4a2375395de188d363b8e79389430d60dd2da8c81a1a8ef087eb"
+      "sha256": "612856db9dab501c80f4be22b0f18daa70863a3cdbee75d793514e8cf67d7678"
     },
     {
       "path": "analysis_runtime/src/soc_llm_policy/artifact_verify.py",
@@ -1616,6 +1616,10 @@
       "sha256": "783b8b2b13fa1e8517a36413d291b2a7d22560d8bc79f32f6f4a562c5ba04493"
     },
     {
+      "path": "analysis_runtime/src/soc_llm_policy/policy_graph_metadata.py",
+      "sha256": "a6fc0967d6f2a04c4d2a83c3a2d3b05f0f22bdc1f91edb405e6c4d611e33df99"
+    },
+    {
       "path": "analysis_runtime/src/soc_llm_policy/policy_ir.py",
       "sha256": "f191efde14e021c5b9431bdc8eb838878c33daf5778aa7d06d831833ce0dee56"
     },
@@ -1681,7 +1685,7 @@
     },
     {
       "path": "analysis_runtime/src/soc_llm_policy/publication_correlation.py",
-      "sha256": "405b3019e7fe409fc8aa641ea2851b5acfa1b7727910fd46f2ad0bcb964caa17"
+      "sha256": "253957e5641623f2706ccb8d4891f92b6175f54e921e1ab821110abb4988ab52"
     },
     {
       "path": "analysis_runtime/src/soc_llm_policy/publication_export.py",
@@ -9860,6 +9864,10 @@
       "sha256": "afd37c577a15f07b9b4877148a607458daceb7718da1aed6d804bb39777f812d"
     },
     {
+      "path": "artifact_outputs/analysis/policy_graph.json",
+      "sha256": "fc7a63e5b832cac1e2b0fbe28ae16f743eef635976faf449ca832ab0e3911b47"
+    },
+    {
       "path": "artifact_outputs/analysis/policy_preflight/policy_preflight/corpus_macros.tex",
       "sha256": "5f3165132152f9ad0442b4bd05df83a3928fa70e576ae2e5fe19b1170b167dae"
     },
@@ -9953,7 +9961,7 @@
     },
     {
       "path": "artifact_outputs/analysis/runtime_refresh_receipt.json",
-      "sha256": "3ef629500a7cedce12842f3c5d677bf10fa66a4386d1eacdf4e01fa24cd3f698"
+      "sha256": "40ff31dfcd876ec83d67455637c16773cc3f9e18ac77eb5634174a87f1c5cfbc"
     },
     {
       "path": "artifact_outputs/analysis/separation_input.schema.json",
@@ -91041,7 +91049,7 @@
     },
     {
       "path": "reproduce.sh",
-      "sha256": "174d60a6032ae77d1949047c48c039873cb1b20c8c01db14ba7bf60dd7a485e5"
+      "sha256": "198327695ef5c6af27088cf6e7c1f4b73c4f81b5c5de33decd18cb86db2b551f"
     },
     {
       "path": "requirements-dev.txt",

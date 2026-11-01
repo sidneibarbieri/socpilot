@@ -88,7 +88,7 @@
     },
     {
       "path": "scripts/policy_graph.py",
-      "sha256": "ec109929ed3c6dbc1312e601c73f6e68333acd7266a7cb6e5c4f38aaa34ed78e"
+      "sha256": "39e85a85339614f30e9fbd60d87dda1fdcdb7ece04af3a72f96b7b794eb0ed11"
     },
     {
       "path": "scripts/recount_aggregates_from_cells.py",
@@ -160,11 +160,11 @@
     },
     {
       "path": "src/soc_llm_policy/artifact_package.py",
-      "sha256": "7fc2db6de64897cd9a4efb56076889c0155da928730dda320c380801f268ec04"
+      "sha256": "cae8c452dac177895268483d6d17d2f388e0cdbcda40caa740e5a45103b397f7"
     },
     {
       "path": "src/soc_llm_policy/artifact_runtime_refresh.py",
-      "sha256": "cc7d10c51dec4a2375395de188d363b8e79389430d60dd2da8c81a1a8ef087eb"
+      "sha256": "612856db9dab501c80f4be22b0f18daa70863a3cdbee75d793514e8cf67d7678"
     },
     {
       "path": "src/soc_llm_policy/artifact_verify.py",
@@ -351,6 +351,10 @@
       "sha256": "783b8b2b13fa1e8517a36413d291b2a7d22560d8bc79f32f6f4a562c5ba04493"
     },
     {
+      "path": "src/soc_llm_policy/policy_graph_metadata.py",
+      "sha256": "a6fc0967d6f2a04c4d2a83c3a2d3b05f0f22bdc1f91edb405e6c4d611e33df99"
+    },
+    {
       "path": "src/soc_llm_policy/policy_ir.py",
       "sha256": "f191efde14e021c5b9431bdc8eb838878c33daf5778aa7d06d831833ce0dee56"
     },
@@ -416,7 +420,7 @@
     },
     {
       "path": "src/soc_llm_policy/publication_correlation.py",
-      "sha256": "405b3019e7fe409fc8aa641ea2851b5acfa1b7727910fd46f2ad0bcb964caa17"
+      "sha256": "253957e5641623f2706ccb8d4891f92b6175f54e921e1ab821110abb4988ab52"
     },
     {
       "path": "src/soc_llm_policy/publication_export.py",

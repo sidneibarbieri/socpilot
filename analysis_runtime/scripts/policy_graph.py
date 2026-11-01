@@ -28,6 +28,8 @@ def _parser() -> argparse.ArgumentParser:
 
     validate = subparsers.add_parser("validate")
     validate.add_argument("--graph", type=Path, required=True)
+    validate.add_argument("--catalog", type=Path)
+    validate.add_argument("--constraints", type=Path)
 
     compile_parser = subparsers.add_parser("compile")
     compile_parser.add_argument("--graph", type=Path, required=True)
@@ -48,6 +50,13 @@ def main() -> int:
 
     graph = _load_graph(args.graph)
     document = compile_policy_graph(graph)
+    if args.command == "validate":
+        if (args.catalog is None) != (args.constraints is None):
+            raise ValueError("Catalog and constraints must be supplied together")
+        if args.catalog is not None:
+            expected = load_policy_document(args.catalog, args.constraints)
+            if document != expected:
+                raise ValueError("Policy graph differs from the declared YAML policy")
     if args.command == "compile":
         dump_constraints(document, args.output)
     return 0
