@@ -23,6 +23,10 @@
       "sha256": "5f94e9b33b4a3779b958499b75072f2923ca9e2eae8a7f99880cd4893473f914"
     },
     {
+      "path": "scripts/build_action_omission_report.py",
+      "sha256": "c52c479f10e3078425f64e72d93e6a39203971ec6d3ffafea49d25eb3571141f"
+    },
+    {
       "path": "scripts/build_adversarial_report.py",
       "sha256": "a05575687d3f3d39738189a430ed028aa41e5bd60ef323ade70237ae5e71b192"
     },

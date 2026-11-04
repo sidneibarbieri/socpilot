@@ -116,6 +116,14 @@ bash reproduce.sh offline-verdict-audit --run-id measurement_e6889d081957361f --
 bash reproduce.sh offline-verdict-audit --run-id measurement_e6889d081957361f__adversarial --expected-cells 160 --incident-input-root artifact_outputs/experiments/measurement_e6889d081957361f__adversarial/scenario_input/dataset
 ```
 
+## Omission by required action
+
+Recompute, from the preserved per-cell family outcomes and the declared constraints, how often each mandatory rule's action is omitted when the rule applies, pooled by the action the rule requires and checked in each model, prompt condition, and batch. The command prints the LaTeX macros the paper uses.
+
+```bash
+bash reproduce.sh action-omission
+```
+
 ## Repair stability and residual conflicts
 
 Stable does not mean compliant. The offline audit separately counts post-repair violations and `active_requirement_prohibition_conflict_cells`: contexts where active rules both require and prohibit the same action. This count screens direct conflicts, not general policy satisfiability. Such conflicts require policy review; retrying the same repair does not resolve them. Historical decisions and failures remain part of the preserved evidence.

@@ -1229,7 +1229,7 @@
   "run_id": "measurement_e6889d081957361f",
   "campaign_evidence_path": "reconstruction/campaign-evidence-original-source.json",
   "artifact_stage": "reported_results",
-  "file_count": 22768,
+  "file_count": 22769,
   "files": [
     {
       "path": ".env.example",
@@ -1257,7 +1257,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "2148d4b53cb7894506ac3adea774206ee3df96e1a7818d62cb61284f0ca59b48"
+      "sha256": "c7cd16186324e0168e8899162fb5e31e86c96725bb78a1ffd34c9b1876ca73de"
     },
     {
       "path": "REVIEWER_DASHBOARD.html",
@@ -1277,7 +1277,7 @@
     },
     {
       "path": "analysis_runtime/runtime_manifest.json",
-      "sha256": "db2f634bf186624ce607f3fc947dcf0765a245708d14c945d19dc5901e78087e"
+      "sha256": "ce4e0ce8ca64758895dc5c5324e8b065851bd80db203e2b1ef50bafd32ff277f"
     },
     {
       "path": "analysis_runtime/scripts/audit_corpus_partitions.py",
@@ -1286,6 +1286,10 @@
     {
       "path": "analysis_runtime/scripts/audit_run_integrity.py",
       "sha256": "5f94e9b33b4a3779b958499b75072f2923ca9e2eae8a7f99880cd4893473f914"
+    },
+    {
+      "path": "analysis_runtime/scripts/build_action_omission_report.py",
+      "sha256": "c52c479f10e3078425f64e72d93e6a39203971ec6d3ffafea49d25eb3571141f"
     },
     {
       "path": "analysis_runtime/scripts/build_adversarial_report.py",
@@ -91049,7 +91053,7 @@
     },
     {
       "path": "reproduce.sh",
-      "sha256": "198327695ef5c6af27088cf6e7c1f4b73c4f81b5c5de33decd18cb86db2b551f"
+      "sha256": "78717b65488f79ce05eee800f32ed28ba3a460ee41477f964d577547db496954"
     },
     {
       "path": "requirements-dev.txt",

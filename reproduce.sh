@@ -120,6 +120,7 @@ Commands:
   recompute-policy-evidence Recompute transfer-check evidence.
   policy-graph-validate     Validate the policy graph against the typed rules.
   recount-aggregates        Recount every reported rate from the per-cell verdicts.
+  action-omission           Recompute mandatory-rule omission rates by required action.
   offline-verdict-audit     Recompute decisions from sanitized inputs and outputs.
   rule-coverage             Exercise every declared rule without provider calls.
   rule-satisfiability       Screen the reviewed rules for declared conflicts.
@@ -310,6 +311,14 @@ validate_policy_graph() {
   echo "Policy graph matches its typed rules and action catalog."
 }
 
+action_omission() {
+  echo "Recomputing mandatory-rule omission rates by required action"
+  "${PYTHON}" "${RUNTIME_ROOT}/scripts/build_action_omission_report.py" \
+    --cells artifact_outputs/experiments/measurement_e6889d081957361f/policy_family_cells.jsonl \
+    --constraints artifact_data/global/constraints.yaml \
+    --output /dev/stdout
+}
+
 recount_aggregates() {
   echo "Recounting every reported aggregate from the per-cell verdict record"
   "${PYTHON}" "${RUNTIME_ROOT}/scripts/recount_aggregates_from_cells.py" \
@@ -369,6 +378,10 @@ case "${COMMAND}" in
   recount-aggregates)
     require_reported_results "recount-aggregates"
     recount_aggregates
+    ;;
+  action-omission)
+    require_reported_results "action-omission"
+    action_omission
     ;;
   reproduce-results)
     require_reported_results "reproduce-results"
