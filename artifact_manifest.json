@@ -1229,7 +1229,7 @@
   "run_id": "measurement_e6889d081957361f",
   "campaign_evidence_path": "reconstruction/campaign-evidence-original-source.json",
   "artifact_stage": "reported_results",
-  "file_count": 22770,
+  "file_count": 22771,
   "files": [
     {
       "path": ".env.example",
@@ -1713,7 +1713,7 @@
     },
     {
       "path": "analysis_runtime/src/soc_llm_policy/publication_safety.py",
-      "sha256": "eba24fdf965796a893c75b375ecf93567bc946e22caec8c1f7badd20e539a603"
+      "sha256": "8869d538ec08235909bf0b74eb2d3ce7ff04607824c3b3c689df8d1630a28276"
     },
     {
       "path": "analysis_runtime/src/soc_llm_policy/publication_tracebacks.py",
@@ -92310,6 +92310,10 @@
     {
       "path": "tests/test_public_artifact_runner.py",
       "sha256": "464aa9e124365fe1ad3afb799607b0b05933f03a98986bc5b8e7d467aeb87340"
+    },
+    {
+      "path": "tests/test_publication_safety_archive.py",
+      "sha256": "95da3e847f5ef773272f4413e69d1bfe6f58b47dc2a1b6c7fa1333e61fad4c73"
     }
   ]
 }

@@ -23,7 +23,7 @@ def version_controlled_exclusions(root: Path, candidates: list[Path]) -> set[Pat
     rather than unapproved. Inside a built package there is no repository, so
     nothing is excluded and every unapproved bank is refused.
     """
-    if not candidates:
+    if not candidates or not (root / ".git").exists():
         return set()
     result = subprocess.run(
         ["git", "-C", str(root), "check-ignore", "--stdin"],
