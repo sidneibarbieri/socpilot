@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "socpilot-playground"
+version = "0.1.0a4"
+description = "Local policy-checking interface backed by SOCpilot"
+requires-python = ">=3.12"
+dependencies = [
+  "soc-llm-policy==0.0.1",
+  "pydantic==2.13.4",
+  "PyYAML==6.0.3",
+]
+
+[project.scripts]
+socpilot-playground = "socpilot_playground.app:main"
+
+[tool.setuptools]
+packages = ["socpilot_playground"]
+
+[tool.setuptools.package-data]
+socpilot_playground = ["*.html", "*.js", "*.css", "*.json", "*.svg"]
+
+[tool.ruff]
+target-version = "py312"

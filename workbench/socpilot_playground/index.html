@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOCpilot · Response-plan workbench</title><link rel="icon" href="/icon.svg"><link rel="stylesheet" href="/style.css">
+<script src="/app.js" defer></script></head>
+<body>
+<header class="app-header"><div class="app-identity"><svg class="app-mark" viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#0b1b33"/><path d="M47 17 21 30l11 3 3 11z" fill="#2463d6"/></svg><div><p class="product-name">SOCpilot</p><p class="app-title">Response-plan workbench</p></div></div><div class="scope-status"><span class="status-dot" aria-hidden="true"></span><span>Local check · no host actions</span></div></header>
+<main>
+<header class="intro"><p class="eyebrow">Local policy workbench</p>
+<h1>Check a response plan before acting</h1>
+<p>Provide a proposal, policy and action catalog. Inspect the verdict, repair and remaining violations.</p>
+<p class="scope">Local policy checking · No model calls · No host actions executed</p></header>
+<div class="columns"><section aria-labelledby="proposal-title">
+<h2 id="proposal-title">1. Provide the input</h2>
+<label for="mode">Input mode</label><select id="mode" disabled>
+<option value="guided">Guided synthetic example</option>
+<option value="case">Your structured policy case</option></select>
+<div id="guided-panel">
+<p>This example requires forensic collection before reimaging and prohibits host isolation.</p>
+<form id="proposal-form"><label for="actions">One action per line, in execution order (1–20 actions)</label>
+<textarea id="actions" rows="6" spellcheck="false" required></textarea>
+<p class="hint">Available: collect_forensics, reimage_host, isolate_host.</p>
+<div class="buttons"><button type="submit" id="check" class="primary" disabled>Check and repair</button>
+<button type="button" id="unsafe" disabled>Load violating example</button>
+<button type="button" id="safe" disabled>Load compliant example</button></div></form>
+<h2>Declared policy</h2><ul id="policy-summary"></ul>
+<details><summary>Inspect policy JSON</summary><pre id="policy"></pre></details>
+ </div>
+<div id="case-panel" hidden>
+<p>Use your own action identifiers, catalog and declared rules. The bundled case is synthetic.</p>
+<form id="case-form"><label for="case-json">Policy case JSON (up to 64 KiB)</label>
+<textarea id="case-json" rows="13" spellcheck="false" required></textarea>
+<div class="buttons"><button type="submit" id="check-case" class="primary" disabled>Check policy case</button>
+<button type="button" id="load-case" disabled>Load synthetic case</button></div>
+<p class="field-label">Import a local JSON case</p><div class="file-picker"><input type="file" id="case-file" class="visually-hidden" accept=".json,application/json" disabled><label for="case-file" class="file-button">Choose JSON file…</label><span id="case-file-name" class="file-name">No file selected</span></div>
+</form>
+<p><a href="/api/case-schema" target="_blank" rel="noopener">Inspect the JSON schema</a>.</p>
+<p class="hint">Approval entries are input declarations, not independently authenticated authorization.
+Exported results include your case: use synthetic data for public demonstrations.</p>
+</div>
+</section><section aria-labelledby="result-title">
+<h2 id="result-title">2. Inspect the verdict and repair</h2>
+<p id="status" role="status" aria-live="polite">Loading the built-in synthetic example…</p>
+<div id="results" hidden><dl>
+<dt>Proposed sequence</dt><dd id="proposed"></dd>
+<dt>Rules violated before repair</dt><dd id="before"></dd>
+<dt>Repaired sequence</dt><dd id="repaired"></dd>
+<dt>Rules violated after repair</dt><dd id="after"></dd>
+<dt>Second repair leaves the plan unchanged</dt><dd id="stable"></dd></dl>
+<h3>Engine repair report</h3><ul id="edits"></ul>
+<p id="case-reference"></p>
+<p>Compliance concerns the supplied rules and context. Repair stability is a separate check.</p>
+<button type="button" id="download" disabled>Download result JSON</button>
+<button type="button" id="download-case" hidden disabled>Download input case</button>
+<details><summary>Inspect edits and complete machine-readable result</summary><pre id="raw"></pre></details>
+</div></section></div>
+<footer>Runs locally against the packaged SOCpilot engine. Approval fields are supplied declarations.
+Use the evidence dashboard and <code>bash reproduce.sh all</code> to audit the paper’s preserved results.</footer>
+</main></body></html>

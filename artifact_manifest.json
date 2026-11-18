@@ -1229,7 +1229,7 @@
   "run_id": "measurement_e6889d081957361f",
   "campaign_evidence_path": "reconstruction/campaign-evidence-original-source.json",
   "artifact_stage": "reported_results",
-  "file_count": 22771,
+  "file_count": 22794,
   "files": [
     {
       "path": ".env.example",
@@ -1257,11 +1257,15 @@
     },
     {
       "path": "README.md",
-      "sha256": "b5835aeac5f5f0268c946783450124a5c9802dcaba8da6935605afeb3dc03223"
+      "sha256": "d1b44960d516f48edd6ca1a6ff150cb022c91bd25d1fc6fc34986a5a18170e4b"
     },
     {
       "path": "REVIEWER_DASHBOARD.html",
       "sha256": "3faec549ad7febb0d2c1fc0838a80afc435de3143daf4f506d76cd375e66edfd"
+    },
+    {
+      "path": "analysis_runtime/LICENSE",
+      "sha256": "55bc4c2525c7f9752dda40a119a0cc5824e8c9327ee083f54e5a20791a38a02e"
     },
     {
       "path": "analysis_runtime/pyproject.toml",
@@ -91057,7 +91061,7 @@
     },
     {
       "path": "reproduce.sh",
-      "sha256": "7d2a48e0c4f3e0e297858b886fdadc11d59328dd6ecb61d19ddd13266ce48134"
+      "sha256": "7c62c32856b41a18c602599c11741540ee03f19657f74adba0bb26fd7bdad563"
     },
     {
       "path": "requirements-dev.txt",
@@ -91972,6 +91976,10 @@
       "sha256": "3da92b958cba2c9a879a9b8f29e27c8841764b5b63d82fe1cab1c88a46eb127b"
     },
     {
+      "path": "scripts/run_reviewer_workbench.py",
+      "sha256": "c1bf8fe81b9853e4fa0f1bf366eeb17a9547a0b44613978d4e7f02c404870e3e"
+    },
+    {
       "path": "scripts/validate_heldout_activation.py",
       "sha256": "c4a24833d34123479b3b98ebbc09e54d49bf4ad26674d9002fb53aee9bc65eb1"
     },
@@ -92314,6 +92322,90 @@
     {
       "path": "tests/test_publication_safety_archive.py",
       "sha256": "95da3e847f5ef773272f4413e69d1bfe6f58b47dc2a1b6c7fa1333e61fad4c73"
+    },
+    {
+      "path": "tests/test_reviewer_workbench_install.py",
+      "sha256": "b05a5f1adc3edf1fed3797e24634c182dfe4c1e4481e99618083e7ee0fd8334f"
+    },
+    {
+      "path": "workbench/compare_results.py",
+      "sha256": "09ce306354b545a1b9e5258bf3b1242fff3ccc87e30ea9865589abfdfb757204"
+    },
+    {
+      "path": "workbench/compliant-proposal.json",
+      "sha256": "b57d4a974dfbcbc25cbdabd22d0b3b3376471d5cda3a74e4dedbfec73e58bef6"
+    },
+    {
+      "path": "workbench/conflicting-case.json",
+      "sha256": "1a7eef2429bd2c25293dde35009d6f3f3b4a3e229667612581b7d69011c65a40"
+    },
+    {
+      "path": "workbench/images/policy-case.png",
+      "sha256": "35220867eb0776d6e7203cfeed047c147d5ade05e63d4cd6726fd5b97dbe6fcc"
+    },
+    {
+      "path": "workbench/pyproject.toml",
+      "sha256": "0cdbd66a35e57bfbbe59ac0d1dc41e8aa003ad67e56422b49fb4f91b9fe9ccaf"
+    },
+    {
+      "path": "workbench/qualify_install.py",
+      "sha256": "a38cca296e1f913e76e03c6617d10554e911696467ea3ac8881621ca0382eaa1"
+    },
+    {
+      "path": "workbench/socpilot_playground/__init__.py",
+      "sha256": "44aea755c4f6e99551a6a70290e5e44be38694f49d4640989a323d518584effe"
+    },
+    {
+      "path": "workbench/socpilot_playground/__main__.py",
+      "sha256": "5fe41ef53f838c29af26f1deb7650a5bcf73d470c917066d646f52450355aa47"
+    },
+    {
+      "path": "workbench/socpilot_playground/app.js",
+      "sha256": "b3fcb7799c209e96bece8ba5b0ce062da2d55d43a4a96702fe5afc917ea9e3ba"
+    },
+    {
+      "path": "workbench/socpilot_playground/app.py",
+      "sha256": "2eb633a2b6636636b6e92658ab46e27d787ce35c75db1c4aca8f0550e7864cea"
+    },
+    {
+      "path": "workbench/socpilot_playground/cases.py",
+      "sha256": "fe073e0112aa4aae55fd19ca579c7ade4d606b94953f8f7477c086c81759c1ca"
+    },
+    {
+      "path": "workbench/socpilot_playground/icon.svg",
+      "sha256": "4d2cf48ac7e9d4faadc4a438434fd834588d1f57000be0e2f201044f3295db5f"
+    },
+    {
+      "path": "workbench/socpilot_playground/index.html",
+      "sha256": "e9dc4302d7130f4f6186a221d40f65ff0ca4b96914044241afe9c666b00a4bd0"
+    },
+    {
+      "path": "workbench/socpilot_playground/policy-case.json",
+      "sha256": "fa851f0c9556e10a9d8ef14174b007895de7e3c38d0fa0863e07410da17a0d35"
+    },
+    {
+      "path": "workbench/socpilot_playground/service.py",
+      "sha256": "9853b0fbb3d8647ba2a23b872464152101c3950ecac1212c9fa9a54383f2a7bf"
+    },
+    {
+      "path": "workbench/socpilot_playground/style.css",
+      "sha256": "0248d942ea8c4e7fba235675b28ce3b390f5f156dadc6219a06fe7a2716ee5d6"
+    },
+    {
+      "path": "workbench/test_cases.py",
+      "sha256": "eed3833e1e9cfdf20ba1633a71b52470faba726d933195f2b310893a875bceee"
+    },
+    {
+      "path": "workbench/test_compare_results.py",
+      "sha256": "5571760c1aba9eb7a12ef369b0d166bc82d4572bb8ddb1c576f662617e02fdd5"
+    },
+    {
+      "path": "workbench/test_playground.py",
+      "sha256": "0fb13b54f2c20dd6e8169e57bb7a4dc09e63ce09778eaa6137565f760bf465b8"
+    },
+    {
+      "path": "workbench/violating-proposal.json",
+      "sha256": "679ef967657f603816e7116a01028c990cf6cbaa3ee37dcdad1d7c5bfb7353fc"
     }
   ]
 }

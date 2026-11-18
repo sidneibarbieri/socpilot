@@ -134,6 +134,7 @@ Start here -- one command per question (times measured on Apple-silicon macOS):
   doctor   read-only check of the interpreter, the runtime packages,    1 s      -
            and stray outputs that would fail review; prints the fix
   all      doctor + demo + review + replay + action-omission             2m21s    python >= 3.12
+  workbench  local policy GUI or structured-case CLI                    -        python >= 3.12
 
 The first command creates .venv/ and installs 7 pinned packages (network access
 to PyPI). Nothing here calls a model provider or needs a credential.
@@ -178,12 +179,16 @@ PY
 
 # Creates the package-local .venv on first use and installs the pinned runtime
 # requirements; an environment the reviewer activated is never modified.
-require_dependencies() {
+require_supported_python() {
   if ! python_is_supported "${PYTHON}"; then
     echo "Python 3.12 or newer is required; ${PYTHON} is $("${PYTHON}" --version 2>&1)." >&2
     echo "Run: bash $(basename "${BASH_SOURCE[0]}") doctor   # prints the install command" >&2
     exit 1
   fi
+}
+
+require_dependencies() {
+  require_supported_python
   has_dependencies && return
   if [[ -n "${VIRTUAL_ENV:-}" && "${PYTHON}" == "${VIRTUAL_ENV}/bin/python" ]]; then
     echo "The active environment ${VIRTUAL_ENV} lacks the runtime dependencies." >&2
@@ -464,6 +469,27 @@ case "${COMMAND}" in
   doctor)
     doctor
     exit $?
+    ;;
+  workbench)
+    shift
+    if [[ "${1:-}" == --help || "${1:-}" == -h ]]; then
+      cat <<'EOF'
+SOCpilot policy workbench: same engine through a local GUI and CLI.
+
+  bash reproduce.sh workbench                          # http://127.0.0.1:8767
+  bash reproduce.sh workbench --port 8773               # choose another local port
+  bash reproduce.sh workbench --input workbench/violating-proposal.json
+  bash reproduce.sh workbench --case-input workbench/socpilot_playground/policy-case.json
+  bash reproduce.sh workbench --rebuild                 # qualify a new cached installation
+
+Python >=3.12 and first-use registry access are required. Installation is
+qualified in a source-bound user cache; an active external virtualenv is not
+modified. Stop the server with Ctrl+C. No model or host-response actions run.
+EOF
+      exit 0
+    fi
+    require_supported_python
+    exec "${PYTHON}" "${ROOT}/scripts/run_reviewer_workbench.py" "$@"
     ;;
 esac
 

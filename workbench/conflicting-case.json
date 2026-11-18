@@ -1,0 +1,17 @@
+{
+  "schema_version": "1",
+  "case_id": "synthetic-conflicting-policy",
+  "actions": [],
+  "catalog": [
+    {"action_id": "capture_memory", "reversible": true},
+    {"action_id": "restart_service", "reversible": false},
+    {"action_id": "quarantine_account", "requires_approval": true}
+  ],
+  "rules": [
+    {"rule_id": "must_capture", "type": "mandatory", "action": "capture_memory"},
+    {"rule_id": "must_not_capture", "type": "prohibit_when", "action": "capture_memory"}
+  ],
+  "telemetry": [],
+  "incident_approved_actions": [],
+  "approval_policy_mode": "remove"
+}

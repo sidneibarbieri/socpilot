@@ -1,0 +1,17 @@
+{
+  "schema_version": "1",
+  "case_id": "synthetic-service-recovery",
+  "actions": ["restart_service", "quarantine_account"],
+  "catalog": [
+    {"action_id": "capture_memory", "reversible": true},
+    {"action_id": "restart_service", "reversible": false},
+    {"action_id": "quarantine_account", "requires_approval": true}
+  ],
+  "rules": [
+    {"rule_id": "preserve_evidence", "type": "prohibit_before", "action": "restart_service", "condition_action": "capture_memory"},
+    {"rule_id": "account_approval", "type": "require_approval", "action": "quarantine_account"}
+  ],
+  "telemetry": [],
+  "incident_approved_actions": [],
+  "approval_policy_mode": "remove"
+}
