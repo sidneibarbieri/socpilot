@@ -10,18 +10,33 @@ fi
 export PYTHONPATH="${RUNTIME_ROOT}/src${PYTHONPATH:+:${PYTHONPATH}}"
 export PYTHONDONTWRITEBYTECODE=1
 
-if [[ -n "${VIRTUAL_ENV:-}" && -x "${VIRTUAL_ENV}/bin/python" ]]; then
-  PYTHON="${VIRTUAL_ENV}/bin/python"
-elif [[ -x "${ROOT}/.venv/bin/python" ]]; then
-  PYTHON="${ROOT}/.venv/bin/python"
-else
-  PYTHON="${PYTHON:-python3}"
-fi
-
-"${PYTHON}" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 12) else 1)' || {
-  echo "Python 3.12 or newer is required; ${PYTHON} is $("${PYTHON}" --version 2>&1)." >&2
-  exit 1
+python_is_supported() {
+  "$1" -c 'import sys; raise SystemExit(0 if sys.version_info >= (3, 12) else 1)' >/dev/null 2>&1
 }
+
+# One interpreter choice for every command, including the doctor's report:
+# an active virtual environment, then the package-local .venv, then $PYTHON,
+# then the first Python 3.12+ on PATH.
+find_python() {
+  if [[ -n "${VIRTUAL_ENV:-}" && -x "${VIRTUAL_ENV}/bin/python" ]]; then
+    printf '%s\n' "${VIRTUAL_ENV}/bin/python"; return
+  fi
+  if [[ -x "${ROOT}/.venv/bin/python" ]]; then
+    printf '%s\n' "${ROOT}/.venv/bin/python"; return
+  fi
+  if [[ -n "${PYTHON:-}" ]]; then
+    printf '%s\n' "${PYTHON}"; return
+  fi
+  local candidate
+  for candidate in python3 python3.14 python3.13 python3.12; do
+    if command -v "${candidate}" >/dev/null 2>&1 && python_is_supported "${candidate}"; then
+      command -v "${candidate}"; return
+    fi
+  done
+  return 1
+}
+
+PYTHON="$(find_python || command -v python3 || echo python3)"
 
 artifact_stage() {
   "${PYTHON}" - <<'PY'
@@ -84,9 +99,6 @@ if manifest_path.is_file():
 PY
 }
 
-if [[ "${1:-help}" != "help" && "${1:-help}" != "--help" ]]; then
-  restore_archive_campaign_links
-fi
 
 show_help() {
   printf 'Usage:\n  bash %s <command> [options]\n\n' "$(basename "${BASH_SOURCE[0]}")"
@@ -110,8 +122,24 @@ EOF
     return
   fi
   cat <<'EOF'
-Commands:
-  reproduce-results         Validate the package and regenerate evidence reports.
+Start here -- one command per question (times measured on Apple-silicon macOS):
+  command  what it establishes                                         time     needs
+  -------  ----------------------------------------------------------  -------  -------------
+  demo     the verifier on a synthetic plan: violation found, repaired,  1 s      python >= 3.12
+           second pass unchanged (synthetic; not model evidence)
+  review   integrity, both corpus batches, policy graph, rule coverage,  2m15s    python >= 3.12
+           every aggregate recounted from 4,798 cells, dashboard
+  replay   recomputes the 4,798 primary and 160 adversarial preserved    ~5 s     python >= 3.12
+           decisions from sanitized inputs, with no provider call
+  doctor   read-only check of the interpreter, the runtime packages,    1 s      -
+           and stray outputs that would fail review; prints the fix
+  all      doctor + demo + review + replay + action-omission             2m21s    python >= 3.12
+
+The first command creates .venv/ and installs 7 pinned packages (network access
+to PyPI). Nothing here calls a model provider or needs a credential.
+
+Individual audits:
+  reproduce-results         Validate the package and regenerate evidence reports (= review).
   validate-public-artifact  Run integrity, dataset, consistency, and hygiene gates.
   artifact-verify           Verify package files against the hash manifest.
   dataset-audit             Recompute dataset quality and readiness metrics.
@@ -140,24 +168,36 @@ require_reported_results() {
   exit 2
 }
 
-require_dependencies() {
-  if "${PYTHON}" - <<'PY' >/dev/null 2>&1
+has_dependencies() {
+  "${PYTHON}" - <<'PY' >/dev/null 2>&1
 import dotenv
 import pydantic
 import yaml
 PY
-  then
-    return
+}
+
+# Creates the package-local .venv on first use and installs the pinned runtime
+# requirements; an environment the reviewer activated is never modified.
+require_dependencies() {
+  if ! python_is_supported "${PYTHON}"; then
+    echo "Python 3.12 or newer is required; ${PYTHON} is $("${PYTHON}" --version 2>&1)." >&2
+    echo "Run: bash $(basename "${BASH_SOURCE[0]}") doctor   # prints the install command" >&2
+    exit 1
   fi
-
-  cat >&2 <<'EOF'
-Required Python dependencies are unavailable.
-
-Create the local environment:
-  python3 -m venv .venv
-  .venv/bin/pip install -r requirements.txt -r requirements-dev.txt
-EOF
-  exit 1
+  has_dependencies && return
+  if [[ -n "${VIRTUAL_ENV:-}" && "${PYTHON}" == "${VIRTUAL_ENV}/bin/python" ]]; then
+    echo "The active environment ${VIRTUAL_ENV} lacks the runtime dependencies." >&2
+    echo "Install them: pip install -r ${RUNTIME_ROOT}/requirements.txt  (or deactivate it)" >&2
+    exit 1
+  fi
+  if [[ "${PYTHON}" != "${ROOT}/.venv/bin/python" ]]; then
+    echo "[env] creating ${ROOT}/.venv with $("${PYTHON}" --version 2>&1)" >&2
+    "${PYTHON}" -m venv "${ROOT}/.venv" >&2
+    PYTHON="${ROOT}/.venv/bin/python"
+  fi
+  echo "[env] installing pinned packages from ${RUNTIME_ROOT}/requirements.txt" >&2
+  PIP_DISABLE_PIP_VERSION_CHECK=1 "${PYTHON}" -m pip install -q -r "${RUNTIME_ROOT}/requirements.txt" >&2
+  has_dependencies || { echo "Dependency installation did not complete." >&2; exit 1; }
 }
 
 validate_artifact() {
@@ -356,16 +396,95 @@ reproduce_results() {
   echo "Zero-cost reproduction passed."
 }
 
+demo() {
+  echo "Synthetic demonstration (not model evidence): one plan, two rules"
+  "${PYTHON}" -m soc_llm_policy.policy_example
+}
+
+replay_decisions() {
+  local primary="measurement_e6889d081957361f"
+  echo "Recomputing the primary study's preserved decisions"
+  "${PYTHON}" -m soc_llm_policy.offline_verdict_audit \
+    --repo-root . \
+    --policy-input-root artifact_data/global \
+    --incident-input-root artifact_data/dataset \
+    --incident-input-root artifact_data/heldout \
+    --run-id "${primary}" --expected-cells 4798 >/dev/null
+  echo "Recomputing the adversarial study's preserved decisions"
+  "${PYTHON}" -m soc_llm_policy.offline_verdict_audit \
+    --repo-root . \
+    --policy-input-root artifact_data/global \
+    --incident-input-root "artifact_outputs/experiments/${primary}__adversarial/scenario_input/dataset" \
+    --run-id "${primary}__adversarial" --expected-cells 160 >/dev/null
+  echo "Both decision records recompute exactly (4,798 + 160 cells)."
+}
+
+doctor() {
+  local selected
+  selected="$(find_python || true)"
+  local interpreter="${selected:-$(command -v python3 || true)}"
+  if [[ -z "${interpreter}" ]]; then
+    echo "[FAIL] python  no python3 on PATH"
+    echo "       fix: brew install python@3.12   # Debian/Ubuntu: apt install python3.12 python3.12-venv"
+    return 1
+  fi
+  "${interpreter}" "${RUNTIME_ROOT}/scripts/doctor.py" \
+    --package-root . --runtime-root "${RUNTIME_ROOT}" --selected-python "${selected}"
+}
+
+run_all() {
+  local failed=()
+  echo "==> doctor"
+  if ! doctor; then
+    echo "==> stopped: apply the fix printed above, then rerun this command"
+    return 1
+  fi
+  # Each step is its own process: inside `cmd || ...` bash ignores set -e, so an
+  # in-process step could fail midway and still report success.
+  local runner="${ROOT}/$(basename "${BASH_SOURCE[0]}")" step
+  for step in demo review replay action-omission; do
+    echo; echo "==> ${step}"
+    bash "${runner}" "${step}" || failed+=("${step}")
+  done
+  echo
+  # ${failed[*]-} keeps an empty array safe under set -u on bash 3.2 (macOS).
+  if [[ -z "${failed[*]-}" ]]; then
+    echo "==> all passed: doctor, demo, review, replay, action-omission"
+  else
+    echo "==> failed: ${failed[*]}"; return 1
+  fi
+}
+
 COMMAND="${1:-}"
 case "${COMMAND}" in
   ""|-h|--help|help)
     show_help
     exit 0
     ;;
+  doctor)
+    doctor
+    exit $?
+    ;;
 esac
 
 require_dependencies
+restore_archive_campaign_links
 case "${COMMAND}" in
+  demo)
+    demo
+    ;;
+  review)
+    require_reported_results "review"
+    reproduce_results
+    ;;
+  replay)
+    require_reported_results "replay"
+    replay_decisions
+    ;;
+  all)
+    require_reported_results "all"
+    run_all
+    ;;
   offline-verdict-audit)
     require_reported_results "offline-verdict-audit"
     shift
@@ -418,7 +537,10 @@ case "${COMMAND}" in
     ;;
   rule-coverage)
     shift
-    exec "${PYTHON}" "${RUNTIME_ROOT}/scripts/build_rule_coverage_report.py" --repo-root . "$@"
+    # Written beside the other rechecks; the default results/ path is outside the
+    # package boundary and made the next validate-public-artifact fail.
+    exec "${PYTHON}" "${RUNTIME_ROOT}/scripts/build_rule_coverage_report.py" --repo-root . \
+      --output-json artifact_outputs/analysis/rule_coverage_report.json "$@"
     ;;
   rule-satisfiability)
     shift

@@ -91,6 +91,10 @@
       "sha256": "57c7474657ccbaba6bf50dc0ad8a2566488d7c1c07cb34905f4461e39156617e"
     },
     {
+      "path": "scripts/doctor.py",
+      "sha256": "8a5dcec2a10f000e0ab5abc6329accde152e384613eedff1f58362713f1e8e83"
+    },
+    {
       "path": "scripts/policy_graph.py",
       "sha256": "39e85a85339614f30e9fbd60d87dda1fdcdb7ece04af3a72f96b7b794eb0ed11"
     },
