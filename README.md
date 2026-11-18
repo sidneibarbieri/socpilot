@@ -19,18 +19,20 @@ provider payloads, credentials, or publication-workspace automation.
 From the package root, with any Python 3.12 or newer on `PATH`:
 
 ```bash
-./reproduce.sh all
+bash reproduce.sh all
 ```
+
+Use `bash` for both Git clones and downloaded ZIPs; the anonymous ZIP does not preserve executable permissions.
 
 The first command creates `.venv/` and installs seven pinned packages from `analysis_runtime/requirements.txt` (network access to PyPI). No model provider, credential, service, or container is involved. Times were measured on an Apple-silicon macOS host and vary by machine.
 
 | Command | What it establishes | Time |
 | --- | --- | --- |
-| `./reproduce.sh doctor` | Read-only check of the interpreter, the runtime packages, and stray outputs that would fail review; prints the exact fix | 1 s |
-| `./reproduce.sh demo` | The verifier on a synthetic plan: violation found, repaired, second pass unchanged (synthetic; not model evidence) | 1 s |
-| `./reproduce.sh review` | Integrity, both corpus batches, policy graph, rule coverage, every aggregate recounted from 4,798 cells, dashboard regenerated | 2 min 15 s |
-| `./reproduce.sh replay` | The 4,798 primary and 160 adversarial preserved decisions recomputed from sanitized inputs, without a provider call | ~5 s |
-| `./reproduce.sh all` | doctor, then demo, review, replay, and action-omission; ends with `all passed` | 2 min 21 s, including the first environment install |
+| `bash reproduce.sh doctor` | Read-only check of the interpreter, the runtime packages, and stray outputs that would fail review; prints the exact fix | 1 s |
+| `bash reproduce.sh demo` | The verifier on a synthetic plan: violation found, repaired, second pass unchanged (synthetic; not model evidence) | 1 s |
+| `bash reproduce.sh review` | Integrity, both corpus batches, policy graph, rule coverage, every aggregate recounted from 4,798 cells, dashboard regenerated | 2 min 15 s |
+| `bash reproduce.sh replay` | The 4,798 primary and 160 adversarial preserved decisions recomputed from sanitized inputs, without a provider call | ~5 s |
+| `bash reproduce.sh all` | doctor, then demo, review, replay, and action-omission; ends with `all passed` | 2 min 21 s, including the first environment install |
 
 `run.sh` and `provider_run.sh` are the frozen collection implementation, bound by the package manifest. They are kept for provenance and controlled provider evaluation and are not needed for review.
 
