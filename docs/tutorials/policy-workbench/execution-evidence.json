@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "recorded_engine_source_commit": "496b1856fcbad2b234ff474ea58975eb064ccaf7",
+  "synthetic_inputs": true,
+  "synthetic_narration": true,
+  "no_model_calls_in_demonstrated_commands": true,
+  "no_host_response_execution": true,
+  "runtime": "macOS arm64 / Python 3.12",
+  "observations": [
+    "Fresh extracted artifact; isolated workbench installation qualified",
+    "Actual invalid-input rejection and recovery",
+    "Actual structured-case import, check and JSON exports",
+    "Complete GUI/CLI JSON equality",
+    "Conflicting policy leaves a visible residual violation despite stable repair",
+    "Full preserved-evidence command completed with exit 0"
+  ],
+  "review_command": "bash reproduce.sh all",
+  "review_exit_code": 0,
+  "review_elapsed_seconds": 136.718317,
+  "video_duration_seconds": 218.170667,
+  "editing": "Recorded UI actions held for narration; fresh terminal commands. Review idle periods visibly labelled as shortened. No synthetic UI.",
+  "captions": "Recorded narration word timings offset by retained source segment.",
+  "limits": [
+    "Synthetic policy examples are separate from the paper model outputs",
+    "Approval entries are declarations, not authenticated authorization",
+    "Runtime qualification is on the stated host; this is not an independent-host experiment",
+    "No claim of human evaluation of the synthetic voice"
+  ],
+  "audio_measurements": {
+    "integrated_lufs": -17.46,
+    "true_peak_dbtp": -2.77,
+    "loudness_range_lu": 3.5
+  },
+  "video_sha256": "33e497294f277b1982e2a507309ab6dd0e8dbce5b16a8b7dac68c196b1e309c9"
+}

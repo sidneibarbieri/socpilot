@@ -1229,7 +1229,7 @@
   "run_id": "measurement_e6889d081957361f",
   "campaign_evidence_path": "reconstruction/campaign-evidence-original-source.json",
   "artifact_stage": "reported_results",
-  "file_count": 22794,
+  "file_count": 22801,
   "files": [
     {
       "path": ".env.example",
@@ -1257,7 +1257,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "d1b44960d516f48edd6ca1a6ff150cb022c91bd25d1fc6fc34986a5a18170e4b"
+      "sha256": "33624e92eb09e65071a3142a65fdfafbe867e892c8b13c64d2aa6a564c1e0614"
     },
     {
       "path": "REVIEWER_DASHBOARD.html",
@@ -91026,6 +91026,34 @@
     {
       "path": "docs/REVIEWER_GUIDE.md",
       "sha256": "10958746da28859107092d1e090f89a28ec4152c711889c8294f083c4762d2a7"
+    },
+    {
+      "path": "docs/tutorials/policy-workbench/FOLLOW_ALONG.md",
+      "sha256": "b31578aa4111a349f675ca505084f96d4a705cf10acd6c584400243023c13b60"
+    },
+    {
+      "path": "docs/tutorials/policy-workbench/chapters.json",
+      "sha256": "8d8718897ed2250f04d6b768bc9e74ee0eb60b9ee07666a302e656d528e3714d"
+    },
+    {
+      "path": "docs/tutorials/policy-workbench/english.vtt",
+      "sha256": "7badf0438f88a46fb9f92a3db3f4e0a0ae4ece0cc6542e33c076a7f3958013a5"
+    },
+    {
+      "path": "docs/tutorials/policy-workbench/execution-evidence.json",
+      "sha256": "4159e983ff2dc104343a18641fd499a69f7fe23f724b9acb35ff70fe13db9d59"
+    },
+    {
+      "path": "docs/tutorials/policy-workbench/poster.png",
+      "sha256": "2e76af0b51b57a1cad23fb95703b3193c196b57f78a1f4636b654b2ab791766c"
+    },
+    {
+      "path": "docs/tutorials/policy-workbench/transcript.txt",
+      "sha256": "37ca029cbe145ec72063c5d03fff6cd89864149c8070fd1544b67b2b6e620214"
+    },
+    {
+      "path": "docs/tutorials/policy-workbench/tutorial.mp4",
+      "sha256": "33e497294f277b1982e2a507309ab6dd0e8dbce5b16a8b7dac68c196b1e309c9"
     },
     {
       "path": "protocol_extensions/projection_fidelity_probe/README.md",

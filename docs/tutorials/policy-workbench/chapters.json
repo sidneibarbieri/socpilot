@@ -1,0 +1,56 @@
+[
+  {
+    "id": "01-purpose",
+    "title": "Why check a response proposal?",
+    "start_seconds": 0,
+    "end_seconds": 20.9
+  },
+  {
+    "id": "02-start-current",
+    "title": "Start the public artifact workbench",
+    "start_seconds": 20.9,
+    "end_seconds": 43.3
+  },
+  {
+    "id": "03-guided-check",
+    "title": "Understand the rules and inspect a repair",
+    "start_seconds": 43.3,
+    "end_seconds": 75.1
+  },
+  {
+    "id": "04-invalid-recovery",
+    "title": "Reject an unknown action and recover",
+    "start_seconds": 75.1,
+    "end_seconds": 97.3
+  },
+  {
+    "id": "05-structured-case",
+    "title": "Import a case with its own catalog and rules",
+    "start_seconds": 97.3,
+    "end_seconds": 133.6
+  },
+  {
+    "id": "06-export",
+    "title": "Export the input and the checked result",
+    "start_seconds": 133.6,
+    "end_seconds": 158.9
+  },
+  {
+    "id": "07-cli-parity",
+    "title": "Repeat the same input through the CLI",
+    "start_seconds": 158.9,
+    "end_seconds": 181.0
+  },
+  {
+    "id": "08-conflict",
+    "title": "Distinguish repair stability from policy compliance",
+    "start_seconds": 181.0,
+    "end_seconds": 205.1
+  },
+  {
+    "id": "09-reproduce",
+    "title": "Reproduce the preserved paper results",
+    "start_seconds": 205.1,
+    "end_seconds": 217.94
+  }
+]

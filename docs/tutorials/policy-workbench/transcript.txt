@@ -1,0 +1,17 @@
+This tutorial shows how to use the SOC pilot policy workbench. A response proposal can contain useful actions and still violate an explicit policy. We will inspect a proposal, check it, examine the repair, and export an auditable result. Everything here uses synthetic input. The workbench executes no response actions on a host.
+
+Extract the anonymous ZIP linked in the paper. With Python three point twelve available, run bash reproduce.sh workbench. First use downloads pinned dependencies and qualifies an isolated installation. Later runs verify and reuse it. Open the local address printed in the terminal. No model key is needed.
+
+The guided example makes the policy visible before we check anything. Forensic evidence must be collected before reimaging, and isolation is prohibited in this example. The proposal reimages the host and then isolates it. Select Check and repair. Two rules are violated. The engine removes isolation and inserts forensic collection before reimaging. The resulting sequence has no remaining violations under these declared rules. This is a policy verdict, not evidence that an action succeeded in an incident.
+
+An action outside the catalog is rejected. Notice that editing the input clears the old verdict and disables its export. You cannot accidentally download the result for a different proposal. Load the compliant example and check again. It needs no policy repair. Validation failures are visible, and recovery does not require restarting the application.
+
+Now switch to your structured policy case and import the supplied service recovery example. This is a different action catalog. Its proposal restarts a service and quarantines an account. The declared rules require memory capture before restart and approval for quarantine. No approval is supplied. Check the case. The repair inserts memory capture and removes the unapproved action. Approval fields are declarations in the input, not authenticated authorization. You can inspect the complete case and the rule results before downloading anything.
+
+Download the normalized input case and the result. The result retains the proposed sequence, the rules, the edits, the repaired sequence, and the verdicts before and after repair. Its input hash identifies the case that was checked. Keep the files together with the package version. These records let another researcher inspect how a declared policy affected this particular proposal.
+
+The command line uses the same checker and repair service. Pass the downloaded input to the case input option and save the JSON output. Compare the complete output with the file exported by the interface. They must match. The command shown here performs that comparison on the actual files. It does not replace the checker with a separate implementation.
+
+A stable repair is not necessarily a compliant plan. This final synthetic case contains conflicting rules: memory capture is mandatory and prohibited. The workbench leaves the mandatory rule violated even though a second repair leaves the sequence unchanged. Read remaining violations as well as stability. The tool does not turn conflicting requirements into an approval.
+
+To reproduce the paper's preserved results, run bash reproduce.sh all in this same artifact. These synthetic examples demonstrate policy checking, not incident response execution.
